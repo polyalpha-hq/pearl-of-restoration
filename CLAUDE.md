@@ -40,8 +40,9 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 ---
 
 ## TODO (open as of 2026-05-05)
-- [ ] Remove small circle buttons from hero section (user requested, session cut off)
-- [ ] Review/redesign hero section layout — user not satisfied with current state
+- [x] Remove small circle buttons from hero section — done v6.1
+- [x] Add manifesto text to hero (EB Garamond italic, gold) — done v6.1
+- [x] Move stats cards from hero to impact section — done v6.1
 
 ---
 
