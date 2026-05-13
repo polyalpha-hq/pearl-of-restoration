@@ -20,10 +20,12 @@ A prospective investor can understand the PEARL token opportunity and take actio
 - ✓ Mobile-responsive layout with gold/cream brand palette — existing
 - ✓ GitHub Pages deployment — existing
 
-### Active
+### Validated
 
-- [ ] **PERF-01** — Extract base64 images to `media/` folder (8.5MB → ~50KB HTML)
-- [ ] **PERF-02** — Ensure all 3 production lines of content remain fully intact after extraction
+- ✓ **PERF-01** — Extract base64 images to `media/` folder — Validated in Phase 1: `index.html` reduced from 8.5 MB to 81 KB, 14 images in `media/`
+- ✓ **PERF-02** — All product block content fully intact after extraction — Validated in Phase 1: human-verified in browser, no broken images
+
+### Active
 - [ ] **I18N-01** — Language switcher with 4 locales: EN, ES, PT-BR, HI
 - [ ] **I18N-02** — All visible text translated per locale; default is EN
 - [ ] **I18N-03** — Language selection persists across page reloads (localStorage)
@@ -48,7 +50,7 @@ A prospective investor can understand the PEARL token opportunity and take actio
 
 ## Context
 
-**Codebase state:** Single-file static site (`index.html`, 8.5MB due to ~14 base64 images). Deployed to GitHub Pages from `polyalpha-hq/pearl-of-restoration`. No build pipeline — edit HTML, commit, deploy.
+**Codebase state:** Single-file static site (`index.html`, now 81 KB after Phase 1 extraction). 14 images in `media/`. Deployed to GitHub Pages from `polyalpha-hq/pearl-of-restoration`. No build pipeline — edit HTML, commit, deploy.
 
 **Blockchain:** PEARL token deployed on TON blockchain. Smart contract exists. Purchases handled via Telegram bot (both TonKeeper and credit-card-style flows redirect to bot). Total raise target: $24,749,074.
 
@@ -99,4 +101,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-13 after initialization*
+*Last updated: 2026-05-13 — Phase 1 complete (image extraction baseline)*
