@@ -7,8 +7,8 @@
 
 ### Performance
 
-- [ ] **PERF-01**: Page load begins within 2s — HTML under 200KB (images extracted to `media/` folder)
-- [ ] **PERF-02**: All existing product images (Oil Regeneration, MWF, Activated Carbon, KDK) display correctly after base64 extraction
+- [x] **PERF-01**: Page load begins within 2s — HTML under 200KB (images extracted to `media/` folder)
+- [x] **PERF-02**: All existing product images (Oil Regeneration, MWF, Activated Carbon, KDK) display correctly after base64 extraction
 
 ### Multilingual
 
@@ -77,8 +77,8 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PERF-01 | Phase 1 | Pending |
-| PERF-02 | Phase 1 | Pending |
+| PERF-01 | Phase 1 | Complete |
+| PERF-02 | Phase 1 | Complete |
 | I18N-01 | Phase 2 | Pending |
 | I18N-02 | Phase 2 | Pending |
 | I18N-03 | Phase 2 | Pending |

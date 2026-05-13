@@ -105,7 +105,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Image Extraction & Baseline | 2/2 | Complete   | 2026-05-13 |
+| 1. Image Extraction & Baseline | 2/2 | Complete    | 2026-05-13 |
 | 2. Hindi Locale | 0/? | Not started | - |
 | 3. Token Sale Section | 0/? | Not started | - |
 | 4. Revenue Participation Estimator | 0/? | Not started | - |
