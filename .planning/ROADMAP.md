@@ -10,7 +10,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Image Extraction & Baseline** — Extract all base64 images to `media/` folder, bringing `index.html` from 8.5MB to ~50KB
+- [x] **Phase 1: Image Extraction & Baseline** — Extract all base64 images to `media/` folder, bringing `index.html` from 8.5MB to ~50KB (completed 2026-05-13)
 - [ ] **Phase 2: Hindi Locale** — Add HI to the existing EN/ES/PT-BR i18n engine with full translations
 - [ ] **Phase 3: Token Sale Section** — Ship PEARL token section with price, supply, progress bar, Buy CTA, and tokenomics page
 - [ ] **Phase 4: Revenue Participation Estimator** — Integrate existing dashboard HTML as investment calculator with scoped CSS
@@ -30,9 +30,9 @@
   2. All four product blocks (Oil Regeneration, MWF, Activated Carbon, KDK) display their photos correctly — no broken images, no missing content
   3. A developer can open and edit `index.html` in a standard text editor without risk of accidentally corrupting base64 blobs
 **Depends on:** Nothing (first phase — technical prerequisite for all subsequent phases)
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
   - [x] 01-01-PLAN.md — Build extraction tooling and safety net (.gitignore, git tag, extract_base64_images.py)
-  - [ ] 01-02-PLAN.md — Run extraction, swap index.html, verify visually (human checkpoint + commit)
+  - [x] 01-02-PLAN.md — Run extraction, swap index.html, verify visually (human checkpoint + commit)
 
 ### Phase 2: Hindi Locale
 **Goal:** Add HI (Hindi) as the fourth language in the existing i18n engine so that all current and future content is authored once and published in all four locales simultaneously.
@@ -105,7 +105,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Image Extraction & Baseline | 1/2 | In Progress|  |
+| 1. Image Extraction & Baseline | 2/2 | Complete   | 2026-05-13 |
 | 2. Hindi Locale | 0/? | Not started | - |
 | 3. Token Sale Section | 0/? | Not started | - |
 | 4. Revenue Participation Estimator | 0/? | Not started | - |
