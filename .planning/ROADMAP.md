@@ -43,7 +43,9 @@
   2. Switching between EN, ES, PT-BR, and HI produces complete translations with no untranslated English strings visible in any locale
   3. After selecting Hindi and closing or refreshing the browser, the page reloads in Hindi (localStorage persistence confirmed)
 **Depends on:** Phase 1
-**Plans:** TBD
+**Plans:** 2 plans ready
+  - [ ] 02-01-PLAN.md — Insert hi:{} translation block (~80 keys, Devanagari) into i18n const *(Wave 1)*
+  - [ ] 02-02-PLAN.md — Add HI button to nav .lang-sw div + human visual verification *(Wave 2 — blocked on 02-01)*
 
 ### Phase 3: Token Sale Section
 **Goal:** Publish the PEARL token sale section — token explainer, price per token, total supply, fundraising progress bar, Buy CTA routing to Telegram bot, and a tokenomics page framing the 15% revenue participation model as a compliant utility token.
@@ -106,7 +108,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Image Extraction & Baseline | 2/2 | Complete    | 2026-05-13 |
-| 2. Hindi Locale | 0/? | Not started | - |
+| 2. Hindi Locale | 0/2 | Ready to execute | - |
 | 3. Token Sale Section | 0/? | Not started | - |
 | 4. Revenue Participation Estimator | 0/? | Not started | - |
 | 5. Facility Photo Feed | 0/? | Not started | - |
