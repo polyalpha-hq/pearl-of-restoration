@@ -30,8 +30,8 @@
   2. All four product blocks (Oil Regeneration, MWF, Activated Carbon, KDK) display their photos correctly — no broken images, no missing content
   3. A developer can open and edit `index.html` in a standard text editor without risk of accidentally corrupting base64 blobs
 **Depends on:** Nothing (first phase — technical prerequisite for all subsequent phases)
-**Plans:** 2 plans
-  - [ ] 01-01-PLAN.md — Build extraction tooling and safety net (.gitignore, git tag, extract_base64_images.py)
+**Plans:** 1/2 plans executed
+  - [x] 01-01-PLAN.md — Build extraction tooling and safety net (.gitignore, git tag, extract_base64_images.py)
   - [ ] 01-02-PLAN.md — Run extraction, swap index.html, verify visually (human checkpoint + commit)
 
 ### Phase 2: Hindi Locale
@@ -105,7 +105,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Image Extraction & Baseline | 0/? | Not started | - |
+| 1. Image Extraction & Baseline | 1/2 | In Progress|  |
 | 2. Hindi Locale | 0/? | Not started | - |
 | 3. Token Sale Section | 0/? | Not started | - |
 | 4. Revenue Participation Estimator | 0/? | Not started | - |
