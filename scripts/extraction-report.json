@@ -1,0 +1,100 @@
+[
+  {
+    "index": 0,
+    "filename": "media/hero-bg.jpg",
+    "bytes": 623152,
+    "sha256": "1431fa1c8213ecad224f4eb2a0e989d19560bdda998d7c08dc4f4904a0c89dc9",
+    "source_line_approx": 45
+  },
+  {
+    "index": 1,
+    "filename": "media/iceland-bg.jpg",
+    "bytes": 338834,
+    "sha256": "2d28b292ac26930b00be23073fc49668254b77c535bc216b56c3da94752222d6",
+    "source_line_approx": 70
+  },
+  {
+    "index": 2,
+    "filename": "media/cosmos-bg.jpg",
+    "bytes": 1763108,
+    "sha256": "ab95a5a51798f2762b921ba7d7f30d7372babb8b68892f4fa34174c91daab9d6",
+    "source_line_approx": 76
+  },
+  {
+    "index": 3,
+    "filename": "media/about-director.png",
+    "bytes": 641504,
+    "sha256": "d8d24651b5fce0fd2005a0e517dd172109851b10b254fd54d3d15c271c148e7d",
+    "source_line_approx": 406
+  },
+  {
+    "index": 4,
+    "filename": "media/block1-photo-1.jpg",
+    "bytes": 213641,
+    "sha256": "bc37d0700a07f766a96dff45bce6d8493a0ec7e823b234485b7130de11ac3d32",
+    "source_line_approx": 488
+  },
+  {
+    "index": 5,
+    "filename": "media/block1-photo-2.jpg",
+    "bytes": 189379,
+    "sha256": "83aec6ce4e1f8a2491bb0c508f1f7ae6e334546264eae2d8c45faf5fc5a402c8",
+    "source_line_approx": 489
+  },
+  {
+    "index": 6,
+    "filename": "media/block1-photo-3.jpg",
+    "bytes": 157710,
+    "sha256": "d6431ff2dc73be29a710daa406a1aa8413ecf678030bfaea3195ddde30f425b9",
+    "source_line_approx": 490
+  },
+  {
+    "index": 7,
+    "filename": "media/block1-photo-4.jpg",
+    "bytes": 183479,
+    "sha256": "e2e7b98a578bee5d07e5e0d0b0a20e3280576b00e6c265fbac62b3cee86a006c",
+    "source_line_approx": 491
+  },
+  {
+    "index": 8,
+    "filename": "media/block1-photo-5.jpg",
+    "bytes": 195842,
+    "sha256": "edfe6ab39801a0c6281ad034c000e30f07e30f66526c16e874671c2379623ab0",
+    "source_line_approx": 492
+  },
+  {
+    "index": 9,
+    "filename": "media/block1-photo-6.jpg",
+    "bytes": 198826,
+    "sha256": "b7e488e61e6c41193e7cdd80c6d00bfe62a02df69db60a6e35949b1c9f757263",
+    "source_line_approx": 493
+  },
+  {
+    "index": 10,
+    "filename": "media/block1-photo-7.jpg",
+    "bytes": 101668,
+    "sha256": "231a169f152d065c14a605753155d8440c4bc14eb44f755e1f78d56e6dd14e51",
+    "source_line_approx": 494
+  },
+  {
+    "index": 11,
+    "filename": "media/block3-photo-1.jpg",
+    "bytes": 58872,
+    "sha256": "5e5f6b7e2ebafb8d87cb89a6f70d4107a39a195e9c97a1cef9d07d9e33d87326",
+    "source_line_approx": 508
+  },
+  {
+    "index": 12,
+    "filename": "media/block3-photo-2.jpg",
+    "bytes": 746721,
+    "sha256": "e63e94796fcd465a7e2bea1f51125690be23639ee54c5a42be0e308b3309ebe7",
+    "source_line_approx": 509
+  },
+  {
+    "index": 13,
+    "filename": "media/block4-photo-1.jpg",
+    "bytes": 1230951,
+    "sha256": "1e8e42f0581a04c475c91ff5d3f7a94c43441012044806a574cda4579e222248",
+    "source_line_approx": 514
+  }
+]
