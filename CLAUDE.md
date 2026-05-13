@@ -285,7 +285,7 @@ Do not make direct repo edits outside a GSD workflow unless the user explicitly 
 
 ## Auto-save rule
 
-After every completed phase or significant decision, automatically update `Memory.md` and `CLAUDE.md` without waiting for a user reminder. Commit with message:
+After every completed phase or significant decision, automatically update `Memory.md`, `CLAUDE.md`, and `SKILL_pearl-of-restoration.md` without waiting for a user reminder. Commit with message:
 
 ```
 docs: auto-update memory after [phase/decision name]
