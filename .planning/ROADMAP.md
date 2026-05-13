@@ -30,7 +30,9 @@
   2. All four product blocks (Oil Regeneration, MWF, Activated Carbon, KDK) display their photos correctly — no broken images, no missing content
   3. A developer can open and edit `index.html` in a standard text editor without risk of accidentally corrupting base64 blobs
 **Depends on:** Nothing (first phase — technical prerequisite for all subsequent phases)
-**Plans:** TBD
+**Plans:** 2 plans
+  - [ ] 01-01-PLAN.md — Build extraction tooling and safety net (.gitignore, git tag, extract_base64_images.py)
+  - [ ] 01-02-PLAN.md — Run extraction, swap index.html, verify visually (human checkpoint + commit)
 
 ### Phase 2: Hindi Locale
 **Goal:** Add HI (Hindi) as the fourth language in the existing i18n engine so that all current and future content is authored once and published in all four locales simultaneously.

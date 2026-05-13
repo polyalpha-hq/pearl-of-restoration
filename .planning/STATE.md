@@ -1,9 +1,25 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: unknown
+last_updated: "2026-05-13T13:12:33.836Z"
+progress:
+  total_phases: 6
+  completed_phases: 0
+  total_plans: 2
+  completed_plans: 0
+  percent: 0
+---
+
 # Project State — Pearl of Restoration
 
 ## Status
+
 Planning — Phase 1 ready to plan
 
 ## Project Reference
+
 See: .planning/PROJECT.md (updated 2026-05-13)
 
 **Core value:** A prospective investor can understand the PEARL token opportunity and take action in under 60 seconds in their own language.
@@ -33,6 +49,7 @@ See: .planning/PROJECT.md (updated 2026-05-13)
 ## Accumulated Context
 
 ### Key Decisions
+
 - Telegram bot is the only purchase backend — no on-site transactions
 - Static 5-minute photo refresh instead of live RTSP stream (no relay server)
 - No TonConnect SDK for v1 — bot handles all on-chain logic
@@ -40,17 +57,20 @@ See: .planning/PROJECT.md (updated 2026-05-13)
 - PEARL positioned as utility token (revenue participation), never investment instrument
 
 ### External Blockers
+
 - Phase 3 (Token Sale): TOKEN-03 tokenomics content requires legal review before publish
 - Phase 4 (Calculator): Dashboard HTML file must be provided by project owner
 - Phase 5 (Photo Feed): CDN/server endpoint must be set up by camera operator
 - Phase 6 (Referral): Telegram bot owner must confirm `/mycode` command exists
 
 ### Content Rules (Never Violate)
+
 - Never mention Russia, Russian origin, GOST, or Russian company names in any user-visible text
 - Never use "investment return", "profit", or "guaranteed" in token/calculator content
 - All buy/referral actions must route through Telegram bot — no website backend
 
 ### Technical Notes
+
 - `index.html` is currently ~8.5MB due to 14+ base64-encoded images
 - Phase 1 is a hard prerequisite — editing the 8.5MB file risks accidental base64 corruption
 - After Phase 1, file should be under 50KB HTML with images in `media/` folder
@@ -65,4 +85,5 @@ See: .planning/PROJECT.md (updated 2026-05-13)
 ---
 
 ## Last Activity
+
 2026-05-13 — Project initialized, roadmap created (6 phases, 15/15 requirements mapped)
