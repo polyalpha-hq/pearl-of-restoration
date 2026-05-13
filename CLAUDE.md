@@ -4,8 +4,8 @@
 - Brand: **Pearl of Restoration** / Жемчужина Возрождения
 - Company: ООО ТД «Ренессанс-Контракт», Director: Андрей Барановский
 - Repo: https://github.com/polyalpha-hq/pearl-of-restoration (GitHub Pages)
-- Primary file: `index.html` (built from `pearl-of-restoration-v6.html`, ~8.9MB)
-- Backup: `/tmp/backup-v5.html` (v5), `~/Desktop/pearl-of-restoration-v5.html`
+- Primary file: `index.html` — **81 KB** after Phase 1 extraction (was ~8.9MB; 14 images now in `media/`)
+- Backup: `/tmp/backup-v5.html` (v5), git tag `pre-extraction-baseline` (8.5MB state)
 
 ---
 
@@ -18,24 +18,35 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 
 ---
 
-## Page Structure (v6)
+## Page Structure (v6.1 — post Phase 1)
 - 4 content blocks + tab buttons (max-width: 1060px) → full-width gallery
-- **Block I** — Industrial Oil Regeneration System: 7 photos (base64) + 2 videos (`media/`)
+- **Block I** — Industrial Oil Regeneration System: 7 external photos in `media/` + 2 videos
 - **Block II** — MWF video: `media/mwf-video-1.mp4`
-- **Block III** — Activated Carbon (sorbent): 2 photos (base64)
-- **Block IV** — Waste-to-Energy Complex (KDK): 1 photo (base64)
+- **Block III** — Activated Carbon (sorbent): 2 external photos in `media/`
+- **Block IV** — Waste-to-Energy Complex (KDK): 1 external photo in `media/`
 - Each block has a **Read More** button → full-width panel below
 - QR modal: crypto donate working
 - CO2 counter formula: $1 = 100L = 320kg CO2
 
-## Media Files
-- `media/station-1.jpg` — station photo
-- `media/station-7.jpg` — station photo
+## Media Files (all external after Phase 1)
+**Images extracted from base64:**
+- `media/hero-bg.jpg` — hero section CSS background
+- `media/iceland-bg.jpg` — iceland section CSS background
+- `media/cosmos-bg.jpg` — cosmos/roadmap section CSS background
+- `media/about-director.png` — director portrait (contains JPEG data despite .png extension — pre-existing mismatch)
+- `media/block1-photo-{1..7}.jpg` — Block I (Oil Regeneration) gallery, 7 photos
+- `media/block3-photo-{1,2}.jpg` — Block III (Activated Carbon) gallery, 2 photos
+- `media/block4-photo-1.jpg` — Block IV (KDK/Waste-to-Energy) gallery, 1 photo
+
+**Videos (were already external):**
 - `media/mwf-video-1.mp4` — MWF block video
+- `media/station-video-1.mp4` — station video
+- `media/station-video-2.mp4` — station video
 
 ## Crypto Donate
 - USDT TRC-20: `THt3iokn8NELPyaeWHWd8n7xBNECVxwyND`
 - BTC: `bc1q04azu8yus2ynku0fdf2decvjm6javynnx8e0kr`
+- TON (owner wallet): `UQACdIf-AKuiV5_mQMiMX_OVJtfV1aABXBZIaWS8Gn8nbcyV`
 
 ---
 
@@ -71,8 +82,62 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 
 ## DO NOT
 - Mention Russia or Russian origin in any output
+- Mention molasses, sugar plants, or specific feedstock sources
 - Promise operating Waste-to-Energy facilities (none exist)
 - Position Pearl token as investment instrument
+- Use `python3 -m http.server` for local testing — it breaks video playback (no Range request support); use `npx serve` instead
+
+---
+
+## PEARL Token
+
+| Parameter | Value |
+|-----------|-------|
+| Price | **$1.00** |
+| Supply | **20,000,000 PEARL** |
+| Blockchain | **TON** |
+| Yield model | **15% of annual activated carbon revenue** |
+| Legal framing | Utility token (revenue participation) — NOT investment instrument |
+
+## Telegram Bot
+
+- Accepts: **USDT TRC-20**, **TON**, **Toncoin**
+- Languages: **HI** (Hindi), **PT** (Portuguese), **ID** (Indonesian), **EN** (English)
+- Built-in referral system; `/mycode` command returns user's referral code
+
+## Referral Program
+
+| Transaction type | Referrer reward |
+|-----------------|-----------------|
+| Token purchase / donate | **5%** |
+| Equipment sale | **2%** |
+| Investment | **1%** |
+
+- Crypto-only payouts
+- 2-level structure (referrer + referrer's referrer)
+
+## Revenue Numbers
+
+| Scenario | Revenue/year | Token pool (15%)/year |
+|----------|--------------|-----------------------|
+| 1 production line | $18.9M | $2.84M |
+| 3 production lines (target) | $56.8M | $8.5M |
+
+Sustainability fee (3 lines): ~$15.95M/year — shown as a separate operational stream, not part of token pool.
+
+## Public Positioning Formula
+
+> "Agricultural biomass waste → premium activated carbon"
+
+Never mention: Russia, molasses, sugar plants, GOST, МСРМ, СОЖ, КДК.
+
+## Known Bugs (non-blocking — fix in future phase)
+
+| Bug | Location | Impact |
+|-----|----------|--------|
+| Lightbox JS crash | `index.html:832-839` — `openLightbox()` calls `#lightbox` which doesn't exist | Gallery image clicks throw `TypeError` |
+| Backslash in footer | `index.html:704` — `\&nbsp;\&middot;\&nbsp;` renders as `\ · \` | Two visible stray backslashes |
+| extraction-report.json not gitignored | `.gitignore` missing this entry | Unexpected diffs on script re-runs |
 
 <!-- GSD:project-start source:PROJECT.md -->
 ## Project
@@ -112,9 +177,10 @@ A global investment website for the PEARL token on the TON blockchain, enabling 
 - **No build step** — edit `index.html`, commit, push = deploy
 - **No package.json / node_modules** — zero dependencies to install
 ## Asset Approach
-- **Images**: Base64-encoded inline (~14 instances, responsible for ~8.4MB of file size)
-- **Videos**: External files in `media/` folder (`station-1.jpg`, `station-7.jpg`, `mwf-video-1.mp4`)
+- **Images**: External files in `media/` folder (extracted in Phase 1 — no longer base64 inline)
+- **Videos**: External files in `media/` folder (`mwf-video-1.mp4`, `station-video-1.mp4`, `station-video-2.mp4`)
 - **Fonts/Icons**: CDN-loaded at runtime
+- **Local verification**: use `npx serve` (NOT `python3 -m http.server` — lacks Range request support for video)
 ## Browser Targets
 - CSS custom properties (`:root` vars)
 - `backdrop-filter: blur()` (webkit-prefixed fallback included)
@@ -214,3 +280,20 @@ Do not make direct repo edits outside a GSD workflow unless the user explicitly 
 > Profile not yet configured. Run `/gsd-profile-user` to generate your developer profile.
 > This section is managed by `generate-claude-profile` -- do not edit manually.
 <!-- GSD:profile-end -->
+
+---
+
+## Auto-save rule
+
+After every completed phase or significant decision, automatically update `Memory.md` and `CLAUDE.md` without waiting for a user reminder. Commit with message:
+
+```
+docs: auto-update memory after [phase/decision name]
+```
+
+What triggers an auto-update:
+- Phase execution completes (`/gsd-execute-phase`)
+- New token/financial numbers confirmed by user
+- New addresses or bot parameters added
+- Architecture decision finalized
+- Known bugs discovered or fixed
