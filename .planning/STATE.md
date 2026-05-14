@@ -2,35 +2,35 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: ready_to_execute
-last_updated: "2026-05-13T13:30:00.000Z"
+status: ready_to_plan
+last_updated: "2026-05-14T00:00:00.000Z"
 progress:
   total_phases: 6
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 4
-  completed_plans: 0
-  percent: 17
+  completed_plans: 4
+  percent: 33
 ---
 
 # Project State — Pearl of Restoration
 
 ## Status
 
-Ready to Execute — Phase 2 planned (2 plans)
+Phase 2 Complete — Ready to plan Phase 3 (Token Sale Section)
 
 ## Project Reference
 
 See: .planning/PROJECT.md (updated 2026-05-13)
 
 **Core value:** A prospective investor can understand the PEARL token opportunity and take action in under 60 seconds in their own language.
-**Current focus:** Phase 2 — Hindi Locale
+**Current focus:** Phase 3 — Token Sale Section
 
 ## Phases
 
 | # | Name | Status | Plans |
 |---|------|--------|-------|
 | 1 | Image Extraction & Baseline | Complete | 2 |
-| 2 | Hindi Locale | Ready to execute | 2 |
+| 2 | Hindi Locale | Complete | 2 |
 | 3 | Token Sale Section | Not started | 0 |
 | 4 | Revenue Participation Estimator | Not started | 0 |
 | 5 | Facility Photo Feed | Not started | 0 |
@@ -41,10 +41,10 @@ See: .planning/PROJECT.md (updated 2026-05-13)
 | Metric | Value |
 |--------|-------|
 | Phases total | 6 |
-| Phases complete | 1 |
+| Phases complete | 2 |
 | Requirements mapped | 15/15 |
 | Plans created | 4 |
-| Plans complete | 0 |
+| Plans complete | 4 |
 
 ## Accumulated Context
 
@@ -78,12 +78,12 @@ See: .planning/PROJECT.md (updated 2026-05-13)
 
 ## Session Continuity
 
-**Next action:** Run `/gsd-execute-phase 2` to execute the Hindi locale plans.
+**Next action:** Run `/gsd-discuss-phase 3` to discuss Phase 3 (Token Sale Section) before planning.
 
-**Phase 2 entry condition:** Phase 1 complete. No external blockers. Safe to start immediately.
+**Phase 3 entry condition:** Phase 2 complete. External blocker: TOKEN-03 content requires legal review before tokenomics page is published.
 
 ---
 
 ## Last Activity
 
-2026-05-13 — Phase 2 planned: 2 plans, 2 waves (02-01: hi:{} translation block; 02-02: HI nav button + human visual verify)
+2026-05-14 — Phase 2 complete: Hindi locale live — 122-key hi:{} block + HI nav button; all locales verified. CR-01 content policy fix applied (removed molasses/sugar factory reference from rm_block3_inner).

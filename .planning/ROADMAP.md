@@ -11,7 +11,7 @@
 ## Phases
 
 - [x] **Phase 1: Image Extraction & Baseline** — Extract all base64 images to `media/` folder, bringing `index.html` from 8.5MB to ~50KB (completed 2026-05-13)
-- [ ] **Phase 2: Hindi Locale** — Add HI to the existing EN/ES/PT-BR i18n engine with full translations
+- [x] **Phase 2: Hindi Locale** — Add HI to the existing EN/ES/PT-BR i18n engine with full translations (completed 2026-05-14)
 - [ ] **Phase 3: Token Sale Section** — Ship PEARL token section with price, supply, progress bar, Buy CTA, and tokenomics page
 - [ ] **Phase 4: Revenue Participation Estimator** — Integrate existing dashboard HTML as investment calculator with scoped CSS
 - [ ] **Phase 5: Facility Photo Feed** — Add construction feed section loading latest photo from CDN URL with 5-minute refresh
@@ -43,9 +43,9 @@
   2. Switching between EN, ES, PT-BR, and HI produces complete translations with no untranslated English strings visible in any locale
   3. After selecting Hindi and closing or refreshing the browser, the page reloads in Hindi (localStorage persistence confirmed)
 **Depends on:** Phase 1
-**Plans:** 2 plans ready
-  - [ ] 02-01-PLAN.md — Insert hi:{} translation block (~80 keys, Devanagari) into i18n const *(Wave 1)*
-  - [ ] 02-02-PLAN.md — Add HI button to nav .lang-sw div + human visual verification *(Wave 2 — blocked on 02-01)*
+**Plans:** 2/2 plans complete
+  - [x] 02-01-PLAN.md — Insert hi:{} translation block (122 keys, Devanagari) into i18n const *(Wave 1)*
+  - [x] 02-02-PLAN.md — Add HI button to nav .lang-sw div + human visual verification *(Wave 2)*
 
 ### Phase 3: Token Sale Section
 **Goal:** Publish the PEARL token sale section — token explainer, price per token, total supply, fundraising progress bar, Buy CTA routing to Telegram bot, and a tokenomics page framing the 15% revenue participation model as a compliant utility token.
@@ -108,7 +108,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Image Extraction & Baseline | 2/2 | Complete    | 2026-05-13 |
-| 2. Hindi Locale | 0/2 | Ready to execute | - |
+| 2. Hindi Locale | 2/2 | Complete | 2026-05-14 |
 | 3. Token Sale Section | 0/? | Not started | - |
 | 4. Revenue Participation Estimator | 0/? | Not started | - |
 | 5. Facility Photo Feed | 0/? | Not started | - |
@@ -122,9 +122,9 @@
 |-------------|-------|--------|
 | PERF-01 | Phase 1 | Pending |
 | PERF-02 | Phase 1 | Pending |
-| I18N-01 | Phase 2 | Pending |
-| I18N-02 | Phase 2 | Pending |
-| I18N-03 | Phase 2 | Pending |
+| I18N-01 | Phase 2 | Complete |
+| I18N-02 | Phase 2 | Complete |
+| I18N-03 | Phase 2 | Complete |
 | TOKEN-01 | Phase 3 | Pending |
 | TOKEN-02 | Phase 3 | Pending |
 | TOKEN-03 | Phase 3 | Pending |
