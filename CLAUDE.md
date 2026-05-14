@@ -94,9 +94,13 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 | Parameter | Value |
 |-----------|-------|
 | Price | **$1.00** |
-| Supply | **20,000,000 PEARL** |
+| Total emission | **31,051,657 PEARL** (26,051,657 sale + 2,000,000 team + 3,000,000 referral) |
 | Blockchain | **TON** |
-| Yield model | **15% of annual activated carbon revenue** |
+| Target raise | **$26,051,657** → minus 5% referrals = **$24,749,074** for construction |
+| Yield model | **Dual annual streams** — 15% sorbent revenue + 65% Carbon Recovery Fee |
+| DEX listing | STON.fi / DeDust — after Line III operational |
+| Buyback | $1.15/token after Line III, monthly cap ~$1,960,000 |
+| Exchange rate | Fixed: **92 RUB/$** |
 | Legal framing | Utility token (revenue participation) — NOT investment instrument |
 
 ## Telegram Bot
@@ -116,14 +120,30 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 - Crypto-only payouts
 - 2-level structure (referrer + referrer's referrer)
 
-## Revenue Numbers
+## Revenue Numbers — v2 (dual annual streams)
 
-| Scenario | Revenue/year | Token pool (15%)/year |
-|----------|--------------|-----------------------|
-| 1 production line | $18.9M | $2.84M |
-| 3 production lines (target) | $56.8M | $8.5M |
+### Stream 1: Sorbent Revenue (per line)
+| Item | Value/year |
+|------|-----------|
+| Sorbent revenue | $18,935,000 |
+| Cost of production | $4,733,696 (25 RUB/kg @ 92 RUB/$) |
+| Token pool (15%) | **$2,840,000** |
 
-Sustainability fee (3 lines): ~$15.95M/year — shown as a separate operational stream, not part of token pool.
+### Stream 2: Carbon Recovery Fee (CRF)
+| Lines | CRF total/year | 65% → token pool | 35% → operational |
+|-------|---------------|-------------------|-------------------|
+| 1 line | $5,316,667 | $3,456,000 | $1,861,000 |
+| 3 lines (target) | $15,950,000 | $10,368,000 | $5,582,000 |
+
+> CRF flows to token pool **annually** — not a one-time payment.
+
+### Combined Token Pool
+| Scenario | Stream 1 (15% sorbent) | Stream 2 (65% CRF) | Total pool/year | Annual yield |
+|----------|------------------------|---------------------|-----------------|--------------|
+| 1 line | $2,840,000 | $3,456,000 | **$6,296,000** | — |
+| 3 lines (target) | $8,520,000 | $10,368,000 | **$18,888,000** | **~60.8%** |
+
+Yield basis: $18,888,000 / 31,051,657 tokens ≈ 60.8% annually on total emission.
 
 ## Public Positioning Formula
 
