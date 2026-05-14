@@ -129,6 +129,7 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 | Carbon Recovery Fee (CRF) | $4,369,565 (3,000 RUB/t × 134,000 t ÷ 92) |
 | **Full line turnover** | **$23,304,565** |
 | Cost of production | $218/ton = 20,061 RUB/ton — fully covered by CRF |
+| **Line construction cost** | **$8,249,691** ($24,749,074 ÷ 3) |
 | **Token pool (30%)** | **$6,991,370/year** |
 
 ### Token Pool & Yield
