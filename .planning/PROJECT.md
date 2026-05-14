@@ -26,9 +26,9 @@ A prospective investor can understand the PEARL token opportunity and take actio
 - ✓ **PERF-02** — All product block content fully intact after extraction — Validated in Phase 1: human-verified in browser, no broken images
 
 ### Active
-- [ ] **I18N-01** — Language switcher with 4 locales: EN, ES, PT-BR, HI
-- [ ] **I18N-02** — All visible text translated per locale; default is EN
-- [ ] **I18N-03** — Language selection persists across page reloads (localStorage)
+- ✓ **I18N-01** — Language switcher with 4 locales: EN, ES, PT-BR, HI — Validated in Phase 2: HI button added, all 4 locales switch correctly
+- ✓ **I18N-02** — All visible text translated per locale; default is EN — Validated in Phase 2: 122-key hi:{} block, no untranslated strings
+- ✓ **I18N-03** — Language selection persists across page reloads (localStorage) — Validated in Phase 2: human-verified in browser
 - [ ] **TOKEN-01** — Token sale section: PEARL token explainer, price, supply, fundraising progress
 - [ ] **TOKEN-02** — "Buy PEARL" CTA that opens Telegram bot link
 - [ ] **TOKEN-03** — Token economics page showing 15% annual revenue distribution model
@@ -50,7 +50,7 @@ A prospective investor can understand the PEARL token opportunity and take actio
 
 ## Context
 
-**Codebase state:** Single-file static site (`index.html`, now 81 KB after Phase 1 extraction). 14 images in `media/`. Deployed to GitHub Pages from `polyalpha-hq/pearl-of-restoration`. No build pipeline — edit HTML, commit, deploy.
+**Codebase state:** Single-file static site (`index.html`, now ~84 KB after Phase 2 Hindi locale). Phase 2 complete — EN/ES/PT/HI all live. 14 images in `media/`. Deployed to GitHub Pages from `polyalpha-hq/pearl-of-restoration`. No build pipeline — edit HTML, commit, deploy.
 
 **Blockchain:** PEARL token deployed on TON blockchain. Smart contract exists. Purchases handled via Telegram bot (both TonKeeper and credit-card-style flows redirect to bot). Total raise target: $24,749,074.
 
