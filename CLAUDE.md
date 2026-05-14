@@ -97,9 +97,9 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 | Total emission | **31,051,657 PEARL** (26,051,657 sale + 2,000,000 team + 3,000,000 referral) |
 | Blockchain | **TON** |
 | Target raise | **$26,051,657** → minus 5% referrals = **$24,749,074** for construction |
-| Yield model | **Dual annual streams** — 15% sorbent revenue + 65% Carbon Recovery Fee |
-| DEX listing | STON.fi / DeDust — after Line III operational |
-| Buyback | $1.15/token after Line III, monthly cap ~$1,960,000 |
+| Yield model | **30% of full line turnover** (sorbent revenue + Carbon Recovery Fee) |
+| DEX listing | STON.fi / DeDust — after **Line II** completion |
+| Buyback | $1.15/token from **start of Line III construction**, monthly cap ~$1,960,000 |
 | Exchange rate | Fixed: **92 RUB/$** |
 | Legal framing | Utility token (revenue participation) — NOT investment instrument |
 
@@ -120,30 +120,27 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 - Crypto-only payouts
 - 2-level structure (referrer + referrer's referrer)
 
-## Revenue Numbers — v2 (dual annual streams)
+## Revenue Numbers — v3 (30% of full turnover)
 
-### Stream 1: Sorbent Revenue (per line)
+### Per-Line Economics
 | Item | Value/year |
 |------|-----------|
 | Sorbent revenue | $18,935,000 |
-| Cost of production | $4,733,696 (25 RUB/kg @ 92 RUB/$) |
-| Token pool (15%) | **$2,840,000** |
+| Carbon Recovery Fee (CRF) | $4,369,565 (3,000 RUB/t × 134,000 t ÷ 92) |
+| **Full line turnover** | **$23,304,565** |
+| Cost of production | $218/ton = 20,061 RUB/ton — fully covered by CRF |
+| **Token pool (30%)** | **$6,991,370/year** |
 
-### Stream 2: Carbon Recovery Fee (CRF)
-| Lines | CRF total/year | 65% → token pool | 35% → operational |
-|-------|---------------|-------------------|-------------------|
-| 1 line | $5,316,667 | $3,456,000 | $1,861,000 |
-| 3 lines (target) | $15,950,000 | $10,368,000 | $5,582,000 |
+### Token Pool & Yield
+| Scenario | Turnover/year | Token pool (30%) | Annual yield | Payback |
+|----------|--------------|------------------|--------------|---------|
+| 1 line | $23,304,565 | **$6,991,370** | **22.5%** | ~53 months |
+| 3 lines (target) | $69,913,695 | **$20,974,109** | **67.5%** | **~17.8 months** |
 
-> CRF flows to token pool **annually** — not a one-time payment.
+Yield basis: pool / 31,051,657 tokens (total emission at $1.00).
 
-### Combined Token Pool
-| Scenario | Stream 1 (15% sorbent) | Stream 2 (65% CRF) | Total pool/year | Annual yield |
-|----------|------------------------|---------------------|-----------------|--------------|
-| 1 line | $2,840,000 | $3,456,000 | **$6,296,000** | — |
-| 3 lines (target) | $8,520,000 | $10,368,000 | **$18,888,000** | **~60.8%** |
-
-Yield basis: $18,888,000 / 31,051,657 tokens ≈ 60.8% annually on total emission.
+> **Payback logic:** tokenholders recover 2× faster than the plant itself.
+> Plant payback: 6–8 months. Token payback at 3 lines: ~17.8 months.
 
 ## Public Positioning Formula
 
