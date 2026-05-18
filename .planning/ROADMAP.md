@@ -120,18 +120,17 @@
 **UI hint:** yes
 
 ### Phase 8: Object Map
-**Goal:** Add an interactive map section showing all operating facilities as nodes, with each node displaying live load % pulled from Phase 7's on-chain telemetry — turning "we plan to scale" into "here are N nodes running right now".
+**Goal:** Surface live load % per operating facility, fed by Phase 7's on-chain telemetry — so a visitor can see "here are N nodes running right now" instead of reading marketing claims. The **specific visualization (geographic map, abstract globe, region tiles, plain list) is deliberately unresolved** and decided at plan-phase time, after Phase 7 is live and the real number of facilities is known.
 **Mode:** mvp
 **Requirements:** MAP-01, MAP-02, MAP-03
 **Success Criteria** (what must be TRUE):
-  1. A visitor sees a map (or globe view) section with one marker per operating facility, each marker showing live load % computed from the most recent Phase 7 telemetry packet for that facility
-  2. **Geography is anonymized at country or region level only** — no specific city names, no precise coordinates. Implementation decision (per-region label vs. abstract globe vs. country-tile) is made at `/gsd-plan-phase 8` time; the public widget must never expose Russian city names per the platform's content policy
-  3. Tapping a node opens a detail panel with: facility ID, line capacity, current load %, link to that node's Phase 7 telemetry on-chain
-  4. The map updates without a page reload as new telemetry arrives (polling cadence at minimum once per minute)
+  1. A visitor sees a section listing each operating facility with its current load % computed from the most recent Phase 7 telemetry packet, updated without a page reload as new telemetry arrives (polling cadence at minimum once per minute)
+  2. **No city-level geography is exposed publicly.** Real facility locations (recorded internally in `Memory.md`) MUST NOT appear by name, by pin on a map, or by precise coordinate. The public visualization format is **TBD — deferred to `/gsd-plan-phase 8`** when the number of live facilities and the brand's stance on geographic disclosure are both settled. Acceptable forms include: region/continent labels only, abstract globe with non-geographic markers, country-level tiles, or a plain list with facility IDs. Hard-coded forbidden: any UI that lets a visitor identify a specific Russian city as a facility location
+  3. Tapping a facility opens a detail panel with: facility ID, line capacity, current load %, link to that node's Phase 7 telemetry on-chain
 **Depends on:** Phase 7 (no live data without it)
-**Blocked on:** At least 2 facilities must be on-chain in Phase 7 before the map adds value
+**Blocked on:** At least 2 facilities on-chain in Phase 7 + visualization-format decision made at plan-phase time
 **Plans:** TBD
-**UI hint:** yes
+**UI hint:** yes — but format is unresolved; do not pre-commit to a map-style UI before plan-phase
 
 ### Phase 9: Transparency Report
 **Goal:** Make each quarterly dividend payout end-to-end auditable on-chain by linking the payout transaction to the specific sorbent batch IDs whose revenue funded it, closing the loop from physical production (Phase 7) to investor return.
