@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl of Restoration · Activated Carbon Investment Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #04080f;
+    --bg-alt:      #0a121e;
+    --bg-card:     rgba(10,18,30,0.82);
+    --gold:        #c9a84c;
+    --gold-light:  #e8d06a;
+    --gold-soft:   rgba(201,168,76,0.12);
+    --gold-dim:    rgba(201,168,76,0.30);
+    --cream:       #f0e8d0;
+    --cream-dim:   rgba(240,232,208,0.75);
+    --cream-faint: rgba(240,232,208,0.45);
+    --green:       #7ec99c;
+    --border:      rgba(201,168,76,0.18);
+    --border-soft: rgba(240,232,208,0.08);
+
+    --f-display: 'Cinzel Decorative', serif;
+    --f-heading: 'Cinzel', serif;
+    --f-body:    'EB Garamond', Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%;
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--f-body);
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 14px;
+    border: 1px solid var(--gold-dim);
+    pointer-events: none;
+    z-index: 100;
+  }
+  .deck {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-soft);
+    page-break-after: always;
+    position: relative;
+  }
+  .slide.compact { justify-content: flex-start; padding-top: 110px; }
+  .slide-num {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-family: var(--f-heading);
+    font-size: 12px;
+    color: var(--cream-faint);
+    letter-spacing: 0.25em;
+  }
+  .eyebrow {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+  h1, h2, h3 { color: var(--cream); line-height: 1.18; }
+  h1 {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 68px;
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+    color: var(--gold-light);
+  }
+  h2 {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+    color: var(--gold-light);
+  }
+  h3 {
+    font-family: var(--f-heading);
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 14px;
+    color: var(--cream);
+  }
+  p {
+    font-family: var(--f-body);
+    font-size: 19px;
+    color: var(--cream-dim);
+    margin-bottom: 18px;
+    max-width: 880px;
+  }
+  .lead {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    line-height: 1.5;
+    max-width: 920px;
+  }
+  .big-num {
+    font-family: var(--f-heading);
+    font-size: 88px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--gold);
+  }
+  .num-unit {
+    font-family: var(--f-heading);
+    font-size: 24px;
+    color: var(--cream-dim);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
+  .grid { display: grid; gap: 28px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    backdrop-filter: blur(6px);
+  }
+  .card.tight { padding: 22px; }
+  .stat .label {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--cream-faint);
+    margin-bottom: 10px;
+  }
+  .stat .value {
+    font-family: var(--f-heading);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+  .stat .value.accent { color: var(--gold); }
+  .stat .value.green  { color: var(--green); }
+  .stat .sub {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-faint);
+    margin-top: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--f-body);
+    font-size: 16px;
+  }
+  th, td {
+    text-align: left;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  th {
+    font-family: var(--f-heading);
+    font-weight: 500;
+    color: var(--gold);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    background: rgba(201,168,76,0.04);
+  }
+  td { color: var(--cream); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  tr.total td {
+    font-weight: 600;
+    color: var(--gold-light);
+    border-top: 1px solid var(--gold-dim);
+    background: rgba(201,168,76,0.06);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('media/cosmos-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.28;
+    z-index: 0;
+  }
+  .hero-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(4,8,15,0.55) 0%, rgba(4,8,15,0.20) 40%, rgba(4,8,15,0.75) 100%);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 2px;
+    font-family: var(--f-heading);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  ul.bullets { list-style: none; padding: 0; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-family: var(--f-body);
+    font-size: 18px;
+    color: var(--cream-dim);
+    line-height: 1.55;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 12px;
+    width: 10px; height: 1px;
+    background: var(--gold);
+  }
+  ul.bullets li strong { color: var(--cream); font-weight: 600; }
+  .step-flow { display: flex; align-items: stretch; gap: 18px; margin-top: 16px; }
+  .step {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+  }
+  .step-num {
+    font-family: var(--f-heading);
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .step-title {
+    font-family: var(--f-heading);
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .step-desc {
+    font-family: var(--f-body);
+    font-size: 16px;
+    color: var(--cream-dim);
+    line-height: 1.5;
+  }
+  .step-arrow {
+    align-self: center;
+    color: var(--gold);
+    font-size: 22px;
+  }
+  .bar-row { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; font-family: var(--f-body); font-size: 16px; }
+  .bar-label { flex: 0 0 220px; color: var(--cream); }
+  .bar-track { flex: 1; height: 6px; background: rgba(201,168,76,0.08); border-radius: 1px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--gold); border-radius: 1px; }
+  .bar-val { flex: 0 0 150px; text-align: right; color: var(--cream-dim); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  .site-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .site-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 28px;
+    backdrop-filter: blur(6px);
+  }
+  .site-card .label {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .site-card .name {
+    font-family: var(--f-heading);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .site-card .meta {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-faint);
+  }
+  .site-card .cap {
+    font-family: var(--f-heading);
+    font-size: 30px;
+    color: var(--gold);
+    font-weight: 500;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+  }
+  .quote {
+    border-left: 2px solid var(--gold);
+    padding: 8px 0 8px 24px;
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    margin: 28px 0;
+    max-width: 920px;
+    line-height: 1.5;
+  }
+  .footer-meta {
+    margin-top: auto;
+    padding-top: 48px;
+    color: var(--cream-faint);
+    font-family: var(--f-heading);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  .chart-bars { display: flex; flex-direction: column; gap: 14px; }
+  .chart-year { display: flex; align-items: center; gap: 18px; }
+  .chart-year .yr { flex: 0 0 70px; font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.08em; }
+  .chart-year .b {
+    height: 30px;
+    background: var(--gold);
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    color: var(--bg);
+    font-family: var(--f-heading);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  }
+  .chart-year .b.fade { background: var(--gold-soft); color: var(--gold); }
+  .callout {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-dim);
+    border-left: 2px solid var(--gold);
+    padding: 22px 26px;
+    border-radius: 4px;
+    max-width: 920px;
+    backdrop-filter: blur(6px);
+  }
+  .callout p { margin: 0; color: var(--cream); font-size: 18px; }
+  .callout strong { color: var(--gold-light); font-weight: 600; }
+  @media print {
+    body { background: white; color: black; }
+    body::before { display: none; }
+    .slide { min-height: 100vh; page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- SLIDE 1: TITLE -->
+  <section class="slide" style="overflow:hidden;">
+    <div class="hero-bg"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Investment Pitch · 2026</div>
+      <h1>Pearl of Restoration<br>Activated Carbon Programme</h1>
+      <p class="lead" style="max-width: 820px;">
+        A patented industrial process that converts agricultural biomass waste
+        into premium activated carbon. We resolve a recurring environmental
+        liability for processing partners and address a structural supply gap
+        in international sorbent markets.
+      </p>
+      <div style="margin-top: 56px; display: flex; gap: 64px; align-items: baseline; flex-wrap: wrap;">
+        <div>
+          <div class="big-num">$8.25<span class="num-unit"> M</span></div>
+          <div class="stat label" style="margin-top: 12px;">Capex per line, turnkey</div>
+        </div>
+        <div>
+          <div class="big-num">6–8<span class="num-unit"> mo</span></div>
+          <div class="stat label" style="margin-top: 12px;">Plant payback period</div>
+        </div>
+        <div>
+          <div class="big-num">$14.6<span class="num-unit"> M / yr</span></div>
+          <div class="stat label" style="margin-top: 12px;">Net profit per line</div>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>WIPO-patented technology · On-partner-site placement</span>
+        <span>Confidential</span>
+      </div>
+    </div>
+    <div class="slide-num">01 / 13</div>
+  </section>
+
+  <!-- SLIDE 2: THE PROBLEM -->
+  <section class="slide compact">
+    <div class="eyebrow">The Problem</div>
+    <h2>Processing partners are sitting on<br>a liability that grows every year</h2>
+    <div class="grid grid-2" style="margin-top: 32px; align-items: stretch;">
+      <div>
+        <p class="lead" style="margin-bottom: 24px;">
+          When sugar-bearing feedstock passes through membrane filtration, a
+          <strong style="color: var(--cream);">depleted agricultural byproduct</strong>
+          remains — all the marketable sugars are gone; the residual carbohydrate-rich
+          mass has nowhere to go.
+        </p>
+        <ul class="bullets">
+          <li><strong>250,000 tonnes per year</strong> accumulate across our initial target regions alone</li>
+          <li>Volumes <strong>grow every season</strong> in step with primary production output</li>
+          <li>The waste stream is <strong>almost never utilised</strong>; it sits in open storage and decomposes uncontrollably</li>
+          <li>Decomposition products contaminate soil, groundwater, surface water, and air</li>
+          <li><strong>Documented regulatory precedent</strong> — multi-million-dollar fines have already been levied against operators that failed to control disposal</li>
+        </ul>
+        <div class="quote">
+          "Operators have repeatedly raised this issue with sector regulators
+          and policy bodies — without a workable disposal pathway being offered in return."
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="stat">
+            <div class="label">Disposal fee processors will pay</div>
+            <div class="value accent">$32.6 / tonne</div>
+            <div class="sub">Conservative figure used throughout this model</div>
+          </div>
+          <p style="margin-top: 24px; font-size: 17px; color: var(--cream-dim);">
+            Processors today carry the full cost of storage, regulatory risk,
+            and eventual remediation. We replace that cost with a positive
+            revenue stream — they pay us a fixed per-tonne fee to remove the
+            waste; we pay them nothing for the feedstock we then convert.
+          </p>
+        </div>
+        <div class="card tight" style="margin-top: 20px;">
+          <div class="stat">
+            <div class="label">Result for both sides</div>
+            <div class="value">Risk → Revenue</div>
+            <div class="sub">Liability removed; new revenue line opens</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">02 / 13</div>
+  </section>
+
+  <!-- SLIDE 3: MARKET -->
+  <section class="slide compact">
+    <div class="eyebrow">Market</div>
+    <h2>Target sorbent markets<br>are structurally short of supply</h2>
+    <div class="grid grid-3" style="margin-top: 32px;">
+      <div class="card">
+        <div class="stat">
+          <div class="label">Target regional market 2024</div>
+          <div class="value accent">41,000 t</div>
+          <div class="sub">≈ $118 M annual demand</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">Imported share 2024</div>
+          <div class="value">30,000 t</div>
+          <div class="sub">+24% YoY — sourced primarily from Asia</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">Forecast CAGR to 2030</div>
+          <div class="value green">+5.6% / yr</div>
+          <div class="sub">Headroom to 82,000 t/yr</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 56px;">Activated carbon demand in target regions</h3>
+    <div class="chart-bars" style="margin-top: 24px; max-width: 920px;">
+      <div class="chart-year"><span class="yr">2020</span><div class="b fade" style="width: 31.5%;">25.9 kt</div></div>
+      <div class="chart-year"><span class="yr">2021</span><div class="b fade" style="width: 38.5%;">31.6 kt</div></div>
+      <div class="chart-year"><span class="yr">2022</span><div class="b"      style="width: 52.0%;">42.7 kt</div></div>
+      <div class="chart-year"><span class="yr">2023</span><div class="b"      style="width: 46.5%;">38.1 kt</div></div>
+      <div class="chart-year"><span class="yr">2024</span><div class="b"      style="width: 50.0%;">41.0 kt</div></div>
+      <div class="chart-year"><span class="yr">2030*</span><div class="b"     style="width: 100%;">82 kt (forecast)</div></div>
+    </div>
+
+    <div class="callout" style="margin-top: 40px;">
+      <p>
+        <strong>The headline:</strong> domestic production in our initial target
+        regions covered only <strong>5,360 tonnes</strong> in 2024 — down 64% year on
+        year. Imports are growing faster than the market itself. The market is
+        actively asking for a local supply alternative.
+      </p>
+    </div>
+    <div class="slide-num">03 / 13</div>
+  </section>
+
+  <!-- SLIDE 4: THE SOLUTION -->
+  <section class="slide compact">
+    <div class="eyebrow">Our Solution</div>
+    <h2>We turn waste into a product<br>worth approximately $1,087 / tonne</h2>
+    <div class="grid grid-2" style="margin-top: 24px; align-items: center;">
+      <div>
+        <p class="lead" style="margin-bottom: 32px;">
+          A WIPO-patented process — developed in-house — that uses depleted
+          agricultural biomass as the
+          <strong style="color: var(--cream);">primary feedstock</strong>
+          for industrial-grade activated carbon with broad downstream demand.
+        </p>
+        <ul class="bullets">
+          <li><strong>Water treatment</strong> — municipal drinking water and wastewater polishing</li>
+          <li><strong>Power generation</strong> — boiler-water and lubricant purification</li>
+          <li><strong>Heavy industry</strong> — flue-gas scrubbing, chemicals, metallurgy</li>
+          <li><strong>Pharmaceutical</strong> — purified medical-grade activated carbon</li>
+          <li><strong>Consumer goods</strong> — filtration cartridges and household products</li>
+        </ul>
+        <p style="margin-top: 32px; font-size: 17px;">
+          A pilot sample with high activation index has already been produced
+          and verified by independent laboratory testing.
+        </p>
+      </div>
+      <div>
+        <div class="card">
+          <span class="pill">Industrial grade</span>
+          <div style="margin-top: 22px; font-family: var(--f-heading); font-size: 26px; color: var(--gold-light); font-weight: 500; letter-spacing: 0.04em;">
+            Premium activated carbon
+          </div>
+          <p style="margin-top: 14px; font-size: 16px; color: var(--cream-dim);">
+            Performance comparable to leading commercial sorbent grades.
+            Wholesale reference pricing in target markets sits between
+            <strong style="color: var(--cream);">$2,200 and $4,900 per tonne</strong> —
+            our base-case revenue model assumes the conservative $1,087/t.
+          </p>
+        </div>
+        <div class="card tight" style="margin-top: 18px;">
+          <div class="stat">
+            <div class="label">Form factors produced</div>
+            <div class="value">Granular · Powdered</div>
+            <div class="sub">Plus high-margin carbon-composite fibre extension</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">04 / 13</div>
+  </section>
+
+  <!-- SLIDE 5: SYNERGY -->
+  <section class="slide compact">
+    <div class="eyebrow">Triple Synergy</div>
+    <h2>One project resolves<br>three structural problems at once</h2>
+    <div class="grid grid-3" style="margin-top: 36px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 13px;">01 — Processing partners</h3>
+        <p style="font-size: 17px; color: var(--cream); margin-top: 14px; line-height: 1.55;">
+          A workable disposal route for depleted biomass. Regulatory risk,
+          remediation cost, and storage liability all disappear from the
+          partner's P&amp;L.
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 13px;">02 — Sorbent buyers</h3>
+        <p style="font-size: 17px; color: var(--cream); margin-top: 14px; line-height: 1.55;">
+          A reliable local supply of industrial-grade activated carbon —
+          breaking the current import dependency on a small number of
+          overseas producers.
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 13px;">03 — Public sector</h3>
+        <p style="font-size: 17px; color: var(--cream); margin-top: 14px; line-height: 1.55;">
+          Budget previously spent on subsidising the export of surplus biomass
+          is freed. Domestic environmental compliance improves measurably.
+        </p>
+      </div>
+    </div>
+    <div class="quote" style="margin-top: 56px;">
+      The project has no direct competitor in its target markets and is
+      well positioned to displace the bulk of imported supply.
+    </div>
+    <div class="slide-num">05 / 13</div>
+  </section>
+
+  <!-- SLIDE 6: TECHNOLOGY -->
+  <section class="slide compact">
+    <div class="eyebrow">Technology</div>
+    <h2>A three-stage thermal process<br>converts feedstock into sorbent</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      The line is sequential, fully automated, and built around standard
+      industrial unit operations. Patent protection is in place via WIPO.
+    </p>
+
+    <div class="step-flow" style="margin-top: 36px;">
+      <div class="step">
+        <div class="step-num">Stage 01</div>
+        <div class="step-title">Dehydration</div>
+        <div class="step-desc">Feedstock is heated to 150–200 °C to remove residual water and prepare the intermediate for pyrolysis.</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Stage 02</div>
+        <div class="step-title">Carbonisation</div>
+        <div class="step-desc">Pyrolysis at 500–700 °C in an inert atmosphere breaks down the organic phase and forms the carbon skeleton.</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Stage 03</div>
+        <div class="step-title">Activation</div>
+        <div class="step-desc">Steam or CO₂ treatment at 800–1,000 °C opens the pore structure and develops specific surface area.</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-top: 40px;">
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Primary output</div>
+          <div class="value accent">Activated carbon</div>
+          <div class="sub">Granular and powdered grades</div>
+        </div>
+      </div>
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">High-margin extension</div>
+          <div class="value accent">Carbon-composite fibre</div>
+          <div class="sub">Optional downstream product, higher unit value</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">06 / 13</div>
+  </section>
+
+  <!-- SLIDE 7: FIRST FACILITY -->
+  <section class="slide compact">
+    <div class="eyebrow">First Facility</div>
+    <h2>Site A — first line<br>134,000 tonnes feedstock per year</h2>
+    <p class="lead" style="margin-top: 8px;">
+      The line is built on the processing partner's own land, on a long-term
+      lease, eliminating all inbound feedstock logistics costs from day one.
+    </p>
+
+    <div class="grid grid-4" style="margin-top: 40px;">
+      <div class="card stat">
+        <div class="label">Feedstock throughput</div>
+        <div class="value accent">134,000 t / yr</div>
+        <div class="sub">11,170 t / month</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Sorbent output</div>
+        <div class="value accent">17,420 t / yr</div>
+        <div class="sub">1,452 t / month · 13% yield</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Site footprint</div>
+        <div class="value">2,000 m²</div>
+        <div class="sub">49-year ground lease in the SPV's name</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Time to launch</div>
+        <div class="value">6 months</div>
+        <div class="sub">Engineering, construction, commissioning</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 48px;">Utilities and headcount</h3>
+    <div class="grid grid-3" style="margin-top: 16px;">
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Electricity</div>
+          <div class="value">1 MW continuous</div>
+          <div class="sub">at $0.098 / kWh</div>
+        </div>
+      </div>
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Natural gas</div>
+          <div class="value">400 m³ / hr</div>
+          <div class="sub">at $0.109 / m³</div>
+        </div>
+      </div>
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Plant headcount</div>
+          <div class="value">32 staff</div>
+          <div class="sub">Production and operations</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">07 / 13</div>
+  </section>
+
+  <!-- SLIDE 8: CAPEX -->
+  <section class="slide compact">
+    <div class="eyebrow">Investment</div>
+    <h2>Capex structure<br>$8.25 million turnkey per line</h2>
+
+    <div class="grid grid-2" style="margin-top: 32px; gap: 56px;">
+      <div>
+        <h3 style="margin-bottom: 18px;">Equipment composition</h3>
+        <table>
+          <thead>
+            <tr><th>Item</th><th class="num">Qty</th><th class="num">$ thousands</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Thermal-treatment furnace</td><td class="num">12</td><td class="num">913</td></tr>
+            <tr><td>Filter press (hydro unit)</td><td class="num">4</td><td class="num">196</td></tr>
+            <tr><td>Reactor (hydro unit)</td><td class="num">8</td><td class="num">1,130</td></tr>
+            <tr><td>Fluid-bed dryer</td><td class="num">2</td><td class="num">196</td></tr>
+            <tr><td>Granulator</td><td class="num">2</td><td class="num">217</td></tr>
+            <tr><td>Hoppers and pumps</td><td class="num">2</td><td class="num">435</td></tr>
+            <tr><td>Packaging line</td><td class="num">2</td><td class="num">272</td></tr>
+            <tr><td>Modular steam boiler (3 t/hr)</td><td class="num">2</td><td class="num">478</td></tr>
+            <tr><td>Flue-gas scrubbing system</td><td class="num">2</td><td class="num">261</td></tr>
+            <tr><td>Switchgear, instrumentation, controls</td><td class="num">2</td><td class="num">304</td></tr>
+            <tr><td>Carbonisation block (carb. furnace + cooler + activation furnace)</td><td class="num">2</td><td class="num">543</td></tr>
+            <tr class="total"><td>Equipment subtotal</td><td></td><td class="num">4,945</td></tr>
+            <tr><td>Construction, engineering, commissioning (40% of equipment)</td><td></td><td class="num">1,978</td></tr>
+            <tr><td>Working capital, ramp-up, contingency</td><td></td><td class="num">1,326</td></tr>
+            <tr class="total"><td>Total capex per line</td><td></td><td class="num">8,250</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 18px;">Capex distribution</h3>
+        <div class="bar-row"><div class="bar-label">Reactors</div><div class="bar-track"><div class="bar-fill" style="width: 22.9%;"></div></div><div class="bar-val">$1,130 k</div></div>
+        <div class="bar-row"><div class="bar-label">Thermal furnaces</div><div class="bar-track"><div class="bar-fill" style="width: 18.5%;"></div></div><div class="bar-val">$913 k</div></div>
+        <div class="bar-row"><div class="bar-label">Carbonisation block</div><div class="bar-track"><div class="bar-fill" style="width: 11.0%;"></div></div><div class="bar-val">$543 k</div></div>
+        <div class="bar-row"><div class="bar-label">Steam boiler</div><div class="bar-track"><div class="bar-fill" style="width: 9.7%;"></div></div><div class="bar-val">$478 k</div></div>
+        <div class="bar-row"><div class="bar-label">Hoppers and pumps</div><div class="bar-track"><div class="bar-fill" style="width: 8.8%;"></div></div><div class="bar-val">$435 k</div></div>
+        <div class="bar-row"><div class="bar-label">Instrumentation</div><div class="bar-track"><div class="bar-fill" style="width: 6.2%;"></div></div><div class="bar-val">$304 k</div></div>
+        <div class="bar-row"><div class="bar-label">Packaging line</div><div class="bar-track"><div class="bar-fill" style="width: 5.5%;"></div></div><div class="bar-val">$272 k</div></div>
+        <div class="bar-row"><div class="bar-label">Flue-gas scrubbing</div><div class="bar-track"><div class="bar-fill" style="width: 5.3%;"></div></div><div class="bar-val">$261 k</div></div>
+        <div class="bar-row"><div class="bar-label">Granulator</div><div class="bar-track"><div class="bar-fill" style="width: 4.4%;"></div></div><div class="bar-val">$217 k</div></div>
+        <div class="bar-row"><div class="bar-label">Filter press</div><div class="bar-track"><div class="bar-fill" style="width: 4.0%;"></div></div><div class="bar-val">$196 k</div></div>
+        <div class="bar-row"><div class="bar-label">Fluid-bed dryer</div><div class="bar-track"><div class="bar-fill" style="width: 4.0%;"></div></div><div class="bar-val">$196 k</div></div>
+
+        <div class="card" style="margin-top: 36px; border-left: 2px solid var(--gold);">
+          <div class="stat">
+            <div class="label">Plus: construction, engineering, commissioning</div>
+            <div class="value accent">$1.98 M</div>
+            <div class="sub">40% of equipment cost — site-fitting and ramp-up</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">08 / 13</div>
+  </section>
+
+  <!-- SLIDE 9: OPEX / UNIT ECONOMICS -->
+  <section class="slide compact">
+    <div class="eyebrow">Unit Economics</div>
+    <h2>Production cost<br>$218 per tonne of sorbent</h2>
+
+    <div class="grid grid-2" style="margin-top: 32px; gap: 56px;">
+      <div>
+        <h3 style="margin-bottom: 18px;">Cost build, per tonne</h3>
+        <table>
+          <thead>
+            <tr><th>Cost line</th><th class="num">$ / t</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Inbound feedstock logistics</td><td class="num">0</td></tr>
+            <tr><td>Labour, fully loaded</td><td class="num">82</td></tr>
+            <tr><td>Packaging</td><td class="num">5</td></tr>
+            <tr><td>Electricity (400 kWh × $0.098)</td><td class="num">31</td></tr>
+            <tr><td>Natural gas (1,400 m³ × $0.092)</td><td class="num">94</td></tr>
+            <tr><td>Overheads</td><td class="num">6</td></tr>
+            <tr class="total"><td>Total production cost</td><td class="num">218</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 28px; font-size: 16px; color: var(--cream-dim);">
+          Feedstock logistics fall to zero because the line sits directly on
+          the partner's site. There is no haulage, no intermediate storage,
+          and no third-party freight contract on the inbound side.
+        </p>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 18px;">Cost composition</h3>
+        <div class="bar-row"><div class="bar-label">Natural gas</div><div class="bar-track"><div class="bar-fill" style="width: 43%;"></div></div><div class="bar-val">$94 / t</div></div>
+        <div class="bar-row"><div class="bar-label">Labour</div><div class="bar-track"><div class="bar-fill" style="width: 38%;"></div></div><div class="bar-val">$82 / t</div></div>
+        <div class="bar-row"><div class="bar-label">Electricity</div><div class="bar-track"><div class="bar-fill" style="width: 14%;"></div></div><div class="bar-val">$31 / t</div></div>
+        <div class="bar-row"><div class="bar-label">Overheads</div><div class="bar-track"><div class="bar-fill" style="width: 3%;"></div></div><div class="bar-val">$6 / t</div></div>
+        <div class="bar-row"><div class="bar-label">Packaging</div><div class="bar-track"><div class="bar-fill" style="width: 2.5%;"></div></div><div class="bar-val">$5 / t</div></div>
+
+        <div class="card" style="margin-top: 36px; border-left: 2px solid var(--green);">
+          <div class="stat">
+            <div class="label">Total production cost, annual</div>
+            <div class="value green">$3.80 M</div>
+            <div class="sub">17,420 t × $218 / t</div>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top: 20px;">
+          <p>
+            <strong>Key structural feature.</strong> The Carbon Recovery Fee paid by
+            processing partners ($251 per tonne of sorbent, redistributed across
+            output) already exceeds the full $218 / t production cost. Sorbent
+            sales then become almost pure margin.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">09 / 13</div>
+  </section>
+
+  <!-- SLIDE 10: REVENUE AND PROFIT -->
+  <section class="slide compact">
+    <div class="eyebrow">Financial Model</div>
+    <h2>Two revenue streams<br>$14.6 M net profit per line, per year</h2>
+
+    <div class="grid grid-2" style="margin-top: 32px; gap: 40px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 12px;">Stream A — Carbon Recovery Fee</h3>
+        <div style="margin-top: 18px;">
+          <div style="font-family: var(--f-heading); font-size: 48px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em;">$4.37 M</div>
+          <div style="font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.18em; text-transform: uppercase;">per year</div>
+        </div>
+        <p style="margin-top: 18px; font-size: 16px; color: var(--cream-dim);">
+          134,000 t of depleted biomass × $32.6 / t = $4,369,565<br>
+          Monthly run-rate: $364,130
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 12px;">Stream B — Sorbent sales</h3>
+        <div style="margin-top: 18px;">
+          <div style="font-family: var(--f-heading); font-size: 48px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em;">$18.94 M</div>
+          <div style="font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.18em; text-transform: uppercase;">per year</div>
+        </div>
+        <p style="margin-top: 18px; font-size: 16px; color: var(--cream-dim);">
+          17,420 t sorbent × $1,087 / t = $18,935,000<br>
+          Monthly run-rate: $1,578,000 (1,452 t)
+        </p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 56px;">Summary P&amp;L (annual, per line)</h3>
+    <table style="margin-top: 18px; max-width: 820px;">
+      <tbody>
+        <tr><td>Sorbent sales</td><td class="num">$18,935,000</td></tr>
+        <tr><td>Carbon Recovery Fee</td><td class="num">$4,369,565</td></tr>
+        <tr class="total"><td>Total revenue</td><td class="num">$23,304,565</td></tr>
+        <tr><td>Production cost</td><td class="num">−$3,797,560</td></tr>
+        <tr><td>Other operating expenses</td><td class="num">−$4,877,635</td></tr>
+        <tr class="total" style="background: rgba(201,168,76,0.10);"><td><strong style="color: var(--gold-light);">Net profit</strong></td><td class="num"><strong style="color: var(--gold-light);">$14,629,370</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 32px;">
+      <p>
+        Net margin: <strong>62.8%</strong>. The base-case sorbent price of
+        $1,087 / t is set deliberately at the bottom of the market range —
+        reference wholesale pricing in target markets spans $2,200–$4,900 / t.
+      </p>
+    </div>
+    <div class="slide-num">10 / 13</div>
+  </section>
+
+  <!-- SLIDE 11: PAYBACK -->
+  <section class="slide compact">
+    <div class="eyebrow">Payback</div>
+    <h2>Plant payback: 6–8 months from launch</h2>
+    <div class="grid grid-3" style="margin-top: 48px;">
+      <div class="card stat" style="text-align: center; padding: 44px 28px;">
+        <div class="label">Construction and commissioning</div>
+        <div class="value accent" style="font-size: 64px; margin-top: 18px;">6</div>
+        <div class="sub" style="font-size: 16px;">months to first production</div>
+      </div>
+      <div class="card stat" style="text-align: center; padding: 44px 28px;">
+        <div class="label">Capex recovery</div>
+        <div class="value accent" style="font-size: 64px; margin-top: 18px;">6–8</div>
+        <div class="sub" style="font-size: 16px;">months from launch</div>
+      </div>
+      <div class="card stat" style="text-align: center; padding: 44px 28px;">
+        <div class="label">Project IRR</div>
+        <div class="value green" style="font-size: 64px; margin-top: 18px;">&gt; 200%</div>
+        <div class="sub" style="font-size: 16px;">annualised</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 64px;">Investor cash-flow profile (per line)</h3>
+    <table style="margin-top: 18px; max-width: 940px;">
+      <thead>
+        <tr><th>Period</th><th>Event</th><th class="num">Cash flow</th><th class="num">Cumulative</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Month 0</td><td>Investor capital deployed</td><td class="num">−$8,249,691</td><td class="num">−$8,249,691</td></tr>
+        <tr><td>Months 1–6</td><td>Construction and commissioning</td><td class="num">—</td><td class="num">−$8,249,691</td></tr>
+        <tr><td>Month 7</td><td>Production starts</td><td class="num">+$1,219,114</td><td class="num">−$7,030,577</td></tr>
+        <tr><td>Month 8</td><td>Full nameplate</td><td class="num">+$1,219,114</td><td class="num">−$5,811,463</td></tr>
+        <tr><td>Month 10</td><td>Steady-state operation</td><td class="num">+$1,219,114</td><td class="num">−$3,373,235</td></tr>
+        <tr class="total"><td><strong style="color: var(--gold-light);">Months 12–14</strong></td><td><strong style="color: var(--gold-light);">Full capex recovered</strong></td><td class="num"><strong style="color: var(--gold-light);">+$1,219,114</strong></td><td class="num"><strong style="color: var(--gold-light);">≈ $0</strong></td></tr>
+        <tr><td>From month 14</td><td>Distributable profit</td><td class="num">+$1,219,114</td><td class="num">→ +$14.6 M / yr</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 32px;">
+      <p>
+        For PEARL token holders, payback is paced differently — the token pool
+        receives 30% of full turnover across all operating lines. At the three-line
+        target, token-holder payback resolves at <strong>~17.8 months</strong>
+        — roughly twice the plant payback, but with no exposure to single-site risk.
+      </p>
+    </div>
+    <div class="slide-num">11 / 13</div>
+  </section>
+
+  <!-- SLIDE 12: SCALING -->
+  <section class="slide compact">
+    <div class="eyebrow">Scaling Plan</div>
+    <h2>Three lines · 402,000 tonnes<br>of feedstock processed per year</h2>
+    <p class="lead" style="margin-top: 8px;">
+      After the first line reaches steady state, the same equipment package
+      and operating model replicate to two further sites — same capex, same
+      unit economics, same 6-month build cycle.
+    </p>
+
+    <div class="site-grid" style="margin-top: 44px;">
+      <div class="site-card">
+        <div class="label">Line 01</div>
+        <div class="name">Site A — pilot</div>
+        <div class="meta">First operating line; reference build</div>
+        <div class="cap">134,000 t / yr feedstock</div>
+        <div class="meta">Capex: $8.25 M · Build: 6 months</div>
+      </div>
+      <div class="site-card">
+        <div class="label">Line 02</div>
+        <div class="name">Site B — replication 1</div>
+        <div class="meta">Initiated after pilot reaches nameplate</div>
+        <div class="cap">134,000 t / yr feedstock</div>
+        <div class="meta">Capex: $8.25 M · Build: 6 months</div>
+      </div>
+      <div class="site-card">
+        <div class="label">Line 03</div>
+        <div class="name">Site C — replication 2</div>
+        <div class="meta">Initiated alongside Line 02</div>
+        <div class="cap">134,000 t / yr feedstock</div>
+        <div class="meta">Capex: $8.25 M · Build: 6 months</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-top: 56px; gap: 40px;">
+      <div class="card stat" style="padding: 36px;">
+        <div class="label">Combined feedstock processed</div>
+        <div class="value accent" style="font-size: 48px;">402,000 t / yr</div>
+        <div class="sub" style="font-size: 15px;">Across all three lines at nameplate</div>
+      </div>
+      <div class="card stat" style="padding: 36px;">
+        <div class="label">Combined capex</div>
+        <div class="value accent" style="font-size: 48px;">$24,749,074</div>
+        <div class="sub" style="font-size: 15px;">All three lines, turnkey</div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 36px;">
+      <p>
+        Combined revenue at three-line nameplate: <strong>$69.9 M / yr</strong>.
+        The PEARL token pool — 30% of full turnover — distributes
+        <strong>$20.97 M / yr</strong> to token holders at this scale.
+      </p>
+    </div>
+    <div class="slide-num">12 / 13</div>
+  </section>
+
+  <!-- SLIDE 13: SUMMARY -->
+  <section class="slide">
+    <div class="eyebrow">Investor Summary</div>
+    <h2 style="font-size: 50px;">One project · three sites<br>two revenue streams · IRR &gt; 200%</h2>
+
+    <div class="grid grid-3" style="margin-top: 56px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <div class="stat">
+          <div class="label">Entry capex</div>
+          <div class="value accent" style="font-size: 44px;">$8.25 M</div>
+          <div class="sub">Per turnkey line</div>
+        </div>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <div class="stat">
+          <div class="label">Net profit</div>
+          <div class="value accent" style="font-size: 44px;">$14.6 M / yr</div>
+          <div class="sub">Per line, conservative base case</div>
+        </div>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <div class="stat">
+          <div class="label">Payback</div>
+          <div class="value accent" style="font-size: 44px;">6–8 mo</div>
+          <div class="sub">Plant; 17.8 mo for token holders (3 lines)</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 64px;">What makes the project unusual</h3>
+    <ul class="bullets" style="margin-top: 18px;">
+      <li><strong>Negative feedstock cost</strong> — processing partners pay $32.6 / t to dispose of their byproduct; the raw material arrives funded.</li>
+      <li><strong>Zero inbound logistics</strong> — the line sits on partner-owned land.</li>
+      <li><strong>Import substitution</strong> — target regional markets are presently dependent on overseas supply for ~73% of activated carbon demand.</li>
+      <li><strong>Demand tailwind</strong> — market is growing at 5.6% CAGR with credible headroom for the volume to double by 2030.</li>
+      <li><strong>Validated technology</strong> — WIPO-patented process, pilot sample independently lab-verified, three-stage industrial unit operations.</li>
+      <li><strong>Replicable</strong> — three operating lines on identical capex and identical operating model; no bespoke engineering between sites.</li>
+    </ul>
+
+    <div style="margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border);">
+      <div style="font-family: var(--f-heading); font-size: 12px; color: var(--gold); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 14px;">Next step</div>
+      <div style="font-family: var(--f-body); font-style: italic; font-size: 24px; color: var(--cream); line-height: 1.5; max-width: 980px;">
+        Direct meeting with the project team, on-site visit to the pilot facility,
+        and Term Sheet signature.
+      </div>
+    </div>
+
+    <div class="footer-meta">
+      <span>Pearl of Restoration · 2026</span>
+      <span>Prepared for prospective investor · Confidential</span>
+    </div>
+    <div class="slide-num">13 / 13</div>
+  </section>
+
+</div>
+
+<script>
+  document.addEventListener('keydown', function(e) {
+    var slides = document.querySelectorAll('.slide');
+    var currentScroll = window.scrollY;
+    var target = null;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      for (var i = 0; i < slides.length; i++) {
+        if (slides[i].offsetTop > currentScroll + 50) { target = slides[i]; break; }
+      }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      var prev = null;
+      for (var j = 0; j < slides.length; j++) {
+        if (slides[j].offsetTop >= currentScroll - 10) break;
+        prev = slides[j];
+      }
+      target = prev;
+    } else if (e.key === 'Home') {
+      target = slides[0];
+    } else if (e.key === 'End') {
+      target = slides[slides.length - 1];
+    }
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+</script>
+</body>
+</html>

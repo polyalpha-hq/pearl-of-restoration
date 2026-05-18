@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Комплекс по переработке углеродосодержащих отходов · Воронеж</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-alt: #161b22;
+    --bg-card: #1c2330;
+    --text: #f0f6fc;
+    --text-dim: #8b949e;
+    --text-mute: #6e7681;
+    --accent: #d4a64a;
+    --accent-soft: rgba(212,166,74,0.12);
+    --green: #4cb782;
+    --red: #e35d6a;
+    --blue: #6cb6ff;
+    --border: #30363d;
+    --border-soft: #21262d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .deck {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 64px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-soft);
+    page-break-after: always;
+    position: relative;
+  }
+  .slide.compact { justify-content: flex-start; padding-top: 96px; }
+  .slide-num {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 12px;
+    color: var(--text-mute);
+    letter-spacing: 0.05em;
+  }
+  .eyebrow {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  h1, h2, h3 { font-weight: 600; line-height: 1.15; color: var(--text); }
+  h1 { font-size: 64px; margin-bottom: 24px; letter-spacing: -0.02em; }
+  h2 { font-size: 42px; margin-bottom: 32px; letter-spacing: -0.01em; }
+  h3 { font-size: 22px; margin-bottom: 12px; }
+  p { font-size: 18px; color: var(--text-dim); margin-bottom: 16px; max-width: 880px; }
+  .lead { font-size: 22px; color: var(--text); line-height: 1.45; max-width: 880px; }
+  .big-num {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+  }
+  .num-unit { font-size: 28px; color: var(--text-dim); font-weight: 400; }
+  .grid { display: grid; gap: 24px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+  }
+  .card.tight { padding: 20px; }
+  .stat .label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-mute);
+    margin-bottom: 8px;
+  }
+  .stat .value {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .stat .value.accent { color: var(--accent); }
+  .stat .value.green { color: var(--green); }
+  .stat .sub {
+    font-size: 14px;
+    color: var(--text-mute);
+    margin-top: 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  th, td {
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  th {
+    font-weight: 500;
+    color: var(--text-mute);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--bg-alt);
+  }
+  td { color: var(--text); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.total td { font-weight: 600; border-top: 1px solid var(--border); background: var(--bg-alt); }
+  .hero-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0.35;
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .img-card {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .img-card img { width: 100%; display: block; }
+  .img-cover {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .pill.green { background: rgba(76,183,130,0.12); color: var(--green); }
+  .pill.red { background: rgba(227,93,106,0.12); color: var(--red); }
+  ul.bullets { list-style: none; padding: 0; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    font-size: 17px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 11px;
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  ul.bullets li strong { color: var(--text); font-weight: 600; }
+  .step-flow { display: flex; align-items: stretch; gap: 16px; margin-top: 16px; }
+  .step {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+  }
+  .step-num {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .step-title { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .step-desc { font-size: 14px; color: var(--text-mute); }
+  .step-arrow {
+    align-self: center;
+    color: var(--text-mute);
+    font-size: 22px;
+  }
+  .bar-row { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; font-size: 15px; }
+  .bar-label { flex: 0 0 200px; color: var(--text); }
+  .bar-track { flex: 1; height: 8px; background: var(--bg-alt); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; }
+  .bar-val { flex: 0 0 140px; text-align: right; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+  .map-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .map-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .map-card .city { font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .map-card .meta { font-size: 14px; color: var(--text-mute); }
+  .map-card .cap { font-size: 32px; color: var(--accent); font-weight: 600; margin: 10px 0; }
+  .quote {
+    border-left: 3px solid var(--accent);
+    padding: 8px 0 8px 20px;
+    font-size: 22px;
+    color: var(--text);
+    font-style: italic;
+    margin: 24px 0;
+    max-width: 880px;
+  }
+  .footer-meta {
+    margin-top: auto;
+    padding-top: 40px;
+    color: var(--text-mute);
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Sankey-like bar chart */
+  .chart-bars { display: flex; flex-direction: column; gap: 12px; }
+  .chart-year { display: flex; align-items: center; gap: 16px; }
+  .chart-year .yr { flex: 0 0 60px; font-size: 14px; color: var(--text-mute); }
+  .chart-year .b {
+    height: 32px;
+    background: var(--accent);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    color: #0d1117;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .chart-year .b.fade { background: var(--accent-soft); color: var(--accent); }
+  @media print {
+    body { background: white; color: black; }
+    .slide { min-height: 100vh; page-break-after: always; }
+    .hero-img { opacity: 0.4; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- SLIDE 1: TITLE -->
+  <section class="slide" style="overflow:hidden;">
+    <img src="assets/plant-hero.png" class="hero-img" alt="">
+    <div class="hero-content">
+      <div class="eyebrow">Инвестиционный проект · Январь 2026</div>
+      <h1>Комплекс по переработке<br>углеродосодержащих отходов</h1>
+      <p class="lead" style="color:var(--text); max-width:760px;">
+        Превращаем побочный продукт свеклосахарного производства
+        в востребованный на рынке промышленный сорбент.
+        Решаем экологическую проблему отрасли и закрываем дефицит
+        активированного угля в России.
+      </p>
+      <div style="margin-top:48px; display:flex; gap:40px; align-items:baseline;">
+        <div>
+          <div class="big-num">637<span class="num-unit"> млн ₽</span></div>
+          <div class="stat label" style="margin-top:8px;">Инвестиции в 1-й комплекс</div>
+        </div>
+        <div>
+          <div class="big-num">6–8<span class="num-unit"> мес</span></div>
+          <div class="stat label" style="margin-top:8px;">Окупаемость</div>
+        </div>
+        <div>
+          <div class="big-num">1,35<span class="num-unit"> млрд ₽</span></div>
+          <div class="stat label" style="margin-top:8px;">Прибыль в год</div>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>Воронежская область · Площадка на территории сахарного завода-партнёра</span>
+        <span>Конфиденциально</span>
+      </div>
+    </div>
+    <div class="slide-num">01 / 13</div>
+  </section>
+
+  <!-- SLIDE 2: THE PROBLEM -->
+  <section class="slide compact">
+    <div class="eyebrow">Проблема</div>
+    <h2>Сахарные заводы накопили<br>проблему, которая растёт каждый год</h2>
+    <div class="grid grid-2" style="margin-top:32px; align-items:stretch;">
+      <div>
+        <p class="lead" style="margin-bottom:20px;">
+          При мембранной фильтрации сахаросодержащего сока остаётся
+          <strong style="color:var(--text);">обеднённая меласса</strong> — побочный продукт,
+          из которого полностью удалена сахароза.
+        </p>
+        <ul class="bullets">
+          <li><strong>250 000 тонн в год</strong> обеднённой мелассы образуется в Воронежской и Белгородской областях</li>
+          <li>Объёмы <strong>ежегодно растут</strong> вместе с увеличением производства сахара</li>
+          <li>Отходы <strong>практически не утилизируются</strong>, а накапливаются и неконтролируемо разлагаются</li>
+          <li>Образующиеся токсичные продукты загрязняют почву, грунтовые воды, поверхностные воды и воздух</li>
+          <li>Уже есть <strong>обширная судебная практика</strong> и крупные штрафы (Русагро-Тамбов, ~7 млн ₽)</li>
+        </ul>
+        <div class="quote">
+          «Практически все представители предприятий отрасли обращались в Минсельхоз
+          и Правительство РФ по этой проблематике».
+        </div>
+      </div>
+      <div>
+        <img src="assets/molasses-waste.png" class="img-cover" alt="Обедненная меласса" style="height:480px;">
+        <div class="card tight" style="margin-top:20px;">
+          <div class="stat">
+            <div class="label">Готовы платить за утилизацию</div>
+            <div class="value accent">3 000 ₽/т</div>
+            <div class="sub">При пессимистичном сценарии расчётов</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">02 / 13</div>
+  </section>
+
+  <!-- SLIDE 3: MARKET -->
+  <section class="slide compact">
+    <div class="eyebrow">Рынок</div>
+    <h2>Российский рынок сорбентов<br>дефицитен и растёт</h2>
+    <div class="grid grid-3" style="margin-top:32px;">
+      <div class="card">
+        <div class="stat">
+          <div class="label">Объём рынка РФ 2024</div>
+          <div class="value accent">41 000 т</div>
+          <div class="sub">10,9 млрд ₽ в денежном выражении</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">Импорт 2024</div>
+          <div class="value">30 000 т</div>
+          <div class="sub">+24% к 2023 — Китай, Индия</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">Прогноз CAGR до 2030</div>
+          <div class="value green">+5,6%/год</div>
+          <div class="sub">Потенциал до 82 тыс. т/год</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:48px;">Динамика рынка активированного угля в РФ</h3>
+    <div class="chart-bars" style="margin-top:20px; max-width:880px;">
+      <div class="chart-year"><span class="yr">2020</span><div class="b fade" style="width:31.5%">25,9 тыс. т</div></div>
+      <div class="chart-year"><span class="yr">2021</span><div class="b fade" style="width:38.5%">31,6 тыс. т</div></div>
+      <div class="chart-year"><span class="yr">2022</span><div class="b" style="width:52%">42,7 тыс. т</div></div>
+      <div class="chart-year"><span class="yr">2023</span><div class="b" style="width:46.5%">38,1 тыс. т</div></div>
+      <div class="chart-year"><span class="yr">2024</span><div class="b" style="width:50%">41,0 тыс. т</div></div>
+      <div class="chart-year"><span class="yr">2030*</span><div class="b" style="width:100%">82 тыс. т (потенциал)</div></div>
+    </div>
+
+    <div class="card" style="margin-top:36px; border-left:3px solid var(--accent);">
+      <p style="margin:0; color:var(--text); font-size:18px;">
+        <strong style="color:var(--accent);">Главное:</strong>
+        собственное производство в РФ — всего <strong style="color:var(--text);">5 360 т</strong> в 2024 г.
+        (−63,6% к 2023). Импорт растёт быстрее рынка.
+        <strong style="color:var(--text);">Рынок просит импортозамещения.</strong>
+      </p>
+    </div>
+    <div class="slide-num">03 / 13</div>
+  </section>
+
+  <!-- SLIDE 4: THE SOLUTION -->
+  <section class="slide compact">
+    <div class="eyebrow">Наше решение</div>
+    <h2>Превращаем отход в продукт<br>стоимостью 100 000 ₽/тонна</h2>
+    <div class="grid grid-2" style="margin-top:24px; align-items:center;">
+      <div>
+        <p class="lead" style="margin-bottom:32px;">
+          Уникальная разработанная нашей командой технология позволяет
+          использовать обеднённую мелассу как <strong style="color:var(--text);">первичное сырьё</strong>
+          для производства сорбента, имеющего широкое применение.
+        </p>
+        <ul class="bullets">
+          <li><strong>Водоподготовка</strong> — питьевая вода, очистка стоков</li>
+          <li><strong>Энергетика</strong> — очистка котловых вод и масел</li>
+          <li><strong>Промышленность</strong> — газоочистка, химия, металлургия</li>
+          <li><strong>Медицина</strong> — фармацевтический активированный уголь</li>
+          <li><strong>Бытовая сфера</strong> — фильтры, потребительские товары</li>
+        </ul>
+        <p style="margin-top:32px; font-size:16px;">
+          Получен опытный образец высокой степени активации,
+          что подтверждено результатами испытаний в независимой лаборатории.
+        </p>
+      </div>
+      <div>
+        <img src="assets/carbon-product.png" class="img-card" alt="Активированный уголь">
+        <div class="card tight" style="margin-top:16px; display:flex; gap:24px; align-items:center;">
+          <span class="pill">БАУ / ДАУ</span>
+          <div style="font-size:14px; color:var(--text-dim);">
+            Соответствует показателям качества аналогов марок БАУ и ДАУ.
+            Розничная стоимость — от 200 000 до 450 000 ₽/т.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">04 / 13</div>
+  </section>
+
+  <!-- SLIDE 5: SYNERGY -->
+  <section class="slide compact">
+    <div class="eyebrow">Синергетический эффект</div>
+    <h2>Один проект решает<br>сразу три задачи</h2>
+    <div class="grid grid-3" style="margin-top:32px;">
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <h3 style="color:var(--accent); font-size:16px; text-transform:uppercase; letter-spacing:0.08em;">01 — Сахарные заводы</h3>
+        <p style="font-size:17px; color:var(--text); margin-top:12px;">
+          Решение проблемы утилизации обеднённой мелассы — устранение
+          экологических рисков, штрафов, накопления отходов.
+        </p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <h3 style="color:var(--accent); font-size:16px; text-transform:uppercase; letter-spacing:0.08em;">02 — Промышленность РФ</h3>
+        <p style="font-size:17px; color:var(--text); margin-top:12px;">
+          Производство востребованного на рынке сорбента —
+          фактическое импортозамещение продукции из Китая и Индии.
+        </p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <h3 style="color:var(--accent); font-size:16px; text-transform:uppercase; letter-spacing:0.08em;">03 — Минсельхоз</h3>
+        <p style="font-size:17px; color:var(--text); margin-top:12px;">
+          Высвобождение бюджетных средств, выделяемых на субсидирование
+          транспортных затрат при экспорте избыточной мелассы.
+        </p>
+      </div>
+    </div>
+    <div class="quote" style="margin-top:48px;">
+      Проект по производству сорбентов <strong>не имеет прямых аналогов</strong>
+      на территории РФ и позволит уверенно заместить импортируемую продукцию.
+    </div>
+    <div class="slide-num">05 / 13</div>
+  </section>
+
+  <!-- SLIDE 6: TECHNOLOGY -->
+  <section class="slide compact">
+    <div class="eyebrow">Технология</div>
+    <h2>Трёхэтапный процесс<br>переработки в сорбент</h2>
+    <img src="assets/process-flow.png" class="img-card" alt="Схема процесса" style="margin-top:24px; max-width:1000px;">
+
+    <div class="step-flow" style="margin-top:32px;">
+      <div class="step">
+        <div class="step-num">Этап 1</div>
+        <div class="step-title">Дегидратация</div>
+        <div class="step-desc">Удаление воды из сырья при нагреве до 150–200 °C, подготовка полуфабриката к пиролизу</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Этап 2</div>
+        <div class="step-title">Карбонизация</div>
+        <div class="step-desc">Пиролиз при 500–700 °C в инертной среде, разрушение органики и формирование углеродного каркаса</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Этап 3</div>
+        <div class="step-title">Активация</div>
+        <div class="step-desc">Обработка паром/CO₂ при 800–1 000 °C, раскрытие пористой структуры и развитие удельной поверхности</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:32px;">
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Готовый продукт A</div>
+          <div class="value accent">Активированный уголь</div>
+          <div class="sub">Гранулированный, порошковый</div>
+        </div>
+      </div>
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Готовый продукт B</div>
+          <div class="value accent">Углеродно-композитное волокно</div>
+          <div class="sub">Высокоприбавочная стоимость</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">06 / 13</div>
+  </section>
+
+  <!-- SLIDE 7: PILOT PLANT VORONEZH -->
+  <section class="slide compact">
+    <div class="eyebrow">Первый комплекс</div>
+    <h2>Воронежская область<br>134 000 тонн в год</h2>
+    <p class="lead" style="margin-top:8px;">
+      Размещаем комплекс непосредственно на земельном участке сахарного завода-партнёра,
+      чтобы полностью исключить логистические затраты по доставке сырья.
+    </p>
+
+    <div class="grid grid-4" style="margin-top:36px;">
+      <div class="card stat">
+        <div class="label">Переработка сырья</div>
+        <div class="value accent">134 000 т/год</div>
+        <div class="sub">11 170 т/месяц</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Выход сорбента</div>
+        <div class="value accent">17 420 т/год</div>
+        <div class="sub">1 452 т/месяц · выход 13%</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Площадь участка</div>
+        <div class="value">2 000 м²</div>
+        <div class="sub">Аренда на SPV сроком 49 лет</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Срок до запуска</div>
+        <div class="value">6 мес</div>
+        <div class="sub">Оборудование + ПИР + СМР + КИПиА + ПНР</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;">Требования по ресурсам</h3>
+    <div class="grid grid-3" style="margin-top:16px;">
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Электроэнергия</div>
+          <div class="value">1 МВт/ч</div>
+          <div class="sub">по цене 9 ₽/кВт·ч</div>
+        </div>
+      </div>
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Природный газ</div>
+          <div class="value">400 м³/ч</div>
+          <div class="sub">по цене 10 ₽/м³</div>
+        </div>
+      </div>
+      <div class="card tight">
+        <div class="stat">
+          <div class="label">Персонал</div>
+          <div class="value">32 чел.</div>
+          <div class="sub">Производственный персонал</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">07 / 13</div>
+  </section>
+
+  <!-- SLIDE 8: CAPEX -->
+  <section class="slide compact">
+    <div class="eyebrow">Инвестиции</div>
+    <h2>Структура вложений<br>637 млн ₽ под ключ</h2>
+
+    <div class="grid grid-2" style="margin-top:24px; gap:40px;">
+      <div>
+        <h3 style="margin-bottom:16px;">Состав оборудования</h3>
+        <table>
+          <thead>
+            <tr><th>Позиция</th><th class="num">Шт.</th><th class="num">Сумма, тыс. ₽</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Печь термической обработки</td><td class="num">12</td><td class="num">84 000</td></tr>
+            <tr><td>Фильтр-пресс (гидроузел)</td><td class="num">4</td><td class="num">18 000</td></tr>
+            <tr><td>Реактор (гидроузел)</td><td class="num">8</td><td class="num">104 000</td></tr>
+            <tr><td>Сушилка в псевдокипящем слое</td><td class="num">2</td><td class="num">18 000</td></tr>
+            <tr><td>Гранулятор</td><td class="num">2</td><td class="num">20 000</td></tr>
+            <tr><td>Бункерное оборудование и насосы</td><td class="num">2</td><td class="num">40 000</td></tr>
+            <tr><td>Линия фасовки</td><td class="num">2</td><td class="num">25 000</td></tr>
+            <tr><td>Блочно-модульная котельная (3 т пара/ч)</td><td class="num">2</td><td class="num">44 000</td></tr>
+            <tr><td>Система газоочистки</td><td class="num">2</td><td class="num">24 000</td></tr>
+            <tr><td>ЩСУ, КИПиА</td><td class="num">2</td><td class="num">28 000</td></tr>
+            <tr><td>Карбонизация (печь карб. + охладитель + печь активации)</td><td class="num">2</td><td class="num">50 000</td></tr>
+            <tr class="total"><td>Итого оборудование</td><td></td><td class="num">455 000</td></tr>
+            <tr><td>СМР + ПИР + ПНР (40% от оборудования)</td><td></td><td class="num">182 000</td></tr>
+            <tr class="total"><td>ВСЕГО CAPEX</td><td></td><td class="num">637 000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 style="margin-bottom:16px;">Распределение инвестиций</h3>
+        <div class="bar-row"><div class="bar-label">Карбонизация</div><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div><div class="bar-val">50 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Печи термообработки</div><div class="bar-track"><div class="bar-fill" style="width:18.5%"></div></div><div class="bar-val">84 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Реакторы</div><div class="bar-track"><div class="bar-fill" style="width:22.9%"></div></div><div class="bar-val">104 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Котельная</div><div class="bar-track"><div class="bar-fill" style="width:9.7%"></div></div><div class="bar-val">44 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Бункеры и насосы</div><div class="bar-track"><div class="bar-fill" style="width:8.8%"></div></div><div class="bar-val">40 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">КИПиА, ЩСУ</div><div class="bar-track"><div class="bar-fill" style="width:6.2%"></div></div><div class="bar-val">28 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Линия фасовки</div><div class="bar-track"><div class="bar-fill" style="width:5.5%"></div></div><div class="bar-val">25 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Газоочистка</div><div class="bar-track"><div class="bar-fill" style="width:5.3%"></div></div><div class="bar-val">24 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Гранулятор</div><div class="bar-track"><div class="bar-fill" style="width:4.4%"></div></div><div class="bar-val">20 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Фильтр-пресс</div><div class="bar-track"><div class="bar-fill" style="width:4.0%"></div></div><div class="bar-val">18 000 тыс.</div></div>
+        <div class="bar-row"><div class="bar-label">Сушилка</div><div class="bar-track"><div class="bar-fill" style="width:4.0%"></div></div><div class="bar-val">18 000 тыс.</div></div>
+
+        <div class="card" style="margin-top:32px; border-left:3px solid var(--accent);">
+          <div class="stat">
+            <div class="label">Дополнительно — СМР, ПИР, ПНР</div>
+            <div class="value accent">182 млн ₽</div>
+            <div class="sub">40% от стоимости оборудования</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">08 / 13</div>
+  </section>
+
+  <!-- SLIDE 9: OPEX / UNIT ECONOMICS -->
+  <section class="slide compact">
+    <div class="eyebrow">Себестоимость</div>
+    <h2>Производственные затраты<br>20 065 ₽ на тонну сорбента</h2>
+
+    <div class="grid grid-2" style="margin-top:32px; gap:40px;">
+      <div>
+        <h3 style="margin-bottom:16px;">Калькуляция 1 тонны</h3>
+        <table>
+          <thead>
+            <tr><th>Статья затрат</th><th class="num">₽ / т</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Логистика по доставке сырья</td><td class="num">0</td></tr>
+            <tr><td>ФОТ с начислениями</td><td class="num">7 582</td></tr>
+            <tr><td>Упаковка и фасовка</td><td class="num">500</td></tr>
+            <tr><td>Электроэнергия (400 кВт·ч × 9 ₽)</td><td class="num">2 835</td></tr>
+            <tr><td>Газ (1 400 м³ × 8,5 ₽)</td><td class="num">8 648</td></tr>
+            <tr><td>Накладные расходы</td><td class="num">500</td></tr>
+            <tr class="total"><td>Итого себестоимость</td><td class="num">20 065</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:24px; font-size:15px; color:var(--text-mute);">
+          Логистика по сырью = 0 за счёт размещения комплекса прямо на площадке
+          сахарного завода-партнёра.
+        </p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:16px;">Соотношение статей себестоимости</h3>
+        <div class="bar-row"><div class="bar-label">Газ</div><div class="bar-track"><div class="bar-fill" style="width:43%"></div></div><div class="bar-val">8 648 ₽</div></div>
+        <div class="bar-row"><div class="bar-label">ФОТ</div><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><div class="bar-val">7 582 ₽</div></div>
+        <div class="bar-row"><div class="bar-label">Электроэнергия</div><div class="bar-track"><div class="bar-fill" style="width:14%"></div></div><div class="bar-val">2 835 ₽</div></div>
+        <div class="bar-row"><div class="bar-label">Упаковка</div><div class="bar-track"><div class="bar-fill" style="width:2.5%"></div></div><div class="bar-val">500 ₽</div></div>
+        <div class="bar-row"><div class="bar-label">Накладные</div><div class="bar-track"><div class="bar-fill" style="width:2.5%"></div></div><div class="bar-val">500 ₽</div></div>
+
+        <div class="card" style="margin-top:32px; border-left:3px solid var(--green);">
+          <div class="stat">
+            <div class="label">Производственная себестоимость год</div>
+            <div class="value green">349,5 млн ₽</div>
+            <div class="sub">17 420 т × 20 065 ₽</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px; border-left:3px solid var(--accent);">
+          <p style="margin:0; font-size:15px; color:var(--text);">
+            <strong>Ключевая особенность:</strong>
+            производственная себестоимость 1 тонны сорбента полностью покрывается
+            оплатой сахарных заводов за утилизацию мелассы (20 065 ₽ vs 23 075 ₽ на тонну продукта,
+            если разложить 3 000 ₽ × 134 000 т ÷ 17 420 т).
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">09 / 13</div>
+  </section>
+
+  <!-- SLIDE 10: REVENUE AND PROFIT -->
+  <section class="slide compact">
+    <div class="eyebrow">Финансовая модель</div>
+    <h2>Два потока выручки<br>Прибыль 1,35 млрд ₽ в год</h2>
+
+    <div class="grid grid-2" style="margin-top:32px; gap:40px;">
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <h3 style="color:var(--accent); font-size:14px; text-transform:uppercase; letter-spacing:0.1em;">Поток A — Утилизация</h3>
+        <div style="margin-top:16px;">
+          <div style="font-size:48px; font-weight:700; color:var(--text);">402 млн ₽</div>
+          <div style="font-size:14px; color:var(--text-mute);">/год</div>
+        </div>
+        <p style="margin-top:16px; font-size:15px; color:var(--text-dim);">
+          134 000 т обеднённой мелассы × 3 000 ₽/т = 402 млн ₽<br>
+          Ежемесячно: 33,5 млн ₽
+        </p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <h3 style="color:var(--accent); font-size:14px; text-transform:uppercase; letter-spacing:0.1em;">Поток B — Реализация сорбента</h3>
+        <div style="margin-top:16px;">
+          <div style="font-size:48px; font-weight:700; color:var(--text);">1 742 млн ₽</div>
+          <div style="font-size:14px; color:var(--text-mute);">/год</div>
+        </div>
+        <p style="margin-top:16px; font-size:15px; color:var(--text-dim);">
+          17 420 т сорбента × 100 000 ₽/т = 1 742 млн ₽<br>
+          Ежемесячно: 145,2 млн ₽ (1 452 т)
+        </p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:48px;">Сводная P&L (год)</h3>
+    <table style="margin-top:16px; max-width:760px;">
+      <tbody>
+        <tr><td>Выручка от реализации сорбента</td><td class="num">1 742 000 000 ₽</td></tr>
+        <tr><td>Доход от утилизации мелассы</td><td class="num">402 000 000 ₽</td></tr>
+        <tr class="total"><td>Совокупная выручка</td><td class="num">2 144 000 000 ₽</td></tr>
+        <tr><td>Производственная себестоимость</td><td class="num">−349 463 000 ₽</td></tr>
+        <tr><td>Прочие операционные расходы (упрощённо)</td><td class="num">−448 635 000 ₽</td></tr>
+        <tr class="total" style="background:var(--accent-soft);"><td><strong style="color:var(--accent);">Чистая прибыль</strong></td><td class="num"><strong style="color:var(--accent);">1 345 902 000 ₽</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="card" style="margin-top:32px; max-width:760px; border-left:3px solid var(--accent);">
+      <p style="margin:0; font-size:18px; color:var(--text);">
+        Рентабельность по чистой прибыли — <strong style="color:var(--accent);">63%</strong>.
+        Реализационная стоимость 100 000 ₽/т взята как минимальная — реальная
+        розничная стоимость БАУ/ДАУ составляет 200 000–450 000 ₽/т.
+      </p>
+    </div>
+    <div class="slide-num">10 / 13</div>
+  </section>
+
+  <!-- SLIDE 11: PAYBACK -->
+  <section class="slide">
+    <div class="eyebrow">Окупаемость</div>
+    <h2>Возврат инвестиций — 6–8 месяцев</h2>
+    <div class="grid grid-3" style="margin-top:48px;">
+      <div class="card stat" style="text-align:center; padding:40px 24px;">
+        <div class="label">Строительство и ввод</div>
+        <div class="value accent" style="font-size:56px; margin-top:16px;">6</div>
+        <div class="sub" style="font-size:16px;">месяцев до пуска</div>
+      </div>
+      <div class="card stat" style="text-align:center; padding:40px 24px;">
+        <div class="label">Возврат инвестиций</div>
+        <div class="value accent" style="font-size:56px; margin-top:16px;">6–8</div>
+        <div class="sub" style="font-size:16px;">месяцев с момента запуска</div>
+      </div>
+      <div class="card stat" style="text-align:center; padding:40px 24px;">
+        <div class="label">IRR проекта</div>
+        <div class="value green" style="font-size:56px; margin-top:16px;">&gt;200%</div>
+        <div class="sub" style="font-size:16px;">в годовом исчислении</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Денежный поток инвестора</h3>
+    <table style="margin-top:16px; max-width:880px;">
+      <thead>
+        <tr><th>Период</th><th>Событие</th><th class="num">Кэш-флоу</th><th class="num">Накопленный итог</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>0 мес.</td><td>Вложения инвестора</td><td class="num">−637 000 000 ₽</td><td class="num">−637 000 000 ₽</td></tr>
+        <tr><td>1–6 мес.</td><td>Стройка и ПНР</td><td class="num">—</td><td class="num">−637 000 000 ₽</td></tr>
+        <tr><td>7 мес.</td><td>Запуск производства</td><td class="num">+112 158 000 ₽</td><td class="num">−524 842 000 ₽</td></tr>
+        <tr><td>8 мес.</td><td>Полная мощность</td><td class="num">+112 158 000 ₽</td><td class="num">−412 684 000 ₽</td></tr>
+        <tr><td>10 мес.</td><td>Работа</td><td class="num">+112 158 000 ₽</td><td class="num">−188 368 000 ₽</td></tr>
+        <tr class="total" style="background:var(--accent-soft);"><td><strong style="color:var(--accent);">12–14 мес.</strong></td><td><strong style="color:var(--accent);">Возврат полной суммы</strong></td><td class="num"><strong style="color:var(--accent);">+112 158 000 ₽</strong></td><td class="num"><strong style="color:var(--accent);">~0 ₽</strong></td></tr>
+        <tr><td>от 14 мес.</td><td>Чистая прибыль инвестора</td><td class="num">+112 158 000 ₽</td><td class="num">→ +1,35 млрд/год</td></tr>
+      </tbody>
+    </table>
+    <div class="slide-num">11 / 13</div>
+  </section>
+
+  <!-- SLIDE 12: SCALING -->
+  <section class="slide compact">
+    <div class="eyebrow">Масштабирование</div>
+    <h2>3 комплекса = 334 000 тонн<br>переработки в год</h2>
+    <p class="lead" style="margin-top:8px;">
+      После успешного запуска и ввода в эксплуатацию первого комплекса
+      в Воронеже — плановое тиражирование ещё на двух площадках.
+    </p>
+
+    <div class="map-grid" style="margin-top:40px;">
+      <div class="map-card">
+        <div class="city">Воронежская область</div>
+        <div class="meta">Первый комплекс (пилот)</div>
+        <div class="cap">134 000 т/год</div>
+        <div class="meta">Инвестиции: 637 млн ₽<br>Срок: 6 мес</div>
+      </div>
+      <div class="map-card">
+        <div class="city">Краснодарский край</div>
+        <div class="meta">Тиражирование № 1</div>
+        <div class="cap">100 000 т/год</div>
+        <div class="meta">Инвестиции: 600 млн ₽<br>Срок: 6 мес после пилота</div>
+      </div>
+      <div class="map-card">
+        <div class="city">Нижегородская область</div>
+        <div class="meta">Тиражирование № 2</div>
+        <div class="cap">100 000 т/год</div>
+        <div class="meta">Инвестиции: 600 млн ₽<br>Срок: 6 мес после пилота</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:48px; gap:40px;">
+      <div class="card stat" style="padding:32px;">
+        <div class="label">Совокупная переработка</div>
+        <div class="value accent" style="font-size:48px;">334 000 т/год</div>
+        <div class="sub" style="font-size:15px;">Обеднённой мелассы</div>
+      </div>
+      <div class="card stat" style="padding:32px;">
+        <div class="label">Совокупные инвестиции</div>
+        <div class="value accent" style="font-size:48px;">1 837 млн ₽</div>
+        <div class="sub" style="font-size:15px;">На все три комплекса</div>
+      </div>
+    </div>
+    <div class="slide-num">12 / 13</div>
+  </section>
+
+  <!-- SLIDE 13: SUMMARY / CALL TO ACTION -->
+  <section class="slide">
+    <div class="eyebrow">Резюме инвестору</div>
+    <h2 style="font-size:48px;">Один проект — три задачи,<br>две выручки, ROI &gt; 200%</h2>
+
+    <div class="grid grid-3" style="margin-top:56px;">
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <div class="stat">
+          <div class="label">Вход</div>
+          <div class="value accent" style="font-size:42px;">637 млн ₽</div>
+          <div class="sub">Первый комплекс под ключ</div>
+        </div>
+      </div>
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <div class="stat">
+          <div class="label">Прибыль</div>
+          <div class="value accent" style="font-size:42px;">1,35 млрд ₽/год</div>
+          <div class="sub">При пессимистичном сценарии</div>
+        </div>
+      </div>
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <div class="stat">
+          <div class="label">Окупаемость</div>
+          <div class="value accent" style="font-size:42px;">6–8 мес</div>
+          <div class="sub">С момента запуска</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Что делает проект уникальным</h3>
+    <ul class="bullets" style="margin-top:16px;">
+      <li><strong>Сырьё бесплатно</strong> — сахарные заводы платят 3 000 ₽/т за утилизацию</li>
+      <li><strong>Нулевая логистика</strong> — комплекс размещён на площадке партнёра</li>
+      <li><strong>Импортозамещение</strong> — рынок РФ зависит от Китая и Индии на 73%</li>
+      <li><strong>Растущий спрос</strong> — рынок +5,6%/год, потенциал удвоения к 2030</li>
+      <li><strong>Технология подтверждена</strong> — опытный образец прошёл независимую лабораторную проверку</li>
+      <li><strong>Масштабируемость</strong> — три комплекса вместо одного при том же команде и технологии</li>
+    </ul>
+
+    <div style="margin-top:64px; padding-top:32px; border-top:1px solid var(--border);">
+      <div style="font-size:14px; color:var(--text-mute); margin-bottom:12px; letter-spacing:0.08em; text-transform:uppercase;">Следующий шаг</div>
+      <div style="font-size:24px; color:var(--text); font-weight:500;">
+        Личная встреча с командой проекта, demo-визит на пилотную площадку,
+        подписание Term Sheet.
+      </div>
+    </div>
+
+    <div class="footer-meta">
+      <span>Воронеж · Январь 2026</span>
+      <span>Презентация подготовлена для инвестора · Конфиденциально</span>
+    </div>
+    <div class="slide-num">13 / 13</div>
+  </section>
+
+</div>
+
+<script>
+  // Allow keyboard scroll between slides
+  document.addEventListener('keydown', (e) => {
+    const slides = document.querySelectorAll('.slide');
+    const currentScroll = window.scrollY;
+    let target = null;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      for (const s of slides) {
+        if (s.offsetTop > currentScroll + 50) { target = s; break; }
+      }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      let prev = null;
+      for (const s of slides) {
+        if (s.offsetTop >= currentScroll - 10) break;
+        prev = s;
+      }
+      target = prev;
+    } else if (e.key === 'Home') {
+      target = slides[0];
+    } else if (e.key === 'End') {
+      target = slides[slides.length - 1];
+    }
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+</script>
+</body>
+</html>
