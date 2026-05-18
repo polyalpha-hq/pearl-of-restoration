@@ -701,7 +701,7 @@ Processes MSW, plastics, tyres, oil sludge and agricultural waste. Output: liqui
       <li><a href="#donate" data-i18n="ft_donate">Donate</a></li>
     </ul>
     <div class="ft-div"></div>
-    <div class="ft-legal">&copy; 2026 Pearl of Restoration &nbsp;&middot;&nbsp; <span data-i18n="ft_legal">WIPO Patented Technology \&nbsp;\&middot;\&nbsp; Closed-Loop Resource Recovery</span></div>
+    <div class="ft-legal">&copy; 2026 Pearl of Restoration &nbsp;&middot;&nbsp; <span data-i18n="ft_legal">WIPO Patented Technology &nbsp;&middot;&nbsp; Closed-Loop Resource Recovery</span></div>
   </footer>
 </div>
 </div>
@@ -831,11 +831,20 @@ function switchGallery(id){
 }
 function openLightbox(src){
   var lb=document.getElementById('lightbox');
+  if(!lb){
+    lb=document.createElement('div');
+    lb.id='lightbox';
+    lb.style.cssText='position:fixed;inset:0;background:rgba(4,8,15,.92);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;padding:2rem;';
+    lb.innerHTML='<img id="lightbox-img" style="max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 0 40px rgba(0,0,0,.6);">';
+    lb.addEventListener('click',closeLightbox);
+    document.body.appendChild(lb);
+  }
   document.getElementById('lightbox-img').src=src;
   lb.style.display='flex';
 }
 function closeLightbox(){
-  document.getElementById('lightbox').style.display='none';
+  var lb=document.getElementById('lightbox');
+  if(lb)lb.style.display='none';
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
 </script>
