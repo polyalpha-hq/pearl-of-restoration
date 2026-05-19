@@ -247,6 +247,61 @@ Waste-to-Energy Complex (КДК)
 
 ---
 
+## Питч-дек инвестору — 5 языков (доставлено 2026-05-19)
+
+### Файлы (корень репозитория)
+| Язык | Файл | Размер | Аудитория |
+|------|------|--------|-----------|
+| EN | `presentation-en.html` | 55 KB | Международная база |
+| ES | `presentation-es.html` | 57 KB | Latin American Spanish (Чили / Аргентина / Колумбия / Мексика) |
+| PT-BR | `presentation-pt-br.html` | 57 KB | Brazilian Portuguese (Сан-Паулу / Рио, формальный investor tone) |
+| HI | `presentation-hi.html` | 75 KB | Hindi/Devanagari + english finance terms (Мумбаи / Дели / Бангалор) |
+| RU | `presentation-ru.html` | 68 KB | Международный русский (диаспора), **НЕ** РФ-домен |
+
+### Структура (15 слайдов, одинаково во всех локалях)
+- **Часть I (1–3):** проблема и возможность — титул, проблема, рыночные драйверы
+- **Часть II (4–8):** продукт — введение, 7-параметровая QC-таблица, применение, конкурентное преимущество, технология производства
+- **Часть III (9–13):** экономика — unit economics, расширение до 3 линий, потоки выручки, PEARL token, ROI / payback
+- **Часть IV (14–15):** закрытие — кредибилити, single-channel CTA
+
+### Источники (сохранены в `.planning/`)
+- `.planning/source-pitch-deck-ru.html` (45 KB) — оригинальный российский инвестиционный дек
+- `.planning/source-product-deck-ru.pdf` (1.5 MB) — оригинальный российский продуктовый дек
+
+### Слайд 14 — кредибилити (без имён, без фото)
+1. **20+ лет опыта в промышленной химии**
+2. **Действующие развёртывания регенерации масла с 2018 г.**
+3. **Держатель WIPO патента №2820244**
+4. **Независимая лабораторная валидация**
+
+### Слайд 15 — CTA
+- Единственный канал: `https://eco-pearl.com/#contact`
+- НЕТ Telegram / wallet / email / USDT / Bitcoin
+
+### Инварианты анонимизации (проверено grep'ом — 0 матчей на локаль)
+- Никаких упоминаний: Россия / РФ / меласса / сахарная свёкла / тростник / СОЖ / ГОСТ
+- Никаких российских городов (Воронеж / Краснодар / Нижний Новгород)
+- Никакого Узбекистана / Азия-only фрейминга
+- Никаких рублей / ₽ — только USD (конвертация 92 руб/$)
+- WIPO patent №2820244 остаётся как международная IP-кредибилити
+
+### Цепочка коммитов (7 неотправленных на 2026-05-19)
+```
+b667ea1  feat(pitch): EN base — anonymized, international, $24.7M raise
+ed641b0  feat(pitch): merge product content — 15-slide unified deck
+dd36c01  feat(pitch): finalize slides 14-15 — credentials + contact CTA
+0583fd2  feat(pitch): ES variant — Latin American Spanish
+996afde  feat(pitch): PT-BR variant — Brazilian Portuguese
+98a27bf  feat(pitch): HI variant — Indian Hindi
+911b431  feat(pitch): RU variant — international Russian
+```
+
+### Открытые задачи
+- Ревью 4 локалей в браузере пользователем
+- Интеграция в `eco-pearl.com` — отложено в общий batch push с calculator + Telegram bot + token
+
+---
+
 ## УТВЕРЖДЁННЫЙ ДИЗАЙН САЙТА (май 2026)
 
 ### Файл

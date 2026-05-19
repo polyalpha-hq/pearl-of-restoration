@@ -149,6 +149,62 @@ Yield basis: pool / 31,051,657 tokens (total emission at $1.00).
 
 Never mention: Russia, molasses, sugar plants, GOST, МСРМ, СОЖ, КДК.
 
+## Pitch Deck (5 languages) — delivered 2026-05-19
+
+### Files (repo root)
+| Lang | File | Size | Audience |
+|------|------|------|----------|
+| EN | `presentation-en.html` | 55 KB | International base |
+| ES | `presentation-es.html` | 57 KB | Latin American Spanish (Chile / Argentina / Colombia / Mexico) |
+| PT-BR | `presentation-pt-br.html` | 57 KB | Brazilian Portuguese (São Paulo / Rio formal investor tone) |
+| HI | `presentation-hi.html` | 75 KB | Hindi (Devanagari) + English finance terms (Mumbai / Delhi / Bangalore) |
+| RU | `presentation-ru.html` | 68 KB | International Russian (diaspora — EU / Israel / Dubai / Kazakhstan), **NOT** RF domestic |
+
+### Structure (15 slides — same across all locales)
+- **Part I — Problem & Opportunity** (slides 1–3): title, problem, market drivers
+- **Part II — Product** (slides 4–8): intro, 7-parameter QC table, applications, competitive edge, production tech
+- **Part III — Economics** (slides 9–13): unit economics, 3-line expansion, revenue streams, PEARL token, ROI / payback
+- **Part IV — Closing** (slides 14–15): credentials, single-channel CTA
+
+### Source materials (preserved in `.planning/`)
+- `.planning/source-pitch-deck-ru.html` (45 KB) — original RU investor deck (13 slides)
+- `.planning/source-product-deck-ru.pdf` (1.5 MB) — original RU product/sorbent deck (9 slides)
+
+### Anonymization invariants (0 grep hits per locale)
+- No Russia / РФ / russian / russo / Россия (any spelling, any script)
+- No molasses / меласса / sugar beet / sugar cane / melaza / melaço / गुड़ / गन्ना
+- No Voronezh / Krasnodar / Nizhny / any RF city
+- No Uzbekistan / Asia-only framing — keep "global industrial market"
+- No ГОСТ / GOST — replaced with "international quality standards" / "independent lab validation"
+- No rubles / ₽ / РУБ — USD only (converted at 92 RUB/$)
+- No Telegram / wallet / email / USDT / Bitcoin on CTA — single channel only
+- **WIPO patent №2820244 retained** as international IP credential
+
+### Slide 14 credentials (no names, no photos)
+1. 20+ years industrial chemistry experience
+2. Active oil-regeneration deployments since 2018
+3. WIPO patent holder · №2820244
+4. Independent laboratory validation
+
+### Slide 15 CTA
+- Single channel: `https://eco-pearl.com/#contact`
+- Anchor verified against `index.html:643` (`<section id="contact">`)
+
+### Commit chain (7 unpushed as of 2026-05-19, oldest → newest)
+```
+b667ea1  feat(pitch): EN base — anonymized, international, $24.7M raise
+ed641b0  feat(pitch): merge product content — 15-slide unified deck
+dd36c01  feat(pitch): finalize slides 14-15 — credentials + contact CTA
+0583fd2  feat(pitch): ES variant — Latin American Spanish
+996afde  feat(pitch): PT-BR variant — Brazilian Portuguese
+98a27bf  feat(pitch): HI variant — Indian Hindi
+911b431  feat(pitch): RU variant — international Russian
+```
+
+### Pending
+- Review of 4 locale files in browser (user does this before push)
+- Integration of pitch deck into `eco-pearl.com` main site — deferred to bundle with investment calculator + Telegram bot + token sale section in one batch push
+
 ## Known Bugs (non-blocking — fix in future phase)
 
 | Bug | Location | Impact |
