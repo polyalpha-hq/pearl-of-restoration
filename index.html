@@ -363,46 +363,16 @@ Closed-loop technology — not an idea. A working reality.</p>
 
     <!-- BLOCK 3: THREE PATHS -->
     <div class="hero-paths rv">
-      <div class="s-orn rv" style="margin:0.5rem 0 1.25rem;">
-        <span data-i18n="paths_orn">How do you want to help?</span>
+      <div class="s-orn rv" style="margin:0.5rem 0 1.1rem;">
+        <span data-i18n="paths_orn">Ready to invest?</span>
       </div>
-      <div class="path-grid">
-        <div class="path-card path-card--green rv">
-          <div class="path-icon path-icon--green"><i class="fas fa-industry"></i></div>
-          <div class="path-card-title" data-i18n="path1_title">Buy the equipment</div>
-          <p class="path-card-text" data-i18n="path1_text">Put a working system in your facility. Cut costs. Reduce your footprint.</p>
-          <ul class="path-card-list">
-            <li data-i18n="path1_li1">Oil Regeneration Station</li>
-            <li data-i18n="path1_li2">Bio-Based MWF Concentrate</li>
-            <li data-i18n="path1_li3">Full turnkey installation</li>
-            <li data-i18n="path1_li4">ROI under 12 months</li>
-          </ul>
-          <a href="#contact" class="path-btn path-btn--green" data-i18n="path1_btn">Get a quote &#8594;</a>
-        </div>
-        <div class="path-card path-card--blue rv">
-          <div class="path-icon path-icon--blue"><i class="fas fa-chart-line"></i></div>
-          <div class="path-card-title" data-i18n="path2_title">Invest in the plant</div>
-          <p class="path-card-text" data-i18n="path2_text">Co-fund the activated carbon facility. Scale the loop globally.</p>
-          <ul class="path-card-list">
-            <li data-i18n="path2_li1">Activated Carbon complex</li>
-            <li data-i18n="path2_li2">Complex under construction</li>
-            <li data-i18n="path2_li3">Full financial model available</li>
-            <li data-i18n="path2_li4">WIPO patented technology</li>
-          </ul>
-          <a href="#contact" class="path-btn path-btn--blue" data-i18n="path2_btn">Request investor deck &#8594;</a>
-        </div>
-        <div class="path-card path-card--gold rv">
-          <div class="path-icon path-icon--gold"><i class="fas fa-heart"></i></div>
-          <div class="path-card-title" data-i18n="path3_title">Donate</div>
-          <p class="path-card-text" data-i18n="path3_text">Believe in the mission. Every dollar funds real construction.</p>
-          <ul class="path-card-list">
-            <li data-i18n="path3_li1">Funds real construction</li>
-            <li data-i18n="path3_li2">Tracked on public roadmap</li>
-            <li data-i18n="path3_li3">Impact report every quarter</li>
-            <li data-i18n="path3_li4">No minimum amount</li>
-          </ul>
-          <a href="#donate" class="path-btn path-btn--gold" data-i18n="path3_btn">Donate now &#8594;</a>
-        </div>
+      <h2 class="s-h2 rv" data-i18n="paths_header" style="margin-bottom:1rem;text-align:center;">A pearl grows from a single grain</h2>
+      <p class="hero-manifesto rv" data-i18n="paths_sub" style="margin-bottom:2.2rem;">Invest in the first facility. Earn a share of global scaling.</p>
+      <div class="hero-cta-wrap rv" style="margin:0 0 0.8rem;">
+        <a href="javascript:void(0)" onclick="openInvestorDeck();return false;" class="hero-invest-cta" data-i18n="hero_invest">Open the investor deck &#8594;</a>
+      </div>
+      <div style="text-align:center;">
+        <a href="#donate" class="donate-deck-link" data-i18n="paths_donate_alt" style="text-transform:none;letter-spacing:0.04em;font-size:0.95rem;font-style:italic;border-bottom-color:rgba(201,168,76,0.25);margin-top:0.4rem;">or support construction with a donation</a>
       </div>
     </div>
 
@@ -869,7 +839,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbo
 const i18n={
 en:{
  nav_about:'About',nav_how:'How it Works',nav_impact:'Impact',nav_roadmap:'Roadmap',nav_invest:'Invest',nav_donate:'Donate',
- hero_invest:'Invest in PEARL &#8594;',
+ hero_invest:'Open the investor deck &#8594;',
  donate_deck_cta:'Read the full investor deck &#8594;',
  hero_title:'Help Restore the World, One Factory at a Time',
  hero_manifesto:'Nature has no word for waste.<br>Water evaporates — and returns as rain.<br>A pearl is born from a wound — through pressure, time, transformation.<br>Why should industry be any different?<br>Closed-loop technology — not an idea. A working reality.',
@@ -880,20 +850,11 @@ en:{
  crisis_stat1_label:'Industrial oil wasted yearly',crisis_stat1_val:'8B litres',
  crisis_stat2_label:'CO&#8322; from oil incineration',crisis_stat2_val:'40M tonnes',
  crisis_stat3_label:'Cost to regenerate',crisis_stat3_val:'$0.01/L',
- paths_orn:'How do you want to help?',
+ paths_orn:'Ready to invest?',
  chain1:'Oil Regeneration',chain2:'Metalworking Fluid',chain3:'Activated Carbon',chain4:'Waste-to-Energy',chain5:'Zero Waste',
- path1_title:'Buy the equipment',
- path1_text:'Put a working system in your facility. Cut costs. Reduce your footprint.',
- path1_li1:'Oil Regeneration Station',path1_li2:'Bio-Based MWF Concentrate',path1_li3:'Full turnkey installation',path1_li4:'ROI under 12 months',
- path1_btn:'Get a quote →',
- path2_title:'Invest in the plant',
- path2_text:'Co-fund the activated carbon facility. Scale the loop globally.',
- path2_li1:'Activated Carbon complex',path2_li2:'Complex under construction',path2_li3:'Full financial model available',path2_li4:'WIPO patented technology',
- path2_btn:'Request investor deck →',
- path3_title:'Donate',
- path3_text:'Believe in the mission. Every dollar funds real construction.',
- path3_li1:'Funds real construction',path3_li2:'Tracked on public roadmap',path3_li3:'Impact report every quarter',path3_li4:'No minimum amount',
- path3_btn:'Donate now →',
+ paths_header:'A pearl grows from a single grain',
+ paths_sub:'Invest in the first facility. Earn a share of global scaling.',
+ paths_donate_alt:'or support construction with a donation',
  about_orn:'Our Purpose',
  about_h2:'Nothing Is Waste.<br>Everything Restores.',
  about_p1:'Every litre of industrial oil burned needlessly. Every tonne of organic waste buried in the ground. Every carbon molecule released without purpose. These are not inevitabilities — they are <strong>choices we can reverse.</strong>',
@@ -947,7 +908,7 @@ en:{
 },
 es:{
  nav_about:'Acerca',nav_how:'Cómo Funciona',nav_impact:'Impacto',nav_roadmap:'Hoja de Ruta',nav_invest:'Invertir',nav_donate:'Donar',
- hero_invest:'Invertir en PEARL &#8594;',
+ hero_invest:'Abrir el deck de inversión &#8594;',
  donate_deck_cta:'Leer el deck completo del inversor &#8594;',
  hero_title:'Ayuda a Restaurar el Mundo, Una Fábrica a la Vez',
  hero_manifesto:'La naturaleza no conoce el desperdicio.<br>El agua se evapora — y regresa como lluvia.<br>Una perla nace de una herida — a través de la presión, el tiempo y la transformación.<br>¿Por qué la industria debería ser diferente?<br>Tecnología de ciclo cerrado — no una idea. Una realidad funcional.',
@@ -958,20 +919,11 @@ es:{
  crisis_stat1_label:'Aceite industrial desperdiciado al año',crisis_stat1_val:'8B litros',
  crisis_stat2_label:'CO&#8322; de la incineración de aceite',crisis_stat2_val:'40M toneladas',
  crisis_stat3_label:'Costo de regeneración',crisis_stat3_val:'$0.01/L',
- paths_orn:'¿Cómo quieres ayudar?',
+ paths_orn:'¿Listo para invertir?',
  chain1:'Regeneración de Aceite',chain2:'Fluido de Mecanizado',chain3:'Carbón Activado',chain4:'Energía de Residuos',chain5:'Cero Residuos',
- path1_title:'Compra la tecnología',
- path1_text:'Instala un sistema funcional en tu planta. Reduce costos. Reduce tu huella.',
- path1_li1:'Estación de Regeneración de Aceite',path1_li2:'Concentrado MWF Bio-Based',path1_li3:'Instalación llave en mano',path1_li4:'ROI en menos de 12 meses',
- path1_btn:'Solicitar cotización →',
- path2_title:'Invierte en la planta',
- path2_text:'Cofinancia el complejo de carbón activado. Escala el ciclo globalmente.',
- path2_li1:'Complejo de Carbón Activado',path2_li2:'Primer complejo en construcción',path2_li3:'Modelo financiero completo disponible',path2_li4:'Tecnología patentada OMPI',
- path2_btn:'Solicitar presentación para inversores →',
- path3_title:'Donar',
- path3_text:'Cree en la misión. Cada dólar financia construcción real.',
- path3_li1:'Financia construcción real',path3_li2:'Seguimiento en hoja de ruta pública',path3_li3:'Informe de impacto cada trimestre',path3_li4:'Sin monto mínimo',
- path3_btn:'Donar ahora →',
+ paths_header:'Una perla crece desde un grano',
+ paths_sub:'Invierta en la primera planta. Reciba una parte del escalado global.',
+ paths_donate_alt:'o apoye la construcción con una donación',
  about_orn:'Nuestro Propósito',
  about_h2:'Nada Es Desperdicio.<br>Todo Se Restaura.',
  about_p1:'Cada litro de aceite industrial quemado innecesariamente. Cada tonelada de residuo orgánico enterrado. Cada molécula de carbono liberada sin propósito. No son inevitabilidades — son <strong>elecciones que podemos revertir.</strong>',
@@ -1025,7 +977,7 @@ es:{
 },
 pt:{
  nav_about:'Sobre',nav_how:'Como Funciona',nav_impact:'Impacto',nav_roadmap:'Roteiro',nav_invest:'Investir',nav_donate:'Doar',
- hero_invest:'Investir em PEARL &#8594;',
+ hero_invest:'Abrir o deck de investimento &#8594;',
  donate_deck_cta:'Leia o deck completo do investidor &#8594;',
  hero_title:'Ajude a Restaurar o Mundo, Uma Fábrica por Vez',
  hero_manifesto:'A natureza não conhece o desperdício.<br>A água evapora — e retorna como chuva.<br>Uma pérola nasce de uma ferida — por pressão, tempo, transformação.<br>Por que a indústria deveria ser diferente?<br>Tecnologia de ciclo fechado — não uma ideia. Uma realidade funcional.',
@@ -1036,20 +988,11 @@ pt:{
  crisis_stat1_label:'Óleo industrial desperdiçado por ano',crisis_stat1_val:'8B litros',
  crisis_stat2_label:'CO&#8322; da incineração de óleo',crisis_stat2_val:'40M toneladas',
  crisis_stat3_label:'Custo de regeneração',crisis_stat3_val:'$0,01/L',
- paths_orn:'Como você quer ajudar?',
+ paths_orn:'Pronto para investir?',
  chain1:'Regeneração de Óleo',chain2:'Fluido de Usinagem',chain3:'Carvão Ativado',chain4:'Energia de Resíduos',chain5:'Zero Resíduo',
- path1_title:'Compre a tecnologia',
- path1_text:'Instale um sistema funcional na sua planta. Reduza custos. Reduza sua pegada.',
- path1_li1:'Estação de Regeneração de Óleo',path1_li2:'Concentrado MWF Bio-Based',path1_li3:'Instalação turnkey completa',path1_li4:'ROI em menos de 12 meses',
- path1_btn:'Solicitar orçamento →',
- path2_title:'Invista na planta',
- path2_text:'Cofinance o complexo de carvão ativado. Escale o ciclo globalmente.',
- path2_li1:'Complexo de Carvão Ativado',path2_li2:'Primeiro complexo em construção',path2_li3:'Modelo financeiro completo disponível',path2_li4:'Tecnologia patenteada OMPI',
- path2_btn:'Solicitar apresentação para investidores →',
- path3_title:'Doar',
- path3_text:'Acredite na missão. Cada dólar financia construção real.',
- path3_li1:'Financia construção real',path3_li2:'Rastreado no roteiro público',path3_li3:'Relatório de impacto a cada trimestre',path3_li4:'Sem valor mínimo',
- path3_btn:'Doar agora →',
+ paths_header:'Uma pérola cresce de um grão',
+ paths_sub:'Invista na primeira instalação. Receba uma parte do escalonamento global.',
+ paths_donate_alt:'ou apoie a construção com uma doação',
  about_orn:'Nosso Propósito',
  about_h2:'Nada É Desperdício.<br>Tudo Se Restaura.',
  about_p1:'Cada litro de óleo industrial queimado desnecessariamente. Cada tonelada de resíduo orgânico enterrado. Cada molécula de carbono liberada sem propósito. Não são inevitabilidades — são <strong>escolhas que podemos reverter.</strong>',
@@ -1103,7 +1046,7 @@ pt:{
 },
 hi:{
  nav_about:'हमारे बारे में',nav_how:'यह कैसे काम करता है',nav_impact:'प्रभाव',nav_roadmap:'रोडमैप',nav_invest:'निवेश',nav_donate:'दान करें',
- hero_invest:'PEARL में निवेश करें &#8594;',
+ hero_invest:'निवेशक प्रस्तुति खोलें &#8594;',
  donate_deck_cta:'पूरी निवेशक प्रस्तुति पढ़ें &#8594;',
  hero_title:'दुनिया को पुनर्स्थापित करने में मदद करें, एक कारखाना एक बार में',
  hero_manifesto:'प्रकृति के शब्दकोश में अपशिष्ट का कोई स्थान नहीं।<br>पानी वाष्पित होता है — और वर्षा बनकर लौटता है।<br>एक मोती एक घाव से जन्म लेता है — दबाव, समय और रूपांतरण से।<br>उद्योग अलग क्यों हो?<br>बंद-लूप प्रौद्योगिकी — कोई विचार नहीं। एक कार्यशील वास्तविकता।',
@@ -1114,20 +1057,11 @@ hi:{
  crisis_stat1_label:'हर साल बर्बाद होने वाला औद्योगिक तेल',crisis_stat1_val:'8B लीटर',
  crisis_stat2_label:'तेल दहन से CO&#8322;',crisis_stat2_val:'40M टन',
  crisis_stat3_label:'पुनर्जनन लागत',crisis_stat3_val:'$0.01/L',
- paths_orn:'आप किस तरह मदद करना चाहते हैं?',
+ paths_orn:'निवेश के लिए तैयार हैं?',
  chain1:'तेल पुनर्जनन',chain2:'धातुकर्म द्रव',chain3:'सक्रिय कार्बन',chain4:'अपशिष्ट-से-ऊर्जा',chain5:'शून्य अपशिष्ट',
- path1_title:'उपकरण खरीदें',
- path1_text:'अपनी सुविधा में एक कार्यशील प्रणाली स्थापित करें। लागत कम करें। अपना पर्यावरणीय प्रभाव घटाएं।',
- path1_li1:'तेल पुनर्जनन स्टेशन',path1_li2:'जैव-आधारित MWF सांद्रण',path1_li3:'पूर्ण टर्नकी स्थापना',path1_li4:'12 महीने से कम में ROI',
- path1_btn:'कोटेशन प्राप्त करें →',
- path2_title:'संयंत्र में निवेश करें',
- path2_text:'सक्रिय कार्बन सुविधा को सह-वित्त पोषित करें। लूप को वैश्विक स्तर पर बढ़ाएं।',
- path2_li1:'सक्रिय कार्बन परिसर',path2_li2:'परिसर निर्माणाधीन',path2_li3:'पूर्ण वित्तीय मॉडल उपलब्ध',path2_li4:'WIPO पेटेंट तकनीक',
- path2_btn:'निवेशक डेक का अनुरोध करें →',
- path3_title:'दान करें',
- path3_text:'मिशन पर विश्वास करें। प्रत्येक डॉलर वास्तविक निर्माण को वित्त पोषित करता है।',
- path3_li1:'वास्तविक निर्माण को वित्त पोषित करता है',path3_li2:'सार्वजनिक रोडमैप पर ट्रैक किया गया',path3_li3:'हर तिमाही प्रभाव रिपोर्ट',path3_li4:'न्यूनतम राशि नहीं',
- path3_btn:'अभी दान करें →',
+ paths_header:'मोती एक छोटे से कण से उत्पन्न होता है',
+ paths_sub:'पहली सुविधा में निवेश करें। वैश्विक विस्तार से हिस्सा प्राप्त करें।',
+ paths_donate_alt:'या दान के साथ निर्माण का समर्थन करें',
  about_orn:'हमारा उद्देश्य',
  about_h2:'कुछ भी अपशिष्ट नहीं।<br>सब कुछ पुनर्स्थापित होता है।',
  about_p1:'औद्योगिक तेल का हर लीटर बेकार जलाया गया। जमीन में दबाया गया जैविक अपशिष्ट का हर टन। बिना उद्देश्य के मुक्त हुए कार्बन का हर अणु। ये अनिवार्यताएं नहीं हैं — ये <strong>ऐसे विकल्प हैं जिन्हें हम बदल सकते हैं।</strong>',
@@ -1181,7 +1115,7 @@ hi:{
 },
 ru:{
  nav_about:'О нас',nav_how:'Как это работает',nav_impact:'Результат',nav_roadmap:'Дорожная карта',nav_invest:'Инвестировать',nav_donate:'Поддержать',
- hero_invest:'Инвестировать в PEARL &#8594;',
+ hero_invest:'Открыть инвестиционную презентацию &#8594;',
  donate_deck_cta:'Открыть полную презентацию для инвестора &#8594;',
  hero_title:'Помогите восстановить мир — завод за заводом',
  hero_manifesto:'В природе нет понятия «отходы».<br>Вода испаряется — и возвращается дождём.<br>Жемчужина рождается из раны — под давлением, со временем, через преображение.<br>Почему промышленность должна быть иной?<br>Технология замкнутого цикла — не идея. Работающая реальность.',
@@ -1192,20 +1126,11 @@ ru:{
  crisis_stat1_label:'Промышленного масла теряется ежегодно',crisis_stat1_val:'8 млрд л',
  crisis_stat2_label:'CO&#8322; от сжигания масла',crisis_stat2_val:'40 млн т',
  crisis_stat3_label:'Стоимость регенерации',crisis_stat3_val:'$0,01/л',
- paths_orn:'Как вы хотите помочь?',
+ paths_orn:'Готовы инвестировать?',
  chain1:'Регенерация масла',chain2:'Жидкость для металлообработки',chain3:'Активированный уголь',chain4:'Энергия из отходов',chain5:'Ноль отходов',
- path1_title:'Купить оборудование',
- path1_text:'Установите работающую систему на своём предприятии. Снизьте затраты. Сократите экологический след.',
- path1_li1:'Станция регенерации масел',path1_li2:'Био-концентрат для металлообработки',path1_li3:'Полная установка под ключ',path1_li4:'Окупаемость менее 12 месяцев',
- path1_btn:'Получить коммерческое предложение →',
- path2_title:'Инвестировать в завод',
- path2_text:'Соинвестируйте в комплекс активированного угля. Масштабируйте цикл глобально.',
- path2_li1:'Комплекс активированного угля',path2_li2:'Первый комплекс строится',path2_li3:'Полная финансовая модель доступна',path2_li4:'Технология защищена патентом ВОИС',
- path2_btn:'Запросить инвестиционную презентацию →',
- path3_title:'Поддержать проект',
- path3_text:'Верьте в миссию. Каждый доллар финансирует реальное строительство.',
- path3_li1:'Финансирует реальное строительство',path3_li2:'Отслеживается в публичной дорожной карте',path3_li3:'Отчёт о результатах каждый квартал',path3_li4:'Без минимальной суммы',
- path3_btn:'Поддержать сейчас →',
+ paths_header:'Жемчужина растёт из зерна',
+ paths_sub:'Инвестируйте в первый комплекс. Получайте долю от глобального масштабирования.',
+ paths_donate_alt:'или поддержите строительство донатом',
  about_orn:'Наша цель',
  about_h2:'Ничто не является отходом.<br>Всё восстанавливается.',
  about_p1:'Каждый литр промышленного масла, сожжённого без смысла. Каждая тонна органических отходов, закопанных в землю. Каждая молекула углерода, выброшенная без цели. Это не неизбежность — это <strong>выбор, который мы можем изменить.</strong>',
