@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl of Restoration · सक्रिय कार्बन निवेश प्रस्तुति</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #04080f;
+    --bg-alt:      #0a121e;
+    --bg-card:     rgba(10,18,30,0.82);
+    --gold:        #c9a84c;
+    --gold-light:  #e8d06a;
+    --gold-soft:   rgba(201,168,76,0.12);
+    --gold-dim:    rgba(201,168,76,0.30);
+    --cream:       #f0e8d0;
+    --cream-dim:   rgba(240,232,208,0.75);
+    --cream-faint: rgba(240,232,208,0.45);
+    --green:       #7ec99c;
+    --border:      rgba(201,168,76,0.18);
+    --border-soft: rgba(240,232,208,0.08);
+
+    --f-display: 'Cinzel Decorative', serif;
+    --f-heading: 'Cinzel', serif;
+    --f-body:    'EB Garamond', Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%;
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--f-body);
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 14px;
+    border: 1px solid var(--gold-dim);
+    pointer-events: none;
+    z-index: 100;
+  }
+  .deck {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-soft);
+    page-break-after: always;
+    position: relative;
+  }
+  .slide.compact { justify-content: flex-start; padding-top: 110px; }
+  .slide-num {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-family: var(--f-heading);
+    font-size: 12px;
+    color: var(--cream-faint);
+    letter-spacing: 0.25em;
+  }
+  .eyebrow {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+  h1, h2, h3 { color: var(--cream); line-height: 1.18; }
+  h1 {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 68px;
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+    color: var(--gold-light);
+  }
+  h2 {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+    color: var(--gold-light);
+  }
+  h3 {
+    font-family: var(--f-heading);
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 14px;
+    color: var(--cream);
+  }
+  p {
+    font-family: var(--f-body);
+    font-size: 19px;
+    color: var(--cream-dim);
+    margin-bottom: 18px;
+    max-width: 880px;
+  }
+  .lead {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    line-height: 1.5;
+    max-width: 920px;
+  }
+  .big-num {
+    font-family: var(--f-heading);
+    font-size: 88px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--gold);
+  }
+  .num-unit {
+    font-family: var(--f-heading);
+    font-size: 24px;
+    color: var(--cream-dim);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
+  .grid { display: grid; gap: 28px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    backdrop-filter: blur(6px);
+  }
+  .card.tight { padding: 22px; }
+  .stat .label {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--cream-faint);
+    margin-bottom: 10px;
+  }
+  .stat .value {
+    font-family: var(--f-heading);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+  .stat .value.accent { color: var(--gold); }
+  .stat .value.green  { color: var(--green); }
+  .stat .sub {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-faint);
+    margin-top: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--f-body);
+    font-size: 16px;
+  }
+  th, td {
+    text-align: left;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  th {
+    font-family: var(--f-heading);
+    font-weight: 500;
+    color: var(--gold);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    background: rgba(201,168,76,0.04);
+  }
+  td { color: var(--cream); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  td.pass { color: var(--green); font-family: var(--f-heading); font-weight: 500; text-align: center; }
+  tr.total td {
+    font-weight: 600;
+    color: var(--gold-light);
+    border-top: 1px solid var(--gold-dim);
+    background: rgba(201,168,76,0.06);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.28;
+    z-index: 0;
+  }
+  .hero-bg.cosmos    { background-image: url('media/cosmos-bg.jpg'); }
+  .hero-bg.iceland   { background-image: url('media/iceland-bg.jpg'); }
+  .hero-bg.hero      { background-image: url('media/hero-bg.jpg'); }
+  .hero-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(4,8,15,0.55) 0%, rgba(4,8,15,0.20) 40%, rgba(4,8,15,0.75) 100%);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 2px;
+    font-family: var(--f-heading);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  ul.bullets { list-style: none; padding: 0; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-family: var(--f-body);
+    font-size: 18px;
+    color: var(--cream-dim);
+    line-height: 1.55;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 12px;
+    width: 10px; height: 1px;
+    background: var(--gold);
+  }
+  ul.bullets li strong { color: var(--cream); font-weight: 600; }
+  .step-flow { display: flex; align-items: stretch; gap: 18px; margin-top: 16px; }
+  .step {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+  }
+  .step-num {
+    font-family: var(--f-heading);
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .step-title {
+    font-family: var(--f-heading);
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .step-desc {
+    font-family: var(--f-body);
+    font-size: 16px;
+    color: var(--cream-dim);
+    line-height: 1.5;
+  }
+  .step-arrow {
+    align-self: center;
+    color: var(--gold);
+    font-size: 22px;
+  }
+  .bar-row { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; font-family: var(--f-body); font-size: 16px; }
+  .bar-label { flex: 0 0 220px; color: var(--cream); }
+  .bar-track { flex: 1; height: 6px; background: rgba(201,168,76,0.08); border-radius: 1px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--gold); border-radius: 1px; }
+  .bar-val { flex: 0 0 150px; text-align: right; color: var(--cream-dim); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  .site-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .site-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 28px;
+    backdrop-filter: blur(6px);
+  }
+  .site-card .label {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .site-card .name {
+    font-family: var(--f-heading);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .site-card .meta {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-faint);
+  }
+  .site-card .cap {
+    font-family: var(--f-heading);
+    font-size: 30px;
+    color: var(--gold);
+    font-weight: 500;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+  }
+  .quote {
+    border-left: 2px solid var(--gold);
+    padding: 8px 0 8px 24px;
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    margin: 28px 0;
+    max-width: 920px;
+    line-height: 1.5;
+  }
+  .footer-meta {
+    margin-top: auto;
+    padding-top: 48px;
+    color: var(--cream-faint);
+    font-family: var(--f-heading);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  .callout {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-dim);
+    border-left: 2px solid var(--gold);
+    padding: 22px 26px;
+    border-radius: 4px;
+    max-width: 920px;
+    backdrop-filter: blur(6px);
+  }
+  .callout p { margin: 0; color: var(--cream); font-size: 18px; }
+  .callout strong { color: var(--gold-light); font-weight: 600; }
+  .driver-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .driver {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 28px 24px;
+    backdrop-filter: blur(6px);
+  }
+  .driver .icon {
+    font-family: var(--f-heading);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .driver h4 {
+    font-family: var(--f-heading);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+  .driver p { font-size: 15px; line-height: 1.55; margin: 0; }
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .spec {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+  }
+  .spec .num {
+    font-family: var(--f-heading);
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+  .spec .unit {
+    font-family: var(--f-heading);
+    font-size: 14px;
+    color: var(--cream-faint);
+    letter-spacing: 0.12em;
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+  .spec .desc {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--cream-dim);
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+  @media print {
+    body { background: white; color: black; }
+    body::before { display: none; }
+    .slide { min-height: 100vh; page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- ============================================================ -->
+  <!-- PART 1 — PROBLEM & OPPORTUNITY                                -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 1: TITLE -->
+  <section class="slide" style="overflow:hidden;">
+    <div class="hero-bg cosmos"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Investment Pitch · 2026</div>
+      <h1>Pearl of Restoration<br>सक्रिय कार्बन कार्यक्रम</h1>
+      <p class="lead" style="max-width: 840px;">
+        एक WIPO-पेटेंटेड औद्योगिक प्रक्रिया, जो कृषि बायोमास अपशिष्ट को
+        प्रीमियम सक्रिय कार्बन में परिवर्तित करती है। हम प्रसंस्करण भागीदारों
+        के लिए एक स्थायी पर्यावरणीय देयता का समाधान करते हैं और वैश्विक सॉर्बेंट
+        बाज़ार की संरचनात्मक आपूर्ति कमी को संबोधित करते हैं।
+      </p>
+      <div style="margin-top: 56px; display: flex; gap: 64px; align-items: baseline; flex-wrap: wrap;">
+        <div>
+          <div class="big-num">$24.75<span class="num-unit"> M</span></div>
+          <div class="stat label" style="margin-top: 12px;">कुल पूँजी जुटाव · तीन turnkey लाइनें</div>
+        </div>
+        <div>
+          <div class="big-num">6–8<span class="num-unit"> mo</span></div>
+          <div class="stat label" style="margin-top: 12px;">प्रति लाइन प्लांट payback</div>
+        </div>
+        <div>
+          <div class="big-num">$69.9<span class="num-unit"> M / yr</span></div>
+          <div class="stat label" style="margin-top: 12px;">पूर्ण क्षमता पर संयुक्त टर्नओवर</div>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>WIPO-पेटेंटेड तकनीक · भागीदार-स्थल पर स्थापना</span>
+        <span>गोपनीय</span>
+      </div>
+    </div>
+    <div class="slide-num">01 / 15</div>
+  </section>
+
+  <!-- SLIDE 2: THE PROBLEM -->
+  <section class="slide compact">
+    <div class="eyebrow">समस्या</div>
+    <h2>प्रसंस्करण भागीदार एक ऐसी देयता पर बैठे हैं<br>जो हर वर्ष बढ़ती जा रही है</h2>
+    <div class="grid grid-2" style="margin-top: 32px; align-items: stretch;">
+      <div>
+        <p class="lead" style="margin-bottom: 24px;">
+          एक उच्च-मात्रा वाला <strong style="color: var(--cream);">क्षीण कृषि उपोत्पाद</strong>
+          बड़े पैमाने के खाद्य प्रसंस्करण के डाउनस्ट्रीम में संचित होता है।
+          विक्रय-योग्य घटक पहले ही निकाले जा चुके होते हैं; शेष कार्बोहाइड्रेट-समृद्ध
+          द्रव्यमान के लिए कोई वाणिज्यिक उपयोग का मार्ग उपलब्ध नहीं है।
+        </p>
+        <ul class="bullets">
+          <li>हमारे प्रारंभिक लक्षित क्षेत्रों में अकेले <strong>250,000 टन प्रति वर्ष</strong> संचित होते हैं</li>
+          <li>प्राथमिक उत्पादन के साथ-साथ <strong>हर मौसम में मात्रा बढ़ती है</strong></li>
+          <li>यह अपशिष्ट धारा <strong>लगभग कभी उपयोग में नहीं लाई जाती</strong>; खुले भंडारण में पड़ी रहती है और अनियंत्रित रूप से विघटित होती है</li>
+          <li>विघटन उत्पाद मिट्टी, भूजल, सतही जल और वायु को दूषित करते हैं</li>
+          <li><strong>प्रलेखित नियामक उदाहरण</strong> — निपटान नियंत्रित न कर पाने वाले संचालकों पर पहले ही करोड़ों डॉलर का जुर्माना लगाया जा चुका है</li>
+        </ul>
+        <div class="quote">
+          "संचालकों ने इस मुद्दे को कई बार क्षेत्रीय नियामकों एवं नीति निकायों के
+          समक्ष उठाया है — परंतु बदले में कोई व्यावहारिक निपटान मार्ग प्रस्तावित
+          नहीं किया गया।"
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="stat">
+            <div class="label">प्रसंस्करणकर्ता द्वारा देय निपटान शुल्क</div>
+            <div class="value accent">$32.6 / tonne</div>
+            <div class="sub">इस मॉडल में प्रयुक्त रूढ़िवादी आँकड़ा</div>
+          </div>
+          <p style="margin-top: 24px; font-size: 17px; color: var(--cream-dim);">
+            आज प्रसंस्करणकर्ता भंडारण, नियामक जोखिम और अंतिम उपचार की पूरी लागत
+            उठाते हैं। हम उस लागत को एक धनात्मक राजस्व धारा से प्रतिस्थापित करते
+            हैं — वे अपशिष्ट हटाने के लिए हमें प्रति-टन निश्चित शुल्क देते हैं;
+            और हम जिस फीडस्टॉक को परिवर्तित करते हैं, उसके लिए उन्हें कुछ भी
+            भुगतान नहीं करते।
+          </p>
+        </div>
+        <div class="card tight" style="margin-top: 20px;">
+          <div class="stat">
+            <div class="label">दोनों पक्षों के लिए परिणाम</div>
+            <div class="value">जोखिम → राजस्व</div>
+            <div class="sub">देयता समाप्त; नई राजस्व धारा प्रारंभ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">02 / 15</div>
+  </section>
+
+  <!-- SLIDE 3: MARKET DRIVERS -->
+  <section class="slide compact">
+    <div class="eyebrow">बाज़ार चालक</div>
+    <h2>सॉर्बेंट की वैश्विक माँग<br>संरचनात्मक है, चक्रीय नहीं</h2>
+    <p class="lead" style="margin-top: 8px; max-width: 980px;">
+      सख़्त होते पर्यावरणीय मानक, बढ़ता औद्योगिक उत्पादन और जीवन-गुणवत्ता की
+      उच्चतर अपेक्षाएँ — सभी एक ही आवश्यकता पर अभिसरित होते हैं: उच्च-श्रेणी
+      के अधिशोषक पदार्थ, पर्याप्त मात्रा में, अनुमेय लागत पर।
+    </p>
+
+    <div class="driver-grid" style="margin-top: 44px;">
+      <div class="driver">
+        <div class="icon">पारिस्थितिकी</div>
+        <h4>जल एवं मृदा</h4>
+        <p>
+          अपशिष्ट जल उपचार, मृदा तथा जलाशयों में विषैले यौगिकों एवं भारी
+          धातुओं का निष्प्रभावन। अनुमेय सांद्रता सीमाओं के सख़्त होने से माँग
+          निरंतर ऊपर जा रही है।
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">उद्योग</div>
+        <h4>प्रक्रिया दक्षता</h4>
+        <p>
+          पेट्रोरसायन, धातुकर्म एवं फ़ार्मास्यूटिकल्स प्रक्रिया प्रवाह बढ़ाने,
+          उपकरणों की सुरक्षा और उत्सर्जन मानकों को पूरा करने हेतु सॉर्बेंट पर
+          निर्भर हैं।
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">चिकित्सा</div>
+        <h4>एंटरोसॉर्बेंट</h4>
+        <p>
+          विषहरण, विषाक्त पदार्थों, एलर्जेन्स तथा रोगजनक सूक्ष्मजीवों का
+          निष्कासन — वैश्विक फ़ार्मा व्यय के साथ बढ़ती हुई श्रेणी।
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">ऊर्जा</div>
+        <h4>संग्रहण एवं कैप्चर</h4>
+        <p>
+          हाइड्रोजन-ऊर्जा अवसंरचना और प्राकृतिक-गैस संग्रहण दोनों के लिए
+          स्थिर विशिष्ट सतह क्षेत्रफल वाले उच्च-क्षमता अधिशोषक पदार्थ
+          आवश्यक हैं।
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 48px;">
+      <div class="card">
+        <div class="stat">
+          <div class="label">लक्षित क्षेत्रीय बाज़ार 2024</div>
+          <div class="value accent">41,000 t</div>
+          <div class="sub">≈ $118 M वार्षिक माँग</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">आयातित हिस्सा 2024</div>
+          <div class="value">30,000 t</div>
+          <div class="sub">+24% YoY — मुख्यतः वैश्विक औद्योगिक बाज़ार से आयात</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">2030 तक अनुमानित CAGR</div>
+          <div class="value green">+5.6% / yr</div>
+          <div class="sub">82,000 t/yr तक विकास क्षमता</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">03 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 2 — PRODUCT                                              -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 4: WHAT WE PRODUCE -->
+  <section class="slide compact">
+    <div class="eyebrow">उत्पाद</div>
+    <h2>कृषि बायोमास अपशिष्ट से<br>निर्मित प्रीमियम सक्रिय कार्बन</h2>
+    <div class="grid grid-2" style="margin-top: 32px; align-items: stretch;">
+      <div>
+        <p class="lead" style="margin-bottom: 28px;">
+          हमारी प्रक्रिया एक निम्न-मूल्य, उच्च-मात्रा वाले बायोमास अवशेष को
+          एक उच्च-क्षमता वाले छिद्रित कार्बन पदार्थ में परिवर्तित करती है —
+          विकसित विशिष्ट सतह क्षेत्रफल के साथ — जो औद्योगिक अनुप्रयोगों में
+          प्रदूषकों के एक व्यापक स्पेक्ट्रम को बाँधने में सक्षम है।
+        </p>
+        <ul class="bullets">
+          <li><strong>नवीकरणीय फीडस्टॉक</strong> — एक प्राथमिक उत्पादन चक्र के अपरिहार्य उपोत्पाद के रूप में वार्षिक रूप से उत्पन्न</li>
+          <li><strong>ऋणात्मक कच्चे माल की लागत</strong> — प्रसंस्करण भागीदार फीडस्टॉक हटवाने के लिए हमें भुगतान करते हैं</li>
+          <li><strong>पुनरुत्पाद्य गुणवत्ता</strong> — प्रत्येक बैच एक ही बहु-मानक प्रयोगशाला विनिर्देश के विरुद्ध सत्यापित (स्लाइड 5)</li>
+          <li><strong>दो फॉर्म फ़ैक्टर</strong> — दानेदार और चूर्ण, साथ ही वैकल्पिक उच्च-मार्जिन कार्बन-कम्पोज़िट फ़ाइबर विस्तार</li>
+        </ul>
+      </div>
+      <div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <span class="pill">Industrial grade</span>
+          <div style="margin-top: 22px; font-family: var(--f-heading); font-size: 28px; color: var(--gold-light); font-weight: 500; letter-spacing: 0.04em;">
+            प्रीमियम सक्रिय कार्बन
+          </div>
+          <p style="margin-top: 16px; font-size: 17px; color: var(--cream-dim);">
+            प्रदर्शन वैश्विक बाज़ार में व्यापारित अग्रणी वाणिज्यिक सॉर्बेंट
+            श्रेणियों के तुलनीय है — और कई मापदंडों पर उनसे श्रेष्ठ भी।
+          </p>
+          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-soft);">
+            <div class="stat">
+              <div class="label">संदर्भ थोक मूल्य रेंज</div>
+              <div class="value accent">$2,200 – $4,900 / t</div>
+              <div class="sub">हमारा base case रूढ़िवादी $1,087 / t मानता है</div>
+            </div>
+          </div>
+        </div>
+        <div class="card tight" style="margin-top: 18px;">
+          <div class="stat">
+            <div class="label">प्रति लाइन बिक्री उत्पादन</div>
+            <div class="value">17,420 t / yr</div>
+            <div class="sub">134,000 t फीडस्टॉक से 13% उपज</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">04 / 15</div>
+  </section>
+
+  <!-- SLIDE 5: QUALITY PARAMETERS -->
+  <section class="slide compact">
+    <div class="eyebrow">गुणवत्ता मानक</div>
+    <h2>सात प्रयोगशाला संकेतक<br>हर बैच पर — पूर्णतः सत्यापित</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      हमारी प्रक्रिया से उत्पादित एक पायलट नमूना अंतर्राष्ट्रीय गुणवत्ता
+      मानकों के विरुद्ध पूर्ण प्रयोगशाला परीक्षण में उत्तीर्ण हुआ है। प्रत्येक
+      प्रमुख मापदंड विनिर्देश को या तो पूरा करता है या उससे अधिक — कई मापदंड
+      पर्याप्त सुरक्षा मार्जिन के साथ ऐसा करते हैं।
+    </p>
+
+    <div class="spec-grid" style="margin-top: 36px;">
+      <div class="spec">
+        <div class="num">65%</div>
+        <div class="unit">आयोडीन अधिशोषण</div>
+        <div class="desc">≥60% विनिर्देश से 5 प्रतिशत अंक अधिक</div>
+      </div>
+      <div class="spec">
+        <div class="num">4.5%</div>
+        <div class="unit">राख की मात्रा</div>
+        <div class="desc">≤6% सीमा से 25% कम — उच्च उत्पाद शुद्धता</div>
+      </div>
+      <div class="spec">
+        <div class="num">1.7<span style="font-size:26px;"> cm³/g</span></div>
+        <div class="unit">छिद्र आयतन</div>
+        <div class="desc">≥1.6 cm³/g विनिर्देश से अधिक</div>
+      </div>
+      <div class="spec">
+        <div class="num">6.0%</div>
+        <div class="unit">नमी</div>
+        <div class="desc">≤10% सीमा से 1.7× कम — भंडारण स्थिरता</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 48px;">पूर्ण प्रयोगशाला सत्यापन</h3>
+    <table style="margin-top: 16px; max-width: 1100px;">
+      <thead>
+        <tr>
+          <th style="width: 40px;">#</th>
+          <th>मापदंड</th>
+          <th>विनिर्देश</th>
+          <th>परिणाम</th>
+          <th style="width: 80px; text-align: center;">स्थिति</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>दृश्य रूप</td><td>काले दाने, बिना यांत्रिक समावेशन</td><td>काले दाने, स्वच्छ</td><td class="pass">✓</td></tr>
+        <tr><td>2</td><td>आयोडीन अधिशोषण सक्रियता</td><td>≥ 60%</td><td>65%</td><td class="pass">✓</td></tr>
+        <tr><td>3</td><td>जल द्वारा कुल छिद्र आयतन</td><td>≥ 1.6 cm³/g</td><td>1.7 cm³/g</td><td class="pass">✓</td></tr>
+        <tr><td>4</td><td>थोक घनत्व</td><td>≤ 240 g/dm³</td><td>230 g/dm³</td><td class="pass">✓</td></tr>
+        <tr><td>5.1</td><td>अंश: छलनी №36 पर अवशेष</td><td>≤ 2.5%</td><td>1.8%</td><td class="pass">✓</td></tr>
+        <tr><td>5.2</td><td>अंश: छलनी №10 पर अवशेष</td><td>≥ 95.5%</td><td>96.4%</td><td class="pass">✓</td></tr>
+        <tr><td>5.3</td><td>अंश: तली में</td><td>≤ 2.0%</td><td>0.9%</td><td class="pass">✓</td></tr>
+        <tr><td>6</td><td>राख की मात्रा (द्रव्यमान अंश)</td><td>≤ 6%</td><td>4.5%</td><td class="pass">✓</td></tr>
+        <tr><td>7</td><td>नमी (द्रव्यमान अंश)</td><td>≤ 10%</td><td>6.0%</td><td class="pass">✓</td></tr>
+        <tr class="total"><td></td><td colspan="3"><strong style="color: var(--gold-light);">सात में से सातों मापदंड विनिर्देश के अंतर्गत या उससे ऊपर</strong></td><td class="pass" style="color: var(--gold-light);">✓</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 28px;">
+      <p>
+        ऊपर दिए गए सभी मान पायलट नमूने के स्वतंत्र प्रयोगशाला सत्यापन से हैं।
+        औद्योगिक उत्पादन में हर बैच पर वही मापदंड पैनल लागू होता है — गुणवत्ता
+        अनुबंधात्मक है, उपाख्यानात्मक नहीं।
+      </p>
+    </div>
+    <div class="slide-num">05 / 15</div>
+  </section>
+
+  <!-- SLIDE 6: APPLICATIONS -->
+  <section class="slide compact">
+    <div class="eyebrow">अनुप्रयोग</div>
+    <h2>चार औद्योगिक बाज़ार<br>पूरे उत्पादन को अवशोषित करते हैं</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      हमारे सक्रिय कार्बन का भौतिक-रासायनिक प्रोफ़ाइल इसे प्रत्येक प्रमुख
+      सॉर्बेंट अंतिम-बाज़ार में सीधे प्रयोग योग्य बनाता है — नगरीय जल उपचार
+      से लेकर फ़ार्मास्यूटिकल शुद्धिकरण तक।
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 36px; gap: 28px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">जल एवं अपशिष्ट जल उपचार</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          औद्योगिक एवं पेयजल धाराओं से भारी धातुओं (सीसा, कैडमियम, पारा),
+          कार्बनिक प्रदूषकों, क्लोरो-ऑर्गेनिक यौगिकों तथा कीटनाशकों का प्रभावी
+          निष्कासन। धातुकर्म संयंत्रों, इलेक्ट्रोप्लेटिंग सुविधाओं और नगरीय
+          उपचार संयंत्रों में उपयोग।
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">रसायन एवं पेट्रोरसायन</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          विषाक्त पदार्थों का अधिशोषण, प्रक्रिया गैस धाराओं से वाष्पशील
+          कार्बनिक यौगिकों का निष्कासन, संक्षारण से उपकरण सुरक्षा। अम्ल/क्षार
+          उत्पादन, कार्बनिक विलायक निर्माण तथा रिफाइनरी संचालन में प्रयुक्त।
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">खाद्य उद्योग</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          VOC हटाना, सिरप का विरंजन, खाद्य-श्रेणी योजकों की पॉलिशिंग।
+          पेयजल फ़िनिशिंग, अल्कोहलिक एवं ग़ैर-अल्कोहलिक पेय उत्पादन लाइनों
+          में उपयोग।
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">फ़ार्मा एवं सौंदर्य प्रसाधन</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          सक्रिय फ़ार्मास्यूटिकल अवयवों का शुद्धिकरण, तैयार औषधि पदार्थों से
+          अशुद्धियों का निष्कासन, चिकित्सकीय एंटरोसॉर्बेंट का उत्पादन।
+          गहन-सफ़ाई सौंदर्य प्रसाधन सूत्रीकरण में उपयोग।
+        </p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 36px;">
+      <p>
+        अंतिम-बाज़ारों की यह विविधता स्वयं एक जोखिम-न्यूनीकरण कथा है —
+        सॉर्बेंट उत्पादन कभी भी किसी एक क्रेता उद्योग पर निर्भर नहीं;
+        किसी एक वर्टिकल में संकुचन को दूसरे की माँग द्वारा अवशोषित कर लिया
+        जाता है।
+      </p>
+    </div>
+    <div class="slide-num">06 / 15</div>
+  </section>
+
+  <!-- SLIDE 7: COMPETITIVE EDGE -->
+  <section class="slide compact">
+    <div class="eyebrow">प्रतिस्पर्धात्मक लाभ</div>
+    <h2>स्थापित सॉर्बेंट्स के विरुद्ध<br>हम कहाँ जीतते हैं</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      दो प्रमुख वाणिज्यिक कार्बन फीडस्टॉक — एंथ्रेसाइट कोयला और नारियल खोल —
+      की तुलना में हमारा उत्पाद चार स्वतंत्र दिशाओं पर संरचनात्मक लाभ
+      प्रस्तुत करता है।
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 40px; gap: 28px;">
+      <div class="card">
+        <div class="step-num">01</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">उच्चतर चयनात्मकता</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          हमारे पदार्थ की छिद्र संरचना भारी धातुओं और जटिल कार्बनिक प्रदूषकों
+          के प्रति बढ़ी हुई चयनात्मकता दिखाती है — समान द्रव्यमान लोडिंग पर
+          कोयला-आधारित या खोल-आधारित विकल्पों से गहरी पॉलिशिंग संभव बनाती है।
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">02</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">तेज़ अधिशोषण गतिकी</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          सूक्ष्म-छिद्र संरचना उल्लेखनीय रूप से तेज़ प्रदूषक ग्रहण प्रदान करती
+          है — स्तंभ में कम संपर्क समय, हमारे सॉर्बेंट का उपयोग करने वाली
+          किसी भी उपचार प्रणाली का उच्चतर समग्र थ्रूपुट।
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">03</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">कम पर्यावरणीय छाप</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          खनित कोयले या नारियल खोल के स्थान पर अवशिष्ट बायोमास धारा का उपयोग
+          करके, हम अंतर्निहित कार्बन फ़ुटप्रिंट को महत्वपूर्ण रूप से घटाते हैं
+          और ग़ैर-नवीकरणीय कच्चे माल की खपत से बचते हैं — ESG-बाध्य क्रेताओं के
+          लिए एक आवश्यक खरीद मानदंड।
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">04</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">संरचनात्मक रूप से कम लागत</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          ऋणात्मक फीडस्टॉक लागत और स्थल-पर प्रसंस्करण (शून्य आवक लॉजिस्टिक्स)
+          हमें स्थापित उत्पादकों से कम मूल्य निर्धारण की अनुमति देते हैं, जबकि
+          62.8% शुद्ध मार्जिन बना रहता है — प्रतिस्पर्धी न तो इनपुट लागत और न
+          ही स्थान आसानी से दोहरा सकते हैं।
+        </p>
+      </div>
+    </div>
+    <div class="slide-num">07 / 15</div>
+  </section>
+
+  <!-- SLIDE 8: PRODUCTION TECHNOLOGY -->
+  <section class="slide compact">
+    <div class="eyebrow">उत्पादन तकनीक</div>
+    <h2>नियंत्रित-वातावरण सक्रियण के साथ<br>तीन-चरणीय ऊष्मीय प्रक्रिया</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      लाइन अनुक्रमिक, पूर्णतः स्वचालित और मानक औद्योगिक इकाई संचालनों पर
+      आधारित है। WIPO के माध्यम से पेटेंट संरक्षण सुनिश्चित है। प्रत्येक
+      चरण उपकरणीकृत है; स्लाइड 5 के गुणवत्ता मापदंड विशिष्ट प्रक्रिया
+      सेट-पॉइंट्स से प्रत्यक्ष रूप से जुड़े हैं।
+    </p>
+
+    <div class="step-flow" style="margin-top: 36px;">
+      <div class="step">
+        <div class="step-num">Stage 01</div>
+        <div class="step-title">तैयारी</div>
+        <div class="step-desc">
+          अवांछित अशुद्धियाँ हटाने और इष्टतम श्यानता प्राप्त करने हेतु
+          फीडस्टॉक की पूर्व-सफ़ाई एवं सांद्रण। एकसमान डाउनस्ट्रीम छिद्र
+          संरचना बनाने के लिए महत्वपूर्ण।
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Stage 02</div>
+        <div class="step-title">पाइरोलिसिस (कार्बोनाइज़ेशन)</div>
+        <div class="step-desc">
+          ऑक्सीजन-रहित वातावरण में <strong style="color: var(--gold);">500–800 °C</strong>
+          पर ऊष्मीय उपचार। कार्बनिक चरण विघटित होता है और कार्बन कंकाल
+          निर्मित होता है।
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Stage 03</div>
+        <div class="step-title">सक्रियण</div>
+        <div class="step-desc">
+          <strong style="color: var(--gold);">800–1,000 °C</strong> पर वाष्प
+          अथवा रासायनिक-अभिकर्मक उपचार। छिद्र संरचना खोलता है, सूक्ष्मछिद्र
+          एवं मध्यछिद्र विकसित करता है — पदार्थ की अधिशोषण क्षमता का स्रोत।
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 44px;">
+      <div class="card tight stat">
+        <div class="label">निर्माण समय</div>
+        <div class="value">6 months</div>
+        <div class="sub">इंजीनियरिंग, निर्माण, कमीशनिंग</div>
+      </div>
+      <div class="card tight stat">
+        <div class="label">फीडस्टॉक थ्रूपुट</div>
+        <div class="value accent">134,000 t / yr</div>
+        <div class="sub">प्रति लाइन 11,170 t / month</div>
+      </div>
+      <div class="card tight stat">
+        <div class="label">प्लांट स्टाफ़ संख्या</div>
+        <div class="value">32 staff</div>
+        <div class="sub">सतत 24/7 संचालन</div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 32px;">
+      <p>
+        प्रत्येक बैच का परीक्षण उसी नौ-मापदंड प्रयोगशाला विनिर्देश पर किया
+        जाता है। विनिर्देश से बाहर का उत्पादन इन-लाइन पुनः प्रसंस्कृत किया
+        जाता है — उत्पादन तल से कोई डाउनग्रेड मार्ग उपलब्ध नहीं है।
+      </p>
+    </div>
+    <div class="slide-num">08 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 3 — ECONOMICS                                            -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 9: UNIT ECONOMICS -->
+  <section class="slide compact">
+    <div class="eyebrow">यूनिट इकोनॉमिक्स</div>
+    <h2>$8.25 M turnkey · $14.6 M शुद्ध लाभ<br>प्रति लाइन, प्रति वर्ष</h2>
+
+    <div class="grid grid-2" style="margin-top: 32px; gap: 56px;">
+      <div>
+        <h3 style="margin-bottom: 18px;">Capex संरचना (प्रति लाइन)</h3>
+        <table>
+          <tbody>
+            <tr><td>उपकरण (भट्टियाँ, रिएक्टर, ग्रेन्युलेटर, पैकेजिंग)</td><td class="num">$4,945,000</td></tr>
+            <tr><td>निर्माण, इंजीनियरिंग, कमीशनिंग (40%)</td><td class="num">$1,978,000</td></tr>
+            <tr><td>कार्यशील पूँजी, ramp-up, आकस्मिकता</td><td class="num">$1,326,691</td></tr>
+            <tr class="total"><td>प्रति लाइन कुल capex, turnkey</td><td class="num">$8,249,691</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 36px; margin-bottom: 18px;">उत्पादन लागत संरचना (प्रति टन सॉर्बेंट)</h3>
+        <table>
+          <tbody>
+            <tr><td>आवक फीडस्टॉक लॉजिस्टिक्स</td><td class="num">$0</td></tr>
+            <tr><td>प्राकृतिक गैस</td><td class="num">$94</td></tr>
+            <tr><td>श्रम, पूर्ण लोडेड</td><td class="num">$82</td></tr>
+            <tr><td>बिजली</td><td class="num">$31</td></tr>
+            <tr><td>ओवरहेड्स + पैकेजिंग</td><td class="num">$11</td></tr>
+            <tr class="total"><td>प्रति टन उत्पादन लागत</td><td class="num">$218</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 18px;">वार्षिक P&amp;L (प्रति लाइन)</h3>
+        <table>
+          <tbody>
+            <tr><td>सॉर्बेंट बिक्री (17,420 t × $1,087)</td><td class="num">$18,935,000</td></tr>
+            <tr><td>Carbon Recovery Fee (134,000 t × $32.6)</td><td class="num">$4,369,565</td></tr>
+            <tr class="total"><td>कुल राजस्व</td><td class="num">$23,304,565</td></tr>
+            <tr><td>उत्पादन लागत (17,420 t × $218)</td><td class="num">−$3,797,560</td></tr>
+            <tr><td>अन्य परिचालन व्यय</td><td class="num">−$4,877,635</td></tr>
+            <tr class="total" style="background: rgba(201,168,76,0.10);"><td><strong style="color: var(--gold-light);">शुद्ध लाभ</strong></td><td class="num"><strong style="color: var(--gold-light);">$14,629,370</strong></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout" style="margin-top: 32px;">
+          <p>
+            <strong>शुद्ध मार्जिन: 62.8%.</strong> अकेला Carbon Recovery Fee
+            ($251 प्रति टन सॉर्बेंट, उत्पादन पर पुनर्वितरित) पहले से ही
+            पूरी $218 उत्पादन लागत से अधिक है। तब सॉर्बेंट बिक्री लगभग शुद्ध
+            मार्जिन बन जाती है।
+          </p>
+        </div>
+
+        <div class="callout" style="margin-top: 16px;">
+          <p>
+            सॉर्बेंट base-case मूल्य $1,087 / t जानबूझकर बाज़ार रेंज के
+            निचले छोर पर रखा गया है — थोक संदर्भ मूल्य
+            <strong>$2,200 – $4,900 / t</strong> तक फैला है।
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">09 / 15</div>
+  </section>
+
+  <!-- SLIDE 10: 3-LINE EXPANSION -->
+  <section class="slide compact">
+    <div class="eyebrow">स्केलिंग योजना</div>
+    <h2>तीन समान लाइनें<br>$24.75 M कुल जुटाव · $69.9 M / yr टर्नओवर</h2>
+    <p class="lead" style="margin-top: 8px;">
+      Line A के स्थिर अवस्था में पहुँचने के बाद, वही उपकरण पैकेज और संचालन
+      मॉडल दो और स्थलों पर दोहराया जाता है — वही capex, वही यूनिट इकोनॉमिक्स,
+      वही 6-माह निर्माण चक्र। स्थलों के बीच कोई कस्टम इंजीनियरिंग नहीं।
+    </p>
+
+    <div class="site-grid" style="margin-top: 44px;">
+      <div class="site-card">
+        <div class="label">Line 01</div>
+        <div class="name">Site A — pilot</div>
+        <div class="meta">पहली परिचालन लाइन; संदर्भ निर्माण</div>
+        <div class="cap">134,000 t / yr फीडस्टॉक</div>
+        <div class="meta">Capex: $8.25 M · निर्माण: 6 months</div>
+      </div>
+      <div class="site-card">
+        <div class="label">Line 02</div>
+        <div class="name">Site B — replication 1</div>
+        <div class="meta">पायलट के nameplate पहुँचने के बाद प्रारंभ</div>
+        <div class="cap">134,000 t / yr फीडस्टॉक</div>
+        <div class="meta">Capex: $8.25 M · निर्माण: 6 months</div>
+      </div>
+      <div class="site-card">
+        <div class="label">Line 03</div>
+        <div class="name">Site C — replication 2</div>
+        <div class="meta">Line 02 के साथ-साथ प्रारंभ</div>
+        <div class="cap">134,000 t / yr फीडस्टॉक</div>
+        <div class="meta">Capex: $8.25 M · निर्माण: 6 months</div>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 56px; gap: 28px;">
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">संयुक्त फीडस्टॉक प्रसंस्कृत</div>
+        <div class="value accent" style="font-size: 38px;">402,000 t / yr</div>
+        <div class="sub">तीनों लाइनों के nameplate पर</div>
+      </div>
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">संयुक्त निर्माण बजट</div>
+        <div class="value accent" style="font-size: 38px;">$24,749,074</div>
+        <div class="sub">3 × $8.25 M, सम्पूर्ण</div>
+      </div>
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">संयुक्त वार्षिक टर्नओवर</div>
+        <div class="value accent" style="font-size: 38px;">$69,913,695</div>
+        <div class="sub">स्थिर अवस्था में $23.3 M × 3</div>
+      </div>
+    </div>
+    <div class="slide-num">10 / 15</div>
+  </section>
+
+  <!-- SLIDE 11: REVENUE STREAMS -->
+  <section class="slide compact">
+    <div class="eyebrow">राजस्व मॉडल</div>
+    <h2>दो स्वतंत्र राजस्व धाराएँ<br>परियोजना अर्थव्यवस्था को de-risk करती हैं</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      लाइन वैल्यू चेन के दोनों ओर से कमाती है: प्रसंस्करणकर्ता अपना उपोत्पाद
+      हटवाने के लिए हमें भुगतान करते हैं (Stream A); अंतिम-क्रेता उससे
+      उत्पादित सक्रिय कार्बन के लिए हमें भुगतान करते हैं (Stream B)। अकेली
+      प्रत्येक धारा पहले से ही पूरी उत्पादन लागत को कवर कर लेती है।
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 36px; gap: 40px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 12px;">Stream A — Carbon Recovery Fee</h3>
+        <div style="margin-top: 18px;">
+          <div style="font-family: var(--f-heading); font-size: 52px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em;">$4.37 M</div>
+          <div style="font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.18em; text-transform: uppercase;">प्रति लाइन · प्रति वर्ष</div>
+        </div>
+        <p style="margin-top: 18px; font-size: 16px; color: var(--cream-dim);">
+          134,000 t क्षीण बायोमास × $32.6 / t = $4,369,565<br>
+          मासिक run-rate: $364,130<br>
+          <em style="color: var(--cream-faint);">अनुबंधित शुल्क — डाउनस्ट्रीम सॉर्बेंट बिक्री से स्वतंत्र, सुनिश्चित भुगतान।</em>
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 12px;">Stream B — सॉर्बेंट बिक्री</h3>
+        <div style="margin-top: 18px;">
+          <div style="font-family: var(--f-heading); font-size: 52px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em;">$18.94 M</div>
+          <div style="font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.18em; text-transform: uppercase;">प्रति लाइन · प्रति वर्ष</div>
+        </div>
+        <p style="margin-top: 18px; font-size: 16px; color: var(--cream-dim);">
+          17,420 t सॉर्बेंट × $1,087 / t = $18,935,000<br>
+          मासिक run-rate: $1,578,000 (1,452 t)<br>
+          <em style="color: var(--cream-faint);">चार अंतिम-बाज़ार वर्टिकल्स में विविधीकृत (स्लाइड 6)।</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 44px; gap: 28px;">
+      <div class="card stat">
+        <div class="label">प्रति लाइन कुल राजस्व</div>
+        <div class="value accent" style="font-size: 36px;">$23,304,565 / yr</div>
+        <div class="sub">Stream A + Stream B संयुक्त</div>
+      </div>
+      <div class="card stat">
+        <div class="label">3 लाइनों का कुल राजस्व</div>
+        <div class="value accent" style="font-size: 36px;">$69,913,695 / yr</div>
+        <div class="sub">तीन-लाइन nameplate स्थिर अवस्था पर</div>
+      </div>
+      <div class="card stat">
+        <div class="label">शुद्ध मार्जिन (प्रति लाइन)</div>
+        <div class="value green" style="font-size: 36px;">62.8%</div>
+        <div class="sub">$23.3 M कुल राजस्व पर $14.6 M शुद्ध</div>
+      </div>
+    </div>
+    <div class="slide-num">11 / 15</div>
+  </section>
+
+  <!-- SLIDE 12: PEARL TOKEN -->
+  <section class="slide compact">
+    <div class="eyebrow">निवेश वाहन</div>
+    <h2>PEARL token<br>प्लांट इकोनॉमिक्स में आंशिक भागीदारी</h2>
+    <p class="lead" style="margin-top: 8px; max-width: 980px;">
+      निवेशक SPV में प्रत्यक्ष रूप से प्रवेश नहीं करते। पूँजी TON पर PEARL
+      utility token के माध्यम से जुटाई जाती है — टोकन धारक प्रत्येक परिचालन
+      लाइन के
+      <strong style="color: var(--cream);">पूर्ण लाइन टर्नओवर का 30%</strong>
+      साझा करते हैं, जो आवधिक वितरण के रूप में दिया जाता है।
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 40px; gap: 56px;">
+      <div>
+        <h3 style="margin-bottom: 18px;">Token mechanics</h3>
+        <table>
+          <tbody>
+            <tr><td>Token price (निश्चित)</td><td class="num">$1.00</td></tr>
+            <tr><td>कुल emission</td><td class="num">31,051,657 PEARL</td></tr>
+            <tr><td>&nbsp;&nbsp;• Public sale</td><td class="num">26,051,657</td></tr>
+            <tr><td>&nbsp;&nbsp;• Team allocation</td><td class="num">2,000,000</td></tr>
+            <tr><td>&nbsp;&nbsp;• Referral pool</td><td class="num">3,000,000</td></tr>
+            <tr><td>लक्षित जुटाव</td><td class="num">$26,051,657</td></tr>
+            <tr><td>निर्माण हेतु आवंटित (5% referrals के बाद)</td><td class="num">$24,749,074</td></tr>
+            <tr><td>Blockchain</td><td class="num">TON</td></tr>
+            <tr><td>विधिक रूपरेखा</td><td class="num">Utility token</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout" style="margin-top: 28px;">
+          <p>
+            <strong>महत्वपूर्ण।</strong> PEARL एक राजस्व-भागीदारी वाला utility
+            token के रूप में स्थापित है — निवेश साधन के रूप में नहीं। सभी
+            संचार प्रत्येक लक्षित अधिकार-क्षेत्र में नियामक स्पष्टता हेतु
+            इसी रूपरेखा का पालन करते हैं।
+          </p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 18px;">वितरण पूल — पूर्ण टर्नओवर का 30%</h3>
+        <table>
+          <thead>
+            <tr><th>परिचालन स्तर</th><th class="num">टर्नओवर / yr</th><th class="num">पूल (30%)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 लाइन सक्रिय</td><td class="num">$23,304,565</td><td class="num">$6,991,370</td></tr>
+            <tr><td>2 लाइनें सक्रिय</td><td class="num">$46,609,130</td><td class="num">$13,982,739</td></tr>
+            <tr class="total"><td>3 लाइनें सक्रिय (लक्ष्य)</td><td class="num">$69,913,695</td><td class="num">$20,974,109</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 36px; margin-bottom: 18px;">द्वितीयक बाज़ार एवं buyback</h3>
+        <ul class="bullets">
+          <li><strong>DEX listing</strong> — STON.fi और DeDust पर — Line II पूर्ण होने के बाद (तरलता वास्तविक राजस्व से, launch hype से नहीं)</li>
+          <li><strong>Buyback $1.15 / token पर</strong> Line III निर्माण की प्रारंभ तिथि से शुरू होगा — मासिक सीमा ≈ $1.96 M</li>
+          <li><strong>कोई lock-up नहीं</strong> public-sale tokens पर; team tokens milestones के विरुद्ध vest होते हैं</li>
+        </ul>
+      </div>
+    </div>
+    <div class="slide-num">12 / 15</div>
+  </section>
+
+  <!-- SLIDE 13: ROI / PAYBACK -->
+  <section class="slide compact">
+    <div class="eyebrow">प्रतिफल एवं Payback</div>
+    <h2>Token-holder payback: 17.8 महीने<br>तीन-लाइन स्थिर अवस्था पर</h2>
+
+    <div class="grid grid-3" style="margin-top: 48px;">
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">प्लांट payback</div>
+        <div class="value accent" style="font-size: 56px; margin-top: 16px;">6–8</div>
+        <div class="sub" style="font-size: 16px;">प्रति लाइन launch से months</div>
+      </div>
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">Token-holder payback</div>
+        <div class="value accent" style="font-size: 56px; margin-top: 16px;">~17.8</div>
+        <div class="sub" style="font-size: 16px;">3 लाइनें सक्रिय होने पर months</div>
+      </div>
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">3 लाइनों पर वार्षिक yield</div>
+        <div class="value green" style="font-size: 56px; margin-top: 16px;">67.5%</div>
+        <div class="sub" style="font-size: 16px;">$20.97 M पूल / 31.05 M tokens</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 56px;">निर्माण-विस्तार के दौरान yield की वृद्धि</h3>
+    <table style="margin-top: 18px; max-width: 920px;">
+      <thead>
+        <tr>
+          <th>चरण</th>
+          <th class="num">सक्रिय लाइनें</th>
+          <th class="num">पूल / yr</th>
+          <th class="num">$1 token पर yield</th>
+          <th class="num">Holder payback</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Year 1 — पायलट परिचालन</td><td class="num">1</td><td class="num">$6,991,370</td><td class="num">22.5%</td><td class="num">~53 mo</td></tr>
+        <tr><td>Year 2 — replication 1 सक्रिय</td><td class="num">2</td><td class="num">$13,982,739</td><td class="num">45.0%</td><td class="num">~27 mo</td></tr>
+        <tr class="total"><td>Year 2+ — लक्षित स्केल</td><td class="num">3</td><td class="num">$20,974,109</td><td class="num">67.5%</td><td class="num">~17.8 mo</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 32px;">
+      <p>
+        प्लांट payback (प्रति लाइन 6–8 महीने) और token-holder payback
+        (पूर्ण क्षमता पर ~17.8 महीने) भिन्न अवधारणाएँ हैं। प्लांट अपना
+        capex एकल लाइन के लाभ से वसूल लेता है; token holder का payback
+        सम्पूर्ण token float पर पूल वितरण की गति से तय होता है, अतः वह
+        बाद में पूरा होता है — परंतु एकल सुविधा के बजाय तीनों परिचालन
+        स्थलों पर विविधीकृत एक्सपोज़र के साथ।
+      </p>
+    </div>
+    <div class="slide-num">13 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 4 — CLOSING                                              -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 14: TEAM & CREDENTIALS -->
+  <section class="slide compact" style="overflow:hidden;">
+    <div class="hero-bg iceland"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+      <div class="eyebrow">टीम एवं प्रमाण-पत्र</div>
+      <h2>सक्रिय कार्बन कार्यक्रम के पीछे<br>चार प्रमाण-पत्र</h2>
+      <p class="lead" style="margin-top: 8px; max-width: 920px;">
+        एक पेटेंटेड प्रक्रिया, सक्रिय औद्योगिक तैनातियों का ट्रैक रिकॉर्ड,
+        और स्वतंत्र तृतीय-पक्ष सत्यापन — परियोजना की विश्वसनीयता दावों पर
+        नहीं, सत्यापन-योग्य तथ्यों पर टिकी है।
+      </p>
+
+      <div class="grid grid-2" style="margin-top: 48px; gap: 28px;">
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">01 — विशेषज्ञता</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">औद्योगिक रसायन शास्त्र में 20+ वर्ष का अनुभव</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            औद्योगिक विलगन प्रक्रियाओं, सॉर्बेंट रसायन शास्त्र, और बंद-चक्र
+            संसाधन पुनर्प्राप्ति में दो दशकों का व्यावहारिक कार्य। सक्रिय
+            कार्बन कार्यक्रम के पीछे की इंजीनियरिंग टीम वही है जिसने नीचे
+            सूचीबद्ध परिचालन उत्पाद बनाए हैं।
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">02 — परिचालन रिकॉर्ड</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">2018 से सक्रिय तेल-पुनरुत्पादन तैनातियाँ</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            2018 से तीन पूर्ण-स्केल औद्योगिक तेल-पुनरुत्पादन प्रणालियाँ
+            भारी-उद्योग ग्राहकों के साथ निरंतर परिचालन में हैं — स्वतंत्र
+            रूप से मूल्यांकित, राजस्व-जनक, और उसी टीम द्वारा सर्विस्ड जो
+            सक्रिय कार्बन लाइन की इंजीनियरिंग करती है।
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">03 — बौद्धिक संपदा</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">WIPO patent holder · №2820244</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            मुख्य ऊष्मीय-सक्रियण प्रक्रिया WIPO-पंजीकृत patent №2820244 द्वारा
+            संरक्षित है। संरक्षण सभी प्राथमिक लक्षित अधिकार-क्षेत्रों में
+            विस्तृत है; पेटेंट आधार टीम के प्रत्येक उत्पाद पर समान है — कोई
+            बाहरी तकनीकी निर्भरता नहीं।
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">04 — सत्यापन</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">स्वतंत्र प्रयोगशाला सत्यापन</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            पायलट नमूना स्लाइड 5 में विस्तृत सातों गुणवत्ता मापदंडों के
+            विरुद्ध एक स्वतंत्र प्रयोगशाला द्वारा परीक्षित किया जा चुका है।
+            प्रत्येक संकेतक विनिर्देश को या तो पूरा करता है या उससे अधिक —
+            गुणवत्ता सत्यापन-योग्य है, मात्र दावा नहीं।
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">14 / 15</div>
+  </section>
+
+  <!-- SLIDE 15: CALL TO ACTION -->
+  <section class="slide" style="overflow:hidden; justify-content: center;">
+    <div class="hero-bg hero"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content" style="text-align: center; max-width: 980px; margin: 0 auto;">
+      <div class="eyebrow" style="text-align: center;">संपर्क करें</div>
+      <h2 style="font-size: 56px; text-align: center;">अवसर पर चर्चा हेतु<br>तैयार हैं?</h2>
+      <p class="lead" style="margin: 16px auto 0; text-align: center; max-width: 760px;">
+        परियोजना टीम से सीधे संवाद करें — तकनीकी Q&amp;A, पूर्ण वित्तीय
+        मॉडल, पेटेंट एवं प्रयोगशाला दस्तावेज़, और हमारे वर्तमान पोर्टफोलियो
+        की किसी विद्यमान परिचालन सुविधा का दौरा।
+      </p>
+
+      <div style="margin-top: 64px;">
+        <a href="https://eco-pearl.com/#contact"
+           style="display: inline-block;
+                  padding: 22px 56px;
+                  font-family: var(--f-heading);
+                  font-size: 18px;
+                  font-weight: 500;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--gold-light);
+                  background: rgba(201,168,76,0.08);
+                  border: 1px solid var(--gold);
+                  border-radius: 2px;
+                  text-decoration: none;
+                  transition: background 0.25s ease;">
+          Get in touch  &nbsp;→&nbsp;  eco-pearl.com/#contact
+        </a>
+      </div>
+
+      <div class="footer-meta" style="justify-content: center; gap: 48px; margin-top: 96px;">
+        <span>Pearl of Restoration · 2026</span>
+        <span>प्रत्याशित निवेशक हेतु तैयार · गोपनीय</span>
+      </div>
+    </div>
+    <div class="slide-num">15 / 15</div>
+  </section>
+
+</div>
+
+<script>
+  document.addEventListener('keydown', function(e) {
+    var slides = document.querySelectorAll('.slide');
+    var currentScroll = window.scrollY;
+    var target = null;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      for (var i = 0; i < slides.length; i++) {
+        if (slides[i].offsetTop > currentScroll + 50) { target = slides[i]; break; }
+      }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      var prev = null;
+      for (var j = 0; j < slides.length; j++) {
+        if (slides[j].offsetTop >= currentScroll - 10) break;
+        prev = slides[j];
+      }
+      target = prev;
+    } else if (e.key === 'Home') {
+      target = slides[0];
+    } else if (e.key === 'End') {
+      target = slides[slides.length - 1];
+    }
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+</script>
+</body>
+</html>
