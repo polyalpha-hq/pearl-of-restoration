@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl of Restoration · Инвестиционная презентация программы активированного угля</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #04080f;
+    --bg-alt:      #0a121e;
+    --bg-card:     rgba(10,18,30,0.82);
+    --gold:        #c9a84c;
+    --gold-light:  #e8d06a;
+    --gold-soft:   rgba(201,168,76,0.12);
+    --gold-dim:    rgba(201,168,76,0.30);
+    --cream:       #f0e8d0;
+    --cream-dim:   rgba(240,232,208,0.75);
+    --cream-faint: rgba(240,232,208,0.45);
+    --green:       #7ec99c;
+    --border:      rgba(201,168,76,0.18);
+    --border-soft: rgba(240,232,208,0.08);
+
+    --f-display: 'Cinzel Decorative', serif;
+    --f-heading: 'Cinzel', serif;
+    --f-body:    'EB Garamond', Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%;
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--f-body);
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 14px;
+    border: 1px solid var(--gold-dim);
+    pointer-events: none;
+    z-index: 100;
+  }
+  .deck {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-soft);
+    page-break-after: always;
+    position: relative;
+  }
+  .slide.compact { justify-content: flex-start; padding-top: 110px; }
+  .slide-num {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-family: var(--f-heading);
+    font-size: 12px;
+    color: var(--cream-faint);
+    letter-spacing: 0.25em;
+  }
+  .eyebrow {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+  h1, h2, h3 { color: var(--cream); line-height: 1.18; }
+  h1 {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 68px;
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+    color: var(--gold-light);
+  }
+  h2 {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+    color: var(--gold-light);
+  }
+  h3 {
+    font-family: var(--f-heading);
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 14px;
+    color: var(--cream);
+  }
+  p {
+    font-family: var(--f-body);
+    font-size: 19px;
+    color: var(--cream-dim);
+    margin-bottom: 18px;
+    max-width: 880px;
+  }
+  .lead {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    line-height: 1.5;
+    max-width: 920px;
+  }
+  .big-num {
+    font-family: var(--f-heading);
+    font-size: 88px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--gold);
+  }
+  .num-unit {
+    font-family: var(--f-heading);
+    font-size: 24px;
+    color: var(--cream-dim);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
+  .grid { display: grid; gap: 28px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    backdrop-filter: blur(6px);
+  }
+  .card.tight { padding: 22px; }
+  .stat .label {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--cream-faint);
+    margin-bottom: 10px;
+  }
+  .stat .value {
+    font-family: var(--f-heading);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+  .stat .value.accent { color: var(--gold); }
+  .stat .value.green  { color: var(--green); }
+  .stat .sub {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-faint);
+    margin-top: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--f-body);
+    font-size: 16px;
+  }
+  th, td {
+    text-align: left;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  th {
+    font-family: var(--f-heading);
+    font-weight: 500;
+    color: var(--gold);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    background: rgba(201,168,76,0.04);
+  }
+  td { color: var(--cream); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  td.pass { color: var(--green); font-family: var(--f-heading); font-weight: 500; text-align: center; }
+  tr.total td {
+    font-weight: 600;
+    color: var(--gold-light);
+    border-top: 1px solid var(--gold-dim);
+    background: rgba(201,168,76,0.06);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.28;
+    z-index: 0;
+  }
+  .hero-bg.cosmos    { background-image: url('media/cosmos-bg.jpg'); }
+  .hero-bg.iceland   { background-image: url('media/iceland-bg.jpg'); }
+  .hero-bg.hero      { background-image: url('media/hero-bg.jpg'); }
+  .hero-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(4,8,15,0.55) 0%, rgba(4,8,15,0.20) 40%, rgba(4,8,15,0.75) 100%);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 2px;
+    font-family: var(--f-heading);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  ul.bullets { list-style: none; padding: 0; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-family: var(--f-body);
+    font-size: 18px;
+    color: var(--cream-dim);
+    line-height: 1.55;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 12px;
+    width: 10px; height: 1px;
+    background: var(--gold);
+  }
+  ul.bullets li strong { color: var(--cream); font-weight: 600; }
+  .step-flow { display: flex; align-items: stretch; gap: 18px; margin-top: 16px; }
+  .step {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+  }
+  .step-num {
+    font-family: var(--f-heading);
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .step-title {
+    font-family: var(--f-heading);
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .step-desc {
+    font-family: var(--f-body);
+    font-size: 16px;
+    color: var(--cream-dim);
+    line-height: 1.5;
+  }
+  .step-arrow {
+    align-self: center;
+    color: var(--gold);
+    font-size: 22px;
+  }
+  .bar-row { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; font-family: var(--f-body); font-size: 16px; }
+  .bar-label { flex: 0 0 220px; color: var(--cream); }
+  .bar-track { flex: 1; height: 6px; background: rgba(201,168,76,0.08); border-radius: 1px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--gold); border-radius: 1px; }
+  .bar-val { flex: 0 0 150px; text-align: right; color: var(--cream-dim); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  .site-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .site-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 28px;
+    backdrop-filter: blur(6px);
+  }
+  .site-card .label {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .site-card .name {
+    font-family: var(--f-heading);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .site-card .meta {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-faint);
+  }
+  .site-card .cap {
+    font-family: var(--f-heading);
+    font-size: 30px;
+    color: var(--gold);
+    font-weight: 500;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+  }
+  .quote {
+    border-left: 2px solid var(--gold);
+    padding: 8px 0 8px 24px;
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    margin: 28px 0;
+    max-width: 920px;
+    line-height: 1.5;
+  }
+  .footer-meta {
+    margin-top: auto;
+    padding-top: 48px;
+    color: var(--cream-faint);
+    font-family: var(--f-heading);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  .callout {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-dim);
+    border-left: 2px solid var(--gold);
+    padding: 22px 26px;
+    border-radius: 4px;
+    max-width: 920px;
+    backdrop-filter: blur(6px);
+  }
+  .callout p { margin: 0; color: var(--cream); font-size: 18px; }
+  .callout strong { color: var(--gold-light); font-weight: 600; }
+  .driver-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .driver {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 28px 24px;
+    backdrop-filter: blur(6px);
+  }
+  .driver .icon {
+    font-family: var(--f-heading);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .driver h4 {
+    font-family: var(--f-heading);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+  .driver p { font-size: 15px; line-height: 1.55; margin: 0; }
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .spec {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+  }
+  .spec .num {
+    font-family: var(--f-heading);
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+  .spec .unit {
+    font-family: var(--f-heading);
+    font-size: 14px;
+    color: var(--cream-faint);
+    letter-spacing: 0.12em;
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+  .spec .desc {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--cream-dim);
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+  @media print {
+    body { background: white; color: black; }
+    body::before { display: none; }
+    .slide { min-height: 100vh; page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- ============================================================ -->
+  <!-- PART 1 — PROBLEM & OPPORTUNITY                                -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 1: TITLE -->
+  <section class="slide" style="overflow:hidden;">
+    <div class="hero-bg cosmos"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Инвестиционная презентация · 2026</div>
+      <h1>Pearl of Restoration<br>Программа активированного угля</h1>
+      <p class="lead" style="max-width: 840px;">
+        Запатентованный WIPO промышленный процесс переработки отходов
+        сельскохозяйственной биомассы в активированный уголь премиального
+        класса. Программа закрывает повторяющееся экологическое
+        обязательство переработчиков-партнёров и устраняет структурный
+        дефицит предложения на глобальном рынке сорбентов.
+      </p>
+      <div style="margin-top: 56px; display: flex; gap: 64px; align-items: baseline; flex-wrap: wrap;">
+        <div>
+          <div class="big-num">$24,75<span class="num-unit"> M</span></div>
+          <div class="stat label" style="margin-top: 12px;">Объём привлечения · три линии под ключ</div>
+        </div>
+        <div>
+          <div class="big-num">6–8<span class="num-unit"> мес</span></div>
+          <div class="stat label" style="margin-top: 12px;">Окупаемость одной линии</div>
+        </div>
+        <div>
+          <div class="big-num">$69,9<span class="num-unit"> M / год</span></div>
+          <div class="stat label" style="margin-top: 12px;">Совокупный оборот на полной мощности</div>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>Технология под патентом WIPO · Размещение на площадке партнёра</span>
+        <span>Конфиденциально</span>
+      </div>
+    </div>
+    <div class="slide-num">01 / 15</div>
+  </section>
+
+  <!-- SLIDE 2: THE PROBLEM -->
+  <section class="slide compact">
+    <div class="eyebrow">Проблема</div>
+    <h2>Переработчики-партнёры годами накапливают<br>обязательство, которое только растёт</h2>
+    <div class="grid grid-2" style="margin-top: 32px; align-items: stretch;">
+      <div>
+        <p class="lead" style="margin-bottom: 24px;">
+          После завершения первичной переработки на крупных предприятиях
+          пищевой промышленности остаётся <strong style="color: var(--cream);">обеднённый
+          сельскохозяйственный побочный продукт</strong> в значительных
+          объёмах. Товарные сахара уже извлечены; остаточная
+          углеводородная масса не имеет коммерческого применения.
+        </p>
+        <ul class="bullets">
+          <li><strong>250 000 тонн в год</strong> накапливается только в начальных целевых регионах программы</li>
+          <li>Объёмы <strong>растут ежегодно</strong> вместе с ростом основного производства</li>
+          <li>Поток отходов <strong>практически не утилизируется</strong>: хранится открыто и неконтролируемо разлагается</li>
+          <li>Продукты разложения загрязняют почву, грунтовые и поверхностные воды, атмосферу</li>
+          <li><strong>Регуляторный прецедент задокументирован</strong> — на операторов, не справившихся с утилизацией, уже накладывались многомиллионные штрафы</li>
+        </ul>
+        <div class="quote">
+          «Операторы неоднократно поднимали этот вопрос перед отраслевыми
+          регуляторами — рабочего сценария утилизации в ответ им не предложили».
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="stat">
+            <div class="label">Тариф за утилизацию, который готовы платить переработчики</div>
+            <div class="value accent">$32,6 / тонна</div>
+            <div class="sub">Консервативная цифра, применённая по всей модели</div>
+          </div>
+          <p style="margin-top: 24px; font-size: 17px; color: var(--cream-dim);">
+            Сегодня переработчики несут полные издержки хранения,
+            регуляторного риска и последующей рекультивации. Мы замещаем
+            эти издержки положительной выручкой: партнёр платит нам
+            фиксированный тариф за тонну вывоза, и при этом мы не платим
+            ему ничего за сырьё, которое затем перерабатываем.
+          </p>
+        </div>
+        <div class="card tight" style="margin-top: 20px;">
+          <div class="stat">
+            <div class="label">Эффект для обеих сторон</div>
+            <div class="value">Риск → Выручка</div>
+            <div class="sub">Обязательство снято; открывается новая статья доходов</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">02 / 15</div>
+  </section>
+
+  <!-- SLIDE 3: MARKET DRIVERS -->
+  <section class="slide compact">
+    <div class="eyebrow">Драйверы рынка</div>
+    <h2>Глобальный спрос на сорбенты<br>имеет структурный, а не циклический характер</h2>
+    <p class="lead" style="margin-top: 8px; max-width: 980px;">
+      Ужесточение экологических норм, расширение промышленного выпуска
+      и растущие требования к качеству жизни сходятся в одной точке —
+      потребности в высококачественных адсорбентах, доступных в объёме
+      и по предсказуемой цене.
+    </p>
+
+    <div class="driver-grid" style="margin-top: 44px;">
+      <div class="driver">
+        <div class="icon">Экология</div>
+        <h4>Вода и почва</h4>
+        <p>
+          Очистка сточных вод, нейтрализация токсичных соединений и
+          тяжёлых металлов в почвах и водоёмах. Ужесточение предельно
+          допустимых концентраций продолжает поддерживать спрос.
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">Промышленность</div>
+        <h4>Эффективность процессов</h4>
+        <p>
+          Нефтехимия, металлургия и фармацевтика опираются на сорбенты
+          для повышения производительности, защиты оборудования и
+          соответствия нормам по выбросам.
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">Медицина</div>
+        <h4>Энтеросорбенты</h4>
+        <p>
+          Детоксикация, выведение токсинов, аллергенов и патогенной
+          микрофлоры — категория, растущая вместе с глобальными
+          расходами на фармацевтику.
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">Энергетика</div>
+        <h4>Хранение и улавливание</h4>
+        <p>
+          Инфраструктура водородной энергетики и хранения природного
+          газа требует высокоёмких адсорбентов со стабильной удельной
+          поверхностью.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 48px;">
+      <div class="card">
+        <div class="stat">
+          <div class="label">Целевой региональный рынок 2024</div>
+          <div class="value accent">41 000 т</div>
+          <div class="sub">≈ $118 M годового спроса</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">Доля импорта 2024</div>
+          <div class="value">30 000 т</div>
+          <div class="sub">+24% г/г — поставки преимущественно из Азии</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">Прогноз CAGR до 2030</div>
+          <div class="value green">+5,6% / год</div>
+          <div class="sub">Потенциал до 82 000 т/год</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">03 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 2 — PRODUCT                                              -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 4: WHAT WE PRODUCE -->
+  <section class="slide compact">
+    <div class="eyebrow">Продукт</div>
+    <h2>Активированный уголь премиального класса<br>из отходов сельскохозяйственной биомассы</h2>
+    <div class="grid grid-2" style="margin-top: 32px; align-items: stretch;">
+      <div>
+        <p class="lead" style="margin-bottom: 28px;">
+          Наш процесс преобразует объёмный низколиквидный остаток биомассы
+          в высокоэффективный пористый углеродный материал с развитой
+          удельной поверхностью — способный связывать широкий спектр
+          загрязнителей в промышленных применениях.
+        </p>
+        <ul class="bullets">
+          <li><strong>Возобновляемое сырьё</strong> — образуется ежегодно как неизбежный побочный продукт основного производственного цикла</li>
+          <li><strong>Отрицательная стоимость сырья</strong> — партнёры платят нам за его вывоз</li>
+          <li><strong>Воспроизводимое качество</strong> — каждая партия проверяется по той же многопараметрической лабораторной спецификации (слайд 5)</li>
+          <li><strong>Две товарные формы</strong> — гранулированная и порошковая, плюс опциональная высокомаржинальная линия углерод-композитного волокна</li>
+        </ul>
+      </div>
+      <div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <span class="pill">Промышленный класс</span>
+          <div style="margin-top: 22px; font-family: var(--f-heading); font-size: 28px; color: var(--gold-light); font-weight: 500; letter-spacing: 0.04em;">
+            Активированный уголь премиум
+          </div>
+          <p style="margin-top: 16px; font-size: 17px; color: var(--cream-dim);">
+            Характеристики сопоставимы — а по ряду параметров превосходят —
+            ведущие коммерческие марки сорбентов, обращающихся на
+            глобальном рынке.
+          </p>
+          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-soft);">
+            <div class="stat">
+              <div class="label">Референсный оптовый ценовой диапазон</div>
+              <div class="value accent">$2 200 – $4 900 / т</div>
+              <div class="sub">Базовый сценарий принят на консервативном уровне $1 087 / т</div>
+            </div>
+          </div>
+        </div>
+        <div class="card tight" style="margin-top: 18px;">
+          <div class="stat">
+            <div class="label">Товарный выпуск с линии</div>
+            <div class="value">17 420 т / год</div>
+            <div class="sub">13% выход из 134 000 т сырья</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">04 / 15</div>
+  </section>
+
+  <!-- SLIDE 5: QUALITY PARAMETERS -->
+  <section class="slide compact">
+    <div class="eyebrow">Параметры качества</div>
+    <h2>Семь лабораторных показателей<br>подтверждены — в каждой партии</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      Пилотный образец, произведённый по нашему процессу, прошёл полный
+      цикл лабораторных испытаний по международным стандартам качества.
+      Каждый ключевой параметр соответствует спецификации или превосходит
+      её; по ряду показателей — со значительным запасом.
+    </p>
+
+    <div class="spec-grid" style="margin-top: 36px;">
+      <div class="spec">
+        <div class="num">65%</div>
+        <div class="unit">Адсорбция по йоду</div>
+        <div class="desc">Превышает спецификацию ≥60% на 5 п. п.</div>
+      </div>
+      <div class="spec">
+        <div class="num">4,5%</div>
+        <div class="unit">Зольность</div>
+        <div class="desc">На 25% ниже предела ≤6% — высокая чистота продукта</div>
+      </div>
+      <div class="spec">
+        <div class="num">1,7<span style="font-size:26px;"> см³/г</span></div>
+        <div class="unit">Объём пор</div>
+        <div class="desc">Превышает спецификацию ≥1,6 см³/г</div>
+      </div>
+      <div class="spec">
+        <div class="num">6,0%</div>
+        <div class="unit">Влажность</div>
+        <div class="desc">В 1,7× ниже предела ≤10% — устойчивость при хранении</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 48px;">Полная лабораторная валидация</h3>
+    <table style="margin-top: 16px; max-width: 1100px;">
+      <thead>
+        <tr>
+          <th style="width: 40px;">№</th>
+          <th>Параметр</th>
+          <th>Спецификация</th>
+          <th>Результат</th>
+          <th style="width: 80px; text-align: center;">Статус</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Внешний вид</td><td>Чёрные гранулы, без механических включений</td><td>Чёрные гранулы, чистые</td><td class="pass">✓</td></tr>
+        <tr><td>2</td><td>Адсорбционная активность по йоду</td><td>≥ 60%</td><td>65%</td><td class="pass">✓</td></tr>
+        <tr><td>3</td><td>Суммарный объём пор по воде</td><td>≥ 1,6 см³/г</td><td>1,7 см³/г</td><td class="pass">✓</td></tr>
+        <tr><td>4</td><td>Насыпная плотность</td><td>≤ 240 г/дм³</td><td>230 г/дм³</td><td class="pass">✓</td></tr>
+        <tr><td>5.1</td><td>Фракция: остаток на сите №36</td><td>≤ 2,5%</td><td>1,8%</td><td class="pass">✓</td></tr>
+        <tr><td>5.2</td><td>Фракция: остаток на сите №10</td><td>≥ 95,5%</td><td>96,4%</td><td class="pass">✓</td></tr>
+        <tr><td>5.3</td><td>Фракция: проход</td><td>≤ 2,0%</td><td>0,9%</td><td class="pass">✓</td></tr>
+        <tr><td>6</td><td>Зольность (массовая доля)</td><td>≤ 6%</td><td>4,5%</td><td class="pass">✓</td></tr>
+        <tr><td>7</td><td>Влажность (массовая доля)</td><td>≤ 10%</td><td>6,0%</td><td class="pass">✓</td></tr>
+        <tr class="total"><td></td><td colspan="3"><strong style="color: var(--gold-light);">Семь из семи параметров в пределах или выше спецификации</strong></td><td class="pass" style="color: var(--gold-light);">✓</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 28px;">
+      <p>
+        Все значения выше получены в независимой лабораторной валидации
+        пилотного образца. Та же панель параметров регулирует каждую
+        партию в промышленной эксплуатации — качество носит контрактный,
+        а не декларативный характер.
+      </p>
+    </div>
+    <div class="slide-num">05 / 15</div>
+  </section>
+
+  <!-- SLIDE 6: APPLICATIONS -->
+  <section class="slide compact">
+    <div class="eyebrow">Применения</div>
+    <h2>Четыре промышленных рынка<br>покрывают весь выпуск</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      Физико-химический профиль нашего активированного угля делает его
+      напрямую применимым на каждом крупном конечном рынке сорбентов —
+      от муниципальной водоочистки до фармацевтической очистки субстанций.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 36px; gap: 28px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">Очистка воды и стоков</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          Эффективное удаление тяжёлых металлов (свинец, кадмий, ртуть),
+          органических загрязнителей, хлорорганических соединений и
+          пестицидов из промышленных и питьевых потоков воды. Применяется
+          на металлургических, гальванических и муниципальных
+          очистных сооружениях.
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">Химия и нефтехимия</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          Сорбция токсичных веществ, удаление летучих органических
+          соединений из технологических газовых потоков, защита
+          оборудования от коррозии. Применяется в производстве кислот
+          и оснований, органических растворителей, в операциях
+          нефтеперерабатывающих заводов.
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">Пищевая промышленность</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          Удаление ЛОС, обесцвечивание сиропов, доочистка пищевых
+          добавок. Финишная подготовка питьевой воды, линии
+          безалкогольных и алкогольных напитков.
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">Фарма и косметика</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          Очистка активных фармацевтических субстанций, удаление
+          примесей из готовых лекарственных форм, производство
+          медицинских энтеросорбентов. Применяется в составах
+          косметики глубокого очищения.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 36px;">
+      <p>
+        Сама диверсификация конечных рынков снижает риск: выпуск сорбента
+        никогда не зависит от одной отрасли-покупателя — сжатие в одной
+        вертикали компенсируется спросом в другой.
+      </p>
+    </div>
+    <div class="slide-num">06 / 15</div>
+  </section>
+
+  <!-- SLIDE 7: COMPETITIVE EDGE -->
+  <section class="slide compact">
+    <div class="eyebrow">Конкурентное преимущество</div>
+    <h2>В чём мы выигрываем<br>у существующих сорбентов</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      В сравнении с двумя доминирующими коммерческими видами сырья для
+      угля — антрацитом и скорлупой кокоса — наш продукт обладает
+      структурными преимуществами по четырём независимым направлениям.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 40px; gap: 28px;">
+      <div class="card">
+        <div class="step-num">01</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">Более высокая селективность</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          Пористая архитектура материала демонстрирует повышенную
+          селективность к тяжёлым металлам и сложным органическим
+          загрязнителям, обеспечивая более глубокую доочистку, чем
+          аналоги на основе угля или скорлупы при равной массовой загрузке.
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">02</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">Более быстрая кинетика адсорбции</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          Мелкопористая структура обеспечивает существенно более
+          быстрое поглощение загрязнителей — короче время контакта
+          в колонне и выше совокупная производительность любой
+          системы очистки, использующей наш сорбент.
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">03</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">Меньший экологический след</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          Использование остаточного потока биомассы вместо
+          добываемого угля или скорлупы кокоса существенно снижает
+          встроенный углеродный след и исключает потребление
+          невозобновляемого сырья — закупочное требование для
+          покупателей с ESG-мандатом.
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">04</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">Структурно более низкая себестоимость</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          Отрицательная стоимость сырья плюс переработка на площадке
+          партнёра (нулевая входящая логистика) позволяют выставлять
+          цены ниже существующих производителей при сохранении 62,8%
+          чистой маржи — ни входящие издержки, ни географию конкуренты
+          легко не повторят.
+        </p>
+      </div>
+    </div>
+    <div class="slide-num">07 / 15</div>
+  </section>
+
+  <!-- SLIDE 8: PRODUCTION TECHNOLOGY -->
+  <section class="slide compact">
+    <div class="eyebrow">Производственная технология</div>
+    <h2>Трёхстадийный термический процесс<br>с активацией в управляемой атмосфере</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      Линия последовательная, полностью автоматизирована и построена на
+      типовых промышленных операциях. Патентная защита оформлена через
+      WIPO. Каждая стадия инструментирована; параметры качества со
+      слайда 5 прослеживаются до конкретных уставок процесса.
+    </p>
+
+    <div class="step-flow" style="margin-top: 36px;">
+      <div class="step">
+        <div class="step-num">Стадия 01</div>
+        <div class="step-title">Подготовка</div>
+        <div class="step-desc">
+          Предварительная очистка и концентрирование сырья для удаления
+          нежелательных примесей и достижения оптимальной вязкости.
+          Критично для формирования однородной пористой структуры
+          на следующих стадиях.
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Стадия 02</div>
+        <div class="step-title">Пиролиз (карбонизация)</div>
+        <div class="step-desc">
+          Термообработка при <strong style="color: var(--gold);">500–800 °C</strong>
+          в бескислородной атмосфере. Органическая фаза разлагается,
+          формируется углеродный скелет материала.
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Стадия 03</div>
+        <div class="step-title">Активация</div>
+        <div class="step-desc">
+          Обработка паром или химическим реагентом при
+          <strong style="color: var(--gold);">800–1 000 °C</strong>. Раскрывает
+          пористую структуру, формирует микро- и мезопоры — источник
+          адсорбционной ёмкости материала.
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 44px;">
+      <div class="card tight stat">
+        <div class="label">Срок строительства</div>
+        <div class="value">6 месяцев</div>
+        <div class="sub">Инжиниринг, строительство, пусконаладка</div>
+      </div>
+      <div class="card tight stat">
+        <div class="label">Пропускная способность по сырью</div>
+        <div class="value accent">134 000 т / год</div>
+        <div class="sub">11 170 т / мес на линию</div>
+      </div>
+      <div class="card tight stat">
+        <div class="label">Штатная численность</div>
+        <div class="value">32 человек</div>
+        <div class="sub">Непрерывный режим 24/7</div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 32px;">
+      <p>
+        Каждая партия испытывается по той же девятипараметрической
+        лабораторной спецификации. Несоответствующий выпуск возвращается
+        в переработку внутри линии — пути сброса в более низкий
+        товарный класс с производственного контура не существует.
+      </p>
+    </div>
+    <div class="slide-num">08 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 3 — ECONOMICS                                            -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 9: UNIT ECONOMICS -->
+  <section class="slide compact">
+    <div class="eyebrow">Юнит-экономика</div>
+    <h2>$8,25 M под ключ · $14,6 M чистой прибыли<br>на линию в год</h2>
+
+    <div class="grid grid-2" style="margin-top: 32px; gap: 56px;">
+      <div>
+        <h3 style="margin-bottom: 18px;">Состав capex (на линию)</h3>
+        <table>
+          <tbody>
+            <tr><td>Оборудование (печи, реакторы, гранулятор, упаковка)</td><td class="num">$4 945 000</td></tr>
+            <tr><td>Строительство, инжиниринг, пусконаладка (40%)</td><td class="num">$1 978 000</td></tr>
+            <tr><td>Оборотный капитал, выход на режим, резерв</td><td class="num">$1 326 691</td></tr>
+            <tr class="total"><td>Итого capex на линию, под ключ</td><td class="num">$8 249 691</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 36px; margin-bottom: 18px;">Структура себестоимости (на тонну сорбента)</h3>
+        <table>
+          <tbody>
+            <tr><td>Входящая логистика сырья</td><td class="num">$0</td></tr>
+            <tr><td>Природный газ</td><td class="num">$94</td></tr>
+            <tr><td>ФОТ с начислениями</td><td class="num">$82</td></tr>
+            <tr><td>Электроэнергия</td><td class="num">$31</td></tr>
+            <tr><td>Накладные + упаковка</td><td class="num">$11</td></tr>
+            <tr class="total"><td>Себестоимость одной тонны</td><td class="num">$218</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 18px;">Годовой P&amp;L (на линию)</h3>
+        <table>
+          <tbody>
+            <tr><td>Продажи сорбента (17 420 т × $1 087)</td><td class="num">$18 935 000</td></tr>
+            <tr><td>Carbon Recovery Fee (134 000 т × $32,6)</td><td class="num">$4 369 565</td></tr>
+            <tr class="total"><td>Совокупная выручка</td><td class="num">$23 304 565</td></tr>
+            <tr><td>Себестоимость производства (17 420 т × $218)</td><td class="num">−$3 797 560</td></tr>
+            <tr><td>Прочие операционные расходы</td><td class="num">−$4 877 635</td></tr>
+            <tr class="total" style="background: rgba(201,168,76,0.10);"><td><strong style="color: var(--gold-light);">Чистая прибыль</strong></td><td class="num"><strong style="color: var(--gold-light);">$14 629 370</strong></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout" style="margin-top: 32px;">
+          <p>
+            <strong>Чистая маржа: 62,8%.</strong> Один только Carbon Recovery
+            Fee ($251 на тонну сорбента в перераспределении на выпуск) уже
+            покрывает полную себестоимость $218. Продажи сорбента
+            становятся практически чистой маржой.
+          </p>
+        </div>
+
+        <div class="callout" style="margin-top: 16px;">
+          <p>
+            Цена сорбента в базовом сценарии $1 087 / т взята намеренно
+            у нижней границы рынка — референсный оптовый диапазон
+            составляет <strong>$2 200 – $4 900 / т</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">09 / 15</div>
+  </section>
+
+  <!-- SLIDE 10: 3-LINE EXPANSION -->
+  <section class="slide compact">
+    <div class="eyebrow">План масштабирования</div>
+    <h2>Три идентичные линии<br>$24,75 M совокупного привлечения · $69,9 M / год оборота</h2>
+    <p class="lead" style="margin-top: 8px;">
+      После выхода Линии А на устойчивый режим тот же комплект
+      оборудования и операционная модель тиражируются ещё на две
+      площадки — тот же capex, та же юнит-экономика, тот же шестимесячный
+      цикл строительства. Без индивидуального инжиниринга между площадками.
+    </p>
+
+    <div class="site-grid" style="margin-top: 44px;">
+      <div class="site-card">
+        <div class="label">Линия 01</div>
+        <div class="name">Площадка А — пилот</div>
+        <div class="meta">Первая действующая линия; референсный объект</div>
+        <div class="cap">134 000 т / год сырья</div>
+        <div class="meta">Capex: $8,25 M · Срок: 6 месяцев</div>
+      </div>
+      <div class="site-card">
+        <div class="label">Линия 02</div>
+        <div class="name">Площадка B — тиражирование 1</div>
+        <div class="meta">Запуск после выхода пилота на проектную мощность</div>
+        <div class="cap">134 000 т / год сырья</div>
+        <div class="meta">Capex: $8,25 M · Срок: 6 месяцев</div>
+      </div>
+      <div class="site-card">
+        <div class="label">Линия 03</div>
+        <div class="name">Площадка C — тиражирование 2</div>
+        <div class="meta">Запуск параллельно с Линией 02</div>
+        <div class="cap">134 000 т / год сырья</div>
+        <div class="meta">Capex: $8,25 M · Срок: 6 месяцев</div>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 56px; gap: 28px;">
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">Совокупная переработка сырья</div>
+        <div class="value accent" style="font-size: 38px;">402 000 т / год</div>
+        <div class="sub">По трём линиям на проектной мощности</div>
+      </div>
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">Совокупный строительный бюджет</div>
+        <div class="value accent" style="font-size: 38px;">$24 749 074</div>
+        <div class="sub">3 × $8,25 M, с учётом всего</div>
+      </div>
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">Совокупный годовой оборот</div>
+        <div class="value accent" style="font-size: 38px;">$69 913 695</div>
+        <div class="sub">$23,3 M × 3 на устойчивом режиме</div>
+      </div>
+    </div>
+    <div class="slide-num">10 / 15</div>
+  </section>
+
+  <!-- SLIDE 11: REVENUE STREAMS -->
+  <section class="slide compact">
+    <div class="eyebrow">Модель выручки</div>
+    <h2>Два независимых потока выручки<br>снижают риск проектной экономики</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      Линия зарабатывает с обеих сторон цепочки создания стоимости:
+      переработчики платят нам за вывоз побочного продукта (Поток А);
+      конечные покупатели платят за активированный уголь, который мы из
+      него производим (Поток B). Каждый поток сам по себе уже покрывает
+      полную себестоимость производства.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 36px; gap: 40px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 12px;">Поток А — Carbon Recovery Fee</h3>
+        <div style="margin-top: 18px;">
+          <div style="font-family: var(--f-heading); font-size: 52px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em;">$4,37 M</div>
+          <div style="font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.18em; text-transform: uppercase;">на линию · в год</div>
+        </div>
+        <p style="margin-top: 18px; font-size: 16px; color: var(--cream-dim);">
+          134 000 т обеднённой биомассы × $32,6 / т = $4 369 565<br>
+          Месячный run-rate: $364 130<br>
+          <em style="color: var(--cream-faint);">Контрактный тариф — выплачивается независимо от продаж сорбента.</em>
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 12px;">Поток B — Продажи сорбента</h3>
+        <div style="margin-top: 18px;">
+          <div style="font-family: var(--f-heading); font-size: 52px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em;">$18,94 M</div>
+          <div style="font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.18em; text-transform: uppercase;">на линию · в год</div>
+        </div>
+        <p style="margin-top: 18px; font-size: 16px; color: var(--cream-dim);">
+          17 420 т сорбента × $1 087 / т = $18 935 000<br>
+          Месячный run-rate: $1 578 000 (1 452 т)<br>
+          <em style="color: var(--cream-faint);">Диверсифицировано по четырём конечным вертикалям (слайд 6).</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 44px; gap: 28px;">
+      <div class="card stat">
+        <div class="label">Совокупная выручка на линию</div>
+        <div class="value accent" style="font-size: 36px;">$23 304 565 / год</div>
+        <div class="sub">Поток А + Поток B вместе</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Совокупная выручка трёх линий</div>
+        <div class="value accent" style="font-size: 36px;">$69 913 695 / год</div>
+        <div class="sub">На устойчивом режиме трёх линий</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Чистая маржа (на линию)</div>
+        <div class="value green" style="font-size: 36px;">62,8%</div>
+        <div class="sub">$14,6 M чистой прибыли на $23,3 M совокупной выручки</div>
+      </div>
+    </div>
+    <div class="slide-num">11 / 15</div>
+  </section>
+
+  <!-- SLIDE 12: PEARL TOKEN -->
+  <section class="slide compact">
+    <div class="eyebrow">Инвестиционный инструмент</div>
+    <h2>Токен PEARL<br>фракционный доступ к экономике производства</h2>
+    <p class="lead" style="margin-top: 8px; max-width: 980px;">
+      Инвесторы не входят в SPV напрямую. Капитал привлекается через
+      utility-токен PEARL на блокчейне TON — держатели участвуют в
+      <strong style="color: var(--cream);">30% полного оборота линий</strong>
+      по каждой действующей линии, в форме периодических распределений.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 40px; gap: 56px;">
+      <div>
+        <h3 style="margin-bottom: 18px;">Механика токена</h3>
+        <table>
+          <tbody>
+            <tr><td>Цена токена (фиксированная)</td><td class="num">$1,00</td></tr>
+            <tr><td>Совокупная эмиссия</td><td class="num">31 051 657 PEARL</td></tr>
+            <tr><td>&nbsp;&nbsp;• Публичная продажа</td><td class="num">26 051 657</td></tr>
+            <tr><td>&nbsp;&nbsp;• Аллокация команды</td><td class="num">2 000 000</td></tr>
+            <tr><td>&nbsp;&nbsp;• Реферальный пул</td><td class="num">3 000 000</td></tr>
+            <tr><td>Целевой объём привлечения</td><td class="num">$26 051 657</td></tr>
+            <tr><td>Направляется на строительство (после 5% рефералов)</td><td class="num">$24 749 074</td></tr>
+            <tr><td>Блокчейн</td><td class="num">TON</td></tr>
+            <tr><td>Юридическая квалификация</td><td class="num">Utility-токен</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout" style="margin-top: 28px;">
+          <p>
+            <strong>Важно.</strong> PEARL позиционируется как utility-токен
+            с участием в выручке — не как инвестиционный инструмент. Все
+            коммуникации придерживаются этой рамки для регуляторной ясности
+            в каждой целевой юрисдикции.
+          </p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 18px;">Распределительный пул — 30% полного оборота</h3>
+        <table>
+          <thead>
+            <tr><th>Эксплуатационный масштаб</th><th class="num">Оборот / год</th><th class="num">Пул (30%)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 линия в работе</td><td class="num">$23 304 565</td><td class="num">$6 991 370</td></tr>
+            <tr><td>2 линии в работе</td><td class="num">$46 609 130</td><td class="num">$13 982 739</td></tr>
+            <tr class="total"><td>3 линии в работе (цель)</td><td class="num">$69 913 695</td><td class="num">$20 974 109</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 36px; margin-bottom: 18px;">Вторичный рынок и выкуп</h3>
+        <ul class="bullets">
+          <li><strong>Листинг на DEX</strong> STON.fi и DeDust — после ввода Линии II (ликвидность из реальной выручки, а не из ажиотажа на запуске)</li>
+          <li><strong>Выкуп по $1,15 / токен</strong> стартует с момента начала строительства Линии III — ежемесячный лимит ≈ $1,96 M</li>
+          <li><strong>Без локапа</strong> на токены публичной продажи; токены команды вестятся под майлстоуны</li>
+        </ul>
+      </div>
+    </div>
+    <div class="slide-num">12 / 15</div>
+  </section>
+
+  <!-- SLIDE 13: ROI / PAYBACK -->
+  <section class="slide compact">
+    <div class="eyebrow">Доходность и окупаемость</div>
+    <h2>Окупаемость для держателя: 17,8 месяцев<br>на устойчивом режиме трёх линий</h2>
+
+    <div class="grid grid-3" style="margin-top: 48px;">
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">Окупаемость линии</div>
+        <div class="value accent" style="font-size: 56px; margin-top: 16px;">6–8</div>
+        <div class="sub" style="font-size: 16px;">месяцев на линию с момента запуска</div>
+      </div>
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">Окупаемость для держателя</div>
+        <div class="value accent" style="font-size: 56px; margin-top: 16px;">~17,8</div>
+        <div class="sub" style="font-size: 16px;">месяцев при трёх линиях в работе</div>
+      </div>
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">Годовая доходность при 3 линиях</div>
+        <div class="value green" style="font-size: 56px; margin-top: 16px;">67,5%</div>
+        <div class="sub" style="font-size: 16px;">$20,97 M пул / 31,05 M токенов</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 56px;">Нарастание доходности по мере ввода линий</h3>
+    <table style="margin-top: 18px; max-width: 920px;">
+      <thead>
+        <tr>
+          <th>Стадия</th>
+          <th class="num">Линий в работе</th>
+          <th class="num">Пул / год</th>
+          <th class="num">Доходность на токен $1</th>
+          <th class="num">Окупаемость держателя</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Год 1 — работает пилот</td><td class="num">1</td><td class="num">$6 991 370</td><td class="num">22,5%</td><td class="num">~53 мес</td></tr>
+        <tr><td>Год 2 — ввод тиражирования 1</td><td class="num">2</td><td class="num">$13 982 739</td><td class="num">45,0%</td><td class="num">~27 мес</td></tr>
+        <tr class="total"><td>Год 2+ — целевой масштаб</td><td class="num">3</td><td class="num">$20 974 109</td><td class="num">67,5%</td><td class="num">~17,8 мес</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 32px;">
+      <p>
+        Окупаемость линии (6–8 месяцев на линию) и окупаемость для
+        держателя токена (~17,8 месяцев на полной мощности) — это разные
+        понятия. Сама линия возвращает свой capex из прибыли единичной
+        площадки; окупаемость держателя определяется распределением пула
+        на весь объём эмиссии, поэтому она наступает позже — зато с
+        диверсифицированной экспозицией сразу на все три действующие
+        площадки, а не на одну.
+      </p>
+    </div>
+    <div class="slide-num">13 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 4 — CLOSING                                              -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 14: TEAM & CREDENTIALS -->
+  <section class="slide compact" style="overflow:hidden;">
+    <div class="hero-bg iceland"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Команда и подтверждения</div>
+      <h2>Четыре подтверждения, на которых<br>стоит программа активированного угля</h2>
+      <p class="lead" style="margin-top: 8px; max-width: 920px;">
+        Запатентованный процесс, действующие промышленные внедрения и
+        независимая лабораторная валидация — доверие к проекту строится
+        на проверяемых фактах, а не на заявлениях.
+      </p>
+
+      <div class="grid grid-2" style="margin-top: 48px; gap: 28px;">
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">01 — Экспертиза</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">20+ лет опыта в промышленной химии</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            Два десятилетия практической работы в промышленных
+            разделительных процессах, химии сорбентов и в системах
+            замкнутого восстановления ресурсов. Та же инженерная
+            команда, что стоит за программой активированного угля,
+            построила и действующие продукты, перечисленные ниже.
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">02 — Операционный track record</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">Действующие установки регенерации масла с 2018 года</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            Три полномасштабные промышленные установки регенерации
+            индустриального масла находятся в непрерывной эксплуатации
+            у клиентов из тяжёлой промышленности с 2018 года —
+            независимо оценённые, генерирующие выручку и обслуживаемые
+            той же командой, что проектирует линию активированного угля.
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">03 — Интеллектуальная собственность</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">Патент WIPO №2820244</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            Базовый процесс термической активации защищён патентом
+            WIPO №2820244. Защита распространяется на все основные
+            целевые юрисдикции; единая патентная база охватывает каждый
+            продукт в портфеле команды — внешних технологических
+            зависимостей нет.
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">04 — Валидация</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">Независимая лабораторная валидация</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            Пилотный образец испытан независимой лабораторией по всем
+            семи параметрам качества, приведённым на слайде 5. Каждый
+            показатель соответствует спецификации или превосходит её —
+            качество проверяемо, а не декларативно.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">14 / 15</div>
+  </section>
+
+  <!-- SLIDE 15: CALL TO ACTION -->
+  <section class="slide" style="overflow:hidden; justify-content: center;">
+    <div class="hero-bg hero"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content" style="text-align: center; max-width: 980px; margin: 0 auto;">
+      <div class="eyebrow" style="text-align: center;">Связаться с нами</div>
+      <h2 style="font-size: 56px; text-align: center;">Готовы обсудить<br>возможность?</h2>
+      <p class="lead" style="margin: 16px auto 0; text-align: center; max-width: 760px;">
+        Прямой диалог с проектной командой — технические Q&amp;A, полная
+        финансовая модель, патентная и лабораторная документация, а также
+        визит на одну из действующих площадок текущего портфеля.
+      </p>
+
+      <div style="margin-top: 64px;">
+        <a href="https://eco-pearl.com/#contact"
+           style="display: inline-block;
+                  padding: 22px 56px;
+                  font-family: var(--f-heading);
+                  font-size: 18px;
+                  font-weight: 500;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--gold-light);
+                  background: rgba(201,168,76,0.08);
+                  border: 1px solid var(--gold);
+                  border-radius: 2px;
+                  text-decoration: none;
+                  transition: background 0.25s ease;">
+          Связаться  &nbsp;→&nbsp;  eco-pearl.com/#contact
+        </a>
+      </div>
+
+      <div class="footer-meta" style="justify-content: center; gap: 48px; margin-top: 96px;">
+        <span>Pearl of Restoration · 2026</span>
+        <span>Подготовлено для потенциального инвестора · Конфиденциально</span>
+      </div>
+    </div>
+    <div class="slide-num">15 / 15</div>
+  </section>
+
+</div>
+
+<script>
+  document.addEventListener('keydown', function(e) {
+    var slides = document.querySelectorAll('.slide');
+    var currentScroll = window.scrollY;
+    var target = null;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      for (var i = 0; i < slides.length; i++) {
+        if (slides[i].offsetTop > currentScroll + 50) { target = slides[i]; break; }
+      }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      var prev = null;
+      for (var j = 0; j < slides.length; j++) {
+        if (slides[j].offsetTop >= currentScroll - 10) break;
+        prev = slides[j];
+      }
+      target = prev;
+    } else if (e.key === 'Home') {
+      target = slides[0];
+    } else if (e.key === 'End') {
+      target = slides[slides.length - 1];
+    }
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+</script>
+</body>
+</html>
