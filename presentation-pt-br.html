@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl of Restoration · Pitch de Investimento em Carvão Ativado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #04080f;
+    --bg-alt:      #0a121e;
+    --bg-card:     rgba(10,18,30,0.82);
+    --gold:        #c9a84c;
+    --gold-light:  #e8d06a;
+    --gold-soft:   rgba(201,168,76,0.12);
+    --gold-dim:    rgba(201,168,76,0.30);
+    --cream:       #f0e8d0;
+    --cream-dim:   rgba(240,232,208,0.75);
+    --cream-faint: rgba(240,232,208,0.45);
+    --green:       #7ec99c;
+    --border:      rgba(201,168,76,0.18);
+    --border-soft: rgba(240,232,208,0.08);
+
+    --f-display: 'Cinzel Decorative', serif;
+    --f-heading: 'Cinzel', serif;
+    --f-body:    'EB Garamond', Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%;
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--f-body);
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 14px;
+    border: 1px solid var(--gold-dim);
+    pointer-events: none;
+    z-index: 100;
+  }
+  .deck {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-soft);
+    page-break-after: always;
+    position: relative;
+  }
+  .slide.compact { justify-content: flex-start; padding-top: 110px; }
+  .slide-num {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-family: var(--f-heading);
+    font-size: 12px;
+    color: var(--cream-faint);
+    letter-spacing: 0.25em;
+  }
+  .eyebrow {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+  h1, h2, h3 { color: var(--cream); line-height: 1.18; }
+  h1 {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 68px;
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+    color: var(--gold-light);
+  }
+  h2 {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+    color: var(--gold-light);
+  }
+  h3 {
+    font-family: var(--f-heading);
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 14px;
+    color: var(--cream);
+  }
+  p {
+    font-family: var(--f-body);
+    font-size: 19px;
+    color: var(--cream-dim);
+    margin-bottom: 18px;
+    max-width: 880px;
+  }
+  .lead {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    line-height: 1.5;
+    max-width: 920px;
+  }
+  .big-num {
+    font-family: var(--f-heading);
+    font-size: 88px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--gold);
+  }
+  .num-unit {
+    font-family: var(--f-heading);
+    font-size: 24px;
+    color: var(--cream-dim);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
+  .grid { display: grid; gap: 28px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    backdrop-filter: blur(6px);
+  }
+  .card.tight { padding: 22px; }
+  .stat .label {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--cream-faint);
+    margin-bottom: 10px;
+  }
+  .stat .value {
+    font-family: var(--f-heading);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+  .stat .value.accent { color: var(--gold); }
+  .stat .value.green  { color: var(--green); }
+  .stat .sub {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-faint);
+    margin-top: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--f-body);
+    font-size: 16px;
+  }
+  th, td {
+    text-align: left;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  th {
+    font-family: var(--f-heading);
+    font-weight: 500;
+    color: var(--gold);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    background: rgba(201,168,76,0.04);
+  }
+  td { color: var(--cream); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  td.pass { color: var(--green); font-family: var(--f-heading); font-weight: 500; text-align: center; }
+  tr.total td {
+    font-weight: 600;
+    color: var(--gold-light);
+    border-top: 1px solid var(--gold-dim);
+    background: rgba(201,168,76,0.06);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.28;
+    z-index: 0;
+  }
+  .hero-bg.cosmos    { background-image: url('media/cosmos-bg.jpg'); }
+  .hero-bg.iceland   { background-image: url('media/iceland-bg.jpg'); }
+  .hero-bg.hero      { background-image: url('media/hero-bg.jpg'); }
+  .hero-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(4,8,15,0.55) 0%, rgba(4,8,15,0.20) 40%, rgba(4,8,15,0.75) 100%);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 2px;
+    font-family: var(--f-heading);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  ul.bullets { list-style: none; padding: 0; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-family: var(--f-body);
+    font-size: 18px;
+    color: var(--cream-dim);
+    line-height: 1.55;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 12px;
+    width: 10px; height: 1px;
+    background: var(--gold);
+  }
+  ul.bullets li strong { color: var(--cream); font-weight: 600; }
+  .step-flow { display: flex; align-items: stretch; gap: 18px; margin-top: 16px; }
+  .step {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+  }
+  .step-num {
+    font-family: var(--f-heading);
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .step-title {
+    font-family: var(--f-heading);
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .step-desc {
+    font-family: var(--f-body);
+    font-size: 16px;
+    color: var(--cream-dim);
+    line-height: 1.5;
+  }
+  .step-arrow {
+    align-self: center;
+    color: var(--gold);
+    font-size: 22px;
+  }
+  .bar-row { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; font-family: var(--f-body); font-size: 16px; }
+  .bar-label { flex: 0 0 220px; color: var(--cream); }
+  .bar-track { flex: 1; height: 6px; background: rgba(201,168,76,0.08); border-radius: 1px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--gold); border-radius: 1px; }
+  .bar-val { flex: 0 0 150px; text-align: right; color: var(--cream-dim); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  .site-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .site-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 28px;
+    backdrop-filter: blur(6px);
+  }
+  .site-card .label {
+    font-family: var(--f-heading);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .site-card .name {
+    font-family: var(--f-heading);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .site-card .meta {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--cream-faint);
+  }
+  .site-card .cap {
+    font-family: var(--f-heading);
+    font-size: 30px;
+    color: var(--gold);
+    font-weight: 500;
+    margin: 14px 0 6px;
+    letter-spacing: 0.02em;
+  }
+  .quote {
+    border-left: 2px solid var(--gold);
+    padding: 8px 0 8px 24px;
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--cream);
+    margin: 28px 0;
+    max-width: 920px;
+    line-height: 1.5;
+  }
+  .footer-meta {
+    margin-top: auto;
+    padding-top: 48px;
+    color: var(--cream-faint);
+    font-family: var(--f-heading);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  .callout {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-dim);
+    border-left: 2px solid var(--gold);
+    padding: 22px 26px;
+    border-radius: 4px;
+    max-width: 920px;
+    backdrop-filter: blur(6px);
+  }
+  .callout p { margin: 0; color: var(--cream); font-size: 18px; }
+  .callout strong { color: var(--gold-light); font-weight: 600; }
+  .driver-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .driver {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 28px 24px;
+    backdrop-filter: blur(6px);
+  }
+  .driver .icon {
+    font-family: var(--f-heading);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .driver h4 {
+    font-family: var(--f-heading);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+  .driver p { font-size: 15px; line-height: 1.55; margin: 0; }
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .spec {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+  }
+  .spec .num {
+    font-family: var(--f-heading);
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+  .spec .unit {
+    font-family: var(--f-heading);
+    font-size: 14px;
+    color: var(--cream-faint);
+    letter-spacing: 0.12em;
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+  .spec .desc {
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--cream-dim);
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+  @media print {
+    body { background: white; color: black; }
+    body::before { display: none; }
+    .slide { min-height: 100vh; page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- ============================================================ -->
+  <!-- PART 1 — PROBLEM & OPPORTUNITY                                -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 1: TITLE -->
+  <section class="slide" style="overflow:hidden;">
+    <div class="hero-bg cosmos"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Pitch de Investimento · 2026</div>
+      <h1>Pearl of Restoration<br>Programa de Carvão Ativado</h1>
+      <p class="lead" style="max-width: 840px;">
+        Um processo industrial com patente WIPO que converte resíduo de biomassa
+        agrícola em carvão ativado premium. Resolvemos um passivo ambiental
+        recorrente dos parceiros processadores e endereçamos uma lacuna
+        estrutural de oferta no mercado global de sorventes.
+      </p>
+      <div style="margin-top: 56px; display: flex; gap: 64px; align-items: baseline; flex-wrap: wrap;">
+        <div>
+          <div class="big-num">$24,75<span class="num-unit"> M</span></div>
+          <div class="stat label" style="margin-top: 12px;">Captação total · três linhas turnkey</div>
+        </div>
+        <div>
+          <div class="big-num">6–8<span class="num-unit"> meses</span></div>
+          <div class="stat label" style="margin-top: 12px;">Payback da planta por linha</div>
+        </div>
+        <div>
+          <div class="big-num">$69,9<span class="num-unit"> M / ano</span></div>
+          <div class="stat label" style="margin-top: 12px;">Faturamento combinado em regime pleno</div>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>Tecnologia patenteada pela WIPO · Instalação no site do parceiro</span>
+        <span>Confidencial</span>
+      </div>
+    </div>
+    <div class="slide-num">01 / 15</div>
+  </section>
+
+  <!-- SLIDE 2: THE PROBLEM -->
+  <section class="slide compact">
+    <div class="eyebrow">O Problema</div>
+    <h2>Parceiros processadores carregam<br>um passivo que cresce a cada ano</h2>
+    <div class="grid grid-2" style="margin-top: 32px; align-items: stretch;">
+      <div>
+        <p class="lead" style="margin-bottom: 24px;">
+          Um <strong style="color: var(--cream);">subproduto agrícola esgotado</strong>
+          de alto volume se acumula a jusante de grandes operações de
+          processamento de alimentos. Os componentes comercialmente viáveis já
+          foram extraídos; a massa residual rica em carboidratos não tem
+          destinação econômica.
+        </p>
+        <ul class="bullets">
+          <li><strong>250.000 toneladas por ano</strong> se acumulam apenas em nossas regiões-alvo iniciais</li>
+          <li>Os volumes <strong>crescem a cada safra</strong>, acompanhando a produção primária</li>
+          <li>O fluxo de resíduo <strong>quase nunca é aproveitado</strong>; permanece em pátios abertos e se decompõe sem controle</li>
+          <li>Os produtos de decomposição contaminam solo, lençol freático, corpos hídricos superficiais e ar</li>
+          <li><strong>Precedente regulatório documentado</strong> — multas milionárias já foram aplicadas a operadores que falharam no controle da destinação</li>
+        </ul>
+        <div class="quote">
+          "Operadores levaram esta questão repetidamente a reguladores setoriais
+          e órgãos formuladores de política — sem que uma rota viável de
+          destinação fosse oferecida em troca."
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="stat">
+            <div class="label">Taxa de destinação que os processadores aceitam pagar</div>
+            <div class="value accent">$32,6 / tonelada</div>
+            <div class="sub">Valor conservador utilizado em todo o modelo</div>
+          </div>
+          <p style="margin-top: 24px; font-size: 17px; color: var(--cream-dim);">
+            Hoje os processadores arcam com o custo integral de armazenagem,
+            risco regulatório e eventual remediação. Substituímos esse custo
+            por um fluxo de receita positivo — eles nos pagam uma taxa fixa
+            por tonelada para retirar o resíduo, e nós não pagamos nada pela
+            matéria-prima que em seguida convertemos.
+          </p>
+        </div>
+        <div class="card tight" style="margin-top: 20px;">
+          <div class="stat">
+            <div class="label">Resultado para os dois lados</div>
+            <div class="value">Risco → Receita</div>
+            <div class="sub">Passivo eliminado; nova linha de receita aberta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">02 / 15</div>
+  </section>
+
+  <!-- SLIDE 3: MARKET DRIVERS -->
+  <section class="slide compact">
+    <div class="eyebrow">Vetores de Mercado</div>
+    <h2>A demanda global por sorventes<br>é estrutural, não cíclica</h2>
+    <p class="lead" style="margin-top: 8px; max-width: 980px;">
+      O endurecimento das normas ambientais, a expansão da produção industrial
+      e a elevação dos padrões de qualidade de vida convergem para a mesma
+      necessidade — materiais adsorventes de alta qualidade, disponíveis em
+      volume e a custo previsível.
+    </p>
+
+    <div class="driver-grid" style="margin-top: 44px;">
+      <div class="driver">
+        <div class="icon">Ecologia</div>
+        <h4>Água e solo</h4>
+        <p>
+          Tratamento de efluentes, neutralização de compostos tóxicos e metais
+          pesados em solo e corpos hídricos. Limites máximos de concentração
+          cada vez mais restritivos mantêm a demanda em alta.
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">Indústria</div>
+        <h4>Eficiência de processo</h4>
+        <p>
+          Petroquímica, metalurgia e farmacêutica dependem de sorventes para
+          elevar a produtividade dos processos, proteger equipamentos e atender
+          aos padrões de emissão.
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">Medicina</div>
+        <h4>Enterossorventes</h4>
+        <p>
+          Desintoxicação, remoção de toxinas, alérgenos e microrganismos
+          patogênicos — categoria que cresce em linha com o gasto farmacêutico
+          global.
+        </p>
+      </div>
+      <div class="driver">
+        <div class="icon">Energia</div>
+        <h4>Armazenamento e captura</h4>
+        <p>
+          Infraestrutura para hidrogênio energético e estocagem de gás natural
+          demandam materiais adsorventes de alta capacidade, com área
+          superficial específica estável.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 48px;">
+      <div class="card">
+        <div class="stat">
+          <div class="label">Mercado regional-alvo 2024</div>
+          <div class="value accent">41.000 t</div>
+          <div class="sub">≈ $118 M de demanda anual</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">Fatia importada 2024</div>
+          <div class="value">30.000 t</div>
+          <div class="sub">+24% A/A — origem do mercado industrial global</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stat">
+          <div class="label">CAGR projetado até 2030</div>
+          <div class="value green">+5,6% / ano</div>
+          <div class="sub">Espaço para chegar a 82.000 t/ano</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">03 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 2 — PRODUCT                                              -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 4: WHAT WE PRODUCE -->
+  <section class="slide compact">
+    <div class="eyebrow">O Produto</div>
+    <h2>Carvão ativado premium<br>a partir de resíduo de biomassa agrícola</h2>
+    <div class="grid grid-2" style="margin-top: 32px; align-items: stretch;">
+      <div>
+        <p class="lead" style="margin-bottom: 28px;">
+          Nosso processo converte um resíduo de biomassa de baixo valor e alto
+          volume em um material carbonáceo poroso de alto desempenho, com área
+          superficial específica desenvolvida — capaz de fixar um amplo
+          espectro de contaminantes em aplicações industriais.
+        </p>
+        <ul class="bullets">
+          <li><strong>Matéria-prima renovável</strong> — gerada anualmente como subproduto inevitável de um ciclo de produção primário</li>
+          <li><strong>Custo negativo de matéria-prima</strong> — os parceiros processadores nos pagam para retirar a carga</li>
+          <li><strong>Qualidade reproduzível</strong> — cada batelada é verificada contra a mesma especificação laboratorial multiparamétrica (slide 5)</li>
+          <li><strong>Dois formatos</strong> — granular e em pó, mais a extensão opcional de fibra carbono-compósita de alta margem</li>
+        </ul>
+      </div>
+      <div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <span class="pill">Grau industrial</span>
+          <div style="margin-top: 22px; font-family: var(--f-heading); font-size: 28px; color: var(--gold-light); font-weight: 500; letter-spacing: 0.04em;">
+            Carvão ativado premium
+          </div>
+          <p style="margin-top: 16px; font-size: 17px; color: var(--cream-dim);">
+            Desempenho comparável — e, em diversos parâmetros, superior — aos
+            principais sorventes comerciais hoje negociados no mercado global.
+          </p>
+          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-soft);">
+            <div class="stat">
+              <div class="label">Faixa de preço atacado de referência</div>
+              <div class="value accent">$2.200 – $4.900 / t</div>
+              <div class="sub">Nosso caso-base adota o conservador de $1.087 / t</div>
+            </div>
+          </div>
+        </div>
+        <div class="card tight" style="margin-top: 18px;">
+          <div class="stat">
+            <div class="label">Volume de venda por linha</div>
+            <div class="value">17.420 t / ano</div>
+            <div class="sub">Rendimento de 13% sobre 134.000 t de matéria-prima</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">04 / 15</div>
+  </section>
+
+  <!-- SLIDE 5: QUALITY PARAMETERS -->
+  <section class="slide compact">
+    <div class="eyebrow">Parâmetros de Qualidade</div>
+    <h2>Sete indicadores laboratoriais<br>verificados — em cada batelada</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      Uma amostra piloto produzida pelo nosso processo passou por ensaio
+      laboratorial completo contra padrões internacionais de qualidade. Cada
+      parâmetro-chave atende ou supera a especificação; vários deles com
+      margem de segurança substancial.
+    </p>
+
+    <div class="spec-grid" style="margin-top: 36px;">
+      <div class="spec">
+        <div class="num">65%</div>
+        <div class="unit">Adsorção de iodo</div>
+        <div class="desc">Supera a especificação de ≥60% em 5 pontos percentuais</div>
+      </div>
+      <div class="spec">
+        <div class="num">4,5%</div>
+        <div class="unit">Teor de cinzas</div>
+        <div class="desc">25% abaixo do teto de ≤6% — alta pureza do produto</div>
+      </div>
+      <div class="spec">
+        <div class="num">1,7<span style="font-size:26px;"> cm³/g</span></div>
+        <div class="unit">Volume de poros</div>
+        <div class="desc">Supera a especificação de ≥1,6 cm³/g</div>
+      </div>
+      <div class="spec">
+        <div class="num">6,0%</div>
+        <div class="unit">Umidade</div>
+        <div class="desc">1,7× abaixo do teto de ≤10% — estabilidade na estocagem</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 48px;">Verificação laboratorial completa</h3>
+    <table style="margin-top: 16px; max-width: 1100px;">
+      <thead>
+        <tr>
+          <th style="width: 40px;">#</th>
+          <th>Parâmetro</th>
+          <th>Especificação</th>
+          <th>Resultado</th>
+          <th style="width: 80px; text-align: center;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Aparência visual</td><td>Grãos pretos, sem inclusões mecânicas</td><td>Grãos pretos, limpos</td><td class="pass">✓</td></tr>
+        <tr><td>2</td><td>Atividade de adsorção de iodo</td><td>≥ 60%</td><td>65%</td><td class="pass">✓</td></tr>
+        <tr><td>3</td><td>Volume total de poros por água</td><td>≥ 1,6 cm³/g</td><td>1,7 cm³/g</td><td class="pass">✓</td></tr>
+        <tr><td>4</td><td>Densidade aparente</td><td>≤ 240 g/dm³</td><td>230 g/dm³</td><td class="pass">✓</td></tr>
+        <tr><td>5.1</td><td>Granulometria: retido na peneira nº 36</td><td>≤ 2,5%</td><td>1,8%</td><td class="pass">✓</td></tr>
+        <tr><td>5.2</td><td>Granulometria: retido na peneira nº 10</td><td>≥ 95,5%</td><td>96,4%</td><td class="pass">✓</td></tr>
+        <tr><td>5.3</td><td>Granulometria: fundo</td><td>≤ 2,0%</td><td>0,9%</td><td class="pass">✓</td></tr>
+        <tr><td>6</td><td>Teor de cinzas (fração mássica)</td><td>≤ 6%</td><td>4,5%</td><td class="pass">✓</td></tr>
+        <tr><td>7</td><td>Umidade (fração mássica)</td><td>≤ 10%</td><td>6,0%</td><td class="pass">✓</td></tr>
+        <tr class="total"><td></td><td colspan="3"><strong style="color: var(--gold-light);">Sete de sete parâmetros dentro ou acima da especificação</strong></td><td class="pass" style="color: var(--gold-light);">✓</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 28px;">
+      <p>
+        Todos os valores acima vêm de validação por laboratório independente da
+        amostra piloto. O mesmo painel de parâmetros governa cada batelada na
+        produção industrial — qualidade é contratual, não anedótica.
+      </p>
+    </div>
+    <div class="slide-num">05 / 15</div>
+  </section>
+
+  <!-- SLIDE 6: APPLICATIONS -->
+  <section class="slide compact">
+    <div class="eyebrow">Aplicações</div>
+    <h2>Quatro mercados industriais<br>absorvem toda a produção</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      O perfil físico-químico do nosso carvão ativado o torna diretamente
+      aplicável a todos os principais segmentos finais do mercado de sorventes
+      — do tratamento municipal de água à purificação farmacêutica.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 36px; gap: 28px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">Tratamento de água e efluentes</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          Remoção eficaz de metais pesados (chumbo, cádmio, mercúrio),
+          contaminantes orgânicos, compostos clororgânicos e agrotóxicos de
+          águas industriais e de abastecimento. Utilizado em metalúrgicas,
+          galvânicas e estações municipais de tratamento.
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">Química e petroquímica</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          Sorção de substâncias tóxicas, remoção de compostos orgânicos voláteis
+          de correntes gasosas de processo, proteção de equipamentos contra
+          corrosão. Aplicado em produção de ácidos e bases, fabricação de
+          solventes orgânicos e operações de refino.
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">Indústria de alimentos</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          Remoção de VOCs, descoloração de xaropes, polimento de aditivos de
+          grau alimentício. Acabamento de água potável e linhas de produção
+          de bebidas alcoólicas e não alcoólicas.
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 14px;">Farma e cosméticos</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 14px; line-height: 1.55;">
+          Purificação de princípios ativos farmacêuticos, remoção de impurezas
+          em substâncias medicamentosas acabadas, produção de enterossorventes
+          medicinais. Empregado em formulações cosméticas de limpeza profunda.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 36px;">
+      <p>
+        A diversidade dos mercados finais é, por si só, um vetor de mitigação
+        de risco — a produção de sorvente nunca depende de uma única indústria
+        compradora; uma retração em um vertical é absorvida pela demanda em
+        outro.
+      </p>
+    </div>
+    <div class="slide-num">06 / 15</div>
+  </section>
+
+  <!-- SLIDE 7: COMPETITIVE EDGE -->
+  <section class="slide compact">
+    <div class="eyebrow">Vantagem Competitiva</div>
+    <h2>Onde ganhamos<br>frente aos sorventes incumbentes</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      Contra as duas matérias-primas comerciais dominantes — carvão antracito
+      e casca de coco — nosso produto entrega vantagens estruturais em quatro
+      vetores independentes.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 40px; gap: 28px;">
+      <div class="card">
+        <div class="step-num">01</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">Seletividade superior</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          A arquitetura de poros do nosso material apresenta seletividade
+          elevada em relação a metais pesados e contaminantes orgânicos
+          complexos, permitindo polimento mais profundo do que equivalentes
+          de carvão ou casca de coco com a mesma carga mássica.
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">02</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">Cinética de adsorção mais rápida</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          A estrutura de poros finos entrega captação de contaminantes
+          substancialmente mais ágil — tempos de contato menores na coluna e
+          maior vazão global em qualquer sistema de tratamento que utilize
+          nosso sorvente.
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">03</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">Menor pegada ambiental</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          Ao usar um fluxo residual de biomassa em vez de carvão mineral ou
+          casca de coco, reduzimos materialmente a pegada de carbono embutida
+          e evitamos consumo de matérias-primas não renováveis — requisito
+          obrigatório de compras para clientes orientados a ESG.
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-num">04</div>
+        <h3 style="margin-top: 6px; font-size: 18px;">Custo estruturalmente menor</h3>
+        <p style="font-size: 16px; color: var(--cream-dim); margin-top: 10px; line-height: 1.55;">
+          O custo negativo de matéria-prima somado ao processamento no próprio
+          site (zero logística de entrada) nos permite precificar abaixo dos
+          produtores incumbentes preservando margem líquida de 62,8% — os
+          concorrentes não conseguem replicar facilmente nem o custo de
+          insumo nem a localização.
+        </p>
+      </div>
+    </div>
+    <div class="slide-num">07 / 15</div>
+  </section>
+
+  <!-- SLIDE 8: PRODUCTION TECHNOLOGY -->
+  <section class="slide compact">
+    <div class="eyebrow">Tecnologia de Produção</div>
+    <h2>Processo térmico de três estágios<br>com ativação em atmosfera controlada</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      A linha é sequencial, totalmente automatizada e construída sobre
+      operações unitárias industriais padronizadas. A proteção patentária está
+      registrada via WIPO. Cada estágio é instrumentado; os parâmetros de
+      qualidade do slide 5 remontam a set-points específicos do processo.
+    </p>
+
+    <div class="step-flow" style="margin-top: 36px;">
+      <div class="step">
+        <div class="step-num">Estágio 01</div>
+        <div class="step-title">Preparação</div>
+        <div class="step-desc">
+          Pré-limpeza e concentração da matéria-prima para remover impurezas
+          indesejadas e atingir a viscosidade ideal. Crítico para formar uma
+          estrutura de poros uniforme nas etapas seguintes.
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Estágio 02</div>
+        <div class="step-title">Pirólise (carbonização)</div>
+        <div class="step-desc">
+          Tratamento térmico a <strong style="color: var(--gold);">500–800 °C</strong>
+          em atmosfera isenta de oxigênio. A fase orgânica se decompõe e o
+          esqueleto de carbono é formado.
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">Estágio 03</div>
+        <div class="step-title">Ativação</div>
+        <div class="step-desc">
+          Tratamento por vapor ou reagente químico a
+          <strong style="color: var(--gold);">800–1.000 °C</strong>. Abre a
+          estrutura de poros, desenvolve microporos e mesoporos — fonte da
+          capacidade adsortiva do material.
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 44px;">
+      <div class="card tight stat">
+        <div class="label">Prazo de construção</div>
+        <div class="value">6 meses</div>
+        <div class="sub">Engenharia, obra e comissionamento</div>
+      </div>
+      <div class="card tight stat">
+        <div class="label">Throughput de matéria-prima</div>
+        <div class="value accent">134.000 t / ano</div>
+        <div class="sub">11.170 t / mês por linha</div>
+      </div>
+      <div class="card tight stat">
+        <div class="label">Quadro da planta</div>
+        <div class="value">32 colaboradores</div>
+        <div class="sub">Operação contínua 24/7</div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 32px;">
+      <p>
+        Cada batelada é ensaiada contra a mesma especificação laboratorial de
+        nove parâmetros. Saídas fora de especificação são reprocessadas em
+        linha — não existe rota de downgrade saindo do chão de fábrica.
+      </p>
+    </div>
+    <div class="slide-num">08 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 3 — ECONOMICS                                            -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 9: UNIT ECONOMICS -->
+  <section class="slide compact">
+    <div class="eyebrow">Economia Unitária</div>
+    <h2>$8,25 M turnkey · $14,6 M de lucro líquido<br>por linha, por ano</h2>
+
+    <div class="grid grid-2" style="margin-top: 32px; gap: 56px;">
+      <div>
+        <h3 style="margin-bottom: 18px;">Composição do capex (por linha)</h3>
+        <table>
+          <tbody>
+            <tr><td>Equipamentos (fornos, reatores, granulador, envase)</td><td class="num">$4.945.000</td></tr>
+            <tr><td>Construção, engenharia e comissionamento (40%)</td><td class="num">$1.978.000</td></tr>
+            <tr><td>Capital de giro, ramp-up e contingência</td><td class="num">$1.326.691</td></tr>
+            <tr class="total"><td>Capex total por linha, turnkey</td><td class="num">$8.249.691</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 36px; margin-bottom: 18px;">Composição do custo de produção (por tonelada de sorvente)</h3>
+        <table>
+          <tbody>
+            <tr><td>Logística de matéria-prima na entrada</td><td class="num">$0</td></tr>
+            <tr><td>Gás natural</td><td class="num">$94</td></tr>
+            <tr><td>Mão de obra, totalmente onerada</td><td class="num">$82</td></tr>
+            <tr><td>Energia elétrica</td><td class="num">$31</td></tr>
+            <tr><td>Despesas indiretas + embalagem</td><td class="num">$11</td></tr>
+            <tr class="total"><td>Custo de produção por tonelada</td><td class="num">$218</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 18px;">DRE anual (por linha)</h3>
+        <table>
+          <tbody>
+            <tr><td>Vendas de sorvente (17.420 t × $1.087)</td><td class="num">$18.935.000</td></tr>
+            <tr><td>Carbon Recovery Fee (134.000 t × $32,6)</td><td class="num">$4.369.565</td></tr>
+            <tr class="total"><td>Receita total</td><td class="num">$23.304.565</td></tr>
+            <tr><td>Custo de produção (17.420 t × $218)</td><td class="num">−$3.797.560</td></tr>
+            <tr><td>Outras despesas operacionais</td><td class="num">−$4.877.635</td></tr>
+            <tr class="total" style="background: rgba(201,168,76,0.10);"><td><strong style="color: var(--gold-light);">Lucro líquido</strong></td><td class="num"><strong style="color: var(--gold-light);">$14.629.370</strong></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout" style="margin-top: 32px;">
+          <p>
+            <strong>Margem líquida: 62,8%.</strong> Somente o Carbon Recovery
+            Fee ($251 por tonelada de sorvente, redistribuído sobre a produção)
+            já supera o custo total de produção de $218. As vendas de sorvente
+            tornam-se, em seguida, praticamente margem pura.
+          </p>
+        </div>
+
+        <div class="callout" style="margin-top: 16px;">
+          <p>
+            O caso-base de preço do sorvente de $1.087 / t foi fixado
+            deliberadamente no piso da faixa de mercado — o atacado de
+            referência opera entre
+            <strong>$2.200 e $4.900 / t</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">09 / 15</div>
+  </section>
+
+  <!-- SLIDE 10: 3-LINE EXPANSION -->
+  <section class="slide compact">
+    <div class="eyebrow">Plano de Escala</div>
+    <h2>Três linhas idênticas<br>$24,75 M de captação total · $69,9 M / ano de faturamento</h2>
+    <p class="lead" style="margin-top: 8px;">
+      Após a Linha A atingir regime estável, o mesmo pacote de equipamentos e
+      o mesmo modelo operacional são replicados em mais dois sites — mesmo
+      capex, mesma economia unitária, mesmo ciclo de obra de 6 meses. Não há
+      engenharia específica entre sites.
+    </p>
+
+    <div class="site-grid" style="margin-top: 44px;">
+      <div class="site-card">
+        <div class="label">Linha 01</div>
+        <div class="name">Site A — piloto</div>
+        <div class="meta">Primeira linha em operação; construção de referência</div>
+        <div class="cap">134.000 t / ano de matéria-prima</div>
+        <div class="meta">Capex: $8,25 M · Obra: 6 meses</div>
+      </div>
+      <div class="site-card">
+        <div class="label">Linha 02</div>
+        <div class="name">Site B — replicação 1</div>
+        <div class="meta">Iniciada após o piloto atingir capacidade nominal</div>
+        <div class="cap">134.000 t / ano de matéria-prima</div>
+        <div class="meta">Capex: $8,25 M · Obra: 6 meses</div>
+      </div>
+      <div class="site-card">
+        <div class="label">Linha 03</div>
+        <div class="name">Site C — replicação 2</div>
+        <div class="meta">Iniciada em paralelo à Linha 02</div>
+        <div class="cap">134.000 t / ano de matéria-prima</div>
+        <div class="meta">Capex: $8,25 M · Obra: 6 meses</div>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 56px; gap: 28px;">
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">Matéria-prima processada combinada</div>
+        <div class="value accent" style="font-size: 38px;">402.000 t / ano</div>
+        <div class="sub">Somando as três linhas em capacidade nominal</div>
+      </div>
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">Orçamento combinado de construção</div>
+        <div class="value accent" style="font-size: 38px;">$24.749.074</div>
+        <div class="sub">3 × $8,25 M, tudo incluído</div>
+      </div>
+      <div class="card stat" style="padding: 32px;">
+        <div class="label">Faturamento anual combinado</div>
+        <div class="value accent" style="font-size: 38px;">$69.913.695</div>
+        <div class="sub">$23,3 M × 3 em regime estável</div>
+      </div>
+    </div>
+    <div class="slide-num">10 / 15</div>
+  </section>
+
+  <!-- SLIDE 11: REVENUE STREAMS -->
+  <section class="slide compact">
+    <div class="eyebrow">Modelo de Receita</div>
+    <h2>Dois fluxos de receita independentes<br>reduzem o risco econômico do projeto</h2>
+    <p style="margin-top: 8px; max-width: 980px;">
+      A linha fatura nas duas pontas da cadeia de valor: os processadores nos
+      pagam para retirar seu subproduto (Fluxo A); os compradores finais nos
+      pagam pelo carvão ativado que produzimos a partir dele (Fluxo B). Cada
+      fluxo, isoladamente, já cobriria todo o custo de produção.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 36px; gap: 40px;">
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 12px;">Fluxo A — Carbon Recovery Fee</h3>
+        <div style="margin-top: 18px;">
+          <div style="font-family: var(--f-heading); font-size: 52px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em;">$4,37 M</div>
+          <div style="font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.18em; text-transform: uppercase;">por linha · por ano</div>
+        </div>
+        <p style="margin-top: 18px; font-size: 16px; color: var(--cream-dim);">
+          134.000 t de biomassa esgotada × $32,6 / t = $4.369.565<br>
+          Run-rate mensal: $364.130<br>
+          <em style="color: var(--cream-faint);">Taxa contratada — recebida independentemente das vendas de sorvente a jusante.</em>
+        </p>
+      </div>
+      <div class="card" style="border-top: 2px solid var(--gold);">
+        <h3 style="color: var(--gold); font-size: 12px;">Fluxo B — Vendas de Sorvente</h3>
+        <div style="margin-top: 18px;">
+          <div style="font-family: var(--f-heading); font-size: 52px; font-weight: 600; color: var(--cream); letter-spacing: 0.02em;">$18,94 M</div>
+          <div style="font-family: var(--f-heading); font-size: 14px; color: var(--cream-faint); letter-spacing: 0.18em; text-transform: uppercase;">por linha · por ano</div>
+        </div>
+        <p style="margin-top: 18px; font-size: 16px; color: var(--cream-dim);">
+          17.420 t de sorvente × $1.087 / t = $18.935.000<br>
+          Run-rate mensal: $1.578.000 (1.452 t)<br>
+          <em style="color: var(--cream-faint);">Diversificado em quatro verticais de mercado final (slide 6).</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top: 44px; gap: 28px;">
+      <div class="card stat">
+        <div class="label">Receita total por linha</div>
+        <div class="value accent" style="font-size: 36px;">$23.304.565 / ano</div>
+        <div class="sub">Fluxo A + Fluxo B combinados</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Receita total 3 linhas</div>
+        <div class="value accent" style="font-size: 36px;">$69.913.695 / ano</div>
+        <div class="sub">Em regime estável com três linhas em capacidade nominal</div>
+      </div>
+      <div class="card stat">
+        <div class="label">Margem líquida (por linha)</div>
+        <div class="value green" style="font-size: 36px;">62,8%</div>
+        <div class="sub">$14,6 M líquidos sobre $23,3 M de receita total</div>
+      </div>
+    </div>
+    <div class="slide-num">11 / 15</div>
+  </section>
+
+  <!-- SLIDE 12: PEARL TOKEN -->
+  <section class="slide compact">
+    <div class="eyebrow">Veículo de Investimento</div>
+    <h2>O token PEARL<br>acesso fracionado à economia da planta</h2>
+    <p class="lead" style="margin-top: 8px; max-width: 980px;">
+      Os investidores não entram diretamente na SPV. O capital é captado pelo
+      token utilitário PEARL, na TON — os detentores do token participam de
+      <strong style="color: var(--cream);">30% do faturamento integral da linha</strong>
+      em cada linha em operação, pago como distribuições periódicas.
+    </p>
+
+    <div class="grid grid-2" style="margin-top: 40px; gap: 56px;">
+      <div>
+        <h3 style="margin-bottom: 18px;">Mecânica do token</h3>
+        <table>
+          <tbody>
+            <tr><td>Preço do token (fixo)</td><td class="num">$1,00</td></tr>
+            <tr><td>Emissão total</td><td class="num">31.051.657 PEARL</td></tr>
+            <tr><td>&nbsp;&nbsp;• Venda pública</td><td class="num">26.051.657</td></tr>
+            <tr><td>&nbsp;&nbsp;• Alocação do time</td><td class="num">2.000.000</td></tr>
+            <tr><td>&nbsp;&nbsp;• Pool de indicação</td><td class="num">3.000.000</td></tr>
+            <tr><td>Captação-alvo</td><td class="num">$26.051.657</td></tr>
+            <tr><td>Destinado à construção (após 5% de indicações)</td><td class="num">$24.749.074</td></tr>
+            <tr><td>Blockchain</td><td class="num">TON</td></tr>
+            <tr><td>Enquadramento jurídico</td><td class="num">Token utilitário</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout" style="margin-top: 28px;">
+          <p>
+            <strong>Importante.</strong> O PEARL é posicionado como token
+            utilitário com participação em receita — não como instrumento de
+            investimento. Toda a comunicação segue esse enquadramento para
+            clareza regulatória em cada jurisdição-alvo.
+          </p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 18px;">Pool de distribuição — 30% do faturamento integral</h3>
+        <table>
+          <thead>
+            <tr><th>Escala operacional</th><th class="num">Faturamento / ano</th><th class="num">Pool (30%)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 linha em operação</td><td class="num">$23.304.565</td><td class="num">$6.991.370</td></tr>
+            <tr><td>2 linhas em operação</td><td class="num">$46.609.130</td><td class="num">$13.982.739</td></tr>
+            <tr class="total"><td>3 linhas em operação (meta)</td><td class="num">$69.913.695</td><td class="num">$20.974.109</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 36px; margin-bottom: 18px;">Mercado secundário e buyback</h3>
+        <ul class="bullets">
+          <li><strong>Listagem em DEX</strong> na STON.fi e DeDust — após a conclusão da Linha II (liquidez vinda de receita real, não de hype de lançamento)</li>
+          <li><strong>Buyback a $1,15 / token</strong> tem início na data de início da construção da Linha III — teto mensal de ≈ $1,96 M</li>
+          <li><strong>Sem lock-up</strong> nos tokens de venda pública; tokens do time têm vesting atrelado a marcos</li>
+        </ul>
+      </div>
+    </div>
+    <div class="slide-num">12 / 15</div>
+  </section>
+
+  <!-- SLIDE 13: ROI / PAYBACK -->
+  <section class="slide compact">
+    <div class="eyebrow">Retornos e Payback</div>
+    <h2>Payback do token holder: 17,8 meses<br>em regime estável de três linhas</h2>
+
+    <div class="grid grid-3" style="margin-top: 48px;">
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">Payback da planta</div>
+        <div class="value accent" style="font-size: 56px; margin-top: 16px;">6–8</div>
+        <div class="sub" style="font-size: 16px;">meses por linha a partir do start-up</div>
+      </div>
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">Payback do token holder</div>
+        <div class="value accent" style="font-size: 56px; margin-top: 16px;">~17,8</div>
+        <div class="sub" style="font-size: 16px;">meses com 3 linhas em operação</div>
+      </div>
+      <div class="card stat" style="text-align: center; padding: 40px 24px;">
+        <div class="label">Yield anual com 3 linhas</div>
+        <div class="value green" style="font-size: 56px; margin-top: 16px;">67,5%</div>
+        <div class="sub" style="font-size: 16px;">Pool de $20,97 M / 31,05 M tokens</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 56px;">Evolução do yield ao longo do build-out</h3>
+    <table style="margin-top: 18px; max-width: 920px;">
+      <thead>
+        <tr>
+          <th>Estágio</th>
+          <th class="num">Linhas em operação</th>
+          <th class="num">Pool / ano</th>
+          <th class="num">Yield sobre token de $1</th>
+          <th class="num">Payback do holder</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Ano 1 — piloto em operação</td><td class="num">1</td><td class="num">$6.991.370</td><td class="num">22,5%</td><td class="num">~53 meses</td></tr>
+        <tr><td>Ano 2 — replicação 1 em operação</td><td class="num">2</td><td class="num">$13.982.739</td><td class="num">45,0%</td><td class="num">~27 meses</td></tr>
+        <tr class="total"><td>Ano 2+ — escala-alvo</td><td class="num">3</td><td class="num">$20.974.109</td><td class="num">67,5%</td><td class="num">~17,8 meses</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 32px;">
+      <p>
+        Payback da planta (6–8 meses por linha) e payback do token holder
+        (~17,8 meses em regime pleno) são conceitos distintos. A planta
+        recupera o próprio capex com o lucro de uma única linha; o payback do
+        holder é definido pela distribuição do pool sobre o float total de
+        tokens, resolvendo-se mais adiante — porém com exposição diversificada
+        a todos os três sites em operação, em vez de uma única unidade.
+      </p>
+    </div>
+    <div class="slide-num">13 / 15</div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 4 — CLOSING                                              -->
+  <!-- ============================================================ -->
+
+  <!-- SLIDE 14: TEAM & CREDENTIALS -->
+  <section class="slide compact" style="overflow:hidden;">
+    <div class="hero-bg iceland"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Time e Credenciais</div>
+      <h2>Quatro credenciais por trás<br>do programa de carvão ativado</h2>
+      <p class="lead" style="margin-top: 8px; max-width: 920px;">
+        Um processo patenteado, um histórico de implantações industriais ativas
+        e validação independente por terceiros — a credibilidade do projeto se
+        apoia em fatos verificáveis, não em afirmações.
+      </p>
+
+      <div class="grid grid-2" style="margin-top: 48px; gap: 28px;">
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">01 — Expertise</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">Mais de 20 anos em química industrial</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            Duas décadas de atuação prática em processos industriais de
+            separação, química de sorventes e recuperação de recursos em
+            circuito fechado. O time de engenharia por trás do programa de
+            carvão ativado é o mesmo que construiu os produtos em operação
+            listados abaixo.
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">02 — Histórico operacional</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">Sistemas de regeneração de óleo em operação desde 2018</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            Três sistemas industriais de regeneração de óleo em escala plena
+            operam continuamente com clientes de indústria pesada desde 2018 —
+            avaliados de forma independente, gerando receita e atendidos pelo
+            mesmo time que faz a engenharia da linha de carvão ativado.
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">03 — Propriedade intelectual</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">Titular da patente WIPO · nº 2820244</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            O processo central de ativação térmica é protegido pela patente
+            registrada na WIPO nº 2820244. A proteção se estende a todas as
+            principais jurisdições-alvo; a base patentária é a mesma em todos
+            os produtos do portfólio do time — sem dependências tecnológicas
+            externas.
+          </p>
+        </div>
+        <div class="card" style="border-left: 2px solid var(--gold);">
+          <div class="step-num">04 — Validação</div>
+          <h3 style="margin-top: 8px; font-size: 20px;">Validação por laboratório independente</h3>
+          <p style="font-size: 16px; color: var(--cream-dim); margin-top: 12px; line-height: 1.55;">
+            A amostra piloto foi ensaiada por laboratório independente contra
+            os sete parâmetros de qualidade detalhados no slide 5. Cada
+            indicador atende ou supera a especificação — qualidade é
+            verificável, não declarada.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">14 / 15</div>
+  </section>
+
+  <!-- SLIDE 15: CALL TO ACTION -->
+  <section class="slide" style="overflow:hidden; justify-content: center;">
+    <div class="hero-bg hero"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-content" style="text-align: center; max-width: 980px; margin: 0 auto;">
+      <div class="eyebrow" style="text-align: center;">Fale Conosco</div>
+      <h2 style="font-size: 56px; text-align: center;">Pronto para discutir<br>a oportunidade?</h2>
+      <p class="lead" style="margin: 16px auto 0; text-align: center; max-width: 760px;">
+        Converse diretamente com o time do projeto — Q&amp;A técnico, modelo
+        financeiro completo, documentação de patente e de laboratório, e visita
+        a uma unidade em operação do nosso portfólio atual.
+      </p>
+
+      <div style="margin-top: 64px;">
+        <a href="https://eco-pearl.com/#contact"
+           style="display: inline-block;
+                  padding: 22px 56px;
+                  font-family: var(--f-heading);
+                  font-size: 18px;
+                  font-weight: 500;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--gold-light);
+                  background: rgba(201,168,76,0.08);
+                  border: 1px solid var(--gold);
+                  border-radius: 2px;
+                  text-decoration: none;
+                  transition: background 0.25s ease;">
+          Fale conosco  &nbsp;→&nbsp;  eco-pearl.com/#contact
+        </a>
+      </div>
+
+      <div class="footer-meta" style="justify-content: center; gap: 48px; margin-top: 96px;">
+        <span>Pearl of Restoration · 2026</span>
+        <span>Preparado para investidor prospectivo · Confidencial</span>
+      </div>
+    </div>
+    <div class="slide-num">15 / 15</div>
+  </section>
+
+</div>
+
+<script>
+  document.addEventListener('keydown', function(e) {
+    var slides = document.querySelectorAll('.slide');
+    var currentScroll = window.scrollY;
+    var target = null;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      for (var i = 0; i < slides.length; i++) {
+        if (slides[i].offsetTop > currentScroll + 50) { target = slides[i]; break; }
+      }
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      var prev = null;
+      for (var j = 0; j < slides.length; j++) {
+        if (slides[j].offsetTop >= currentScroll - 10) break;
+        prev = slides[j];
+      }
+      target = prev;
+    } else if (e.key === 'Home') {
+      target = slides[0];
+    } else if (e.key === 'End') {
+      target = slides[slides.length - 1];
+    }
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+</script>
+</body>
+</html>
