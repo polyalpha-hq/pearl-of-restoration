@@ -89,59 +89,78 @@ Never mention Russia, Russian origin, Russian standards, or Russian companies in
 
 ---
 
-## PEARL Token
+## PEARL Token — Spec v5.0 (finalized 2026-05-20)
 
 | Parameter | Value |
 |-----------|-------|
-| Price | **$1.00** |
-| Total emission | **31,051,657 PEARL** (26,051,657 sale + 2,000,000 team + 3,000,000 referral) |
+| Price (3 rounds) | **Round 1 — $1.00 · Round 2 — $1.50 · Round 3 — $2.00** |
+| Total emission | **31,051,657 PEARL** — **frozen forever**, additional issuance technically impossible |
 | Blockchain | **TON** |
-| Target raise | **$26,051,657** → minus 5% referrals = **$24,749,074** for construction |
-| Yield model | **30% of full line turnover** (sorbent revenue + Carbon Recovery Fee) |
-| DEX listing | STON.fi / DeDust — after **Line II** completion |
-| Buyback | $1.15/token from **start of Line III construction**, monthly cap ~$1,960,000 |
-| Exchange rate | Fixed: **92 RUB/$** |
+| Yield | **~49% annual** (Scenario A) |
+| Gross profit per line | **$14,201,086 / year** |
+| DEX listing | STON.fi / DeDust — **after Line II completion** (third holder income stream) |
+| Personal dashboard | **Telegram bot only**, NOT on the website |
 | Legal framing | Utility token (revenue participation) — NOT investment instrument |
+
+### Sale Rounds
+| Round | Price |
+|-------|-------|
+| Round 1 | **$1.00** |
+| Round 2 | **$1.50** |
+| Round 3 | **$2.00** |
+
+### Holder Income Streams
+1. **Revenue-share dividends** — share of operating-line turnover
+2. **Buyback** — token repurchase
+3. **DEX secondary market** — STON.fi / DeDust, **after Line II completion**
+
+### v5 Invariants (spec)
+- **Molasses mentioned nowhere** — only "organic feedstock"
+- **Geographic names removed** — only **Line I / Line II / Line III**, no cities or countries
+- **Emission frozen forever** — 31,051,657 tokens, no additional issuance possible
+- **Transparency Report** — **Phase 2** (after the first dividend payout), not at launch
 
 ## Telegram Bot
 
 - Accepts: **USDT TRC-20**, **TON**, **Toncoin**
-- Languages: **HI** (Hindi), **PT** (Portuguese), **ID** (Indonesian), **EN** (English)
+- Languages: **EN / HI / PT-BR / ID / RU** — all equal
 - Built-in referral system; `/mycode` command returns user's referral code
+- **Personal dashboard — bot only**, not on the website
+- All token purchases and referral actions flow through the bot only
 
-## Referral Program
+## Referral Program — v5 (3 levels + statuses)
 
-| Transaction type | Referrer reward |
-|-----------------|-----------------|
-| Token purchase / donate | **5%** |
-| Equipment sale | **2%** |
-| Investment | **1%** |
+### Levels (multi-level)
+| Level | Reward |
+|-------|--------|
+| Level 1 (direct referral) | **5%** |
+| Level 2 | **2%** |
+| Level 3 | **1%** |
+
+### Statuses (BOTH conditions met simultaneously)
+| Status | Referrals | Volume |
+|--------|-----------|--------|
+| **Pearl Starter** | 25 people | $5,000 |
+| **Pearl Builder** | 100 people | $30,000 |
+| **Pearl Ambassador** | 500 people | $150,000 |
 
 - Crypto-only payouts
-- 2-level structure (referrer + referrer's referrer)
+- Status granted only when **both** thresholds (referral count **AND** volume) are reached at once
 
-## Revenue Numbers — v3 (30% of full turnover)
+## Financial Model — v5 (recalculated 2026-05-20)
 
 ### Per-Line Economics
-| Item | Value/year |
-|------|-----------|
-| Sorbent revenue | $18,935,000 |
-| Carbon Recovery Fee (CRF) | $4,369,565 (3,000 RUB/t × 134,000 t ÷ 92) |
-| **Full line turnover** | **$23,304,565** |
-| Cost of production | $218/ton = 20,061 RUB/ton — fully covered by CRF |
-| **Line construction cost** | **$8,249,691** ($24,749,074 ÷ 3) |
-| **Token pool (30%)** | **$6,991,370/year** |
+| Item | Value |
+|------|-------|
+| **Gross profit per line** | **$14,201,086 / year** |
+| **Yield (Scenario A)** | **~49% annual** |
 
-### Token Pool & Yield
-| Scenario | Turnover/year | Token pool (30%) | Annual yield | Payback |
-|----------|--------------|------------------|--------------|---------|
-| 1 line | $23,304,565 | **$6,991,370** | **22.5%** | ~53 months |
-| 3 lines (target) | $69,913,695 | **$20,974,109** | **67.5%** | **~17.8 months** |
+### CRF — two scenarios
+- **Base scenario** — **no CRF** (Carbon Recovery Fee excluded from the public model)
+- **Scenario B** — with CRF, **internal use only**; never shown in public materials
 
-Yield basis: pool / 31,051,657 tokens (total emission at $1.00).
-
-> **Payback logic:** tokenholders recover 2× faster than the plant itself.
-> Plant payback: 6–8 months. Token payback at 3 lines: ~17.8 months.
+> **v3 model is obsolete.** "30% of full turnover" (pool $6,991,370/yr, yield 22.5% / 67.5%,
+> CRF $4,369,565, full turnover $23,304,565) — **replaced by v5**. Do not use v3 figures in new materials.
 
 ## Public Positioning Formula
 
