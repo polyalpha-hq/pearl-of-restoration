@@ -190,8 +190,30 @@ Never mention: Russia, molasses, sugar plants, GOST, МСРМ, СОЖ, КДК.
 - Single channel: `https://eco-pearl.com/#contact`
 - Anchor verified against `index.html:643` (`<section id="contact">`)
 
-### Commit chain (7 unpushed as of 2026-05-19, oldest → newest)
+### Site integration — DONE (2026-05-20)
+The pitch-deck funnel is wired into `index.html`. Any visitor with investment intent has a path to the locale-matched deck.
+
+- **Hero CTA button** — "Open the investor deck →" (gold-bordered Cinzel), in hero after the manifesto
+- **Nav item "Invest"** (`nav_invest`) — last nav entry before the language switcher
+- **Language-aware routing** — `openInvestorDeck()` reads `currentLang` and opens the matching file: `en→en, es→es, pt→pt-br, hi→hi, ru→ru` (note: locale code `pt`, file `pt-br`). `window.open(url,'_blank','noopener')`
+- **Soft secondary CTA** in donate section — `donate_deck_cta` ("Read the full investor deck →")
+
+**3-card block replaced (revised funnel):** the old "How do you want to help?" 3-card grid (Buy / Invest / Donate) is replaced with one focused investor CTA in the site's poetic register:
+- Eyebrow (`paths_orn`): "Ready to invest?" / "Готовы инвестировать?"
+- Header (`paths_header`, `.s-h2`): "A pearl grows from a single grain" / "Жемчужина растёт из зерна"
+- Subheader (`paths_sub`, `.hero-manifesto` italic): "Invest in the first facility. Earn a share of global scaling."
+- Primary CTA (`hero_invest`, `.hero-invest-cta`): "Open the investor deck →"
+- Soft link (`paths_donate_alt`): "or support construction with a donation" → scrolls to `#donate`
+- Transparent background (no overlay), existing classes only, no new CSS rules
+- `hero_invest` unified between hero button and section CTA
+
+**i18n changes:** new keys `paths_header` / `paths_sub` / `paths_donate_alt` (×5 locales); updated `paths_orn` / `hero_invest`; removed `path1_*` / `path2_*` / `path3_*` (24 strings × 5 locales); `chain1-5` preserved (used in manifesto).
+
+**Dead CSS (deliberately untouched, separate cleanup):** `.path-card*` / `.path-icon*` / `.path-btn*` (~9 rules) now unused; left in place to avoid perturbing the minified style block.
+
+### Commit chain (11 unpushed as of 2026-05-20, oldest → newest)
 ```
+2d5ec73  fix(i18n): remove СОЖ from RU locale for international consistency
 b667ea1  feat(pitch): EN base — anonymized, international, $24.7M raise
 ed641b0  feat(pitch): merge product content — 15-slide unified deck
 dd36c01  feat(pitch): finalize slides 14-15 — credentials + contact CTA
@@ -199,11 +221,30 @@ dd36c01  feat(pitch): finalize slides 14-15 — credentials + contact CTA
 996afde  feat(pitch): PT-BR variant — Brazilian Portuguese
 98a27bf  feat(pitch): HI variant — Indian Hindi
 911b431  feat(pitch): RU variant — international Russian
+97e221e  docs: sync memory files with pitch deck delivery (5 locales)
+4af9ddd  feat(funnel): add Invest CTA + language-aware pitch deck routing
+8cb7286  refactor(funnel): replace 3-card block with focused investor CTA
 ```
 
-### Pending
-- Review of 4 locale files in browser (user does this before push)
-- Integration of pitch deck into `eco-pearl.com` main site — deferred to bundle with investment calculator + Telegram bot + token sale section in one batch push
+### Pending (after push)
+1. Visual verification at `localhost:3000` (6-point checklist: hero CTA, nav, routing EN→RU, soft link, lightbox, mobile)
+2. Push to `origin/main` → Vercel auto-deploys `eco-pearl.com`
+3. Investment calculator integration — `pearl_dashboard_ru6.html` exists, needs funnel integration
+4. Telegram bot for PEARL token purchase
+5. Phases 7-9: Proof-of-Processing, Object Map, Transparency Report
+
+### Known issue — claude-mem worker
+- `npx claude-mem status` fails: `Cannot find module 'zod/v3'`
+- Hook chain still captures observations; only the on-demand status query is broken
+- Fix: `cd ~/.claude/plugins/marketplaces/thedotmack/plugin && npm install`
+
+### Tech context (snapshot)
+- Pearl design system: bg `#04080f`, gold `#c9a84c`, cream `#f0e8d0`
+- Fonts: Cinzel Decorative (h1), Cinzel (h2/h3), EB Garamond (body)
+- 5 active languages: EN / ES / PT-BR / HI / RU
+- Vercel auto-deploys from GitHub `origin/main`
+- Site live at https://www.eco-pearl.com
+- Repo path: `/Users/votykvot/Desktop/pearl-of-restoration`
 
 ## Known Bugs (non-blocking — fix in future phase)
 

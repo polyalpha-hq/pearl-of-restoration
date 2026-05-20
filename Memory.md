@@ -299,8 +299,45 @@
 - Единственный канал: **`https://eco-pearl.com/#contact`**
 - Anchor проверен против `index.html:643` (`<section id="contact">`)
 
-### Цепочка коммитов (7 неотправленных на 2026-05-19, от старого к новому)
+---
+
+## Интеграция питч-дека в сайт — ГОТОВО (2026-05-20)
+
+Воронка «лендинг → инвестиция» встроена в `index.html`. Любой посетитель с инвестиционным намерением видит путь к питч-деку на своём языке.
+
+### Что добавлено
+- **Hero CTA-кнопка** «Open the investor deck →» (золотая, рамка, Cinzel) — в hero после манифеста
+- **Nav-пункт «Invest»** (`nav_invest`) — последний в навигации перед переключателем языков
+- **Language-aware routing** — `openInvestorDeck()` читает `currentLang` и открывает нужный файл:
+  - `en→en, es→es, pt→pt-br, hi→hi, ru→ru` (важно: код локали `pt`, файл `pt-br`)
+  - `window.open('presentation-'+slug+'.html','_blank','noopener')`
+- **Soft secondary CTA в donate-секции** — `donate_deck_cta` («Read the full investor deck →»)
+
+### Замена 3-карточного блока (REVISED)
+Старый блок «How do you want to help?» (3 карточки: Buy / Invest / Donate) заменён на единый сфокусированный investor-CTA в поэтическом регистре сайта:
+- **Eyebrow** (`paths_orn`): «Готовы инвестировать?»
+- **Header** (`paths_header`, класс `.s-h2`): «Жемчужина растёт из зерна»
+- **Subheader** (`paths_sub`, класс `.hero-manifesto` курсив): «Инвестируйте в первый комплекс. Получайте долю от глобального масштабирования.»
+- **Primary CTA** (`hero_invest`, класс `.hero-invest-cta`): «Открыть инвестиционную презентацию →»
+- **Soft link** (`paths_donate_alt`): «или поддержите строительство донатом» → скролл к `#donate`
+- Фон **прозрачный** — показывает hero-изображение, без оверлея
+- **Только существующие классы**, новых CSS-правил не добавлено
+- `hero_invest` **унифицирован** между hero-кнопкой и CTA секции (один текст)
+
+### i18n изменения
+- **Новые ключи** (×5 локалей): `paths_header`, `paths_sub`, `paths_donate_alt`
+- **Обновлены**: `paths_orn`, `hero_invest`
+- **Удалены** (24 строки × 5 локалей): `path1_*`, `path2_*`, `path3_*` (заголовки, тексты, списки, кнопки старых карточек)
+- **Сохранены**: `chain1-5` (используются в манифесте)
+
+### Мёртвый CSS (намеренно не тронут, отдельная уборка)
+`.path-card*`, `.path-icon*`, `.path-btn*` (~9 правил) больше не используются, но оставлены чтобы не трогать минифицированный style-блок в этом коммите.
+
+---
+
+## Цепочка коммитов — 11 неотправленных на origin/main (от старого к новому)
 ```
+2d5ec73  fix(i18n): remove СОЖ from RU locale for international consistency
 b667ea1  feat(pitch): EN base — anonymized, international, $24.7M raise
 ed641b0  feat(pitch): merge product content — 15-slide unified deck
 dd36c01  feat(pitch): finalize slides 14-15 — credentials + contact CTA
@@ -308,8 +345,33 @@ dd36c01  feat(pitch): finalize slides 14-15 — credentials + contact CTA
 996afde  feat(pitch): PT-BR variant — Brazilian Portuguese
 98a27bf  feat(pitch): HI variant — Indian Hindi
 911b431  feat(pitch): RU variant — international Russian
+97e221e  docs: sync memory files with pitch deck delivery (5 locales)
+4af9ddd  feat(funnel): add Invest CTA + language-aware pitch deck routing
+8cb7286  refactor(funnel): replace 3-card block with focused investor CTA
 ```
 
-### Открытые задачи
-- **Ревью 4 локалей в браузере** — пользователь делает сам перед push
-- **Интеграция питч-дека в основной сайт `eco-pearl.com`** — отложено в общий batch push вместе с: investment calculator + Telegram bot + token sale section
+---
+
+## Открытые задачи (после push)
+1. **Визуальная проверка** на `localhost:3000` (6-точечный чеклист: hero CTA, nav, routing EN→RU, soft link, lightbox, mobile)
+2. **Push в origin/main** → Vercel авто-деплоит `eco-pearl.com`
+3. **Интеграция инвест-калькулятора** — `pearl_dashboard_ru6.html` уже существует, нужна интеграция в воронку
+4. **Telegram-бот** для покупки PEARL-токена
+5. **Фазы 7-9**: Proof-of-Processing, Object Map, Transparency Report
+
+---
+
+## Известная проблема — claude-mem worker
+- `npx claude-mem status` падает: `Cannot find module 'zod/v3'`
+- Hook-цепочка **продолжает** захватывать observations; сломан только on-demand status-запрос
+- Фикс: `cd ~/.claude/plugins/marketplaces/thedotmack/plugin && npm install`
+
+---
+
+## Технический контекст (snapshot)
+- **Дизайн-система Pearl**: bg `#04080f`, gold `#c9a84c`, cream `#f0e8d0`
+- **Шрифты**: Cinzel Decorative (h1), Cinzel (h2/h3), EB Garamond (body)
+- **5 активных языков**: EN / ES / PT-BR / HI / RU
+- **Деплой**: Vercel авто-деплоит из GitHub `origin/main`
+- **Сайт**: https://www.eco-pearl.com
+- **Путь к репозиторию**: `/Users/votykvot/Desktop/pearl-of-restoration`
