@@ -6,7 +6,6 @@
 <title>Pearl of Restoration — Help Restore the World</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
-<script src="qrcode.min.js"></script>
 <script src="https://unpkg.com/@formspree/ajax@1.1.1" defer></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -34,11 +33,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;
   color:rgba(255,255,255,0.85);text-decoration:none;transition:color 0.2s;
   text-shadow:0 1px 4px rgba(0,0,0,0.8);}
 .nav-links a:hover{color:var(--gold-light);}
-.nav-cta{font-family:'Cinzel',serif;font-size:0.68rem;font-weight:600;
-  letter-spacing:0.12em;color:var(--gold);border:1px solid rgba(201,168,76,0.5);
-  padding:0.42rem 1.1rem;text-decoration:none;border-radius:2px;
-  background:rgba(0,0,0,0.45);backdrop-filter:blur(4px);transition:all 0.25s;}
-.nav-cta:hover{background:rgba(201,168,76,0.18);border-color:var(--gold);}
 
 #hero{display:block;width:100%;height:auto;min-height:100vh;position:relative;overflow:visible;}
 #hero-img{position:absolute;top:0;left:0;right:0;bottom:0;
@@ -123,65 +117,6 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 .calc-rn{font-family:'Cinzel Decorative',serif;font-size:1.7rem;color:var(--gold-light);margin-bottom:0.2rem;}
 .calc-rl{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream-faint);font-family:'Cinzel',serif;}
 .calc-note{font-size:0.75rem;font-style:italic;color:rgba(201,168,76,0.45);margin-top:1rem;line-height:1.5;}
-
-/* DONATE */
-.don-wrap{max-width:600px;margin:0 auto;text-align:center;}
-.don-amts{display:flex;gap:0.55rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;}
-.don-amt-btn{font-family:'Cinzel',serif;border:1px solid rgba(201,168,76,0.25);
-  background:rgba(0,15,25,0.7);color:var(--cream-dim);font-size:0.85rem;
-  padding:0.55rem 1.2rem;border-radius:2px;cursor:pointer;transition:all 0.2s;}
-.don-amt-btn:hover,.don-amt-btn.active{background:rgba(201,168,76,0.15);
-  border-color:var(--gold);color:var(--gold-light);}
-
-/* Crypto buttons */
-.crypto-btns{display:flex;gap:1rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap;}
-.crypto-btn{display:flex;align-items:center;gap:0.6rem;
-  font-family:'Cinzel',serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;
-  padding:0.8rem 1.75rem;border-radius:2px;cursor:pointer;transition:all 0.25s;border:none;}
-.crypto-btn-usdt{background:rgba(38,161,123,0.15);border:1px solid rgba(38,161,123,0.4);color:#26a17b;}
-.crypto-btn-usdt:hover{background:rgba(38,161,123,0.25);border-color:#26a17b;}
-.crypto-btn-btc{background:rgba(247,147,26,0.12);border:1px solid rgba(247,147,26,0.35);color:#f7931a;}
-.crypto-btn-btc:hover{background:rgba(247,147,26,0.22);border-color:#f7931a;}
-.crypto-icon{font-size:1.1rem;}
-
-.don-impact{font-size:0.85rem;font-style:italic;color:rgba(201,168,76,0.5);line-height:1.65;}
-.don-impact strong{color:var(--gold);font-style:normal;}
-.don-total{margin-top:2rem;padding:1rem 1.5rem;
-  border:1px solid rgba(201,168,76,0.18);border-radius:3px;
-  background:transparent;
-  font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.06em;color:var(--cream-faint);}
-.don-total strong{font-family:'Cinzel Decorative',serif;font-size:1.5rem;
-  color:var(--gold-light);display:block;margin-bottom:0.2rem;}
-
-/* MODAL */
-.modal-overlay{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;
-  align-items:center;justify-content:center;
-  background:rgba(0,0,0,0.85);}
-.modal-overlay.open{display:flex;}
-.modal{background:#070c18;border:1px solid rgba(201,168,76,0.35);border-radius:4px;
-  padding:2.5rem;max-width:420px;width:90%;text-align:center;position:relative;}
-.modal-close{position:absolute;top:1rem;right:1.25rem;background:none;border:none;
-  color:var(--cream-dim);font-size:1.2rem;cursor:pointer;transition:color 0.2s;}
-.modal-close:hover{color:var(--gold);}
-.modal-title{font-family:'Cinzel Decorative',serif;font-size:1rem;color:var(--gold-light);margin-bottom:0.4rem;}
-.modal-network{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--cream-faint);margin-bottom:1.5rem;}
-.modal-qr{width:180px;min-height:180px;height:auto;margin:0 auto 1.5rem;border:1px solid rgba(201,168,76,0.2);
-  border-radius:3px;overflow:hidden;background:#fff;padding:2px;display:flex;align-items:center;justify-content:center;}
-.modal-qr img{width:100%;height:100%;}
-.modal-addr-label{font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
-.modal-addr{font-family:monospace;font-size:0.72rem;color:var(--cream-dim);
-  word-break:break-all;background:rgba(0,0,0,0.4);border:1px solid rgba(201,168,76,0.15);
-  border-radius:2px;padding:0.6rem 0.8rem;margin-bottom:1rem;cursor:pointer;
-  transition:border-color 0.2s;}
-.modal-addr:hover{border-color:var(--gold);}
-.modal-copy-btn{font-family:'Cinzel',serif;font-size:0.65rem;font-weight:600;
-  letter-spacing:0.1em;text-transform:uppercase;background:var(--gold);color:#04080f;
-  border:none;padding:0.6rem 1.5rem;border-radius:2px;cursor:pointer;transition:background 0.2s;}
-.modal-copy-btn:hover{background:var(--gold-light);}
-.modal-copy-confirm{font-size:0.75rem;font-style:italic;color:#5dba78;margin-top:0.5rem;
-  height:1rem;transition:opacity 0.3s;}
 
 /* ROADMAP */
 .rm-list{max-width:660px;margin:0 auto;position:relative;}
@@ -282,8 +217,8 @@ footer{padding:3rem 4vw 4rem;text-align:center;border-top:1px solid rgba(201,168
 .hero-invest-cta:hover{background:rgba(201,168,76,0.22);color:#f0e8d0;box-shadow:0 0 24px rgba(201,168,76,0.28);}
 .nav-invest{font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:#c9a84c !important;border:1px solid rgba(201,168,76,0.40);border-radius:2px;padding:0.4rem 0.95rem;text-decoration:none;font-weight:500;transition:background 0.2s,color 0.2s;cursor:pointer;}
 .nav-invest:hover{background:rgba(201,168,76,0.14);color:#f0e8d0 !important;}
-.donate-deck-link{display:inline-block;margin-top:1.6rem;font-family:'Cinzel',serif;font-size:0.82rem;letter-spacing:0.22em;text-transform:uppercase;color:#c9a84c;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.40);padding-bottom:0.25rem;cursor:pointer;transition:color 0.2s,border-color 0.2s;}
-.donate-deck-link:hover{color:#f0e8d0;border-bottom-color:#f0e8d0;}
+.deck-link{display:inline-block;margin-top:1.6rem;font-family:'Cinzel',serif;font-size:0.82rem;letter-spacing:0.22em;text-transform:uppercase;color:#c9a84c;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.40);padding-bottom:0.25rem;cursor:pointer;transition:color 0.2s,border-color 0.2s;}
+.deck-link:hover{color:#f0e8d0;border-bottom-color:#f0e8d0;}
 @media(max-width:768px){.hero-invest-cta{padding:0.9rem 1.8rem;letter-spacing:0.2em;}.nav-invest{font-size:0.68rem;padding:0.32rem 0.7rem;letter-spacing:0.12em;}}
 </style>
 </head>
@@ -305,7 +240,6 @@ footer{padding:3rem 4vw 4rem;text-align:center;border-top:1px solid rgba(201,168
     <li><a href="javascript:void(0)" onclick="openInvestorDeck();return false;" class="nav-invest" data-i18n="nav_invest">Invest</a></li>
   </ul>
   <div class="lang-sw"><button class="lang-btn" onclick="setLang('en')" data-lang="en">EN</button><button class="lang-btn" onclick="setLang('es')" data-lang="es">ES</button><button class="lang-btn" onclick="setLang('pt')" data-lang="pt">PT</button><button class="lang-btn" onclick="setLang('hi')" data-lang="hi">HI</button><button class="lang-btn" onclick="setLang('ru')" data-lang="ru">RU</button></div>
-  <a href="#donate" class="nav-cta" data-i18n="nav_donate">Donate</a>
 </nav>
 
 <!-- HERO -->
@@ -366,9 +300,6 @@ Closed-loop technology — not an idea. A working reality.</p>
       <div class="hero-cta-wrap rv" style="margin:0 0 0.8rem;">
         <a href="javascript:void(0)" onclick="openInvestorDeck();return false;" class="hero-invest-cta" data-i18n="hero_invest">Open the investor deck &#8594;</a>
       </div>
-      <div style="text-align:center;">
-        <a href="#donate" class="donate-deck-link" data-i18n="paths_donate_alt" style="text-transform:none;letter-spacing:0.04em;font-size:0.95rem;font-style:italic;border-bottom-color:rgba(201,168,76,0.25);margin-top:0.4rem;">or support construction with a donation</a>
-      </div>
     </div>
 
   </div>
@@ -387,7 +318,6 @@ Closed-loop technology — not an idea. A working reality.</p>
       <div class="rv">
         <p class="about-p" data-i18n="about_p1">Every litre of industrial oil burned needlessly. Every tonne of organic waste buried in the ground. Every carbon molecule released without purpose. These are not inevitabilities — they are <strong>choices we can reverse.</strong></p>
         <p class="about-p" data-i18n="about_p2">Pearl of Restoration is a closed-loop ecosystem that transforms industrial waste into resources, energy and life. <strong>Real factories. Real technology. Real impact.</strong> WIPO-patented, independently appraised, operating since 2010.</p>
-        <p class="about-p" data-i18n="about_p3">Every dollar you donate goes directly toward building the next restoration complex — turning what the world discards into what the world needs.</p>
       </div>
     </div>
   </div>
@@ -500,8 +430,8 @@ Processes MSW, plastics, tyres, oil sludge and agricultural waste. Output: liqui
     <h2 class="s-h2 rv" data-i18n="impact_h2">The CO&#8322; Math Is Simple</h2>
     <div class="hero-counters rv" style="margin:1.5rem 0 0.5rem;">
       <div class="cpill">
-        <div class="cpill-label" data-i18n="cpill1_label">&#128293; Donations Received</div>
-        <div class="cpill-val">$2,847</div>
+        <div class="cpill-label" data-i18n="cpill1_label">&#9881;&#65039; Operating Stations</div>
+        <div class="cpill-val">3</div>
       </div>
       <div class="cpill">
         <div class="cpill-label" data-i18n="cpill2_label">&#127959; Construction</div>
@@ -529,44 +459,6 @@ Processes MSW, plastics, tyres, oil sludge and agricultural waste. Output: liqui
           </div>
         </div>
         <div class="calc-note" data-i18n="calc_note">* Based on 3.2 kg CO&#8322; saved per litre regenerated vs. virgin oil production</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DONATE -->
-  <div class="sec" id="donate">
-    <div class="s-orn rv"><span data-i18n="donate_orn">Join the Restoration</span></div>
-    <h2 class="s-h2 rv" data-i18n="donate_h2">Your Dollar.<br>Real CO&#8322; Removed.</h2>
-    <div class="don-wrap">
-      <p class="s-lead" style="margin-bottom:2rem" data-i18n="donate_lead">Every $1 donated funds the regeneration of ~100 litres of industrial oil — preventing 320 kg of CO&#8322; from entering the atmosphere. Choose your amount:</p>
-
-      <div class="don-amts rv">
-        <button class="don-amt-btn" onclick="setAmt(1,this)">$1</button>
-        <button class="don-amt-btn" onclick="setAmt(5,this)">$5</button>
-        <button class="don-amt-btn active" onclick="setAmt(10,this)">$10</button>
-        <button class="don-amt-btn" onclick="setAmt(25,this)">$25</button>
-        <button class="don-amt-btn" onclick="setAmt(50,this)">$50</button>
-        <button class="don-amt-btn" onclick="setAmt(100,this)">$100</button>
-      </div>
-
-      <div class="crypto-btns rv">
-        <button class="crypto-btn crypto-btn-usdt" onclick="openModal('usdt')">
-          <span class="crypto-icon">₮</span><span data-i18n="donate_usdt"> Donate USDT (TRC-20)</span>
-        </button>
-        <button class="crypto-btn crypto-btn-btc" onclick="openModal('btc')">
-          <span class="crypto-icon">₿</span><span data-i18n="donate_btc"> Donate Bitcoin</span>
-        </button>
-      </div>
-
-      <div class="don-impact rv">
-        <strong id="impact-text">$10 = ~3,200 kg of CO&#8322;</strong><span data-i18n="donate_impact_suffix"> kept from the atmosphere.</span>
-      </div>
-      <div class="don-total rv" data-i18n="donate_total">
-        <strong>$2,847</strong>
-        raised by 1,203 people — funding Stage 2 of construction
-      </div>
-      <div style="text-align:center;">
-        <a href="javascript:void(0)" onclick="openInvestorDeck();return false;" class="donate-deck-link" data-i18n="donate_deck_cta">Read the full investor deck &#8594;</a>
       </div>
     </div>
   </div>
@@ -671,6 +563,10 @@ Processes MSW, plastics, tyres, oil sludge and agricultural waste. Output: liqui
         Send Message
       </button>
     </form>
+
+    <div style="margin-top:32px;">
+      <a href="javascript:void(0)" onclick="openInvestorDeck();return false;" class="deck-link" data-i18n="deck_cta">Read the full investor deck &#8594;</a>
+    </div>
   </section>
 
   <footer>
@@ -680,40 +576,11 @@ Processes MSW, plastics, tyres, oil sludge and agricultural waste. Output: liqui
       <li><a href="#how" data-i18n="ft_how">How it Works</a></li>
       <li><a href="#impact" data-i18n="ft_impact">Impact</a></li>
       <li><a href="#roadmap" data-i18n="ft_roadmap">Roadmap</a></li>
-      <li><a href="#donate" data-i18n="ft_donate">Donate</a></li>
     </ul>
     <div class="ft-div"></div>
     <div class="ft-legal">&copy; 2026 Pearl of Restoration &nbsp;&middot;&nbsp; <span data-i18n="ft_legal">WIPO Patented Technology &nbsp;&middot;&nbsp; Closed-Loop Resource Recovery</span></div>
   </footer>
 </div>
-</div>
-
-<!-- USDT MODAL -->
-<div class="modal-overlay" id="modal-usdt">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('usdt')">&times;</button>
-    <div class="modal-title" data-i18n="modal_usdt_title">Donate USDT</div>
-    <div class="modal-network" data-i18n="modal_usdt_net">Tether (USDT) · TRC-20 Network · Tron</div>
-    <div class="modal-qr" id="qr-usdt"></div>
-    <div class="modal-addr-label" data-i18n="modal_addr_lbl">Wallet Address</div>
-    <div class="modal-addr" onclick="copyAddr('usdt')" title="Click to copy">THt3iokn8NELPyaeWHWd8n7xBNECVxwyND</div>
-    <button class="modal-copy-btn" onclick="copyAddr('usdt')" data-i18n="modal_copy_btn">Copy Address</button>
-    <div class="modal-copy-confirm" id="confirm-usdt"></div>
-  </div>
-</div>
-
-<!-- BTC MODAL -->
-<div class="modal-overlay" id="modal-btc">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('btc')">&times;</button>
-    <div class="modal-title" data-i18n="modal_btc_title">Donate Bitcoin</div>
-    <div class="modal-network" data-i18n="modal_btc_net">Bitcoin (BTC) · Bitcoin Network</div>
-    <div class="modal-qr" id="qr-btc"></div>
-    <div class="modal-addr-label" data-i18n="modal_addr_lbl">Wallet Address</div>
-    <div class="modal-addr" onclick="copyAddr('btc')" title="Click to copy">bc1q04azu8yus2ynku0fdf2decvjm6javynnx8e0kr</div>
-    <button class="modal-copy-btn" onclick="copyAddr('btc')" data-i18n="modal_copy_btn">Copy Address</button>
-    <div class="modal-copy-confirm" id="confirm-btc"></div>
-  </div>
 </div>
 
 <script>
@@ -735,47 +602,6 @@ function calc(){
   document.getElementById('moneyVal').textContent='$'+(l*1.5*0.7/1000000).toFixed(2)+'M';
 }
 
-// Donate amount
-let currentAmt=10;
-function setAmt(n,btn){
-  currentAmt=n;
-  document.querySelectorAll('.don-amt-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  const co2=Math.round(n*320);
-  const _ta=i18n[currentLang]||i18n.en;
-  document.getElementById('impact-text').textContent='$'+n+' = ~'+co2.toLocaleString()+(_ta.impact_kg||' kg of CO₂');
-  btn.blur();
-}
-
-// Modal
-var _qrDone={};
-function openModal(type){
-  document.getElementById('modal-'+type).classList.add('open');
-  if(!_qrDone[type]){
-    new QRCode(document.getElementById('qr-'+type),{
-      text:addrs[type],width:176,height:176,
-      colorDark:'#000000',colorLight:'#ffffff',
-      correctLevel:QRCode.CorrectLevel.M
-    });
-    _qrDone[type]=true;
-  }
-}
-function closeModal(type){
-  document.getElementById('modal-'+type).classList.remove('open');
-}
-document.querySelectorAll('.modal-overlay').forEach(m=>{
-  m.addEventListener('click',function(e){if(e.target===this){this.classList.remove('open');}});
-});
-
-// Copy address
-const addrs={usdt:'THt3iokn8NELPyaeWHWd8n7xBNECVxwyND',btc:'bc1q04azu8yus2ynku0fdf2decvjm6javynnx8e0kr'};
-function copyAddr(type){
-  navigator.clipboard.writeText(addrs[type]).then(()=>{
-    const el=document.getElementById('confirm-'+type);
-    el.textContent=((i18n[currentLang]||i18n.en).copied||'✓ Copied to clipboard');
-    setTimeout(()=>el.textContent='',2500);
-  });
-}
 </script>
 <script>
 function switchReadmore(id){
@@ -833,12 +659,11 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbo
 <script>
 const i18n={
 en:{
- nav_about:'About',nav_how:'How it Works',nav_impact:'Impact',nav_roadmap:'Roadmap',nav_invest:'Invest',nav_donate:'Donate',
+ nav_about:'About',nav_how:'How it Works',nav_impact:'Impact',nav_roadmap:'Roadmap',nav_invest:'Invest',
  hero_invest:'Open the investor deck &#8594;',
- donate_deck_cta:'Read the full investor deck &#8594;',
+ deck_cta:'Read the full investor deck &#8594;',
  hero_title:'Help Restore the World, One Factory at a Time',
  hero_manifesto:'Nature has no word for waste.<br>Water evaporates — and returns as rain.<br>A pearl is born from a wound — through pressure, time, transformation.<br>Why should industry be any different?<br>Closed-loop technology — not an idea. A working reality.',
- hero_sub:'Every dollar donated is a real step towards a working restoration complex.',
  crisis_tag:'THE CRISIS IS REAL',
  crisis_title:'Every year, industry discards enough oil to fill 400 Olympic pools.',
  crisis_lead:'It seeps into groundwater. It burns into atmosphere. It ends up in the ocean. We have the technology to stop it — right now.',
@@ -849,12 +674,10 @@ en:{
  chain1:'Oil Regeneration',chain2:'Metalworking Fluid',chain3:'Activated Carbon',chain4:'Waste-to-Energy',chain5:'Zero Waste',
  paths_header:'A pearl grows from a single grain',
  paths_sub:'Invest in the first facility. Earn a share of global scaling.',
- paths_donate_alt:'or support construction with a donation',
  about_orn:'Our Purpose',
  about_h2:'Nothing Is Waste.<br>Everything Restores.',
  about_p1:'Every litre of industrial oil burned needlessly. Every tonne of organic waste buried in the ground. Every carbon molecule released without purpose. These are not inevitabilities — they are <strong>choices we can reverse.</strong>',
  about_p2:'Pearl of Restoration is a closed-loop ecosystem that transforms industrial waste into resources, energy and life. <strong>Real factories. Real technology. Real impact.</strong> WIPO-patented, independently appraised, operating since 2010.',
- about_p3:'Every dollar you donate goes directly toward building the next restoration complex — turning what the world discards into what the world needs.',
  how_orn:'The Closed Loop',how_h2:'Four Technologies. Zero Waste.',
  how_lead:'Each stage feeds the next. Nothing leaves the system as waste — everything returns as value.',
  cc1_status:'Live Now',cc1_title:'Industrial Oil Regeneration',
@@ -873,16 +696,11 @@ en:{
  rm_block3_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">ACTIVATED CARBON FROM ORGANIC WASTE</strong><br><br>Raw material: organic industrial byproduct that processors pay to discard. Output: BAU/DAU grade activated carbon sorbent. Capacity: 134,000 t/year per complex. Payback: 6–8 months.<br><br><span style="color:#c9a84c88;font-size:.8rem;">Applications: water treatment · gas purification · pharmaceutical · food industry</span>',
  rm_block4_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">WASTE-TO-ENERGY COMPLEX</strong><br><br>Processes MSW, plastics, tyres, oil sludge and agricultural waste. Output: liquid fuel, syngas and electricity. Modular design: 1–20+ t/hr. Zero toxic residue.<br><br><span style="color:#c9a84c88;font-size:.8rem;">IRR: 18–45% &nbsp;·&nbsp; Payback: 1–4 years</span>',
  impact_orn:'Real Numbers',impact_h2:'The CO₂ Math Is Simple',
- cpill1_label:'🔥 Donations Received',cpill2_label:'🏗 Construction',cpill3_label:'🌿 CO₂ Offset',
+ cpill1_label:'⚙️ Operating Stations',cpill2_label:'🏗 Construction',cpill3_label:'🌿 CO₂ Offset',
  impact_lead:'Producing virgin industrial oil emits 3.5 kg CO₂ per litre. Regenerating it emits only 0.3 kg. Every litre recovered saves 3.2 kg of CO₂.',
  calc_lbl:'Annual oil volume at a facility (litres)',calc_unit:' L / year',
  calc_rl1:'CO₂ saved per year',calc_rl2:'Annual cost savings',
  calc_note:'* Based on 3.2 kg CO₂ saved per litre regenerated vs. virgin oil production',
- donate_orn:'Join the Restoration',donate_h2:'Your Dollar.<br>Real CO₂ Removed.',
- donate_lead:'Every $1 donated funds the regeneration of ~100 litres of industrial oil — preventing 320 kg of CO₂ from entering the atmosphere. Choose your amount:',
- donate_usdt:' Donate USDT (TRC-20)',donate_btc:' Donate Bitcoin',
- donate_impact_suffix:' kept from the atmosphere.',
- donate_total:'<strong>$2,847</strong> raised by 1,203 people — funding Stage 2 of construction',
  roadmap_orn:'The Path Forward',roadmap_h2:'Roadmap',
  rm_stage1:'Stage 1 — Complete',rm_title1:'Technology &amp; Patents',
  rm_desc1:'Three operating stations. WIPO patent registered. Independent appraisal $1.4M per unit. Certified and operating since 2010. Clients in heavy manufacturing.',
@@ -894,20 +712,15 @@ en:{
  rm_desc4:'Scale to 10+ restoration complexes across three continents. Full closed-loop operation: oil regeneration, organic waste processing, energy recovery.',
  rm_stage5:'Stage 5 — Vision',rm_title5:'Waste-to-Energy Network',
  rm_desc5:'A global network of closed-loop restoration complexes. Every industrial waste stream — returned to the cycle. Nothing leaves as waste.',
- ft_about:'About',ft_how:'How it Works',ft_impact:'Impact',ft_roadmap:'Roadmap',ft_donate:'Donate',
+ ft_about:'About',ft_how:'How it Works',ft_impact:'Impact',ft_roadmap:'Roadmap',
  ft_legal:'WIPO Patented Technology  ·  Closed-Loop Resource Recovery',
- modal_usdt_title:'Donate USDT',modal_usdt_net:'Tether (USDT) · TRC-20 Network · Tron',
- modal_btc_title:'Donate Bitcoin',modal_btc_net:'Bitcoin (BTC) · Bitcoin Network',
- modal_addr_lbl:'Wallet Address',modal_copy_btn:'Copy Address',
- copied:'✓ Copied to clipboard',impact_kg:' kg of CO₂'
 },
 es:{
- nav_about:'Acerca',nav_how:'Cómo Funciona',nav_impact:'Impacto',nav_roadmap:'Hoja de Ruta',nav_invest:'Invertir',nav_donate:'Donar',
+ nav_about:'Acerca',nav_how:'Cómo Funciona',nav_impact:'Impacto',nav_roadmap:'Hoja de Ruta',nav_invest:'Invertir',
  hero_invest:'Abrir el deck de inversión &#8594;',
- donate_deck_cta:'Leer el deck completo del inversor &#8594;',
+ deck_cta:'Leer el deck completo del inversor &#8594;',
  hero_title:'Ayuda a Restaurar el Mundo, Una Fábrica a la Vez',
  hero_manifesto:'La naturaleza no conoce el desperdicio.<br>El agua se evapora — y regresa como lluvia.<br>Una perla nace de una herida — a través de la presión, el tiempo y la transformación.<br>¿Por qué la industria debería ser diferente?<br>Tecnología de ciclo cerrado — no una idea. Una realidad funcional.',
- hero_sub:'Cada dólar donado es un paso real hacia un complejo de restauración operativo.',
  crisis_tag:'LA CRISIS ES REAL',
  crisis_title:'Cada año, la industria descarta suficiente aceite para llenar 400 piscinas olímpicas.',
  crisis_lead:'Se filtra en las aguas subterráneas. Se quema en la atmósfera. Termina en el océano. Tenemos la tecnología para detenerlo — ahora mismo.',
@@ -918,12 +731,10 @@ es:{
  chain1:'Regeneración de Aceite',chain2:'Fluido de Mecanizado',chain3:'Carbón Activado',chain4:'Energía de Residuos',chain5:'Cero Residuos',
  paths_header:'Una perla crece desde un grano',
  paths_sub:'Invierta en la primera planta. Reciba una parte del escalado global.',
- paths_donate_alt:'o apoye la construcción con una donación',
  about_orn:'Nuestro Propósito',
  about_h2:'Nada Es Desperdicio.<br>Todo Se Restaura.',
  about_p1:'Cada litro de aceite industrial quemado innecesariamente. Cada tonelada de residuo orgánico enterrado. Cada molécula de carbono liberada sin propósito. No son inevitabilidades — son <strong>elecciones que podemos revertir.</strong>',
  about_p2:'Pearl of Restoration es un ecosistema de ciclo cerrado que transforma residuos industriales en recursos, energía y vida. <strong>Fábricas reales. Tecnología real. Impacto real.</strong> Patente OMPI, evaluado independientemente, operando desde 2010.',
- about_p3:'Cada dólar que dones va directamente hacia la construcción del próximo complejo de restauración — convirtiendo lo que el mundo descarta en lo que el mundo necesita.',
  how_orn:'El Ciclo Cerrado',how_h2:'Cuatro Tecnologías. Cero Residuos.',
  how_lead:'Cada etapa alimenta a la siguiente. Nada sale del sistema como residuo — todo regresa como valor.',
  cc1_status:'Disponible Ahora',cc1_title:'Regeneración de Aceite Industrial',
@@ -942,16 +753,11 @@ es:{
  rm_block3_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">CARBÓN ACTIVADO DE RESIDUOS ORGÁNICOS</strong><br><br>Materia prima: subproducto orgánico industrial cuya eliminación corre a cargo de los propios fabricantes. Producto: sorbente de carbón activado grado BAU/DAU. Capacidad: 134.000 t/año por complejo. Retorno: 6–8 meses.<br><br><span style="color:#c9a84c88;font-size:.8rem;">Aplicaciones: tratamiento de agua · purificación de gases · farmacéutica · industria alimentaria</span>',
  rm_block4_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">COMPLEJO DE ENERGÍA A PARTIR DE RESIDUOS</strong><br><br>Procesa RSU, plásticos, neumáticos, lodos de aceite y residuos agrícolas. Producto: combustible líquido, gas de síntesis y electricidad. Diseño modular: 1–20+ t/h. Sin residuos tóxicos.<br><br><span style="color:#c9a84c88;font-size:.8rem;">TIR: 18–45% &nbsp;·&nbsp; Retorno: 1–4 años</span>',
  impact_orn:'Números Reales',impact_h2:'Las Matemáticas del CO₂ Son Simples',
- cpill1_label:'🔥 Donaciones Recibidas',cpill2_label:'🏗 Construcción',cpill3_label:'🌿 CO₂ Compensado',
+ cpill1_label:'⚙️ Estaciones Operativas',cpill2_label:'🏗 Construcción',cpill3_label:'🌿 CO₂ Compensado',
  impact_lead:'Producir aceite industrial virgen emite 3,5 kg de CO₂ por litro. Regenerarlo emite solo 0,3 kg. Cada litro recuperado ahorra 3,2 kg de CO₂.',
  calc_lbl:'Volumen anual de aceite en una instalación (litros)',calc_unit:' L / año',
  calc_rl1:'CO₂ ahorrado por año',calc_rl2:'Ahorro anual en costos',
  calc_note:'* Basado en 3,2 kg de CO₂ ahorrado por litro regenerado vs. producción de aceite virgen',
- donate_orn:'Únete a la Restauración',donate_h2:'Tu Dólar.<br>CO₂ Real Eliminado.',
- donate_lead:'Cada $1 donado financia la regeneración de ~100 litros de aceite industrial — evitando que 320 kg de CO₂ entren a la atmósfera. Elige tu cantidad:',
- donate_usdt:' Donar USDT (TRC-20)',donate_btc:' Donar Bitcoin',
- donate_impact_suffix:' que no llegan a la atmósfera.',
- donate_total:'<strong>$2.847</strong> recaudados por 1.203 personas — financiando la Etapa 2 de la construcción',
  roadmap_orn:'El Camino a Seguir',roadmap_h2:'Hoja de Ruta',
  rm_stage1:'Etapa 1 — Completa',rm_title1:'Tecnología y Patentes',
  rm_desc1:'Tres estaciones operativas. Patente OMPI registrada. Valuación independiente $1,4M por unidad. Certificado y operando desde 2010. Clientes en manufactura pesada.',
@@ -963,20 +769,15 @@ es:{
  rm_desc4:'Escalar a 10+ complejos de restauración en tres continentes. Operación de ciclo cerrado completo: regeneración de aceite, procesamiento de residuos orgánicos, recuperación de energía.',
  rm_stage5:'Etapa 5 — Visión',rm_title5:'Red de Energía a partir de Residuos',
  rm_desc5:'Una red global de complejos de restauración de ciclo cerrado. Cada flujo de residuos industriales — devuelto al ciclo. Nada sale como residuo.',
- ft_about:'Acerca',ft_how:'Cómo Funciona',ft_impact:'Impacto',ft_roadmap:'Hoja de Ruta',ft_donate:'Donar',
+ ft_about:'Acerca',ft_how:'Cómo Funciona',ft_impact:'Impacto',ft_roadmap:'Hoja de Ruta',
  ft_legal:'Tecnología Patentada OMPI  ·  Recuperación de Recursos en Ciclo Cerrado',
- modal_usdt_title:'Donar USDT',modal_usdt_net:'Tether (USDT) · Red TRC-20 · Tron',
- modal_btc_title:'Donar Bitcoin',modal_btc_net:'Bitcoin (BTC) · Red Bitcoin',
- modal_addr_lbl:'Dirección de Billetera',modal_copy_btn:'Copiar Dirección',
- copied:'✓ Copiado al portapapeles',impact_kg:' kg de CO₂'
 },
 pt:{
- nav_about:'Sobre',nav_how:'Como Funciona',nav_impact:'Impacto',nav_roadmap:'Roteiro',nav_invest:'Investir',nav_donate:'Doar',
+ nav_about:'Sobre',nav_how:'Como Funciona',nav_impact:'Impacto',nav_roadmap:'Roteiro',nav_invest:'Investir',
  hero_invest:'Abrir o deck de investimento &#8594;',
- donate_deck_cta:'Leia o deck completo do investidor &#8594;',
+ deck_cta:'Leia o deck completo do investidor &#8594;',
  hero_title:'Ajude a Restaurar o Mundo, Uma Fábrica por Vez',
  hero_manifesto:'A natureza não conhece o desperdício.<br>A água evapora — e retorna como chuva.<br>Uma pérola nasce de uma ferida — por pressão, tempo, transformação.<br>Por que a indústria deveria ser diferente?<br>Tecnologia de ciclo fechado — não uma ideia. Uma realidade funcional.',
- hero_sub:'Cada dólar doado é um passo real em direção a um complexo de restauração operacional.',
  crisis_tag:'A CRISE É REAL',
  crisis_title:'Todo ano, a indústria descarta óleo suficiente para encher 400 piscinas olímpicas.',
  crisis_lead:'Infiltra-se nas águas subterrâneas. Queima na atmosfera. Acaba no oceano. Temos a tecnologia para impedir isso — agora mesmo.',
@@ -987,12 +788,10 @@ pt:{
  chain1:'Regeneração de Óleo',chain2:'Fluido de Usinagem',chain3:'Carvão Ativado',chain4:'Energia de Resíduos',chain5:'Zero Resíduo',
  paths_header:'Uma pérola cresce de um grão',
  paths_sub:'Invista na primeira instalação. Receba uma parte do escalonamento global.',
- paths_donate_alt:'ou apoie a construção com uma doação',
  about_orn:'Nosso Propósito',
  about_h2:'Nada É Desperdício.<br>Tudo Se Restaura.',
  about_p1:'Cada litro de óleo industrial queimado desnecessariamente. Cada tonelada de resíduo orgânico enterrado. Cada molécula de carbono liberada sem propósito. Não são inevitabilidades — são <strong>escolhas que podemos reverter.</strong>',
  about_p2:'Pearl of Restoration é um ecossistema de ciclo fechado que transforma resíduos industriais em recursos, energia e vida. <strong>Fábricas reais. Tecnologia real. Impacto real.</strong> Patente OMPI, avaliado independentemente, em operação desde 2010.',
- about_p3:'Cada dólar que você doa vai diretamente para a construção do próximo complexo de restauração — transformando o que o mundo descarta no que o mundo precisa.',
  how_orn:'O Ciclo Fechado',how_h2:'Quatro Tecnologias. Zero Desperdício.',
  how_lead:'Cada etapa alimenta a próxima. Nada sai do sistema como resíduo — tudo retorna como valor.',
  cc1_status:'Disponível Agora',cc1_title:'Regeneração de Óleo Industrial',
@@ -1011,16 +810,11 @@ pt:{
  rm_block3_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">CARVÃO ATIVADO DE RESÍDUOS ORGÂNICOS</strong><br><br>Matéria-prima: subproduto orgânico industrial cujo descarte é custeado pelos próprios fabricantes. Produto: sorvente de carvão ativado grau BAU/DAU. Capacidade: 134.000 t/ano por complexo. Retorno: 6–8 meses.<br><br><span style="color:#c9a84c88;font-size:.8rem;">Aplicações: tratamento de água · purificação de gases · farmacêutica · indústria alimentícia</span>',
  rm_block4_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">COMPLEXO DE ENERGIA A PARTIR DE RESÍDUOS</strong><br><br>Processa RSU, plásticos, pneus, lodos de óleo e resíduos agrícolas. Produto: combustível líquido, gás de síntese e eletricidade. Design modular: 1–20+ t/h. Zero resíduo tóxico.<br><br><span style="color:#c9a84c88;font-size:.8rem;">TIR: 18–45% &nbsp;·&nbsp; Retorno: 1–4 anos</span>',
  impact_orn:'Números Reais',impact_h2:'A Matemática do CO₂ É Simples',
- cpill1_label:'🔥 Doações Recebidas',cpill2_label:'🏗 Construção',cpill3_label:'🌿 CO₂ Compensado',
+ cpill1_label:'⚙️ Estações Operacionais',cpill2_label:'🏗 Construção',cpill3_label:'🌿 CO₂ Compensado',
  impact_lead:'Produzir óleo industrial virgem emite 3,5 kg de CO₂ por litro. Regenerá-lo emite apenas 0,3 kg. Cada litro recuperado economiza 3,2 kg de CO₂.',
  calc_lbl:'Volume anual de óleo em uma instalação (litros)',calc_unit:' L / ano',
  calc_rl1:'CO₂ economizado por ano',calc_rl2:'Economia anual em custos',
  calc_note:'* Baseado em 3,2 kg de CO₂ economizado por litro regenerado vs. produção de óleo virgem',
- donate_orn:'Junte-se à Restauração',donate_h2:'Seu Dólar.<br>CO₂ Real Removido.',
- donate_lead:'Cada $1 doado financia a regeneração de ~100 litros de óleo industrial — evitando que 320 kg de CO₂ entrem na atmosfera. Escolha seu valor:',
- donate_usdt:' Doar USDT (TRC-20)',donate_btc:' Doar Bitcoin',
- donate_impact_suffix:' que não chegam à atmosfera.',
- donate_total:'<strong>$2.847</strong> arrecadados por 1.203 pessoas — financiando a Etapa 2 da construção',
  roadmap_orn:'O Caminho à Frente',roadmap_h2:'Roteiro',
  rm_stage1:'Etapa 1 — Concluída',rm_title1:'Tecnologia e Patentes',
  rm_desc1:'Três estações em operação. Patente OMPI registrada. Avaliação independente $1,4M por unidade. Certificado e em operação desde 2010. Clientes em manufatura pesada.',
@@ -1032,20 +826,15 @@ pt:{
  rm_desc4:'Escalar para 10+ complexos de restauração em três continentes. Operação de ciclo fechado completo: regeneração de óleo, processamento de resíduos orgânicos, recuperação de energia.',
  rm_stage5:'Etapa 5 — Visão',rm_title5:'Rede de Energia a partir de Resíduos',
  rm_desc5:'Uma rede global de complexos de restauração de ciclo fechado. Cada fluxo de resíduos industriais — devolvido ao ciclo. Nada sai como resíduo.',
- ft_about:'Sobre',ft_how:'Como Funciona',ft_impact:'Impacto',ft_roadmap:'Roteiro',ft_donate:'Doar',
+ ft_about:'Sobre',ft_how:'Como Funciona',ft_impact:'Impacto',ft_roadmap:'Roteiro',
  ft_legal:'Tecnologia Patenteada OMPI  ·  Recuperação de Recursos em Ciclo Fechado',
- modal_usdt_title:'Doar USDT',modal_usdt_net:'Tether (USDT) · Rede TRC-20 · Tron',
- modal_btc_title:'Doar Bitcoin',modal_btc_net:'Bitcoin (BTC) · Rede Bitcoin',
- modal_addr_lbl:'Endereço da Carteira',modal_copy_btn:'Copiar Endereço',
- copied:'✓ Copiado para a área de transferência',impact_kg:' kg de CO₂'
 },
 hi:{
- nav_about:'हमारे बारे में',nav_how:'यह कैसे काम करता है',nav_impact:'प्रभाव',nav_roadmap:'रोडमैप',nav_invest:'निवेश',nav_donate:'दान करें',
+ nav_about:'हमारे बारे में',nav_how:'यह कैसे काम करता है',nav_impact:'प्रभाव',nav_roadmap:'रोडमैप',nav_invest:'निवेश',
  hero_invest:'निवेशक प्रस्तुति खोलें &#8594;',
- donate_deck_cta:'पूरी निवेशक प्रस्तुति पढ़ें &#8594;',
+ deck_cta:'पूरी निवेशक प्रस्तुति पढ़ें &#8594;',
  hero_title:'दुनिया को पुनर्स्थापित करने में मदद करें, एक कारखाना एक बार में',
  hero_manifesto:'प्रकृति के शब्दकोश में अपशिष्ट का कोई स्थान नहीं।<br>पानी वाष्पित होता है — और वर्षा बनकर लौटता है।<br>एक मोती एक घाव से जन्म लेता है — दबाव, समय और रूपांतरण से।<br>उद्योग अलग क्यों हो?<br>बंद-लूप प्रौद्योगिकी — कोई विचार नहीं। एक कार्यशील वास्तविकता।',
- hero_sub:'दान किया गया प्रत्येक डॉलर एक कार्यशील पुनर्स्थापना परिसर की ओर एक वास्तविक कदम है।',
  crisis_tag:'संकट वास्तविक है',
  crisis_title:'हर साल, उद्योग 400 ओलंपिक पूलों को भरने के लिए पर्याप्त तेल फेंक देता है।',
  crisis_lead:'यह भूजल में रिसता है। यह वायुमंडल में जलता है। यह समुद्र में जाता है। हमारे पास इसे रोकने की तकनीक है — अभी।',
@@ -1056,12 +845,10 @@ hi:{
  chain1:'तेल पुनर्जनन',chain2:'धातुकर्म द्रव',chain3:'सक्रिय कार्बन',chain4:'अपशिष्ट-से-ऊर्जा',chain5:'शून्य अपशिष्ट',
  paths_header:'मोती एक छोटे से कण से उत्पन्न होता है',
  paths_sub:'पहली सुविधा में निवेश करें। वैश्विक विस्तार से हिस्सा प्राप्त करें।',
- paths_donate_alt:'या दान के साथ निर्माण का समर्थन करें',
  about_orn:'हमारा उद्देश्य',
  about_h2:'कुछ भी अपशिष्ट नहीं।<br>सब कुछ पुनर्स्थापित होता है।',
  about_p1:'औद्योगिक तेल का हर लीटर बेकार जलाया गया। जमीन में दबाया गया जैविक अपशिष्ट का हर टन। बिना उद्देश्य के मुक्त हुए कार्बन का हर अणु। ये अनिवार्यताएं नहीं हैं — ये <strong>ऐसे विकल्प हैं जिन्हें हम बदल सकते हैं।</strong>',
  about_p2:'Pearl of Restoration एक बंद-लूप पारिस्थितिकी तंत्र है जो औद्योगिक अपशिष्ट को संसाधनों, ऊर्जा और जीवन में बदलता है। <strong>वास्तविक कारखाने। वास्तविक प्रौद्योगिकी। वास्तविक प्रभाव।</strong> WIPO-पेटेंटेड, स्वतंत्र रूप से मूल्यांकित, 2010 से संचालित।',
- about_p3:'आपका दान किया गया प्रत्येक डॉलर अगले पुनर्स्थापना परिसर के निर्माण की ओर सीधे जाता है — जो दुनिया फेंकती है उसे जो दुनिया को चाहिए उसमें बदलता है।',
  how_orn:'बंद लूप',how_h2:'चार प्रौद्योगिकियां। शून्य अपशिष्ट।',
  how_lead:'प्रत्येक चरण अगले को पोषित करता है। कुछ भी प्रणाली से अपशिष्ट के रूप में नहीं निकलता — सब कुछ मूल्य के रूप में वापस आता है।',
  cc1_status:'अभी उपलब्ध',cc1_title:'औद्योगिक तेल पुनर्जनन',
@@ -1080,16 +867,11 @@ hi:{
  rm_block3_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">जैविक अपशिष्ट से सक्रिय कार्बन</strong><br><br>कच्चा माल: जैविक औद्योगिक उप-उत्पाद — जिसके निपटान के लिए निर्माता भुगतान करते हैं। आउटपुट: BAU/DAU ग्रेड सक्रिय कार्बन सोर्बेंट। क्षमता: 134,000 टन/वर्ष प्रति परिसर। वापसी: 6–8 महीने।<br><br><span style="color:#c9a84c88;font-size:.8rem;">अनुप्रयोग: जल उपचार · गैस शुद्धिकरण · फार्मास्युटिकल · खाद्य उद्योग</span>',
  rm_block4_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">अपशिष्ट-से-ऊर्जा परिसर</strong><br><br>MSW, प्लास्टिक, टायर, तेल कीचड़ और कृषि अपशिष्ट को प्रसंस्कृत करता है। आउटपुट: तरल ईंधन, सिंगैस और बिजली। मॉड्यूलर डिज़ाइन: 1–20+ टन/घंटा। शून्य विषाक्त अवशेष।<br><br><span style="color:#c9a84c88;font-size:.8rem;">IRR: 18–45% &nbsp;·&nbsp; वापसी: 1–4 वर्ष</span>',
  impact_orn:'वास्तविक संख्याएं',impact_h2:'CO₂ का गणित सरल है',
- cpill1_label:'🔥 प्राप्त दान',cpill2_label:'🏗 निर्माण',cpill3_label:'🌿 CO₂ ऑफसेट',
+ cpill1_label:'⚙️ संचालन स्टेशन',cpill2_label:'🏗 निर्माण',cpill3_label:'🌿 CO₂ ऑफसेट',
  impact_lead:'कच्चा औद्योगिक तेल उत्पादन करने से प्रति लीटर 3.5 kg CO₂ उत्सर्जित होता है। इसे पुनर्जनित करने से केवल 0.3 kg उत्सर्जित होता है। प्रत्येक पुनर्प्राप्त लीटर 3.2 kg CO₂ बचाता है।',
  calc_lbl:'एक सुविधा पर वार्षिक तेल मात्रा (लीटर)',calc_unit:' L / वर्ष',
  calc_rl1:'प्रति वर्ष बचाया गया CO₂',calc_rl2:'वार्षिक लागत बचत',
  calc_note:'* पुनर्जनित बनाम कच्चे तेल उत्पादन के प्रति लीटर 3.2 kg CO₂ की बचत पर आधारित',
- donate_orn:'पुनर्स्थापना में शामिल हों',donate_h2:'आपका डॉलर।<br>वास्तविक CO₂ हटाया गया।',
- donate_lead:'दान किया गया प्रत्येक $1 ~100 लीटर औद्योगिक तेल के पुनर्जनन को वित्त पोषित करता है — 320 kg CO₂ को वायुमंडल में जाने से रोकता है। अपनी राशि चुनें:',
- donate_usdt:' USDT दान करें (TRC-20)',donate_btc:' Bitcoin दान करें',
- donate_impact_suffix:' वायुमंडल से दूर रखा गया।',
- donate_total:'<strong>$2,847</strong> 1,203 लोगों द्वारा जुटाया गया — निर्माण के चरण 2 को वित्त पोषित करना',
  roadmap_orn:'आगे का रास्ता',roadmap_h2:'रोडमैप',
  rm_stage1:'चरण 1 — पूर्ण',rm_title1:'प्रौद्योगिकी &amp; पेटेंट',
  rm_desc1:'तीन संचालन स्टेशन। WIPO पेटेंट पंजीकृत। प्रति यूनिट $1.4M का स्वतंत्र मूल्यांकन। 2010 से प्रमाणित और संचालित। भारी विनिर्माण में ग्राहक।',
@@ -1101,20 +883,15 @@ hi:{
  rm_desc4:'तीन महाद्वीपों में 10+ पुनर्स्थापना परिसरों तक स्केल करना। पूर्ण बंद-लूप संचालन: तेल पुनर्जनन, जैविक अपशिष्ट प्रसंस्करण, ऊर्जा पुनर्प्राप्ति।',
  rm_stage5:'चरण 5 — दृष्टि',rm_title5:'अपशिष्ट-से-ऊर्जा नेटवर्क',
  rm_desc5:'बंद-लूप पुनर्स्थापना परिसरों का एक वैश्विक नेटवर्क। हर औद्योगिक अपशिष्ट धारा — चक्र में वापस। कुछ भी अपशिष्ट के रूप में नहीं निकलता।',
- ft_about:'हमारे बारे में',ft_how:'यह कैसे काम करता है',ft_impact:'प्रभाव',ft_roadmap:'रोडमैप',ft_donate:'दान करें',
+ ft_about:'हमारे बारे में',ft_how:'यह कैसे काम करता है',ft_impact:'प्रभाव',ft_roadmap:'रोडमैप',
  ft_legal:'WIPO पेटेंटेड प्रौद्योगिकी  ·  बंद-लूप संसाधन पुनर्प्राप्ति',
- modal_usdt_title:'USDT दान करें',modal_usdt_net:'Tether (USDT) · TRC-20 नेटवर्क · Tron',
- modal_btc_title:'Bitcoin दान करें',modal_btc_net:'Bitcoin (BTC) · Bitcoin नेटवर्क',
- modal_addr_lbl:'वॉलेट पता',modal_copy_btn:'पता कॉपी करें',
- copied:'✓ क्लिपबोर्ड पर कॉपी किया गया',impact_kg:' kg CO₂'
 },
 ru:{
- nav_about:'О нас',nav_how:'Как это работает',nav_impact:'Результат',nav_roadmap:'Дорожная карта',nav_invest:'Инвестировать',nav_donate:'Поддержать',
+ nav_about:'О нас',nav_how:'Как это работает',nav_impact:'Результат',nav_roadmap:'Дорожная карта',nav_invest:'Инвестировать',
  hero_invest:'Открыть инвестиционную презентацию &#8594;',
- donate_deck_cta:'Открыть полную презентацию для инвестора &#8594;',
+ deck_cta:'Открыть полную презентацию для инвестора &#8594;',
  hero_title:'Помогите восстановить мир — завод за заводом',
  hero_manifesto:'В природе нет понятия «отходы».<br>Вода испаряется — и возвращается дождём.<br>Жемчужина рождается из раны — под давлением, со временем, через преображение.<br>Почему промышленность должна быть иной?<br>Технология замкнутого цикла — не идея. Работающая реальность.',
- hero_sub:'Каждый пожертвованный доллар — реальный шаг к строительству работающего комплекса восстановления.',
  crisis_tag:'КРИЗИС РЕАЛЕН',
  crisis_title:'Каждый год промышленность выбрасывает масло, которого хватит, чтобы заполнить 400 олимпийских бассейнов.',
  crisis_lead:'Оно уходит в грунтовые воды. Сгорает в атмосфере. Попадает в океан. У нас есть технология, чтобы это остановить — прямо сейчас.',
@@ -1125,12 +902,10 @@ ru:{
  chain1:'Регенерация масла',chain2:'Жидкость для металлообработки',chain3:'Активированный уголь',chain4:'Энергия из отходов',chain5:'Ноль отходов',
  paths_header:'Жемчужина растёт из зерна',
  paths_sub:'Инвестируйте в первый комплекс. Получайте долю от глобального масштабирования.',
- paths_donate_alt:'или поддержите строительство донатом',
  about_orn:'Наша цель',
  about_h2:'Ничто не является отходом.<br>Всё восстанавливается.',
  about_p1:'Каждый литр промышленного масла, сожжённого без смысла. Каждая тонна органических отходов, закопанных в землю. Каждая молекула углерода, выброшенная без цели. Это не неизбежность — это <strong>выбор, который мы можем изменить.</strong>',
  about_p2:'Pearl of Restoration — экосистема замкнутого цикла, превращающая промышленные отходы в ресурсы, энергию и жизнь. <strong>Реальные заводы. Реальные технологии. Реальный результат.</strong> Патент ВОИС, независимая оценка, работает с 2010 года.',
- about_p3:'Каждый пожертвованный вами доллар идёт напрямую на строительство следующего комплекса восстановления — превращая то, что мир выбрасывает, в то, что миру нужно.',
  how_orn:'Замкнутый цикл',how_h2:'Четыре технологии. Ноль отходов.',
  how_lead:'Каждый этап питает следующий. Ничто не покидает систему как отходы — всё возвращается как ценность.',
  cc1_status:'Доступно сейчас',cc1_title:'Регенерация промышленного масла',
@@ -1149,16 +924,11 @@ ru:{
  rm_block3_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">АКТИВИРОВАННЫЙ УГОЛЬ ИЗ ОРГАНИЧЕСКИХ ОТХОДОВ</strong><br><br>Сырьё: органические промышленные побочные продукты, за утилизацию которых производители платят сами. Продукт: активированный уголь-сорбент марки БАУ/ДАУ. Мощность: 134 000 т/год на один комплекс. Окупаемость: 6–8 месяцев.<br><br><span style="color:#c9a84c88;font-size:.8rem;">Применение: очистка воды · очистка газов · фармацевтика · пищевая промышленность</span>',
  rm_block4_inner:'<strong style="color:#c9a84c;font-size:.8rem;letter-spacing:.15em;">КОМПЛЕКС ПО ПЕРЕРАБОТКЕ ОТХОДОВ В ЭНЕРГИЮ</strong><br><br>Перерабатывает ТБО, пластик, шины, нефтешлам и сельскохозяйственные отходы. Продукты: жидкое топливо, синтез-газ, электроэнергия. Модульная конструкция: 1–20+ т/ч. Без токсичных остатков.<br><br><span style="color:#c9a84c88;font-size:.8rem;">IRR: 18–45% &nbsp;·&nbsp; Окупаемость: 1–4 года</span>',
  impact_orn:'Реальные цифры',impact_h2:'Математика CO₂ проста',
- cpill1_label:'🔥 Получено пожертвований',cpill2_label:'🏗 Строительство',cpill3_label:'🌿 CO₂ компенсировано',
+ cpill1_label:'⚙️ Действующие станции',cpill2_label:'🏗 Строительство',cpill3_label:'🌿 CO₂ компенсировано',
  impact_lead:'Производство первичного промышленного масла выбрасывает 3,5 кг CO₂ на литр. Регенерация — всего 0,3 кг. Каждый восстановленный литр экономит 3,2 кг CO₂.',
  calc_lbl:'Годовой объём масла на предприятии (литры)',calc_unit:' л / год',
  calc_rl1:'Сэкономленный CO₂ в год',calc_rl2:'Ежегодная экономия затрат',
  calc_note:'* На основе 3,2 кг CO₂, сэкономленного на каждый регенерированный литр по сравнению с производством первичного масла',
- donate_orn:'Присоединитесь к восстановлению',donate_h2:'Ваш доллар.<br>Реальный CO₂ устранён.',
- donate_lead:'Каждый $1 пожертвования финансирует регенерацию ~100 литров промышленного масла — не позволяя 320 кг CO₂ попасть в атмосферу. Выберите сумму:',
- donate_usdt:' Пожертвовать USDT (TRC-20)',donate_btc:' Пожертвовать Bitcoin',
- donate_impact_suffix:' удержано от попадания в атмосферу.',
- donate_total:'<strong>$2 847</strong> собрали 1 203 человека — финансирование этапа 2 строительства',
  roadmap_orn:'Путь вперёд',roadmap_h2:'Дорожная карта',
  rm_stage1:'Этап 1 — завершён',rm_title1:'Технологии &amp; патенты',
  rm_desc1:'Три действующие станции. Патент ВОИС зарегистрирован. Независимая оценка — $1,4 млн за единицу. Сертифицировано и работает с 2010 года. Клиенты в тяжёлой промышленности.',
@@ -1170,12 +940,8 @@ ru:{
  rm_desc4:'Масштабирование до 10+ комплексов восстановления на трёх континентах. Полноценный замкнутый цикл: регенерация масла, переработка органических отходов, рекуперация энергии.',
  rm_stage5:'Этап 5 — видение',rm_title5:'Глобальная сеть комплексов',
  rm_desc5:'Мировая сеть комплексов восстановления замкнутого цикла. Каждый поток промышленных отходов — возвращён в цикл. Ничто не уходит как отходы.',
- ft_about:'О нас',ft_how:'Как это работает',ft_impact:'Результат',ft_roadmap:'Дорожная карта',ft_donate:'Поддержать',
+ ft_about:'О нас',ft_how:'Как это работает',ft_impact:'Результат',ft_roadmap:'Дорожная карта',
  ft_legal:'Технология защищена патентом ВОИС  ·  Восстановление ресурсов замкнутого цикла',
- modal_usdt_title:'Пожертвовать USDT',modal_usdt_net:'Tether (USDT) · Сеть TRC-20 · Tron',
- modal_btc_title:'Пожертвовать Bitcoin',modal_btc_net:'Bitcoin (BTC) · Сеть Bitcoin',
- modal_addr_lbl:'Адрес кошелька',modal_copy_btn:'Скопировать адрес',
- copied:'✓ Скопировано в буфер обмена',impact_kg:' кг CO₂'
 }
 };
 
@@ -1199,8 +965,6 @@ function setLang(lang){
     b.classList.toggle('active',b.getAttribute('data-lang')===lang);
   });
   if(typeof calc==='function') calc();
-  var ab=document.querySelector('.don-amt-btn.active');
-  if(ab&&typeof setAmt==='function') setAmt(parseInt(ab.textContent.replace(/[^0-9]/g,'')),ab);
   document.querySelectorAll('[data-i18n-rm]').forEach(function(btn){
     var rm=t.read_more||'Read More';
     var open=btn.classList.contains('active');
