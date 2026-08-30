@@ -72,6 +72,7 @@
 | [Encyro Invoicing](https://www.encyro.com/invoicing) | Helcim | 2025-11 | invoicing | **триал→заявка** | ? |
 | [InvoiceSherpa](https://www.invoicesherpa.com/pricing) | Propelr (preferred) + BYO | 2026-04 | invoicing / AR | **триал→заявка** | ? |
 | [shopVOX Pay](https://shopvox.com/) | Fullsteam | 2025 | print / sign / apparel | **триал→заявка** | ? |
+| [BILL Receivables](https://www.bill.com/signup) | Adyen | 2024-02 | invoicing / AR | **триал→заявка** | **да** |
 | [Towbook](https://towbook.com/) | Square | 2021-02 | towing | **BYO** | — |
 | [Trafft](https://trafft.com/) | Square | 2024-09 | booking | **BYO** | — |
 | [ARI](https://ari.app/) | Square / Helcim | 2026 | auto repair | **BYO** | — |
@@ -208,7 +209,7 @@
 
 `*` продукт payments старше 2021, путь всё равно открытый.
 
-**Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay, Service Autopilot, SmartMoving, Limo Anywhere Pay.  
+**Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay, Service Autopilot, SmartMoving, Limo Anywhere Pay, BILL Receivables.  
 **нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay / Silverware Pay / MezzoPay / GROUND PAY / Winworks Pay / Arryved Pay (нет payer ACH формы).  
 **?:** ACH в тарифах есть, форму не разобрали.
 
@@ -223,6 +224,9 @@
 
 **Раунд 8 (2026-08-30):** Winworks Pay, Limo Anywhere Pay, Arryved Pay.  
 Не клали: WineDirect (тот же Fullsteam Payments, что Commerce7), StarPay (Oct 2020), EZClaimPay (Aug 2020), Coolfront Payments (2018 / теперь FieldEdge), Compassmax (слит в SPOT, CC с 1996), DRSPay (тот же ERSPay-стек 2018; help даже пишет ERSPay Reports), Eye Cloud Pro (Fullsteam есть, first SKU до окна), Integrapark (нет named Pay SKU; сайт всё ещё «variety of settlement agents»), Livery Coach / GroundSpan (нет named Fullsteam Pay; Livery публично PayPal/Moneris), Bay-Master BM Pay (Fullsteam владеет; процессор на публичных страницах не назван; год first SKU не доказан), Aluvii/Pangea/AbanteCart/B2B Wave/Holland/Paynow+Sola (gateway / preferred, не exclusive in-app apply), Aesthetic Record (AR Pay = Stripe; Clearent VT legacy), Stax Connect (новых named ISV нет кроме уже в таблице), NMI white-label SaaS frontend (новых named нет кроме Everyware).
+
+**Раунд 9 (2026-08-30) — acquirer/ISO hunt:** BILL Receivables (Adyen acquiring 2024-02; payment-link test form = routing+account).  
+Не клали: Atlas (SG), Toast/Roller/Crisp/Wix Payments (SKU до 2021 или уже out), Vagaro (Adyen = CashOut payouts; карты = ISO of PNC, процессор не назван), Rectangle Health PayerSync (insurance reimbursements), Goose (Capital), Etsy/eBay/GoFundMe (marketplace / до окна), Sharetribe (Stripe out of box; Adyen DIY), Moneybird (не US), HotelKey (Paysafe press 2022; сайт = BYO Shift4/FreedomPay/Elavon), Sylogist/Promise (Nuvei/Paya enterprise demo), Tebex/FastSpring (gaming / MoR до 2021), UPay360 (Elavon WorksWith, gov sales), Genius POS 2025 (owned POS, sales), Taplist/7shifts (Genius data sync, не accept), Ovvi (Priority resells POS), MX Merchant (sales form), ConsignCloud/Lizzy/FROG (Gravity sales apply, не in-product), TimeSolv+LexCharge (in-app apply, Nov 2020), Tabs3Pay (2021 in-app + keyed ACH, процессор на публичных страницах не назван; LexCharge отдельно), Rocket Matter Pay (PayPal/Venmo; LexCharge не доказан), 8am AffiniPay/MedPay (SKU до 2021 / нет публичного apply), FreshBooks WePay (в каталоге Stripe-only; SKU старый), Jack Henry Rapid Transfers (Moov A2A, не accept), Payarc/PaymentCloud/CDG/Dharma/Easy Pay Direct/Signature Payments (ISO до окна / sales), Fiserv ISV merchant-signup (lead form).
 
 ---
 
@@ -287,7 +291,7 @@
 
 ### B. Эквайеры / ISO с ISV-программами
 
-16. Adyen for Platforms US 2021–26 — кроме уже в таблице
+16. Adyen for Platforms US 2021–26 — кроме уже в таблице; BILL Receivables добавлен раунд 9
 17. Elavon WorksWith
 18. Fiserv Clover / Carat / Commerce Hub ISV 2021+
 19. Heartland / GPI / Genius named ISVs
