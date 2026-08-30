@@ -202,11 +202,14 @@
 | [MezzoPay](https://www.maestropms.com/) | Fullsteam | 2024-04 | hotel PMS | **демо** | нет |
 | [UrPay](https://urable.com/urpay/) | Fullsteam (Worldpay / Fifth Third) | 2025 | detailing / PPF | **демо** | ? |
 | [GROUND PAY](https://fasttrakcloud.com/groundpay/) | Fullsteam | 2026 | limo / ground | **демо** | нет |
+| [Winworks Pay](https://winworks.com/pay/) | Fullsteam | 2021 | auto shop | **демо** | нет |
+| [Limo Anywhere Pay](https://www.limoanywhere.com/pay/) | Fullsteam | 2022 | limo / black car | **демо** | **да** |
+| [Arryved Pay](https://arryved.com/products/arryved-pay/) | Fullsteam | 2024-06 | brewery / taproom POS | **демо** | нет |
 
 `*` продукт payments старше 2021, путь всё равно открытый.
 
-**Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay, Service Autopilot, SmartMoving.  
-**нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay / Silverware Pay / MezzoPay / GROUND PAY (нет payer ACH формы).  
+**Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay, Service Autopilot, SmartMoving, Limo Anywhere Pay.  
+**нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay / Silverware Pay / MezzoPay / GROUND PAY / Winworks Pay / Arryved Pay (нет payer ACH формы).  
 **?:** ACH в тарифах есть, форму не разобрали.
 
 **Раунд 5 (2026-08-30):** Successware, FieldEdge, Service Autopilot, Flex, improviPay, Dental Intel, SmartMoving, Prophet Pay, SC Pay, Roc Services, Act!, Encyro, DrivePay, Cerbo, WebRezPay, FieldServio, Visual Matrix Fortis Pay, CareStack CS Pay.  
@@ -217,6 +220,9 @@
 
 **Раунд 7 (2026-08-30):** shopVOX Pay, Silverware Pay, MezzoPay, UrPay, GROUND PAY.  
 Не клали: Maxanet / Pluss / ISI (payments ~2019), RMH+Sola (preferred plugin среди нескольких), CounselEAR (нет публичного Pay SKU), Helcim Payment Extension (это сам Helcim, до 2021).
+
+**Раунд 8 (2026-08-30):** Winworks Pay, Limo Anywhere Pay, Arryved Pay.  
+Не клали: WineDirect (тот же Fullsteam Payments, что Commerce7), StarPay (Oct 2020), EZClaimPay (Aug 2020), Coolfront Payments (2018 / теперь FieldEdge), Compassmax (слит в SPOT, CC с 1996), DRSPay (тот же ERSPay-стек 2018; help даже пишет ERSPay Reports), Eye Cloud Pro (Fullsteam есть, first SKU до окна), Integrapark (нет named Pay SKU; сайт всё ещё «variety of settlement agents»), Livery Coach / GroundSpan (нет named Fullsteam Pay; Livery публично PayPal/Moneris), Bay-Master BM Pay (Fullsteam владеет; процессор на публичных страницах не назван; год first SKU не доказан), Aluvii/Pangea/AbanteCart/B2B Wave/Holland/Paynow+Sola (gateway / preferred, не exclusive in-app apply), Aesthetic Record (AR Pay = Stripe; Clearent VT legacy), Stax Connect (новых named ISV нет кроме уже в таблице), NMI white-label SaaS frontend (новых named нет кроме Everyware).
 
 ---
 
@@ -254,3 +260,65 @@
 | Payrix | 22 + 6 | «40+» без имён |
 | JustiFi / Tilled | 3 + 3 | нет каталога |
 | Stax | 4 | «150+» |
+
+---
+
+## План поиска (раунд 8+, кроме Stripe)
+
+Критерии те же: US; signup / триал / in-app KYB; PayFac · ISO/MSP · PSP · gateway · embedded SaaS · PFaaS frontend · MoR; процессор из ToS/help/press; **не** Stripe-only; год SKU 2021–2026; keyed ACH колонка.
+
+### A. PFaaS / embedded (клиентские каталоги)
+
+1. Rainforest — ToS backlinks `legal.rainforestpay.com`, Vertex speakers, «powered by Rainforest», help `rainforest_id`
+2. Payabli — customers / case studies / Huntington portal, pay-in only
+3. Finix — customers, Woo/Direct уже out; новые SaaS
+4. Payrix / Worldpay for Platforms — `/customers` + leftovers
+5. Stax Connect — «150+» без имён; G2, help, press
+6. JustiFi / Tilled / Launchpay / Payops / Infinicept
+7. PayEngine — кроме Flex / CurbWaste / ST SoftPOS
+8. Payload — кроме Innago
+9. Propelr — кроме Act / DrivePay / Cerbo / Lever360 / vinSUITE / Atrium / InvoiceSherpa
+10. Fortis / Payroc — кроме Visual Matrix / Roc / FieldServio
+11. Moov — кроме Tap2Local
+12. WePay / JPM Payments ISV, Priority Commerce
+13. Sola / Cardknox Go — кроме RMH preferred
+14. NMI white-label frontends (не gateway-only)
+15. Frame / Coastal / MannyPay аналоги (open ISO signup)
+
+### B. Эквайеры / ISO с ISV-программами
+
+16. Adyen for Platforms US 2021–26 — кроме уже в таблице
+17. Elavon WorksWith
+18. Fiserv Clover / Carat / Commerce Hub ISV 2021+
+19. Heartland / GPI / Genius named ISVs
+20. TSYS TransIT / Premier
+21. Nuvei / Paysafe / Paya / ProfitStars
+22. CardPointe / CardConnect leftovers
+23. Global Payments кроме AutoLeap
+24. Gravity Payments кроме Confido
+25. Helcim ISV (не сам Helcim; не Extension-as-Helcim)
+26. AffiniPay / 8am leftovers; LexCharge кроме CosmoLex
+27. Fullsteam portfolio 50+ — Pay SKU 2021+ only (Maxanet/PCS/ERS/RoomKey out)
+28. Xplor owned: Coolfront, Compassmax, SPOT (SPOT out — CC с 1996)
+
+### C. Вертикали SaaS (US, «Payments» / «accept cards»)
+
+29. HVAC / plumbing / electrical / pest / lawn / roofing / restoration
+30. Auto / towing / detailing / collision
+31. Dental / chiro / vet / mental health / cash-pay clinic
+32. Legal / tax / accounting
+33. Property / HOA / rent / self-storage / moving
+34. Hotel / winery / golf / parking / events / tickets
+35. Fitness / childcare / church / association / gov
+36. Print / sign / waste / ISP / grocery / manufacturing
+37. Booking / invoicing / CRM 2021–26
+
+### D. Источники (не выдумывать имена)
+
+38. Press: PR Newswire / Business Wire / «launches payments» 2021–26
+39. Product Hunt / G2 / Capterra «payment processing» software
+40. Help centers: «powered by», merchant apply, Rainforest/Finix/Stax/Payabli
+41. `merchantapp.io/*` Fullsteam apply slugs
+42. LinkedIn processor + ISV posts (только с first-party подтверждением)
+
+**Не класть:** Stripe-only; sales callback без in-app apply; payouts/issuing; BYO-orchestration; до 2021; выдуманные бренды.
