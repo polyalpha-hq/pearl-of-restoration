@@ -38,12 +38,14 @@
 | [RegFox](https://www.regfox.com/) | Adyen | — | event registration | **моментально** | — |
 | [RedPodium](https://www.redpodium.com/) | Adyen | — | race registration | **моментально** | — |
 | [GroupRev](https://grouprev.com/) | Adyen | — | fundraising | **моментально** | — |
+| [Innago](https://auth.innago.com/signup) | Payload | — | rent / landlords | **моментально** | ? |
 | [Cal Payments](https://app.cal.com/signup) | Whop | 2026 | booking | **моментально** | — |
 | [8am LawPay](https://www.lawpay.com/) | Adyen | 2007* | legal | **моментально** | — |
 | [8am CPACharge](https://www.cpacharge.com/sign-up/) | Adyen | 2016* | accounting | **моментально** | — |
 | [8am ClientPay](https://www.clientpay.com/) | Adyen / 8am | 2021-02 | pro services | **моментально** | — |
 | [Frame](https://app.framepayments.com/register) | CBC (front unnamed) | ~2024 | любой SMB | **заявка** | — |
 | [MannyPay](https://www.mannypay.io/merchant-sign-up) | Adyen / iMerchant | 2026-07 | любой SMB | **заявка** | — |
+| [Relay](https://app.relayfi.com/register) | Adyen (карты); ACH = Plaid | 2025-06 | SMB banking / invoices | **заявка** | нет |
 | [TherapyAppointment](https://www.therapyappointment.com/sign-up) | Finix | 2025-11 | mental-health EMR | **триал→заявка** | — |
 | [Ticketbud Payments](https://ticketbud.com/users/sign_up) | Finix | 2024-10 | events | **триал→заявка** | — |
 | [SpiceApp POS Lite](https://myspiceapp.com/products/pos-lite/) | Finix | 2022 | restaurant POS | **триал→заявка** | — |
@@ -65,11 +67,14 @@
 | [CosmoLexPay](https://www.cosmolex.com/) | LexCharge | 2021 | legal | **триал→заявка** | — |
 | [Drake Pay](https://www.drakesoftware.com/products/drake-pay/) | Launchpay | 2024-01 | tax | **триал→заявка** | — |
 | [TaxAct Pro Payments](https://www.taxact.com/professional/integrated-payments) | Launchpay | — | tax | **триал→заявка** | — |
+| [Workiz Pay](https://www.workiz.com/signup/join-workiz/) | Adyen + Stripe | ~2025 US Adyen | field service | **триал→заявка** | ? |
 | [Towbook](https://towbook.com/) | Square | 2021-02 | towing | **BYO** | — |
 | [Trafft](https://trafft.com/) | Square | 2024-09 | booking | **BYO** | — |
 | [ARI](https://ari.app/) | Square / Helcim | 2026 | auto repair | **BYO** | — |
 | [sBizzl](https://sbizzl.com/) | Square | — | booking | **BYO** | — |
 | [SimplyBook.me](https://simplybook.me/) | Helcim | — | booking | **BYO** | — |
+| [Knowify](https://knowify.com/construction-payment-processing/) | Square / QBO Payments | — | contractors | **BYO** | ? |
+| [GorillaDesk](https://gorilladesk.com/features/credit-card-processing/) | Square + Stripe | — | pest / lawn | **BYO** | нет |
 | [Meadow Pay](https://www.meadowfi.com/pay) | Finix | 2024–25 | higher ed | **демо** | — |
 | [Archy](https://archy.com) | Finix | — | dental PMS | **демо** | — |
 | [X-CD Payments](https://www.x-cd.com/payments-3/) | Finix | 2026-01 | associations | **демо** | — |
@@ -162,12 +167,21 @@
 | [3C Connect](https://3cconnect.com/book-demo/) | Square | — | HVAC | **демо** + BYO | — |
 | [Booky](https://www.booky.ca/) | Helcim | — | booking | **демо** + BYO | — |
 | [MyCase](https://www.mycase.com/) | LawPay / Adyen | 2025 | legal | **демо** | — |
+| [Buildertrend Payments](https://buildertrend.com/financial-tools/payments/) | Adyen | 2023-02 | construction | **демо** | ? |
+| [ServiceTitan Payments](https://www.servicetitan.com/) | Adyen (+ NMI/TSYS; ACH ProfitStars) | — | field service | **демо** | ? |
+| [SingleOps Payments](https://www.singleops.com/) | ProPay / Global Payments | — | landscape | **демо** | ? |
+| [Confido Legal](https://confidolegal.com/) | Gravity Payments | 2023-12* | legal / IOLTA | **демо** | ? |
+| [BillingPlatform BP Pay](https://billingplatform.com/solutions/portal/payments/bp-pay) | Adyen | 2025-03 | enterprise billing | **демо** | ? |
+| [improveit 360 Payments](https://www.improveit360.com/features/) | PaySimple | — | remodeling CRM | **демо** | ? |
 
 `*` продукт payments старше 2021, путь всё равно открытый.
 
 **Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay.  
 **нет:** SalesThumb (ACH только как ручной tender, не online).  
 **?:** ACH в тарифах есть, форму плательщика в help не разобрали (Keap, ProLine, D-Tools, FieldPulse, Handoff…).
+
+**Раунд 4 (2026-08-30), новые строки:** Innago, Relay, Workiz Pay, Knowify, GorillaDesk, Buildertrend, ServiceTitan, SingleOps, Confido Legal, BP Pay, improveit 360.  
+Не клали как новые: Wave (payments до 2021; Adyen ToS 2025; payer ToS = keyed ACH **да**), AccuLynx / Service Fusion / Shop-Ware (SKU ~2020). Finix / Rainforest / Payabli / Stax / JustiFi / Tilled — новых имён нет.
 
 ---
 
@@ -176,7 +190,7 @@
 | Бренд | Почему |
 |---|---|
 | [Square](https://squareup.com/) / [Helcim](https://www.helcim.com/) / [QBO](https://quickbooks.intuit.com/) / [Auth.net](https://www.authorize.net/) | payments до 2021; у самих **моментально** |
-| [Wave](https://www.waveapps.com/) | был Finix → Adyen + WP + Stripe |
+| [Wave](https://www.waveapps.com/) | был Finix → Adyen + WP + Stripe; payer ToS = **keyed ACH да** |
 | [Lightspeed US](https://www.lightspeedhq.com/) | Finix 2019 → Stripe 2020 |
 | [Pay Theory](https://www.paytheory.com/) | Finix → Fiserv |
 | [Change](https://www.getchange.io/) | Finix payouts |
