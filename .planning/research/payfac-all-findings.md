@@ -73,6 +73,8 @@
 | [InvoiceSherpa](https://www.invoicesherpa.com/pricing) | Propelr (preferred) + BYO | 2026-04 | invoicing / AR | **триал→заявка** | ? |
 | [shopVOX Pay](https://shopvox.com/) | Fullsteam | 2025 | print / sign / apparel | **триал→заявка** | ? |
 | [BILL Receivables](https://www.bill.com/signup) | Adyen | 2024-02 | invoicing / AR | **триал→заявка** | **да** |
+| [Haulvana](https://www.haulvana.com/pricing) | Xplor Pay | 2025-11 | waste | **триал→заявка** | ? |
+| [MyKidReports](https://app.mykidreports.com/signup) | Deluxe + Stripe | 2025-07 | childcare | **триал→заявка** | ? |
 | [Towbook](https://towbook.com/) | Square | 2021-02 | towing | **BYO** | — |
 | [Trafft](https://trafft.com/) | Square | 2024-09 | booking | **BYO** | — |
 | [ARI](https://ari.app/) | Square / Helcim | 2026 | auto repair | **BYO** | — |
@@ -206,6 +208,7 @@
 | [Winworks Pay](https://winworks.com/pay/) | Fullsteam | 2021 | auto shop | **демо** | нет |
 | [Limo Anywhere Pay](https://www.limoanywhere.com/pay/) | Fullsteam | 2022 | limo / black car | **демо** | **да** |
 | [Arryved Pay](https://arryved.com/products/arryved-pay/) | Fullsteam | 2024-06 | brewery / taproom POS | **демо** | нет |
+| [Canopy Payments](https://www.getcanopy.com/) | Adyen | 2022-01 | tax / accounting PMS | **демо** | ? |
 
 `*` продукт payments старше 2021, путь всё равно открытый.
 
@@ -227,6 +230,9 @@
 
 **Раунд 9 (2026-08-30) — acquirer/ISO hunt:** BILL Receivables (Adyen acquiring 2024-02; payment-link test form = routing+account).  
 Не клали: Atlas (SG), Toast/Roller/Crisp/Wix Payments (SKU до 2021 или уже out), Vagaro (Adyen = CashOut payouts; карты = ISO of PNC, процессор не назван), Rectangle Health PayerSync (insurance reimbursements), Goose (Capital), Etsy/eBay/GoFundMe (marketplace / до окна), Sharetribe (Stripe out of box; Adyen DIY), Moneybird (не US), HotelKey (Paysafe press 2022; сайт = BYO Shift4/FreedomPay/Elavon), Sylogist/Promise (Nuvei/Paya enterprise demo), Tebex/FastSpring (gaming / MoR до 2021), UPay360 (Elavon WorksWith, gov sales), Genius POS 2025 (owned POS, sales), Taplist/7shifts (Genius data sync, не accept), Ovvi (Priority resells POS), MX Merchant (sales form), ConsignCloud/Lizzy/FROG (Gravity sales apply, не in-product), TimeSolv+LexCharge (in-app apply, Nov 2020), Tabs3Pay (2021 in-app + keyed ACH, процессор на публичных страницах не назван; LexCharge отдельно), Rocket Matter Pay (PayPal/Venmo; LexCharge не доказан), 8am AffiniPay/MedPay (SKU до 2021 / нет публичного apply), FreshBooks WePay (в каталоге Stripe-only; SKU старый), Jack Henry Rapid Transfers (Moov A2A, не accept), Payarc/PaymentCloud/CDG/Dharma/Easy Pay Direct/Signature Payments (ISO до окна / sales), Fiserv ISV merchant-signup (lead form).
+
+**Раунд 10 (2026-08-30) — vertical hunt:** Haulvana (Xplor Pay, press 2025-11; Kickstart free + Get Started), MyKidReports (Deluxe ACH + Stripe cards, blog 2025-07; `app.mykidreports.com/signup`), Canopy Payments (Adyen, help + 2022-01 feature post; in-app enroll after demo).  
+Не клали: Tithe.ly / Planning Center / ChurchTrac / Breeze (Stripe); Vantaca Pay (ToS = Stripe); Smartwebs (Payabli payouts, уже out); Ministry Brands + AvidXchange (AP); Connect Childcare / Tapestry (UK Unipaas); PestPac / RealGreen (WorkWave Payments, first SKU 2019 — ALREADY WorkWave); FieldRoutes (ALREADY Payrix); LMN Pay / LawnPro / Digitail / Tekion Pay / TaxDome Payments (Stripe-only); ezyVet+PayJunction (2017); DaySmart+CardConnect (2017); IDEXX Payments (Fiserv rebrand of Neo/CardConnect, SKU до окна); CCC+Xplor («6+ years», до окна); PantherPayments/Headnote (2020); Shepherd Pay / Provet Pay / Bittsi / AMCS Pay / UnitFull / Pushpay (процессор на first-party не назван); Vetspire Pay (CardConnect+Stripe+Square+Worldpay; год first SKU не доказан; sales); Supermove Payments (glossary = Payengine; activate = sales; год не доказан; ACH только record); Smart Storage Software (Fortis named; год first SKU не доказан; quote/demo); CCStorage / iSmart (Full Stack Payments / Coastal ISO; underlying acquirer не назван); Routeware+Worldpay (sales AE; first SKU year не доказан); VWS PurGo+Elavon (UK, не US); Product Hunt 2024–26 payments (Fungies MoR / PaymentKit orchestration / UniwebPay — не vertical SaaS merchant embed).
 
 ---
 
@@ -282,7 +288,7 @@
 7. PayEngine — кроме Flex / CurbWaste / ST SoftPOS
 8. Payload — кроме Innago
 9. Propelr — кроме Act / DrivePay / Cerbo / Lever360 / vinSUITE / Atrium / InvoiceSherpa
-10. Fortis / Payroc — кроме Visual Matrix / Roc / FieldServio
+10. Fortis / Payroc — кроме Visual Matrix / Roc / FieldServio; Smart Storage Fortis named но год first SKU не доказан
 11. Moov — кроме Tap2Local
 12. WePay / JPM Payments ISV, Priority Commerce
 13. Sola / Cardknox Go — кроме RMH preferred
