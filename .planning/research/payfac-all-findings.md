@@ -1,164 +1,165 @@
 # US accept-payments — каталог
 
-2026-08-30. Только то, где есть ToS / help / press / «powered by».  
-**Open** = публичный signup или триал, без обязательного демо.  
-Dual = два процессора. Бывший рельс — в скобках.
+2026-08-30. Есть ToS / help / press / «powered by». Dual = два процессора.
 
-Колонки везде одни: **бренд · процессор · год · вертикаль · тип**
+**Путь**
 
----
-
-## Open — без sales
-
-| Бренд | Процессор | Год | Вертикаль | Тип |
-|---|---|---|---|---|
-| Venmo Business | PayPal | 2021-02 | любой SMB | PSP |
-| GoDaddy Payments | Elavon / Adyen / Nuvei | 2021-06 | любой SMB | PayFac |
-| PayPal Zettle / POS | PayPal | 2021-06 | любой SMB | PayFac |
-| Paddle | Paddle | 2022 | софт / SaaS | MoR |
-| Airwallex US | Airwallex / JPM | 2024-04 | любой SMB | PSP |
-| Frame | CBC (front unnamed) | ~2024 | любой SMB | PSP |
-| Dodo Payments | own MoR (BYOP optional) | 2024 | софт | MoR |
-| Easy | **Finix** | 2025-01 | любой SMB | frontend |
-| Trailing Paper | **Finix** | 2026-04 | invoicing | frontend |
-| MannyPay | **Adyen** / iMerchant | 2026-07 | любой SMB | PayFac |
-| Coastal SignUp Link | Fiserv / TSYS / Elavon | 2026-04 | любой SMB | ISO |
-| SpiceApp POS Lite | Finix (Worldpay IC+ opt.) | 2022 | restaurant POS | SaaS |
-| Lunchbox Payments | Finix | 2023-10 | restaurants | SaaS |
-| Contractor+ Pay | Finix | 2024 | field service | SaaS |
-| Candid Pay | Finix | 2024 | dental wholesale | SaaS |
-| Ticketbud Payments | Finix | 2024-10 | events | SaaS |
-| TherapyAppointment | Finix | 2025-11 | mental-health EMR | SaaS |
-| Omella | Finix + Stripe | 2026-06 | K-12 / PTA / SMB | SaaS |
-| Shopmonkey | Finix + Stripe | — | auto repair | SaaS |
-| CharityStack | Finix + Stripe | ~2023 | nonprofit | SaaS |
-| Printavo | Payrix | 2022 | print shops | SaaS |
-| JobNimbus Payments | Payrix | — | contractors | SaaS |
-| Xoda | Payrix | — | fitness | SaaS |
-| GymMaster | Payrix | — | gym | SaaS |
-| D-Tools Payments | Rainforest | 2024-08 | AV / low-voltage | SaaS |
-| ProLine Payments | Rainforest | 2023–24 | roofing | SaaS |
-| MaterioPay | Rainforest | 2024 | construction materials | SaaS |
-| Keap Pay | Rainforest | 2024-04 | CRM / SMB | SaaS |
-| SalesThumb | Rainforest | — | sales | SaaS |
-| Roofr Payments | Payabli | 2024-01 | roofing | SaaS |
-| Drake Pay | Launchpay | 2024-01 | tax (нужен Drake) | SaaS |
-| TaxAct Pro Payments | Launchpay | — | tax (нужен TaxAct) | SaaS |
-| TetherPay / ClientTether | Stax | 2022-01 | franchise CRM | SaaS |
-| TicketSpice | Adyen | — | event tickets | SaaS |
-| GivingFuel | Adyen | — | nonprofit | SaaS |
-| RegFox | Adyen | — | event registration | SaaS |
-| RedPodium | Adyen | — | race registration | SaaS |
-| GroupRev | Adyen | — | fundraising | SaaS |
-| CosmoLexPay | LexCharge / ProfitSolv | 2021 | legal | SaaS |
-| Cal Payments | Whop | 2026 | booking | MoR |
-| Towbook | Square BYO | 2021-02 | towing | BYO |
-| Trafft | Square BYO | 2024-09 | booking | BYO |
-| ARI | Square / Helcim BYO | 2026 | auto repair | BYO |
-| sBizzl | Square BYO | — | booking | BYO |
-| SimplyBook.me | Helcim BYO | — | booking | BYO |
-| 8am LawPay | Adyen (с 2025-12) | 2007* | legal | *продукт старше окна |
-| 8am CPACharge | Adyen | 2016* | accounting | *продукт старше окна |
-| 8am ClientPay | Adyen / 8am | 2021-02 | pro services | SaaS |
+| тег | что это |
+|---|---|
+| **моментально** | открыл аккаунт сам, без демо и без «мы перезвоним» |
+| **заявка** | публичная форма KYB / merchant apply, ждут андеррайтинг |
+| **триал→заявка** | сам завёл SaaS (триал), платежи — отдельная заявка в продукте |
+| **демо** | Book a demo / sales, потом иногда in-app apply |
+| **BYO** | подключает свой Square / Helcim |
 
 ---
 
-## Sales / demo — in-product apply после софта
+## Всё в одной таблице
 
-| Бренд | Процессор | Год | Вертикаль | Тип |
+| Бренд | Процессор | Год | Вертикаль | Путь |
 |---|---|---|---|---|
-| Meadow Pay | Finix | 2024–25 | higher ed | SaaS |
-| Archy | Finix | — | dental PMS | SaaS |
-| X-CD Payments | Finix | 2026-01 | associations | SaaS |
-| Vroom Pay360 | Finix | 2024-04 | c-store ecommerce | SaaS |
-| T2 Systems | Finix / Auth.net | 2023-03 | parking | SaaS |
-| foreUP Payments 2.0 | Finix | 2022-11 | golf | SaaS |
-| Clubessential | Finix (press) | pre-2024 | clubs | SaaS |
-| Cargas Pay | Finix (press) | 2022-08 | fuel / HVAC | SaaS |
-| Passport | Finix (case) | 2019* | parking / cities | *старше окна |
-| AgVend | Finix (case) | 2022–23 | ag retail | SaaS |
-| Beyond / Tally | Finix (case) | 2023-08 | vacation rental | SaaS |
-| Caterease HPay | Payrix | — | catering | SaaS |
-| Horizon Cloud | Payrix | — | hospitality | SaaS |
-| Storable | Payrix | — | self-storage | SaaS |
-| FieldRoutes | Payrix | — | field service | SaaS |
-| Neon Pay | Payrix | — | nonprofit CRM | SaaS |
-| Kangarootime | Payrix | ~2020 | childcare | SaaS |
-| Eyefinity | WP referral | — | optometry | ISO-ref |
-| Runit | WP referral | — | luxury retail POS | ISO-ref |
-| CryptoPay | WP referral | — | laundry / car wash | OEM |
-| Boost | WP PayFac | — | B2B AP | enterprise |
-| PIREL | Payrix | — | docs / AP-AR | SaaS |
-| 2TouchPOS | Payrix | с 2005 | restaurant POS | SaaS |
-| New West | WP referral | — | retail POS | ISO-ref |
-| ReyPAY | WP referral | ~2020 | auto dealers | enterprise |
-| SimplySwim | Payrix AU | — | swim schools | AU |
-| SimpleRent | Payrix AU | — | property | AU |
-| HubHello | Payrix AU | — | childcare | AU |
-| Perfect Gym | Payrix AU | — | gym | AU |
-| iClassPro | Worldpay PF + Payrix | 2015* | youth activities | SaaS |
-| DocketPay | Payrix (+ Fiserv) | — | waste / dumpster | SaaS |
-| Splynx | BYO Payrix | — | ISP billing | SaaS |
-| Hint Payments | Rainforest | — | chiro / DPC | SaaS |
-| PayGround | Rainforest | — | patient pay | SaaS |
-| RoadSync Checkout | Rainforest | — | trucking | SaaS |
-| QuoteMachine | Rainforest | — | quotes / retail | SaaS |
-| Duesy | Rainforest | — | associations | SaaS |
-| FieldPulse | Rainforest (был Payrix) | ~2025 rail | field service | SaaS |
-| Decoda Health | Rainforest | 2024-10 | healthcare | SaaS |
-| Crystal PM | Rainforest | — | dental / chiro | SaaS |
-| Handoff | Rainforest | — | construction | SaaS |
-| CivicPlus | Rainforest | — | gov | SaaS |
-| Newton | Rainforest | — | — | SaaS |
-| Rose Rocket | Rainforest | — | freight TMS | SaaS |
-| Curae | Rainforest | — | patient finance | SaaS |
-| Albiware | Rainforest | — | restoration | SaaS |
-| BuildOps | Payabli | — | construction | SaaS |
-| Builder Prime | Payabli | 2021 | construction | SaaS |
-| CurbWaste | Payabli / PayEngine | — | waste | SaaS |
-| fitDEGREE | Payabli (был Payrix) | — | fitness | SaaS |
-| Cubby | Payabli + Stripe | — | self-storage | SaaS |
-| ExactEstate | Payabli | 2024-11 | property | SaaS |
-| Sunbound | Payabli | — | collections | SaaS |
-| ID Tenant | Payabli | 2026-07 | CRE / tenant | SaaS |
-| Fyxt | Payabli | 2025 | CRE rent + vendor | SaaS |
-| Leap / LeapPay | JustiFi | 2024 | roofing CRM | SaaS |
-| LASSO Payments | JustiFi | 2025 | live events | SaaS |
-| Projul | JustiFi | — | construction | SaaS |
-| ResortCleaning | Tilled | 2022-01 | vacation cleaning | SaaS |
-| LaunchPad | Tilled | — | youth / after-school | SaaS |
-| Bambi | Tilled | — | NEMT | SaaS |
-| TapGoods | Launchpay US / Till CA | 2023 | event rental | SaaS |
-| WorkWave Payments | Payops | — | field service | SaaS |
-| Epos Now US | Adyen | 2023 | retail POS | SaaS |
-| Olo Pay CP | Adyen | 2023 | restaurants | enterprise |
-| Jackrabbit Pay | Adyen | 2023 | youth class | SaaS |
-| RMS Pay US/CA | Adyen | 2025-08 | hospitality PMS | SaaS |
-| Oracle Payments | Adyen | 2022-06 | restaurant / hotel | enterprise |
-| Tessitura MS | Adyen | 2022-03 | arts / ticketing | members |
-| ITX Payments | Adyen | 2024 | live events | SaaS |
-| Konnect Payments | Adyen | 2022–23 | parks | SaaS |
-| Klipboard Money | Adyen? | 2026-02 | vertical ERP | SaaS |
-| Mews Payments | Adyen (+ Stripe) | 2026-07 | hotel PMS | SaaS |
-| Slice | Adyen | — | pizza / QSR | SaaS |
-| ChiroSpring Pay | Stax | — | chiro PMS | SaaS |
-| Sera Payments | Stax | — | field service | SaaS |
-| Fishbowl Payments | Stax | ~2023 | manufacturing | SaaS |
-| Everyware | NMI | — | healthcare SMS-pay | SaaS |
-| Vori Payments | CardPointe + Paysafe | 2024-01 | grocery | SaaS |
-| Gingr | CardConnect (бренд→Stripe) | — | pet daycare | SaaS |
-| iDonate | CardPointe | — | nonprofit | SaaS |
-| Building Stack | Paysafe | — | property PMS | SaaS |
-| Tap2Local | Moov / Jack Henry | 2025-08 | bank/CU app | FI |
-| Revolv3 | Nuvei + others | — | subscriptions | orchestr. |
-| AutoLeap | Global Payments | — | auto shop | SaaS |
-| Club Caddie | CardConnect | — | golf club | SaaS |
-| Whoosh | Square BYO | 2024 | golf | BYO |
-| TicketSocket | Square BYO | — | box office | BYO |
-| 360Winery | Square BYO | 2023-01 | winery | BYO |
-| 3C Connect | Square BYO | — | HVAC | BYO |
-| Booky | Helcim BYO | — | booking | BYO |
-| MyCase | LawPay / Adyen | 2025 | legal PMS | migration |
+| Easy | Finix | 2025-01 | любой SMB | **моментально** |
+| Trailing Paper | Finix | 2026-04 | invoicing | **моментально** |
+| Venmo Business | PayPal | 2021-02 | любой SMB | **моментально** |
+| GoDaddy Payments | Elavon / Adyen / Nuvei | 2021-06 | любой SMB | **моментально** |
+| PayPal Zettle / POS | PayPal | 2021-06 | любой SMB | **моментально** |
+| Paddle | Paddle | 2022 | софт | **моментально** |
+| Dodo Payments | own MoR | 2024 | софт | **моментально** |
+| Airwallex US | Airwallex / JPM | 2024-04 | любой SMB | **моментально** |
+| Coastal SignUp Link | Fiserv / TSYS / Elavon | 2026-04 | любой SMB | **моментально** |
+| Omella | Finix + Stripe | 2026-06 | K-12 / PTA / SMB | **моментально** |
+| CharityStack | Finix + Stripe | ~2023 | nonprofit | **моментально** |
+| TicketSpice | Adyen | — | event tickets | **моментально** |
+| GivingFuel | Adyen | — | nonprofit | **моментально** |
+| RegFox | Adyen | — | event registration | **моментально** |
+| RedPodium | Adyen | — | race registration | **моментально** |
+| GroupRev | Adyen | — | fundraising | **моментально** |
+| Cal Payments | Whop | 2026 | booking | **моментально** |
+| 8am LawPay | Adyen | 2007* | legal | **моментально** |
+| 8am CPACharge | Adyen | 2016* | accounting | **моментально** |
+| 8am ClientPay | Adyen / 8am | 2021-02 | pro services | **моментально** |
+| Frame | CBC (front unnamed) | ~2024 | любой SMB | **заявка** |
+| MannyPay | Adyen / iMerchant | 2026-07 | любой SMB | **заявка** |
+| TherapyAppointment | Finix | 2025-11 | mental-health EMR | **триал→заявка** |
+| Ticketbud Payments | Finix | 2024-10 | events | **триал→заявка** |
+| SpiceApp POS Lite | Finix | 2022 | restaurant POS | **триал→заявка** |
+| Contractor+ Pay | Finix | 2024 | field service | **триал→заявка** |
+| Candid Pay | Finix | 2024 | dental wholesale | **триал→заявка** |
+| Lunchbox Payments | Finix | 2023-10 | restaurants | **триал→заявка** |
+| Shopmonkey | Finix + Stripe | — | auto repair | **триал→заявка** |
+| Printavo | Payrix | 2022 | print shops | **триал→заявка** |
+| JobNimbus Payments | Payrix | — | contractors | **триал→заявка** |
+| Xoda | Payrix | — | fitness | **триал→заявка** |
+| GymMaster | Payrix | — | gym | **триал→заявка** |
+| D-Tools Payments | Rainforest | 2024-08 | AV | **триал→заявка** |
+| ProLine Payments | Rainforest | 2023–24 | roofing | **триал→заявка** |
+| MaterioPay | Rainforest | 2024 | materials | **триал→заявка** |
+| Keap Pay | Rainforest | 2024-04 | CRM | **триал→заявка** |
+| SalesThumb | Rainforest | — | sales | **триал→заявка** |
+| Roofr Payments | Payabli | 2024-01 | roofing | **триал→заявка** |
+| TetherPay / ClientTether | Stax | 2022-01 | franchise CRM | **триал→заявка** |
+| CosmoLexPay | LexCharge | 2021 | legal | **триал→заявка** |
+| Drake Pay | Launchpay | 2024-01 | tax | **триал→заявка** |
+| TaxAct Pro Payments | Launchpay | — | tax | **триал→заявка** |
+| Towbook | Square | 2021-02 | towing | **BYO** |
+| Trafft | Square | 2024-09 | booking | **BYO** |
+| ARI | Square / Helcim | 2026 | auto repair | **BYO** |
+| sBizzl | Square | — | booking | **BYO** |
+| SimplyBook.me | Helcim | — | booking | **BYO** |
+| Meadow Pay | Finix | 2024–25 | higher ed | **демо** |
+| Archy | Finix | — | dental PMS | **демо** |
+| X-CD Payments | Finix | 2026-01 | associations | **демо** |
+| Vroom Pay360 | Finix | 2024-04 | c-store | **демо** |
+| T2 Systems | Finix / Auth.net | 2023-03 | parking | **демо** |
+| foreUP Payments 2.0 | Finix | 2022-11 | golf | **демо** |
+| Clubessential | Finix (press) | pre-2024 | clubs | **демо** |
+| Cargas Pay | Finix (press) | 2022-08 | fuel / HVAC | **демо** |
+| Passport | Finix (case) | 2019* | parking | **демо** |
+| AgVend | Finix (case) | 2022–23 | ag retail | **демо** |
+| Beyond / Tally | Finix (case) | 2023-08 | STR | **демо** |
+| Caterease HPay | Payrix | — | catering | **демо** |
+| Horizon Cloud | Payrix | — | hospitality | **демо** |
+| Storable | Payrix | — | self-storage | **демо** |
+| FieldRoutes | Payrix | — | field service | **демо** |
+| Neon Pay | Payrix | — | nonprofit CRM | **демо** |
+| Kangarootime | Payrix | ~2020 | childcare | **демо** |
+| Eyefinity | WP referral | — | optometry | **демо** |
+| Runit | WP referral | — | luxury POS | **демо** |
+| CryptoPay | WP referral | — | laundry OEM | **демо** |
+| Boost | WP PayFac | — | B2B AP | **демо** |
+| PIREL | Payrix | — | docs / AP-AR | **демо** |
+| 2TouchPOS | Payrix | с 2005 | restaurant POS | **демо** |
+| New West | WP referral | — | retail POS | **демо** |
+| ReyPAY | WP referral | ~2020 | dealers | **демо** |
+| SimplySwim | Payrix AU | — | swim | **демо** |
+| SimpleRent | Payrix AU | — | property | **демо** |
+| HubHello | Payrix AU | — | childcare | **демо** |
+| Perfect Gym | Payrix AU | — | gym | **демо** |
+| iClassPro | Worldpay + Payrix | 2015* | youth class | **демо** |
+| DocketPay | Payrix | — | waste | **демо** |
+| Splynx | BYO Payrix | — | ISP | **демо** |
+| Hint Payments | Rainforest | — | chiro / DPC | **демо** |
+| PayGround | Rainforest | — | patient pay | **демо** |
+| RoadSync Checkout | Rainforest | — | trucking | **демо** |
+| QuoteMachine | Rainforest | — | quotes | **демо** |
+| Duesy | Rainforest | — | associations | **демо** |
+| FieldPulse | Rainforest (был Payrix) | ~2025 | field service | **демо** |
+| Decoda Health | Rainforest | 2024-10 | healthcare | **демо** |
+| Crystal PM | Rainforest | — | dental / chiro | **демо** |
+| Handoff | Rainforest | — | construction | **демо** |
+| CivicPlus | Rainforest | — | gov | **демо** |
+| Newton | Rainforest | — | — | **демо** |
+| Rose Rocket | Rainforest | — | freight | **демо** |
+| Curae | Rainforest | — | patient finance | **демо** |
+| Albiware | Rainforest | — | restoration | **демо** |
+| BuildOps | Payabli | — | construction | **демо** |
+| Builder Prime | Payabli | 2021 | construction | **демо** |
+| CurbWaste | Payabli / PayEngine | — | waste | **демо** |
+| fitDEGREE | Payabli (был Payrix) | — | fitness | **демо** |
+| Cubby | Payabli + Stripe | — | self-storage | **демо** |
+| ExactEstate | Payabli | 2024-11 | property | **демо** |
+| Sunbound | Payabli | — | collections | **демо** |
+| ID Tenant | Payabli | 2026-07 | CRE | **демо** |
+| Fyxt | Payabli | 2025 | CRE | **демо** |
+| Leap / LeapPay | JustiFi | 2024 | roofing CRM | **демо** |
+| LASSO Payments | JustiFi | 2025 | events | **демо** |
+| Projul | JustiFi | — | construction | **демо** |
+| ResortCleaning | Tilled | 2022-01 | vacation cleaning | **демо** |
+| LaunchPad | Tilled | — | youth | **демо** |
+| Bambi | Tilled | — | NEMT | **демо** |
+| TapGoods | Launchpay | 2023 | event rental | **демо** |
+| WorkWave Payments | Payops | — | field service | **демо** |
+| Epos Now US | Adyen | 2023 | retail POS | **демо** |
+| Olo Pay CP | Adyen | 2023 | restaurants | **демо** |
+| Jackrabbit Pay | Adyen | 2023 | youth class | **демо** |
+| RMS Pay US/CA | Adyen | 2025-08 | hotel PMS | **демо** |
+| Oracle Payments | Adyen | 2022-06 | restaurant / hotel | **демо** |
+| Tessitura MS | Adyen | 2022-03 | arts | **демо** |
+| ITX Payments | Adyen | 2024 | live events | **демо** |
+| Konnect Payments | Adyen | 2022–23 | parks | **демо** |
+| Klipboard Money | Adyen? | 2026-02 | ERP | **демо** |
+| Mews Payments | Adyen (+ Stripe) | 2026-07 | hotel PMS | **демо** |
+| Slice | Adyen | — | pizza | **демо** |
+| ChiroSpring Pay | Stax | — | chiro | **демо** |
+| Sera Payments | Stax | — | field service | **демо** |
+| Fishbowl Payments | Stax | ~2023 | manufacturing | **демо** |
+| Everyware | NMI | — | healthcare SMS | **демо** |
+| Vori Payments | CardPointe + Paysafe | 2024-01 | grocery | **демо** |
+| Gingr | CardConnect → Stripe | — | pet daycare | **демо** |
+| iDonate | CardPointe | — | nonprofit | **демо** |
+| Building Stack | Paysafe | — | property | **демо** |
+| Tap2Local | Moov / Jack Henry | 2025-08 | банк / КУ | **демо** |
+| Revolv3 | Nuvei + others | — | subscriptions | **демо** |
+| AutoLeap | Global Payments | — | auto shop | **демо** |
+| Club Caddie | CardConnect | — | golf club | **демо** |
+| Whoosh | Square | 2024 | golf | **демо** + BYO |
+| TicketSocket | Square | — | box office | **демо** + BYO |
+| 360Winery | Square | 2023-01 | winery | **демо** + BYO |
+| 3C Connect | Square | — | HVAC | **демо** + BYO |
+| Booky | Helcim | — | booking | **демо** + BYO |
+| MyCase | LawPay / Adyen | 2025 | legal | **демо** |
+
+`*` продукт payments старше 2021, путь всё равно открытый.
 
 ---
 
@@ -166,29 +167,23 @@ Dual = два процессора. Бывший рельс — в скобка�
 
 | Бренд | Почему |
 |---|---|
-| Square / Helcim / QBO / Auth.net | payments до 2021 |
-| Wave | был Finix → сейчас Adyen + WP + Stripe |
+| Square / Helcim / QBO / Auth.net | payments до 2021; у самих **моментально** |
+| Wave | был Finix → Adyen + WP + Stripe |
 | Lightspeed US | Finix 2019 → Stripe 2020 |
 | Pay Theory | Finix → Fiserv |
-| Change | Finix **payouts**, не эквайринг |
-| Finix WooCommerce | сам вендор, live = sales |
-| Infinite Campus | Payrix → **Stripe** |
-| PayHOA | в PR Payabli; help = **Stripe** |
-| Edstruments / Smartwebs | Payabli **pay-out only** |
-| TEC | Payabli announced, payments Soon |
-| Huntington | Payabli в банке, не SaaS |
-| STRYD | ACH / Paya, карты не доказаны |
-| Finix Direct SMB | сам PayFac, sales / $250 min |
-| Setmore, Occasion, Appointy, Acuity, Checkfront, Bookeo, vCita, ZenMaid | старый Square BYO |
-| Fresha, ROLLER, Zenoti, modmed Pay | Adyen ~2020 |
-| Squire | был Payops → Stripe |
-| Fivestars / RunSignUp | исторический Payops |
-| neonpay.com | не Neon One |
-| `*.payments-dashboard.com` | не доказательство Finix |
+| Change | Finix payouts |
+| Finix WooCommerce / Finix Direct | вендор, live = sales / заявка |
+| Infinite Campus | Payrix → Stripe |
+| PayHOA | PR Payabli; help = Stripe (**моментально**, но Stripe) |
+| Edstruments / Smartwebs | Payabli pay-out |
+| TEC | Payabli, payments Soon |
+| STRYD | ACH / Paya |
+| Fresha, ROLLER, Zenoti, modmed | Adyen ~2020 |
+| Setmore и др. старый Square BYO | до окна / BYO |
 
-**Не подтверждено:** Sublime, Enwoven, Revvable, Abre, Real Green, Resman, PatientPal, пятый Stax ISV, Checkout.com / Priority / Elavon named SaaS.
+**Не подтверждено:** Sublime, Enwoven, Revvable, Abre, Real Green, Resman, PatientPal.
 
-**Stripe-only (нашли, не клали в главное):** Lemon Squeezy, Fourthwall, Stan, Whop, Wix POS, WooPayments, Clio, Skool, Luma, Beacons, Polar, Creem, FreshBooks, Mercury, Zoho, Gumroad, Pixieset, PushPress, Mangomint, TenantCloud, Hemlane, Avail, Lillio, Calendly, Practice Better, Mindbody, ChowNow, Digitail.
+**Stripe-only:** Lemon Squeezy, Fourthwall, Stan, Whop, WooPayments, Clio, Polar, FreshBooks, Zoho, Pixieset, Mindbody, ChowNow…
 
 ---
 
@@ -199,6 +194,6 @@ Dual = два процессора. Бывший рельс — в скобка�
 | Rainforest | 19 | ~100 |
 | Payabli | 12 pay-in | 60–100 |
 | Finix | ~23 | каталог короткий |
-| Payrix | 22 + 6 | «40+» в 2021, без имён |
-| JustiFi / Tilled | 3 + 3 | каталога нет |
+| Payrix | 22 + 6 | «40+» без имён |
+| JustiFi / Tilled | 3 + 3 | нет каталога |
 | Stax | 4 | «150+» |
