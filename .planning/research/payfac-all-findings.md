@@ -58,9 +58,9 @@
 | [TherapyAppointment](https://www.therapyappointment.com/sign-up) | Finix | 2025-11 | mental-health EMR | **триал→заявка** | — |
 | [Ticketbud Payments](https://ticketbud.com/users/sign_up) | Finix | 2024-10 | events | **триал→заявка** | — |
 | [SpiceApp POS Lite](https://myspiceapp.com/products/pos-lite/) | Finix | 2022 | restaurant POS | **триал→заявка** | — |
-| [Contractor+ Pay](https://contractorplus.app/) | Finix | 2024 | field service | **триал→заявка** | — |
+| [Contractor+ Pay](https://contractorplus.app/) | Finix | 2024 | field service | **триал→заявка** | ? |
 | [Candid Pay](https://www.candidwholesale.com/) | Finix | 2024 | dental wholesale | **триал→заявка** | — |
-| [Lunchbox Payments](https://lunchbox.io/essential) | Finix | 2023-10 | restaurants | **триал→заявка** | — |
+| [Lunchbox Payments](https://lunchbox.io/essential) | Finix | 2023-10 | restaurants | **триал→заявка** | ? |
 | [Shopmonkey](https://www.shopmonkey.io/) | Finix + Stripe | — | auto repair | **триал→заявка** | — |
 | [Printavo](https://www.printavo.com/users/sign_up) | Payrix | 2022 | print shops | **триал→заявка** | — |
 | [JobNimbus Payments](https://www.jobnimbus.com/trial-signup/) | Payrix | — | contractors | **триал→заявка** | — |
@@ -255,7 +255,7 @@
 
 **Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay, Service Autopilot, SmartMoving, Limo Anywhere Pay, BILL Receivables.  
 **нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay / Silverware Pay / MezzoPay / GROUND PAY / Winworks Pay / Arryved Pay (нет payer ACH формы); Tabs3Pay (staff вбивает client bank, не payer); StarPay (карты); Supermove (ACH только record).  
-**?:** ACH в тарифах есть, форму не разобрали.
+**?:** ACH в тарифах есть, форму не разобрали. Lunchbox (help = eChecks); Contractor+ (сайт = Card & ACH; форму payer не разобрали).
 
 **Раунд 5 (2026-08-30):** Successware, FieldEdge, Service Autopilot, Flex, improviPay, Dental Intel, SmartMoving, Prophet Pay, SC Pay, Roc Services, Act!, Encyro, DrivePay, Cerbo, WebRezPay, FieldServio, Visual Matrix Fortis Pay, CareStack CS Pay.  
 Не клали: MarketSharp / Profit Rhino / MSI (PaySimple ~2018), Spot (Xplor, CC с 1996), ezyVet+PayJunction (2017), Goose (Adyen Capital).
@@ -280,6 +280,27 @@
 
 **Раунд 12 (2026-08-30) — окно 2020+, неизвестен OK если не Stripe, демо+заявка OK:** StarPay, EZClaimPay, Flybook Pay, TimeSolv+LexCharge, PantherPayments, Fresha / ROLLER / Zenoti (с appendix в главную), ThryvPay, EnrollwarePay, Tabs3Pay (Stax), Vagaro (ISO of PNC), Pushpay (Fiserv+CheckCommerce), BridalLive, ConsignCloud / FROG / Lizzy (Gravity partner apply), Smart Storage (Fortis), Supermove (PayEngine), SylogistPay (Nuvei 2023), UPay360 (Elavon), Vetspire Pay (CardConnect+…), Bay-Master BM Pay (Fullsteam-owned, rail не назван), Provet Pay (Adyen в ToS), DockMaster / ValPay (Adyen whitelist). ISO с живой заявкой — секция ниже (+ Payment Depot = Stax ISO).  
 Не клали: Shepherd Pay (сторонний блог пишет Stripe; first-party молчит — строго без Stripe); WineDirect (= Commerce7 Fullsteam); RoomKeyPAYMENTS (Fullsteam, first SKU ~2019, тот же стек что уже покрыт); Cloudbeds US (Stripe Connect primary); Little Hotelier / SiteMinder / AmenitizPay / NexHealth / Tekmetric / Jobber / Housecall (Stripe-only); Payzli / Payarc / Bankful (agent CRM); RosyPay / Coolfront 2018 / SPOT 1996 / DRSPay=ERS 2018 / Eye Cloud Pro (первый SKU до 2020 без нового SKU); HotelKey (BYO Shift4/FreedomPay/Elavon); Routeware+Worldpay (нет first-party Pay SKU URL).
+
+**Раунд 13 (2026-08-30) — целенаправленно Finix:** `/customers` выжат (Change payouts, Contractor+, Meadow, AgVend, Beyond, Pay Theory, Passport; Archy/Vroom — отдельные story URL). Press boilerplate = Clubessential / Passport / Lunchbox / Cargas. First-party help: Lunchbox Payments (Finix) onboarding + eCheck; TherapyAppointment Finix Dashboard; Ticketbud Payments press; Omella ToS = Stripe **и** Finix; Contractor+ Pay = Card & ACH.  
+Новых named ISV с first-party/press не нашли.  
+Не клали: Fexco payUnite (оркестрация, Finix = один из эквайеров на select verticals; не US SaaS merchant apply); Finix Direct / Woo plugin (сам процессор, appendix); Practice Better / Dubsado / ParkMobile / Flowbird / GolfNow / Cvent / Service Fusion / TheraNest / Jane / Qgiv (Finix не назван); Jonas ClubPay / Northstar (не Finix; Clubessential уже в таблице).  
+ACH апдейт: Lunchbox `?`, Contractor+ `?`.
+
+---
+
+## Finix — все публичные (22 в главной)
+
+Официальный каталог короткий. Это всё, что удалось назвать без выдумок.
+
+| Бренд | Путь | Dual |
+|---|---|---|
+| Easy · Trailing Paper | **моментально** | |
+| Omella · CharityStack | **моментально** | + Stripe |
+| TherapyAppointment · Ticketbud · SpiceApp · Contractor+ · Candid · Lunchbox | **триал→заявка** | |
+| Shopmonkey | **триал→заявка** | + Stripe |
+| Meadow · Archy · X-CD · Vroom · T2 · foreUP · Clubessential · Cargas · Passport · AgVend · Beyond/Tally | **демо** | T2 ещё Auth.net |
+
+**Ушли / не accept:** Wave, Lightspeed US, Pay Theory → другой процессор. Change = payouts. Finix Direct / Woo = сам вендор.
 
 ---
 
@@ -328,7 +349,7 @@
 |---|---|---|
 | Rainforest | 19 | ~100 |
 | Payabli | 12 pay-in | 60–100 |
-| Finix | ~23 | каталог короткий |
+| Finix | 22 (+ Direct/Woo appendix) | каталог короткий; `/customers` выжат |
 | Payrix | 22 + 6 | «40+» без имён |
 | JustiFi / Tilled | 3 + 3 | нет каталога |
 | Stax | 5 (+ Tabs3Pay; Stax Pay self-reg в ISO-секции) | «150+» |
@@ -343,7 +364,7 @@
 
 1. Rainforest — ToS `legal.rainforestpay.com`, Vertex speakers, `rainforest_id` (~19/100)
 2. Payabli — customers / Huntington portal, **pay-in only** (~12/60–100)
-3. Finix — customers; Woo/Direct out
+3. Finix — `/customers` + press boilerplate выжаты (раунд 13); leftover только G2/subprocessors/boarding slugs
 4. Payrix / Worldpay for Platforms — `/customers` leftovers
 5. Stax Connect — «150+» без имён; G2 / help / press
 6. JustiFi / Tilled / Launchpay / Payops / Infinicept

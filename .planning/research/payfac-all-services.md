@@ -35,9 +35,9 @@
 | [TherapyAppointment](https://www.therapyappointment.com/sign-up) | Finix | 2025-11 | mental-health EMR | **триал→заявка** | — |
 | [Ticketbud Payments](https://ticketbud.com/users/sign_up) | Finix | 2024-10 | events | **триал→заявка** | — |
 | [SpiceApp POS Lite](https://myspiceapp.com/products/pos-lite/) | Finix | 2022 | restaurant POS | **триал→заявка** | — |
-| [Contractor+ Pay](https://contractorplus.app/) | Finix | 2024 | field service | **триал→заявка** | — |
+| [Contractor+ Pay](https://contractorplus.app/) | Finix | 2024 | field service | **триал→заявка** | ? |
 | [Candid Pay](https://www.candidwholesale.com/) | Finix | 2024 | dental wholesale | **триал→заявка** | — |
-| [Lunchbox Payments](https://lunchbox.io/essential) | Finix | 2023-10 | restaurants | **триал→заявка** | — |
+| [Lunchbox Payments](https://lunchbox.io/essential) | Finix | 2023-10 | restaurants | **триал→заявка** | ? |
 | [Shopmonkey](https://www.shopmonkey.io/) | Finix + Stripe | — | auto repair | **триал→заявка** | — |
 | [Printavo](https://www.printavo.com/users/sign_up) | Payrix | 2022 | print shops | **триал→заявка** | — |
 | [JobNimbus Payments](https://www.jobnimbus.com/trial-signup/) | Payrix | — | contractors | **триал→заявка** | — |
@@ -236,3 +236,11 @@
 | [Payment Depot](https://www.paymentdepot.com/) | Stax ISO (Wells Fargo; TSYS / Fiserv) | 2013* | любой SMB | **заявка** | — |
 
 Всего строк: **226**
+
+---
+
+## Только Finix (22)
+
+Официальный `/customers` и press выжаты — новых named ISV в раунде 13 не нашли.
+
+Easy · Trailing Paper · Omella (+Stripe) · CharityStack (+Stripe) · TherapyAppointment · Ticketbud · SpiceApp · Contractor+ · Candid · Lunchbox · Shopmonkey (+Stripe) · Meadow · Archy · X-CD · Vroom · T2 · foreUP · Clubessential · Cargas · Passport · AgVend · Beyond/Tally.
