@@ -71,6 +71,7 @@
 | [Act! Payments](https://www.act.com/products/accept-payments/) | Propelr | 2026-04 | CRM | **триал→заявка** | ? |
 | [Encyro Invoicing](https://www.encyro.com/invoicing) | Helcim | 2025-11 | invoicing | **триал→заявка** | ? |
 | [InvoiceSherpa](https://www.invoicesherpa.com/pricing) | Propelr (preferred) + BYO | 2026-04 | invoicing / AR | **триал→заявка** | ? |
+| [shopVOX Pay](https://shopvox.com/) | Fullsteam | 2025 | print / sign / apparel | **триал→заявка** | ? |
 | [Towbook](https://towbook.com/) | Square | 2021-02 | towing | **BYO** | — |
 | [Trafft](https://trafft.com/) | Square | 2024-09 | booking | **BYO** | — |
 | [ARI](https://ari.app/) | Square / Helcim | 2026 | auto repair | **BYO** | — |
@@ -197,11 +198,15 @@
 | [Atrium Campus](https://atriumcampus.com/) | Propelr | 2026-07 | campus card | **демо** | ? |
 | [Commerce7 Fullsteam Payments](https://www.commerce7.com/c7-payments/) | Fullsteam (+ Stripe wallets) | 2021-09 | winery | **демо** | ? |
 | [RICS Pay](https://www.ricssoftware.com/rics-pay/) | Fullsteam | 2021-01 | footwear / apparel POS | **демо** | нет |
+| [Silverware Pay](https://www.silverwarepos.com/silverware-pay) | Fullsteam | 2024-06 | hospitality POS | **демо** | нет |
+| [MezzoPay](https://www.maestropms.com/product/Maestro-PMS-Launches-MezzoPay-Embedded-Payments-Excitement-Abounds-Among-Clients-to-Install-the-Enhanced-Seamless-Secure-Payment-Offering.html) | Fullsteam | 2024-04 | hotel PMS | **демо** | нет |
+| [UrPay](https://urable.com/urpay/) | Fullsteam (Worldpay / Fifth Third) | 2025 | detailing / PPF | **демо** | ? |
+| [GROUND PAY](https://fasttrakcloud.com/groundpay/) | Fullsteam | 2026 | limo / ground | **демо** | нет |
 
 `*` продукт payments старше 2021, путь всё равно открытый.
 
 **Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay, Service Autopilot, SmartMoving.  
-**нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay (нет payer ACH формы).  
+**нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay / Silverware Pay / MezzoPay / GROUND PAY (нет payer ACH формы).  
 **?:** ACH в тарифах есть, форму не разобрали.
 
 **Раунд 5 (2026-08-30):** Successware, FieldEdge, Service Autopilot, Flex, improviPay, Dental Intel, SmartMoving, Prophet Pay, SC Pay, Roc Services, Act!, Encyro, DrivePay, Cerbo, WebRezPay, FieldServio, Visual Matrix Fortis Pay, CareStack CS Pay.  
@@ -209,6 +214,9 @@
 
 **Раунд 6 (2026-08-30):** InvoiceSherpa, Lever360, vinSUITE, Atrium Campus, Commerce7 Fullsteam, RICS Pay.  
 Не клали: Field2Base (sales callback), KORONA (agnostic referral), Party Center / ERS / RoomKey Pay (2019), LW Pay (expense/payouts), Jobber / Housecall Pro (Stripe-only), Toast+Adyen US (не новый merchant SKU).
+
+**Раунд 7 (2026-08-30):** shopVOX Pay, Silverware Pay, MezzoPay, UrPay, GROUND PAY.  
+Не клали: Maxanet / Pluss / ISI (payments ~2019), RMH+Sola (preferred plugin среди нескольких), CounselEAR (нет публичного Pay SKU), Helcim Payment Extension (это сам Helcim, до 2021).
 
 ---
 
