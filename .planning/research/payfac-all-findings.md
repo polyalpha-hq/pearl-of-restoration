@@ -199,7 +199,7 @@
 | [Commerce7 Fullsteam Payments](https://www.commerce7.com/c7-payments/) | Fullsteam (+ Stripe wallets) | 2021-09 | winery | **демо** | ? |
 | [RICS Pay](https://www.ricssoftware.com/rics-pay/) | Fullsteam | 2021-01 | footwear / apparel POS | **демо** | нет |
 | [Silverware Pay](https://www.silverwarepos.com/silverware-pay) | Fullsteam | 2024-06 | hospitality POS | **демо** | нет |
-| [MezzoPay](https://www.maestropms.com/product/Maestro-PMS-Launches-MezzoPay-Embedded-Payments-Excitement-Abounds-Among-Clients-to-Install-the-Enhanced-Seamless-Secure-Payment-Offering.html) | Fullsteam | 2024-04 | hotel PMS | **демо** | нет |
+| [MezzoPay](https://www.maestropms.com/) | Fullsteam | 2024-04 | hotel PMS | **демо** | нет |
 | [UrPay](https://urable.com/urpay/) | Fullsteam (Worldpay / Fifth Third) | 2025 | detailing / PPF | **демо** | ? |
 | [GROUND PAY](https://fasttrakcloud.com/groundpay/) | Fullsteam | 2026 | limo / ground | **демо** | нет |
 
