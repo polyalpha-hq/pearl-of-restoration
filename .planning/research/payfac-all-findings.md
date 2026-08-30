@@ -13,8 +13,8 @@
 | **демо** | Book a demo / sales, потом иногда in-app apply |
 | **BYO** | подключает свой Square / Helcim |
 
-**Keyed ACH** (колонка только у Rainforest): плательщик сам вбивает routing + account. Не Plaid и не депозитный счёт мерчанта.  
-`да` = есть цитата в help. `?` = ACH есть, форму не описали. `нет` = online ACH не живой.
+**Keyed ACH:** плательщик сам вбивает routing + account. Не Plaid и не депозитный счёт мерчанта.  
+`да` = есть цитата в help. `?` = ACH есть, форму не описали. `нет` = online ACH не живой. `—` = не проверяли.
 
 ---
 
@@ -68,6 +68,9 @@
 | [Drake Pay](https://www.drakesoftware.com/products/drake-pay/) | Launchpay | 2024-01 | tax | **триал→заявка** | — |
 | [TaxAct Pro Payments](https://www.taxact.com/professional/integrated-payments) | Launchpay | — | tax | **триал→заявка** | — |
 | [Workiz Pay](https://www.workiz.com/signup/join-workiz/) | Adyen + Stripe | ~2025 US Adyen | field service | **триал→заявка** | ? |
+| [Act! Payments](https://www.act.com/products/accept-payments/) | Propelr | 2026-04 | CRM | **триал→заявка** | ? |
+| [Encyro Invoicing](https://www.encyro.com/invoicing) | Helcim | 2025-11 | invoicing | **триал→заявка** | ? |
+| [InvoiceSherpa](https://www.invoicesherpa.com/pricing) | Propelr (preferred) + BYO | 2026-04 | invoicing / AR | **триал→заявка** | ? |
 | [Towbook](https://towbook.com/) | Square | 2021-02 | towing | **BYO** | — |
 | [Trafft](https://trafft.com/) | Square | 2024-09 | booking | **BYO** | — |
 | [ARI](https://ari.app/) | Square / Helcim | 2026 | auto repair | **BYO** | — |
@@ -173,15 +176,39 @@
 | [Confido Legal](https://confidolegal.com/) | Gravity Payments | 2023-12* | legal / IOLTA | **демо** | ? |
 | [BillingPlatform BP Pay](https://billingplatform.com/solutions/portal/payments/bp-pay) | Adyen | 2025-03 | enterprise billing | **демо** | ? |
 | [improveit 360 Payments](https://www.improveit360.com/features/) | PaySimple | — | remodeling CRM | **демо** | ? |
+| [Successware Payments](https://www.successware.com/features/the-new-successware-platform/successware-payments/) | Stax | 2022-01 | HVAC | **демо** | ? |
+| [FieldEdge Payments](https://fieldedge.com/fe-payments/) | Xplor Pay | 2022-02 | HVAC | **демо** | нет |
+| [Service Autopilot Payments](https://www.serviceautopilot.com/credit-card-processing/) | Xplor Pay | — | pest / lawn / cleaning | **демо** | **да** |
+| [Flex Payments](https://www.flexrentalsolutions.com/flex-payments/) | PayEngine | 2024-11 | event rental | **демо** | ? |
+| [improviPay](https://improvifi.com/technology/) | Xplor Pay | 2026-05 | home improvement | **демо** | ? |
+| [Dental Intelligence Payments](https://www.dentalintel.com/) | Xplor Pay | 2023-07 | dental | **демо** | нет |
+| [SmartMoving](https://www.smartmoving.com/) | Remedy | — | moving | **демо** | **да** |
+| [Prophet Pay](https://www.clubprophet.com/products/prophetpay) | Fullsteam | — | golf POS | **демо** | нет |
+| [SC Pay](https://www.storagecommander.com/merchant-processing) | Fullsteam | — | self-storage | **демо** | нет |
+| [Roc Services](https://payroc.com/solutions/roc-services/) | Payroc | 2024-07 | field invoicing | **демо** | ? |
+| [DrivePay](https://driveshops.com/) | Propelr + FreedomPay | 2026-03 | auto shop ERP | **демо** | ? |
+| [Cerbo](https://cer.bo/) | Propelr / CardPointe | — | cash-pay clinic | **демо** | ? |
+| [WebRezPay](https://webrezpro.com/payments/) | Fullsteam | — | lodging PMS | **демо** | нет |
+| [FieldServio](https://fieldservio.com/) | Payroc | 2024 | field service ERP | **демо** | ? |
+| [Visual Matrix Fortis Pay](https://visualmatrix.com/fortis/) | Fortis | 2023-08 | hotel PMS | **демо** | нет |
+| [CareStack CS Pay](https://carestack.com/dental-software/cspay) | Adyen | — | dental | **демо** | ? |
+| [Lever360](https://www.lever360.com/) | Propelr + Stripe | 2026-04 | restoration | **демо** | ? |
+| [vinSUITE](https://www.vinsuite.com/) | Propelr | 2026-07 | winery DTC | **демо** | ? |
+| [Atrium Campus](https://atriumcampus.com/) | Propelr | 2026-07 | campus card | **демо** | ? |
+| [Commerce7 Fullsteam Payments](https://www.commerce7.com/c7-payments/) | Fullsteam (+ Stripe wallets) | 2021-09 | winery | **демо** | ? |
+| [RICS Pay](https://www.ricssoftware.com/rics-pay/) | Fullsteam | 2021-01 | footwear / apparel POS | **демо** | нет |
 
 `*` продукт payments старше 2021, путь всё равно открытый.
 
-**Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay.  
-**нет:** SalesThumb (ACH только как ручной tender, не online).  
-**?:** ACH в тарифах есть, форму плательщика в help не разобрали (Keap, ProLine, D-Tools, FieldPulse, Handoff…).
+**Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay, Service Autopilot, SmartMoving.  
+**нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay (нет payer ACH формы).  
+**?:** ACH в тарифах есть, форму не разобрали.
 
-**Раунд 4 (2026-08-30), новые строки:** Innago, Relay, Workiz Pay, Knowify, GorillaDesk, Buildertrend, ServiceTitan, SingleOps, Confido Legal, BP Pay, improveit 360.  
-Не клали как новые: Wave (payments до 2021; Adyen ToS 2025; payer ToS = keyed ACH **да**), AccuLynx / Service Fusion / Shop-Ware (SKU ~2020). Finix / Rainforest / Payabli / Stax / JustiFi / Tilled — новых имён нет.
+**Раунд 5 (2026-08-30):** Successware, FieldEdge, Service Autopilot, Flex, improviPay, Dental Intel, SmartMoving, Prophet Pay, SC Pay, Roc Services, Act!, Encyro, DrivePay, Cerbo, WebRezPay, FieldServio, Visual Matrix Fortis Pay, CareStack CS Pay.  
+Не клали: MarketSharp / Profit Rhino / MSI (PaySimple ~2018), Spot (Xplor, CC с 1996), ezyVet+PayJunction (2017), Goose (Adyen Capital).
+
+**Раунд 6 (2026-08-30):** InvoiceSherpa, Lever360, vinSUITE, Atrium Campus, Commerce7 Fullsteam, RICS Pay.  
+Не клали: Field2Base (sales callback), KORONA (agnostic referral), Party Center / ERS / RoomKey Pay (2019), LW Pay (expense/payouts), Jobber / Housecall Pro (Stripe-only), Toast+Adyen US (не новый merchant SKU).
 
 ---
 
