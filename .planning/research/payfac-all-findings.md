@@ -3,18 +3,27 @@
 2026-08-30. Есть ToS / help / press / «powered by». Dual = два процессора.  
 Ссылка на бренде — signup, если путь открытый; иначе сайт / демо.
 
+**Критерии (с раунда 12)**
+
+- US-мерчант может принять карты и/или ACH.
+- Первый payments SKU **2020–2026**. Год не доказан — можно, если стек/Pay SKU живой. `*` = продукт старше 2020, путь всё равно открытый.
+- Процессор из ToS / help / press / sponsoring bank. **`неизвестен` можно**, если first-party не Stripe (свой Pay SKU, «our processing», ISO of bank X, help отделяет от Stripe). Stripe-only — не класть. Dual Stripe+X — класть, если X назван.
+- Путь: публичный signup, SaaS-триал, **или sales/демо + любая заявка** (письмо, Gravity/Elavon partner URL, boarding slug). Не обязательно кнопка внутри продукта.
+
+**Что такое «in-app apply»** — это не отдельный тег пути. Это уточнение: заявка на мерчант-аккаунт открывается **из самого продукта** (Settings → Payments → форма KYB). Раньше без такой кнопки бренд выкидывали, даже если сейлз присылал заявку после демо. **Теперь демо + заявка тоже кладём** (тег **демо**). In-app apply — частный случай тегов **заявка** / **триал→заявка**.
+
 **Путь**
 
 | тег | что это |
 |---|---|
 | **моментально** | открыл аккаунт сам, без демо и без «мы перезвоним» |
-| **заявка** | публичная форма KYB / merchant apply, ждут андеррайтинг |
-| **триал→заявка** | сам завёл SaaS (триал), платежи — отдельная заявка в продукте |
-| **демо** | Book a demo / sales, потом иногда in-app apply |
+| **заявка** | публичная форма KYB / merchant apply, ждут андеррайтинг (на сайте или по ссылке от партнёра) |
+| **триал→заявка** | сам завёл SaaS (триал), платежи — отдельная заявка **в продукте** (это и есть in-app apply) |
+| **демо** | Book a demo / sales, потом заявка — in-app, email-ссылка или partner apply URL |
 | **BYO** | подключает свой Square / Helcim |
 
-**Keyed ACH:** плательщик сам вбивает routing + account. Не Plaid и не депозитный счёт мерчанта.  
-`да` = есть цитата в help. `?` = ACH есть, форму не описали. `нет` = online ACH не живой. `—` = не проверяли.
+**Keyed ACH:** плательщик сам вбивает routing + account. Не Plaid и не депозитный счёт мерчанта. Не staff-keyed в кабинете.  
+`да` = есть цитата в help. `?` = ACH есть, форму не описали. `нет` = online ACH не живой / только staff или Plaid. `—` = не проверяли.
 
 ---
 
@@ -71,6 +80,14 @@
 | [Act! Payments](https://www.act.com/products/accept-payments/) | Propelr | 2026-04 | CRM | **триал→заявка** | ? |
 | [Encyro Invoicing](https://www.encyro.com/invoicing) | Helcim | 2025-11 | invoicing | **триал→заявка** | ? |
 | [InvoiceSherpa](https://www.invoicesherpa.com/pricing) | Propelr (preferred) + BYO | 2026-04 | invoicing / AR | **триал→заявка** | ? |
+| [StarPay / StarChapter](https://www.starchapter.com/StarPay) | Fullsteam | 2020-10 | associations | **триал→заявка** | нет |
+| [TimeSolv + LexCharge](https://www.timesolv.com/timesolvpay) | LexCharge | 2020-11 | legal | **триал→заявка** | ? |
+| [PantherPayments / PracticePanther](https://www.practicepanther.com/pantherpayments) | неизвестен (не Stripe; Headnote 2020) | 2020-09 | legal | **триал→заявка** | ? |
+| [Fresha Payments](https://www.fresha.com/) | Adyen | ~2020 | beauty / salon | **триал→заявка** | — |
+| [ThryvPay](https://www.thryv.com/) | неизвестен (не Stripe; help отделяет от Stripe/Square/PayPal) | 2020-10 | SMB services | **триал→заявка** | ? |
+| [EnrollwarePay](https://www.enrollwaresolutions.com/enrollwarepay) | Fullsteam | * | training / class | **триал→заявка** | — |
+| [Tabs3Pay](https://support.tabs3.com/main/r11871.htm) | Stax | 2021 | legal | **триал→заявка** | нет |
+| [Vagaro Merchant Services](https://www.vagaro.com/pro/card-processing) | неизвестен (ISO of PNC; не Stripe) | * | salon / spa | **триал→заявка** | — |
 | [shopVOX Pay](https://shopvox.com/) | Fullsteam | 2025 | print / sign / apparel | **триал→заявка** | ? |
 | [BILL Receivables](https://www.bill.com/signup) | Adyen | 2024-02 | invoicing / AR | **триал→заявка** | **да** |
 | [Haulvana](https://www.haulvana.com/pricing) | Xplor Pay | 2025-11 | waste | **триал→заявка** | ? |
@@ -216,11 +233,28 @@
 | [Stayntouch Pay](https://www.stayntouch.com/stayntouch-pay/) | Adyen | 2022-10 | hotel PMS | **демо** | ? |
 | [Print Reach Pay](https://printreach.com/how-print-reach-pay-can-transform-your-print-shop/) | Fullsteam | 2021-03 | print / mail MIS | **демо** | ? |
 | [RaccoonPay / RoomRaccoon](https://roomraccoon.com/) | Adyen | 2023-03 | hotel HMS | **демо** | ? |
+| [EZClaimPay](https://ezclaim.com/ezclaimpay/) | Fullsteam | 2020-08 | medical billing | **демо** | — |
+| [Flybook Pay](https://info.theflybook.com/flybook-pay-powered-by-fullsteam) | Fullsteam | 2020-01 | marina / yacht | **демо** | ? |
+| [ROLLER Payments](https://www.roller.software/) | Adyen | 2020 | attractions | **демо** | — |
+| [Zenoti Payments](https://www.zenoti.com/) | Adyen | ~2020 | spa / salon | **демо** | — |
+| [Provet Pay](https://www.provet.com/product/provet-pay) | Adyen | — | vet | **демо** | — |
+| [DockMaster Payments / ValPay](https://portal.dockmaster.com/docs/category/dockmaster-payments/) | Adyen (ValPay) | — | marina | **демо** | — |
+| [Pushpay Giving](https://pushpay.com/) | Fiserv / First Data + CheckCommerce (Nuvei) | * | church / giving | **демо** | ? |
+| [BridalLive Pay](https://www.bridallive.com/merchant-services-for-us-residents) | Fullsteam | — | bridal retail | **демо** | — |
+| [ConsignCloud](https://consigncloud.com/integrations/gravity-payments) | Gravity Payments | — | consignment | **демо** | — |
+| [FROG + Gravity](https://gravitypayments.com/partner/frog/) | Gravity Payments | 2022-12 | furniture retail | **демо** | — |
+| [Lizzy + Gravity](https://gravitypayments.com/lp/lizzy/) | Gravity Payments | — | auto dealers | **демо** | — |
+| [Smart Storage Software](https://smartstoragesoftware.com/features/integrations) | Fortis | * | self-storage | **демо** | ? |
+| [Supermove Payments](https://www.supermove.com/) | PayEngine | * | moving | **демо** | нет |
+| [SylogistPay](https://www.nuvei.com/posts/sylogist-selects-nuvei-to-upgrade-its-payments-solution) | Nuvei / Paya | 2023-06 | nonprofit / gov / edu | **демо** | — |
+| [UPay360](https://360s2g.com/upay360-elavon-partnership-revolutionizes-payments/) | Elavon | — | utility / gov | **демо** | ? |
+| [Vetspire Pay](https://www.vetspire.com/) | CardConnect + Stripe + Square + Worldpay | * | vet | **демо** | — |
+| [Bay-Master BM Pay](https://www.bay-master.com/bay-master-plus-features/) | неизвестен (Fullsteam-owned; first-party rail не назван) | * | auto / marine service | **демо** | — |
 
-`*` продукт payments старше 2021, путь всё равно открытый.
+`*` продукт payments старше 2020, путь всё равно открытый.
 
 **Keyed ACH да** (плательщик вводит routing+account): Hint, PayGround, MaterioPay, Decoda Health, CivicPlus, Albi Pay, Service Autopilot, SmartMoving, Limo Anywhere Pay, BILL Receivables.  
-**нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay / Silverware Pay / MezzoPay / GROUND PAY / Winworks Pay / Arryved Pay (нет payer ACH формы).  
+**нет:** SalesThumb; Relay (Plaid); FieldEdge / Dental Intel / Prophet Pay / SC Pay / WebRezPay / Fortis Pay / RICS Pay / Silverware Pay / MezzoPay / GROUND PAY / Winworks Pay / Arryved Pay (нет payer ACH формы); Tabs3Pay (staff вбивает client bank, не payer); StarPay (карты); Supermove (ACH только record).  
 **?:** ACH в тарифах есть, форму не разобрали.
 
 **Раунд 5 (2026-08-30):** Successware, FieldEdge, Service Autopilot, Flex, improviPay, Dental Intel, SmartMoving, Prophet Pay, SC Pay, Roc Services, Act!, Encyro, DrivePay, Cerbo, WebRezPay, FieldServio, Visual Matrix Fortis Pay, CareStack CS Pay.  
@@ -244,13 +278,32 @@
 **Раунд 11 (2026-08-30) — план + Fullsteam/Payload/Adyen leftovers:** Recur360Pay (Fullsteam, notice 2023-06; trial + in-app «Sign up for RECUR360PAY»), Automaid Pay / Launch27 (Fullsteam boarding `boarding.fullsteampay.net/AutoMaid`, help 2025-05), Brokerage Engine (Payload, ALTA 2023-06, in-app activate), SkySlope Keybox (Payload EMD, 2022), Stayntouch Pay (Adyen, Stayntouch 2.0 press 2022-10), Print Reach Pay (Fullsteam, Midnight 7.0.0 2021-03), RaccoonPay (Adyen, NA launch 2023-03; in-PMS onboarding).  
 Не клали: Flybook Pay (Fullsteam contactless **2020-01**), WineDirect Classic (тот же Fullsteam Payments, что Commerce7), BridalLive Pay (sales@ email, не in-app), Cloudbeds Payments (US primarily Stripe Connect; Adyen ToS есть, но Stripe case study), Little Hotelier / SiteMinder (Stripe с 2015/2025 Terminal), AmenitizPay (Stripe Connect), EnrollwarePay (год first SKU не доказан), RosyPay (старше окна), StarPay (2020), PaymentCloud / CDG / Flagship / Anedot / Stax Pay self-reg (ISO/PayFac до окна / горизонтальный signup как Square), Payzli / Payarc / Bankful (partner/agent apps, не merchant self-serve), NexHealth (Stripe), Tekmetric (Stripe), PracticePanther PantherPayments (2020 / AffiniPay).
 
+**Раунд 12 (2026-08-30) — окно 2020+, неизвестен OK если не Stripe, демо+заявка OK:** StarPay, EZClaimPay, Flybook Pay, TimeSolv+LexCharge, PantherPayments, Fresha / ROLLER / Zenoti (с appendix в главную), ThryvPay, EnrollwarePay, Tabs3Pay (Stax), Vagaro (ISO of PNC), Pushpay (Fiserv+CheckCommerce), BridalLive, ConsignCloud / FROG / Lizzy (Gravity partner apply), Smart Storage (Fortis), Supermove (PayEngine), SylogistPay (Nuvei 2023), UPay360 (Elavon), Vetspire Pay (CardConnect+…), Bay-Master BM Pay (Fullsteam-owned, rail не назван), Provet Pay (Adyen в ToS), DockMaster / ValPay (Adyen whitelist). ISO с живой заявкой — секция ниже (+ Payment Depot = Stax ISO).  
+Не клали: Shepherd Pay (сторонний блог пишет Stripe; first-party молчит — строго без Stripe); WineDirect (= Commerce7 Fullsteam); RoomKeyPAYMENTS (Fullsteam, first SKU ~2019, тот же стек что уже покрыт); Cloudbeds US (Stripe Connect primary); Little Hotelier / SiteMinder / AmenitizPay / NexHealth / Tekmetric / Jobber / Housecall (Stripe-only); Payzli / Payarc / Bankful (agent CRM); RosyPay / Coolfront 2018 / SPOT 1996 / DRSPay=ERS 2018 / Eye Cloud Pro (первый SKU до 2020 без нового SKU); HotelKey (BYO Shift4/FreedomPay/Elavon); Routeware+Worldpay (нет first-party Pay SKU URL).
+
+---
+
+## ISO / PayFac с живой публичной заявкой (первый SKU до 2020)
+
+Горизонтальный signup как у Square: мерчант сам заполняет apply. Не SaaS-embed. Клали, потому что путь открытый и **не Stripe**.
+
+| Бренд | Процессор | Год | Вертикаль | Путь | Keyed ACH |
+|---|---|---|---|---|---|
+| [Stax Pay](https://docs.staxpayments.com/docs/merchant-enrollment) | Stax / Fattmerchant | * | любой SMB | **заявка** | — |
+| [PaymentCloud](https://paymentcloudinc.com/credit-card-processing/) | ISO (Elavon / Paysafe / Global / EMS / EVO) | 2015* | high-risk SMB | **заявка** | — |
+| [CDGcommerce](https://www.cdgcommerce.com/applynow) | ISO (Pinnacle / Synovus / Citizens) | 1998* | любой SMB | **заявка** | — |
+| [Flagship](https://www.flagshipmerchantservices.com/apply/) | ISO (historically First Data / Fiserv) | 2001* | любой SMB | **заявка** | — |
+| [Anedot](https://www.anedot.com/nonprofits) | own (явно не Stripe; «we are the processor») | * | nonprofit / political | **моментально** | ? |
+| [Dharma](https://dharmamerchantservices.com/getting-started/) | ISO (не Stripe) | * | любой SMB | **заявка** | — |
+| [Payment Depot](https://www.paymentdepot.com/) | Stax ISO (Wells Fargo; TSYS / Fiserv) | 2013* | любой SMB | **заявка** | — |
+
 ---
 
 ## Не в главном
 
 | Бренд | Почему |
 |---|---|
-| [Square](https://squareup.com/) / [Helcim](https://www.helcim.com/) / [QBO](https://quickbooks.intuit.com/) / [Auth.net](https://www.authorize.net/) | payments до 2021; у самих **моментально** |
+| [Square](https://squareup.com/) / [Helcim](https://www.helcim.com/) / [QBO](https://quickbooks.intuit.com/) / [Auth.net](https://www.authorize.net/) | payments до 2020; у самих **моментально** (эталон горизонтального signup; не дублируем в ISO-секции) |
 | [Wave](https://www.waveapps.com/) | был Finix → Adyen + WP + Stripe; payer ToS = **keyed ACH да** |
 | [Lightspeed US](https://www.lightspeedhq.com/) | Finix 2019 → Stripe 2020 |
 | [Pay Theory](https://www.paytheory.com/) | Finix → Fiserv |
@@ -261,7 +314,6 @@
 | [Edstruments](https://edstruments.com/) / [Smartwebs](https://smartwebs.com/) | Payabli pay-out |
 | [TEC](https://www.theeventcommunity.com/) | Payabli, payments Soon |
 | [STRYD](https://stryd.us/) | ACH / Paya |
-| [Fresha](https://www.fresha.com/) / [ROLLER](https://www.roller.software/) / [Zenoti](https://www.zenoti.com/) | Adyen ~2020 |
 | Setmore и др. старый Square BYO | до окна / BYO |
 
 **Не подтверждено:** Sublime, Enwoven, Revvable, Abre, Real Green, Resman, PatientPal.
@@ -279,13 +331,13 @@
 | Finix | ~23 | каталог короткий |
 | Payrix | 22 + 6 | «40+» без имён |
 | JustiFi / Tilled | 3 + 3 | нет каталога |
-| Stax | 4 | «150+» |
+| Stax | 5 (+ Tabs3Pay; Stax Pay self-reg в ISO-секции) | «150+» |
 
 ---
 
 ## План поиска (огромный, все процессинги кроме Stripe)
 
-Критерии: US; signup / триал / in-app KYB; PayFac · ISO/MSP · PSP · gateway frontend · embedded SaaS · PFaaS · MoR; процессор из ToS/help/press; **не** Stripe-only; first SKU 2021–2026; keyed ACH колонка. Dual Stripe+X — класть, если X назван.
+Критерии: US; signup / триал / **демо+заявка** (in-app не обязателен); PayFac · ISO/MSP · PSP · gateway frontend · embedded SaaS · PFaaS · MoR; процессор из ToS/help/press **или `неизвестен`, если не Stripe**; first SKU **2020–2026** (год не доказан OK); keyed ACH колонка. Dual Stripe+X — класть, если X назван.
 
 ### A. PFaaS / embedded — клиентские каталоги (выжаты, leftover-only)
 
@@ -295,10 +347,10 @@
 4. Payrix / Worldpay for Platforms — `/customers` leftovers
 5. Stax Connect — «150+» без имён; G2 / help / press
 6. JustiFi / Tilled / Launchpay / Payops / Infinicept
-7. PayEngine — кроме Flex / CurbWaste; Supermove год не доказан
+7. PayEngine — кроме Flex / CurbWaste / Supermove
 8. Payload — кроме Innago / Brokerage Engine / SkySlope
 9. Propelr / CardPointe — кроме Act / DrivePay / Cerbo / Lever360 / vinSUITE / Atrium / InvoiceSherpa
-10. Fortis / Payroc — кроме Visual Matrix / Roc / FieldServio
+10. Fortis / Payroc — кроме Visual Matrix / Roc / FieldServio / Smart Storage
 11. Moov — кроме Tap2Local
 12. WePay / JPM Payments ISV
 13. Sola / Cardknox Go — кроме RMH preferred
@@ -309,8 +361,8 @@
 
 ### B. Эквайеры / ISO / MSP с публичной заявкой или ISV-программой
 
-18. **Adyen for Platforms US** — кроме уже в таблице; Stayntouch / BILL добавлены
-19. **Elavon** WorksWith + ISO frontends
+18. **Adyen for Platforms US** — кроме уже в таблице; Stayntouch / BILL / Fresha / ROLLER / Zenoti / Provet / DockMaster добавлены
+19. **Elavon** WorksWith + ISO frontends — UPay360 in
 20. **Fiserv** Clover / Carat / Commerce Hub / First Data / Clover Go / Clover App Market boarding
 21. **Heartland / GPI / Genius / TSYS** TransIT / Premier named ISVs 2021+
 22. **Worldpay / FIS** (не Payrix catalog)
@@ -318,17 +370,17 @@
 24. **Checkout.com** Platforms US
 25. **Shift4** SkyTab / Lighthouse named SaaS (не hotel gateway-only)
 26. **FreedomPay** кроме DrivePay
-27. **Priority Commerce / MX Merchant** — только если in-app, не sales form
-28. **Gravity Payments** кроме Confido
+27. **Priority Commerce / MX Merchant** — sales form теперь OK, если это merchant apply (не agent CRM)
+28. **Gravity Payments** кроме Confido / ConsignCloud / FROG / Lizzy
 29. **Helcim ISV** (не сам Helcim)
 30. **AffiniPay / 8am** leftovers; LexCharge кроме CosmoLex
-31. **Fullsteam** portfolio 50+ — Pay SKU 2021+ only (Flybook/StarPay/ERS/RoomKey/WineDirect/Maxanet out)
+31. **Fullsteam** portfolio 50+ — 2020+ in (StarPay/EZClaim/Flybook/Enrollware/BridalLive/Bay-Master); ERS/RoomKey/WineDirect/Maxanet still out (дубль / до 2020 без нового SKU)
 32. **Xplor Pay / Clearent** — Coolfront/SPOT out; leftovers кроме FieldEdge / SA / improviPay / Dental Intel / Haulvana
-33. **ISO с merchant apply (не agent CRM):** PaymentCloud, CDG, Dharma, Payment Depot, Flagship, National Processing, Payzli, Payarc, Bankful, Durango, Easy Pay Direct, PayKings, Host Merchant, Electronic Payments, Payline, PaymentSpring, PaySimple leftovers 2021+, Stax Pay self-reg — **класть только если first digital boarding 2021–26**, иначе appendix как Square
-34. **Bank merchant:** Chase Paymentech, Wells, BofA, Elavon direct, Synovus, Fifth Third, Pathward, Woodforest — только self-serve 2021+
+33. **ISO с merchant apply (не agent CRM):** PaymentCloud / CDG / Dharma / Flagship / Anedot / Stax Pay — **в ISO-секции**; leftover: Payment Depot, National Processing, Durango, Easy Pay Direct, PayKings, Host Merchant, Electronic Payments, Payline, PaymentSpring. Payzli / Payarc / Bankful = agent CRM — out
+34. **Bank merchant:** Chase Paymentech, Wells, BofA, Elavon direct, Synovus, Fifth Third, Pathward, Woodforest — self-serve 2020+
 35. **Deluxe** кроме MyKidReports
 36. **Remedy** кроме SmartMoving
-37. **LexCharge / Headnote** leftovers после 2020
+37. **LexCharge / Headnote** leftovers после TimeSolv / PantherPayments / CosmoLex
 38. **Jack Henry / ProfitStars** кроме Tap2Local
 39. **Paddle / Dodo / FastSpring / Tebex** — Tebex/FastSpring до окна
 40. **Airwallex / Payoneer / WorldFirst** accept-side US
@@ -338,22 +390,22 @@
 41. HVAC / plumbing / electrical / pest / lawn / pool / snow
 42. Roofing / restoration / remodeling / materials / AV
 43. Auto / collision / towing / detailing / PPF / dealers
-44. Dental / ortho / chiro / vet / mental health / cash-pay / DPC
+44. Dental / ortho / chiro / vet / mental health / cash-pay / DPC — Provet / Vetspire / Vagaro in; Shepherd out (Stripe rumor)
 45. Legal / tax / accounting / bookkeeping
 46. Property / HOA / rent / CRE / self-storage / moving
 47. Hotel / lodging / STR / winery / brewery / golf / parking / attractions
 48. Events / tickets / class / youth / associations
 49. Fitness / gym / childcare / church / nonprofit / gov
 50. Print / sign / apparel / waste / ISP / grocery / manufacturing / ERP
-51. Booking / invoicing / CRM / AR / field service 2021–26
-52. Church/giving не-Stripe: Pushpay (Fiserv ISO, sales — out пока нет in-app), Anedot (до окна), Tithely/PC/Breeze = Stripe
+51. Booking / invoicing / CRM / AR / field service 2020–26
+52. Church/giving не-Stripe: Pushpay + Anedot in; Tithely/PC/Breeze = Stripe
 53. Hotel не-Stripe: Stayntouch in; Cloudbeds US Stripe; Mews/RMS/Oracle/Visual Matrix/Mezzo already; Guestline / Opera / Infor / RoomRaccoon / HotelKey leftovers
 54. Moving: SmartMoving in; MoversSuite+Remedy = no public apply
-55. Waste: Haulvana / DocketPay / CurbWaste in; Routeware год не доказан
+55. Waste: Haulvana / DocketPay / CurbWaste in; Routeware — нужен first-party Pay SKU URL
 
 ### D. Источники запросов (не выдумывать имена)
 
-56. Press: PR Newswire / Business Wire / GlobeNewswire «launches payments» / «powered by» / «selects» 2021–26
+56. Press: PR Newswire / Business Wire / GlobeNewswire «launches payments» / «powered by» / «selects» 2020–26
 57. `isvpaymentintegration.com` compare pages — named ISVs only
 58. Charge Forward / Vertex / Rainforest conference speaker lists
 59. Product Hunt / G2 / Capterra «payment processing» software 2024–26
@@ -365,8 +417,8 @@
 ### E. Порядок прохода (чтобы не крутить одно и то же)
 
 64. Сначала named leftover у Fullsteam / Xplor / Adyen / Payload / Propelr
-65. Потом ISO с **видимой** merchant apply 2021+
+65. Потом ISO с **видимой** merchant apply (не agent CRM)
 66. Потом вертикаль × «Payments» − Stripe
 67. В конце Product Hunt / press sweep
 
-**Не класть:** Stripe-only; sales callback без in-app apply; payouts/issuing; BYO-orchestration only; first SKU до 2021; выдуманные бренды; повтор skip-листа раундов 5–11.
+**Не класть:** Stripe-only (в т.ч. если процессор неизвестен и есть правдоподобный first-party/help hint на Stripe); payouts/issuing; BYO-orchestration only; выдуманные бренды; повтор skip-листа раундов 5–12, если причина не снята новыми правилами. Sales/демо + заявка — **класть**. First SKU до 2020 — только ISO-секция с живым apply или `*` в главной, если путь открытый и не Stripe.
