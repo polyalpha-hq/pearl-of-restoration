@@ -61,7 +61,6 @@
 | [Contractor+ Pay](https://contractorplus.app/) | Finix | 2024 | field service | **триал→заявка** | ? |
 | [Candid Pay](https://www.candidwholesale.com/) | Finix | 2024 | dental wholesale | **триал→заявка** | — |
 | [Lunchbox Payments](https://lunchbox.io/essential) | Finix | 2023-10 | restaurants | **триал→заявка** | ? |
-| [Shopmonkey](https://www.shopmonkey.io/) | Finix + Stripe | — | auto repair | **триал→заявка** | — |
 | [Printavo](https://www.printavo.com/users/sign_up) | Payrix | 2022 | print shops | **триал→заявка** | — |
 | [JobNimbus Payments](https://www.jobnimbus.com/trial-signup/) | Payrix | — | contractors | **триал→заявка** | — |
 | [Xoda](https://xoda.com/create-account) | Payrix | — | fitness | **триал→заявка** | — |
@@ -284,11 +283,12 @@
 **Раунд 13 (2026-08-30) — целенаправленно Finix:** `/customers` выжат (Change payouts, Contractor+, Meadow, AgVend, Beyond, Pay Theory, Passport; Archy/Vroom — отдельные story URL). Press boilerplate = Clubessential / Passport / Lunchbox / Cargas. First-party help: Lunchbox Payments (Finix) onboarding + eCheck; TherapyAppointment Finix Dashboard; Ticketbud Payments press; Omella ToS = Stripe **и** Finix; Contractor+ Pay = Card & ACH.  
 Новых named ISV с first-party/press не нашли.  
 Не клали: Fexco payUnite (оркестрация, Finix = один из эквайеров на select verticals; не US SaaS merchant apply); Finix Direct / Woo plugin (сам процессор, appendix); Practice Better / Dubsado / ParkMobile / Flowbird / GolfNow / Cvent / Service Fusion / TheraNest / Jane / Qgiv (Finix не назван); Jonas ClubPay / Northstar (не Finix; Clubessential уже в таблице).  
-ACH апдейт: Lunchbox `?`, Contractor+ `?`.
+ACH апдейт: Lunchbox `?`, Contractor+ `?`.  
+**Shopmonkey** снят с главной и с Finix-списка (2026-08-30): живой SKU = Stripe Connect / Capital / instant payout. Help payouts ещё пишет «Stripe or Finix» и API enum держит Finix — leftover, не текущий apply.
 
 ---
 
-## Finix — все публичные (22 в главной)
+## Finix — все публичные (21 в главной)
 
 Официальный каталог короткий. Это всё, что удалось назвать без выдумок.
 
@@ -297,7 +297,6 @@ ACH апдейт: Lunchbox `?`, Contractor+ `?`.
 | Easy · Trailing Paper | **моментально** | |
 | Omella · CharityStack | **моментально** | + Stripe |
 | TherapyAppointment · Ticketbud · SpiceApp · Contractor+ · Candid · Lunchbox | **триал→заявка** | |
-| Shopmonkey | **триал→заявка** | + Stripe |
 | Meadow · Archy · X-CD · Vroom · T2 · foreUP · Clubessential · Cargas · Passport · AgVend · Beyond/Tally | **демо** | T2 ещё Auth.net |
 
 **Ушли / не accept:** Wave, Lightspeed US, Pay Theory → другой процессор. Change = payouts. Finix Direct / Woo = сам вендор.
@@ -335,11 +334,12 @@ ACH апдейт: Lunchbox `?`, Contractor+ `?`.
 | [Edstruments](https://edstruments.com/) / [Smartwebs](https://smartwebs.com/) | Payabli pay-out |
 | [TEC](https://www.theeventcommunity.com/) | Payabli, payments Soon |
 | [STRYD](https://stryd.us/) | ACH / Paya |
+| [Shopmonkey](https://www.shopmonkey.io/) | **Stripe** (Capital / Connect / instant payout). Help payouts ещё пишет «Stripe or Finix» + API enum Finix — leftover, не текущий apply |
 | Setmore и др. старый Square BYO | до окна / BYO |
 
 **Не подтверждено:** Sublime, Enwoven, Revvable, Abre, Real Green, Resman, PatientPal.
 
-**Stripe-only:** [Lemon Squeezy](https://www.lemonsqueezy.com/), [Fourthwall](https://fourthwall.com/), [Stan](https://stan.store/), [Whop](https://whop.com/), [WooPayments](https://woocommerce.com/products/woocommerce-payments/), [Clio](https://www.clio.com/), [Polar](https://polar.sh/), [FreshBooks](https://www.freshbooks.com/accept-payments), [Zoho Payments](https://www.zoho.com/us/payments/), [Pixieset](https://pixieset.com/), [Mindbody](https://www.mindbodyonline.com/), [ChowNow](https://www.chownow.com/)…
+**Stripe-only:** [Shopmonkey](https://www.shopmonkey.io/) (живой SKU), [Lemon Squeezy](https://www.lemonsqueezy.com/), [Fourthwall](https://fourthwall.com/), [Stan](https://stan.store/), [Whop](https://whop.com/), [WooPayments](https://woocommerce.com/products/woocommerce-payments/), [Clio](https://www.clio.com/), [Polar](https://polar.sh/), [FreshBooks](https://www.freshbooks.com/accept-payments), [Zoho Payments](https://www.zoho.com/us/payments/), [Pixieset](https://pixieset.com/), [Mindbody](https://www.mindbodyonline.com/), [ChowNow](https://www.chownow.com/)…
 
 ---
 
@@ -349,7 +349,7 @@ ACH апдейт: Lunchbox `?`, Contractor+ `?`.
 |---|---|---|
 | Rainforest | 19 | ~100 |
 | Payabli | 12 pay-in | 60–100 |
-| Finix | 22 (+ Direct/Woo appendix) | каталог короткий; `/customers` выжат |
+| Finix | 21 (+ Direct/Woo appendix) | каталог короткий; `/customers` выжат; Shopmonkey = Stripe |
 | Payrix | 22 + 6 | «40+» без имён |
 | JustiFi / Tilled | 3 + 3 | нет каталога |
 | Stax | 5 (+ Tabs3Pay; Stax Pay self-reg в ISO-секции) | «150+» |

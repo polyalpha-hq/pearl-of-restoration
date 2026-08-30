@@ -38,7 +38,6 @@
 | [Contractor+ Pay](https://contractorplus.app/) | Finix | 2024 | field service | **триал→заявка** | ? |
 | [Candid Pay](https://www.candidwholesale.com/) | Finix | 2024 | dental wholesale | **триал→заявка** | — |
 | [Lunchbox Payments](https://lunchbox.io/essential) | Finix | 2023-10 | restaurants | **триал→заявка** | ? |
-| [Shopmonkey](https://www.shopmonkey.io/) | Finix + Stripe | — | auto repair | **триал→заявка** | — |
 | [Printavo](https://www.printavo.com/users/sign_up) | Payrix | 2022 | print shops | **триал→заявка** | — |
 | [JobNimbus Payments](https://www.jobnimbus.com/trial-signup/) | Payrix | — | contractors | **триал→заявка** | — |
 | [Xoda](https://xoda.com/create-account) | Payrix | — | fitness | **триал→заявка** | — |
@@ -235,12 +234,12 @@
 | [Dharma](https://dharmamerchantservices.com/getting-started/) | ISO (не Stripe) | * | любой SMB | **заявка** | — |
 | [Payment Depot](https://www.paymentdepot.com/) | Stax ISO (Wells Fargo; TSYS / Fiserv) | 2013* | любой SMB | **заявка** | — |
 
-Всего строк: **226**
+Всего строк: **225**
 
 ---
 
-## Только Finix (22)
+## Только Finix (21)
 
-Официальный `/customers` и press выжаты — новых named ISV в раунде 13 не нашли.
+Официальный `/customers` и press выжаты — новых named ISV в раунде 13 не нашли. Shopmonkey убран: живой SKU = Stripe.
 
-Easy · Trailing Paper · Omella (+Stripe) · CharityStack (+Stripe) · TherapyAppointment · Ticketbud · SpiceApp · Contractor+ · Candid · Lunchbox · Shopmonkey (+Stripe) · Meadow · Archy · X-CD · Vroom · T2 · foreUP · Clubessential · Cargas · Passport · AgVend · Beyond/Tally.
+Easy · Trailing Paper · Omella (+Stripe) · CharityStack (+Stripe) · TherapyAppointment · Ticketbud · SpiceApp · Contractor+ · Candid · Lunchbox · Meadow · Archy · X-CD · Vroom · T2 · foreUP · Clubessential · Cargas · Passport · AgVend · Beyond/Tally.
